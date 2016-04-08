@@ -1,0 +1,1 @@
+/home/philbev/gitfiles/bash_logout
