@@ -1,1 +1,3 @@
-/home/philbev/gitfiles/bash_profile
+if [ -e $HOME/.bashrc ]; then
+	. $HOME/.bashrc
+fi

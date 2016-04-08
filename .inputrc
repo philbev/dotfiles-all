@@ -1,1 +1,52 @@
-/home/philbev/gitfiles/inputrc
+# ~/.inputrc
+# This file configures keyboard input for programs using readline.
+# See "man 3 readline" for more examples.
+
+$include /etc/inputrc
+
+############## EMACS FUNCTIONS #####################
+"q": character-search             #<Alt>+q
+"a": kill-whole-line              #<Alt>+a
+"s": character-search-backward    #<Alt>+s
+"[1;5C": forward-word             #<Ctrl>+<Right>
+"[1;5D": backward-word            #<Ctrl>+<Left>
+"x": shell-expand-line            #<Alt>+x
+
+
+############### FUNCTION KEYS ##############################
+"OP": "less /home/philbev/.key_bindings.txt"        #<F1>
+"OQ": "bind 'set show-all-if-ambiguous on'"         #<F2>
+"OR": "bind 'set show-all-if-ambiguous off'"        #<F3>
+"[24~": "bind -f /home/philbev/.inputrc"            #<F12>
+
+
+################ COMPLETION FUNCTIONS + VARIABLES ##########
+TAB: menu-complete
+"[Z": menu-complete-backward      #<Shift>+<TAB>
+"[2~": complete                   #<Insert>
+set disable-completion off
+set show-all-if-ambiguous off
+set visible-stats on
+set colored-stats on
+set skip-completed-text on
+
+
+############### MISCELLANEOUS MACROS ##############################
+"[1;5A": "cd .."                #<Control>+<Up> 
+"`": "$()OD"                      #<`>
+"g": "\C-e | grep "               #<Alt>+g
+"m": "\C-e | more"                #<Alt>+m
+"l": "\C-e | less"                #<Alt>+l
+"1": "!:1 "                       #<Alt>+1 - First argument of previous command
+"2": "!:2 "                       #<Alt>+2 - Second argument of previous command
+"3": "!:3 "                       #<Alt>+3 - Third argument of previous command
+"4": "!:4 "                       #<Alt>+4 - Fourth argument of previous command
+"5": "!:5 "                       #<Alt>+5 - Fifth argument of previous command
+",": "!^ "                        #<Alt>+^ - First argument of previous command
+
+
+#"@sf": character-search-backward  #<WinKey>+f
+#"đ": character-search-backward      #<AltGr>+f
+#"@s[": character-search-backward  #<Win>+[
+#"@s]": character-search           #<Win>+]
+

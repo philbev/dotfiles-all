@@ -1,1 +1,3 @@
-/home/philbev/gitfiles/gvimrc
+colorscheme slate
+set guifont=Monospace\ 12
+

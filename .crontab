@@ -1,1 +1,13 @@
-/home/philbev/gitfiles/crontab
+#MIN HOUR DAY MONTH DAY_OF_WEEK COMMAND
+#*/5 * * * * echo "Hi there Phil :-)" | mail -s "Testing" phil
+
+#Reminder for putting the bin out
+0 12-20 * * Mon [ $((`date +%-V` % 2)) -ne 0 ] || echo -e 'Put the blue bin out' | mail -s "Blue bin day" phil@philbev.co.uk
+0 12-20 * * Mon [ $((`date +%-V` % 2)) -ne 1 ] || echo -e 'Put the grey bin out' | mail -s "Grey bin day" phil@philbev.co.uk
+
+# Reminder for farmer's market
+0 12-18 8-14,22-28 * * [ `date +%a` = Fri ] &&  echo 'Farmers Market Tomorrow :-)' | mail -s "Farmers Market" phil
+
+# Reminders for putting the clocks on or back
+0 12-20 25-31 mar * [ `date +%a` = Sat ] && echo 'Put the clocks on tomorrow :-)' | mail -s 'Clocks on tomorrow' phil
+0 12-20 25-31 oct * [ `date +%a` = Sat ] && echo 'Put the clocks back tomorrow :-)' | mail -s 'Clocks back tomorrow' phil
