@@ -45,6 +45,7 @@ au VimEnter * let g:airline_left_sep = '▶'
 au VimEnter * let g:airline_right_sep = '◀'
 
 let g:airline#extensions#whitespace#enabled = 0
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		CONFIGURATION OPTIONS GO HERE		"
