@@ -61,6 +61,10 @@ alias vip='vi $HOME/.bash_profile'
 alias viv='vi $HOME/.vimrc'
 alias viv='vi $HOME/.vimrc'
 
+if [[ -f ~/.git-completion.bash ]]; then
+    source .git-completion.bash
+fi
+
 if [[ $KONSOLE_PROFILE_NAME = "Light" ]]; then
     if [[ ! -f ~/.lightbg ]]; then
 	touch ~/.lightbg
