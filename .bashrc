@@ -65,12 +65,6 @@ if [[ -f ~/.git-completion.bash ]]; then
     source .git-completion.bash
 fi
 
-if [[ $KONSOLE_PROFILE_NAME = "Light" ]]; then
-    if [[ ! -f ~/.lightbg ]]; then
-	touch ~/.lightbg
-    fi
-fi
-
 # Let's back-up okular bookmark file to directory where it will not be deleted when KDE
 # is upgraded.
 slackver=`cat /etc/slackware-version | sed 's/Slackware //'`
