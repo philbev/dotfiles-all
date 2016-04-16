@@ -1,0 +1,9 @@
+[user]
+	name = philbev
+	email = phil@philbev.co.uk
+[alias]
+	st = status
+	l = log --decorate
+	ci = commit
+	br = branch
+	co = checkout
