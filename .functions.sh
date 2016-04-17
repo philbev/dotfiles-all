@@ -77,7 +77,7 @@ etime (){
 	#########################
 
 is_git_dir () {
-    if [[ -d .git ]]; then
-	echo "Git repository"
+    if [[ -d .git ]] && git status | grep -q 'Changes not staged'; then
+	echo "$(tput setaf 5)$(tput bold)Changes made to repository!$(tput sgr0)"
     fi
 }
