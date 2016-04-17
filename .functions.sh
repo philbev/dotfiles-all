@@ -72,12 +72,17 @@ etime (){
     printf "Time elapsed = %02d:%02d:%02d\n" $hrs $mins $secs
 }
 
-	#########################
-	#   CHECK GIT STATUS	#
-	#########################
+#################################
+#	   CHECK GIT STATUS	#
+#################################
 
 is_git_dir () {
-    if [[ -d .git ]] && git status | grep -q 'Changes not staged'; then
-	echo "$(tput setaf 5)$(tput bold)Changes made to repository!$(tput sgr0)"
+    if [[ -d .git ]]; then
+	if git status | grep -q 'Changes not staged'; then
+	    echo "$(tput setaf 5)$(tput bold)Changes made to repository!$(tput sgr0)"
+	fi
+	if git status | grep -q 'Changes to be committed'; then
+	    echo "$(tput setaf 5)$(tput bold)Changes need to be committed!$(tput sgr0)"
+	fi
     fi
 }
