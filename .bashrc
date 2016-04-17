@@ -65,6 +65,36 @@ if [[ -f ~/.git-completion.bash ]]; then
     source .git-completion.bash
 fi
 
+# This will run before any command is executed.
+function PreCommand() {
+  if [ -z "$AT_PROMPT" ]; then
+    return
+  fi
+  unset AT_PROMPT
+
+  # Do stuff.
+  #echo "Running PreCommand"	# PUT COMMAND HERE
+  is_git_dir			# is_git_dir() function in ~/.functions.
+}
+trap "PreCommand" DEBUG
+
+# This will run after the execution of the previous full command line.  We don't
+# want it PostCommand to execute when first starting a bash session (i.e., at
+# the first prompt).
+FIRST_PROMPT=1
+function PostCommand() {
+  AT_PROMPT=1
+
+  if [ -n "$FIRST_PROMPT" ]; then
+    unset FIRST_PROMPT
+    return
+  fi
+
+  # Do stuff.
+  #echo "Running PostCommand"
+}
+PROMPT_COMMAND="PostCommand"
+
 # Let's back-up okular bookmark file to directory where it will not be deleted when KDE
 # is upgraded.
 slackver=`cat /etc/slackware-version | sed 's/Slackware //'`
