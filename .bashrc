@@ -1,11 +1,27 @@
 # MY /home/.bashrc INITIALISATION FILE
 
+###################################################################################################
+#	    SOURCED FILES									  #
+###################################################################################################
+
 # Load all my functions from $HOME/.functions.sh
 if [[ -f $HOME/.functions.sh ]]; then
     . $HOME/.functions.sh
 fi
 
-#export TERM=xterm-256color
+if [[ -f ~/.git-completion.bash ]]; then
+    source .git-completion.bash
+fi
+
+
+
+###################################################################################################
+#			ENVIRONMENT VARIABLES							  #
+###################################################################################################
+
+if [[ $USER != root ]]; then
+    export LS_OPTIONS=${LS_OPTIONS/auto/always}
+fi
 export PATH=$PATH:/usr/local/bin/android-studio/bin:/usr/local/bin/android-sdk-linux/platform-tools	# Needed for Android SDK
 export CDPATH=.:/usr/local:/usr/local/downloads:/usr/local/docs
 export LANG="en_GB.UTF-8"
@@ -14,9 +30,6 @@ ps_ssh="\033[1;35m(\h) $ps_local"
 who -m | grep -q '([^:]\+)' && PS1="$ps_ssh" || PS1="$ps_local"
 export PS1
 export LESS="-R"
-if [[ $USER != root ]]; then
-    export LS_OPTIONS=${LS_OPTIONS/auto/always}
-fi
 export HISTCONTROL=ignoredups:ignorespace:erasedups
 export HISTTIMEFORMAT="%c: "
 export QUEUEDIR=/home/philbev/.sbopkg/queues	# Needed for Sbopkg
@@ -29,11 +42,14 @@ export GREP_COLORS="ms=01;34:fn=01;32"
 export GVFS_DISABLE_FUSE=1
 export CXXFLAGS='-std=c++14 -g -Wall'
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 export SLACK_DIR=/usr/local/downloads/repositories/slackware64/latest
-
 shopt -s histappend
 
+
+
+###################################################################################################
+#				ALIASES								  #
+###################################################################################################
 alias ..="cd .."
 alias a=alias
 alias c=clear
@@ -59,12 +75,12 @@ alias vib='vi $HOME/.bashrc'
 alias vil='vi $HOME/.bash_logout'
 alias vip='vi $HOME/.bash_profile'
 alias viv='vi $HOME/.vimrc'
-alias viv='vi $HOME/.vimrc'
 
-if [[ -f ~/.git-completion.bash ]]; then
-    source .git-completion.bash
-fi
 
+
+###################################################################################################
+#				FUNCTIONS							  #
+###################################################################################################
 # This will run before any command is executed.
 function PreCommand() {
   if [ -z "$AT_PROMPT" ]; then
@@ -94,6 +110,9 @@ function PostCommand() {
   #echo "Running PostCommand"
 }
 PROMPT_COMMAND="PostCommand"
+
+
+
 
 # Let's back-up okular bookmark file to directory where it will not be deleted when KDE
 # is upgraded.
