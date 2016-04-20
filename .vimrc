@@ -100,7 +100,7 @@ if has('nvim')
     set history&
     colorscheme elflord
 else
-    set history=10000
+    set history=1000
     au VimEnter,BufRead,BufEnter,ColorScheme colorscheme default
 endif
 
