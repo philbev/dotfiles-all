@@ -72,42 +72,19 @@ set pastetoggle=<F11>
 set statusline=%t\ %y%m%r[%{\&ff}]\ [Buffer:\ %n][ASCII:\ %b\ (Dec)\ :\ 0x%B\ (Hex)]%=%([Line:%l\ of\ %L,Column:%c%V][%p%%]%)
 set runtimepath+=~/.vim/ftplugin
 set noundofile
+set history=1000
 let g:clang_close_preview = 1
-
 set omnifunc=syntaxcomplete#Complete
 set cursorline
 
-"if $USER == "root"
-"set background=dark
-"endif
 
-if $KONSOLE_PROFILE_NAME == "Light"
-    so ~/.vim/colors/lightbg.vim
-else
-    so ~/.vim/colors/darkbg.vim
-endif
-
-"augroup group1
-"    autocmd!
-"    au VimEnter,BufRead,BufEnter,ColorScheme * highlight ModeMsg term=inverse,bold,standout ctermfg=0 ctermbg=15 guifg=Black guibg=White
-"    au VimEnter,BufRead,BufEnter,ColorScheme * highlight WildMenu term=standout ctermfg=0 ctermbg=2 guifg=Black guibg=Yellow
-"    au VimEnter,BufRead,BufEnter,ColorScheme * highlight LineNr term=underline cterm=bold ctermfg=7 ctermbg=Black guifg=Yellow
-"    au VimEnter,BufRead,BufEnter,ColorScheme * highlight CursorLineNr term=underline cterm=bold ctermfg=3 ctermbg=Black guifg=Yellow
-"    au VimEnter,BufRead,BufEnter,ColorScheme * highlight CursorLine cterm=underline ctermfg=None ctermbg=Black gui=bold,underline
-"augroup END
-
-if has('nvim')
-    set history&
-    colorscheme elflord
-else
-    set history=1000
-    au VimEnter,BufRead,BufEnter,ColorScheme colorscheme default
-endif
-
-"AUTOCOMMANDS GO HERE
-augroup group2
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	    AUTOCOMMANDS GO HERE			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup group1
     autocmd!
     au VimEnter * NoMatchParen
+    au VimEnter,BufRead,BufEnter,ColorScheme colorscheme default
     "au VimEnter * AirlineTheme base16-isotope
     "au VimEnter * AirlineTheme base16-default
     au BufWritePost .vimrc source $MYVIMRC
@@ -117,36 +94,9 @@ augroup group2
     au BufNewFile *.h source ~/.vim/cpp_header.vim
 augroup END
 
-""""""""""""""""""""""
-"KEY MAPPINGS GO HERE"
-""""""""""""""""""""""
-if has('nvim')
-    nnoremap <M-/> :bn<cr>|"						<ALT>+/ = Next buffer.
-    nnoremap <M-\> :bp<cr>|"						<ALT>+\ = Previous buffer.
-    nnoremap <M-.> :bp<cr>|"						<ALT>+. = Previous buffer.
-    nnoremap <M-Del> :bd<cr>|"						<Alt>+<Del> = Delete buffer.
-    nnoremap <M-N> n|"						<ALT>+N = New window.
-    nnoremap <M-n> |"						<ALT>+n = Next window.
-    nnoremap <M-c> c|"						<ALT>+c = Close window.
-    nnoremap <M-o> o|"						<ALT>+o = Only window (Close all others).
-    nnoremap <M-s> s|"						<ALT>+s = Split window.
-    nnoremap <M-v> v|"						<ALT>+v = Split window vertically.
-    noremap <M-w> w|"							<ALT>+w = Next window.
-    nnoremap <M-#> |"							<ALT>+# = Edit alternate buffer.
-    nnoremap <C-Down> |"						<CTRL>+<DOWN> = Scroll down one line.
-    nnoremap <M-Down> ddp|"						<ALT>+<DOWN> = Move text on current line down one line.
-    vnoremap <M-Down> dp`[V`]|"						<ALT>+<DOWN> = Move selected lines down one line.
-    nnoremap <C-Up> |"						<CTRL>+<UP> = Scroll up one line.
-    nnoremap <M-Up> ddkP|"						<ALT>+<DOWN> = Move text on current line up one line.
-    vnoremap <M-Up> dkkp`[V`]|"						<ALT>+<UP> = Move selected lines up one line.
-    nnoremap <Leader>b 1GO#!/usr/bin/bash<ESC>:set ft=sh<CR>|"		\b = Insert #! and set filetype.
-    nnoremap <M-l> :set list! list?<CR>|"				<Alt>+l = Display whitespace characters.
-    nnoremap <M-e> :set expandtab! expandtab?<CR>|"			<Alt>+e = Toggle 'Expandtab' and display.
-    nnoremap <M-t> ^gU$yypv$r=|"					<Alt>+t = Uppercase whole line and underline.
-    nnoremap <Up> gk|"							<Up> = Cursor up one virtual line.
-    nnoremap <Down> gj|"						<Down> = Cursor down one virtual line.
-    nnoremap <M-i> :set ic! ic?<CR>|"					<Alt>+i = Toggle 'Ignorecase' option.
-else
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	    KEY MAPPINGS GO HERE"			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     nnoremap / :bn<cr>|"						<ALT>+/ = Next buffer.
     nnoremap \ :bp<cr>|"						<ALT>+\ = Previous buffer.
     nnoremap . :bp<cr>|"						<ALT>+. = Previous buffer.
@@ -172,19 +122,26 @@ else
     nnoremap OA gk|"							<Up> = Cursor up one virtual line.
     nnoremap OB gj|"							<Down> = Cursor down one virtual line.
     nnoremap i :set ic! ic?<CR>|"					<Alt>+i = Toggle 'Ignorecase' option.
-endif
 
-" Some insert completions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	     SOME INSERT COMPLETIONS			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 inoremap  |"		<Ctrl>+f = Filename completion.
 inoremap  |"		<Ctrl>+d = Macro completion.
 inoremap  |"		<Ctrl>+l = Whole line completion.
 inoremap u <Esc>gUiw`]a|"	<Alt>+u = Make word upper case.
 
-" Some Visual mode mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	     SOME VISUAL MODE MAPPINGS			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 vnoremap > >gv
 vnoremap < <gv
 
-"WINDOWS KEYS FOR GERMAN CHARACTERS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	    WINDOWS KEYS FOR GERMAN CHARACTERS		"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 inoremap @sa ä|"	<Window>+a
 inoremap @sA Ä|"	<Window>+<Shift>+A
 inoremap @so ö|"	<Window>+o
@@ -196,31 +153,20 @@ inoremap @sB ß|"	<Window>+<Shift>+B
 inoremap @ss ß|"	<Window>+s
 inoremap @sS ß|"	<Window>+<Shift>+S
 
-"FUNCTION KEYS <F1> TO <F12>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	    FUNCTION KEYS <F1> TO <F12>			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F2> :set hlsearch! hlsearch?|"		<F2> - Toggle option 'hlsearch'
 nnoremap <F3> :set spell! spell?|"			<F3> - Toggle option 'spell'
 nnoremap <F4> :set relativenumber! relativenumber?|"	<F4> - Toggle option 'number'
 nnoremap <F9> :NERDTreeToggle|"			<F9> - Toggle NERDTree
-nnoremap <F12> :e ~/.vimrc<CR>|"				<S-F12> - Edit ~/.vimrc
-if has('nvim')
-    nnoremap <F24> :so ~/.vimrc<CR>|"				<S-F12> - Edit ~/.vimrc
-else
-    nnoremap <S-F12> :so ~/.vimrc<CR>|"				<S-F12> - Edit ~/.vimrc
-endif
+nnoremap <F12> :e ~/.vimrc<CR>|"			<S-F12> - Edit ~/.vimrc
+nnoremap <S-F12> :so ~/.vimrc<CR>|"			<S-F12> - Edit ~/.vimrc
 
-"DISABLE ARROW KEYS
-" Disabling the arrow keys forces me to use Vim properly.
-" According to most advanced users they should not be used
-" and using the Vim operators should speed things up :^)
 
-"nnoremap <Up> <Nop>
-"nnoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-
-"""""""""""""""""""""""""""""""""""""""""""""
-"		ABBREVIATIONS GO HERE	    "
-"""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"		ABBREVIATIONS GO HERE			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "inoreab #! #!/bin/bash<ESC>:set ft=sh<CR>o
 inoreab @g phil@philbevan40@gmail.com
@@ -230,9 +176,9 @@ inoreab gm philbevan40@gmail.com
 inoreab pb Phil Bevan
 inoreab pba Phil Bevan<cr>Flat 3<cr>90 Loughborough Road<cr>West Bridgford<cr>Nottingham<cr>NG2 7JH
 
-"""""""""""""""""""""""""""""""""""""""""""""
-"		NERDTree Options Here	    "
-"""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"		NERDTREE OPTIONS HERE			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeShowBookmarks=1
 
 nnoremap <M-F1> :echo "		VIM FUNCTION KEYS\n
