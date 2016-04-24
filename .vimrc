@@ -101,31 +101,34 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	    KEY MAPPINGS GO HERE"			"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    nnoremap / :bn<cr>|"						<ALT>+/ = Next buffer.
-    nnoremap \ :bp<cr>|"						<ALT>+\ = Previous buffer.
-    nnoremap . :bp<cr>|"						<ALT>+. = Previous buffer.
-    nnoremap [3;3~ :bd<cr>|"						<Alt>+<Del> = Delete buffer.
-    nnoremap N n|"							<ALT>+N = New window.
-    nnoremap n |"							<ALT>+n = Next window.
-    nnoremap c c|"							<ALT>+c = Close window.
-    nnoremap o o|"							<ALT>+o = Only window (Close all others).
-    nnoremap s s|"							<ALT>+s = Split window.
-    nnoremap v v|"							<ALT>+v = Split window vertically.
-    noremap w w|"							<ALT>+w = Next window.
-    nnoremap # |"							<ALT>+# = Edit alternate buffer.
-    nnoremap [1;5B |"						<CTRL>+<DOWN> = Scroll up one line.
-    nnoremap [1;3B ddp|"						<ALT>+<DOWN> = Move text on current line down one line.
-    vnoremap [1;3B dp`[V`]|"						<ALT>+<DOWN> = Move selected lines down one line.
-    nnoremap [1;5A |"						<CTRL>+<UP> = Scroll up one line.
-    nnoremap [1;3A ddkP|"						<ALT>+<DOWN> = Move text on current line up one line.
-    vnoremap [1;3A dkkp`[V`]|"						<ALT>+<UP> = Move selected lines up one line.
-    nnoremap <Leader>b 1GO#!/usr/bin/bash<ESC>:set ft=sh<CR>|"		\b = Insert #! and set filetype.
-    nnoremap l :set list! list?<CR>|"					<Alt>+l = Display whitespace characters.
-    nnoremap e :set expandtab! expandtab?<CR>|"			<Alt>+e = Toggle 'Expandtab' and display.
-    nnoremap t ^gU$yypv$r=|"						<Alt>+t = Uppercase whole line and underline.
-    nnoremap OA gk|"							<Up> = Cursor up one virtual line.
-    nnoremap OB gj|"							<Down> = Cursor down one virtual line.
-    nnoremap i :set ic! ic?<CR>|"					<Alt>+i = Toggle 'Ignorecase' option.
+nnoremap / :bn<cr>|"						<ALT>+/ = Next buffer.
+nnoremap \ :bp<cr>|"						<ALT>+\ = Previous buffer.
+nnoremap . :bp<cr>|"						<ALT>+. = Previous buffer.
+nnoremap [3;3~ :bd<cr>|"					<Alt>+<Del> = Delete buffer.
+nnoremap N n|"						<ALT>+N = New window.
+nnoremap n |"						<ALT>+n = Next window.
+nnoremap c c|"						<ALT>+c = Close window.
+nnoremap o o|"						<ALT>+o = Only window (Close all others).
+nnoremap s s|"						<ALT>+s = Split window.
+nnoremap v v|"						<ALT>+v = Split window vertically.
+noremap w w|"						<ALT>+w = Next window.
+nnoremap # |"						<ALT>+# = Edit alternate buffer.
+nnoremap [1;5B |"						<CTRL>+<DOWN> = Scroll up one line.
+nnoremap [1;3B ddp|"						<ALT>+<DOWN> = Move text on current line down one line.
+vnoremap [1;3B dp`[V`]|"					<ALT>+<DOWN> = Move selected lines down one line.
+nnoremap [1;5A |"						<CTRL>+<UP> = Scroll up one line.
+nnoremap [1;3A ddkP|"						<ALT>+<DOWN> = Move text on current line up one line.
+vnoremap [1;3A dkkp`[V`]|"					<ALT>+<UP> = Move selected lines up one line.
+nnoremap <Leader>b 1GO#!/usr/bin/bash<ESC>:set ft=sh<CR>|"	\b = Insert #! and set filetype.
+nnoremap l :set list! list?<CR>|"				<Alt>+l = Display whitespace characters.
+nnoremap e :set expandtab! expandtab?<CR>|"			<Alt>+e = Toggle 'Expandtab' and display.
+nnoremap T ^gU$yypv$r=|"					<Alt>+T = Uppercase whole line and underline.
+nnoremap OA gk|"						<Up> = Cursor up one virtual line.
+nnoremap OB gj|"						<Down> = Cursor down one virtual line.
+nnoremap i :set ic! ic?<CR>|"					<Alt>+i = Toggle 'Ignorecase' option.
+nnoremap zz :nnoremap j jzz<CR><Bar>:nnoremap k kzz<CR>
+nnoremap zb :nnoremap j jzb<CR><Bar>:nnoremap k kzb<CR>
+nnoremap zt :nnoremap j jzt<CR><Bar>:nnoremap k kzt<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	     SOME INSERT COMPLETIONS			"
