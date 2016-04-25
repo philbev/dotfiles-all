@@ -59,7 +59,6 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
 syntax on
-setlocal noshowmode
 set spelllang=en
 set nospell
 set complete+=d,kspell
