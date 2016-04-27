@@ -82,10 +82,8 @@ set history=1000
 let g:clang_close_preview = 1
 set omnifunc=syntaxcomplete#Complete
 set cursorline
-if &background == "dark"
+if &background == "light"
     colorscheme darkbg
-else
-    colorscheme lightbg
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
