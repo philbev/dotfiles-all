@@ -7,3 +7,10 @@
 	ci = commit
 	br = branch
 	co = checkout
+[color "status"]
+    added = green
+    changed = red bold
+    untracked = magenta bold
+[color "diff"]
+    new = magenta bold
+    old = green bold
