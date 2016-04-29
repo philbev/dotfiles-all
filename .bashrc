@@ -29,7 +29,7 @@ ps_local='\[\033[1;34m\][\u:\w]\$ \[\033[0m\]'
 ps_ssh="\033[1;35m(\h) $ps_local"
 who -m | grep -q '([^:]\+)' && PS1="$ps_ssh" || PS1="$ps_local"
 export PS1
-export LESS="-R"
+export LESS="-eFRX"
 export HISTCONTROL=ignoredups:ignorespace:erasedups
 export HISTTIMEFORMAT="%c: "
 export QUEUEDIR=/home/philbev/.sbopkg/queues	# Needed for Sbopkg
