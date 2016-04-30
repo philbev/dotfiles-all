@@ -92,7 +92,7 @@ endif
 augroup group1
     autocmd!
     au VimEnter * NoMatchParen
-    au VimEnter,BufRead,BufEnter,ColorScheme colorscheme default
+    au VimEnter,BufRead,BufEnter,ColorScheme * colorscheme darkbg
     "au VimEnter * AirlineTheme base16-isotope
     "au VimEnter * AirlineTheme base16-default
     au BufWritePost .vimrc source $MYVIMRC
