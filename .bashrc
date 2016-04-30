@@ -64,8 +64,6 @@ alias f='find / -name'
 alias gitl='git log --decorate --oneline --graph'
 alias grep='grep --color=auto --directories=skip'
 alias ifc='/sbin/ifconfig'
-alias l='ls -lF --color --group-directories-first'
-alias la='ls -alF --color --group-directories-first'
 alias lh='ls -lhF --color --group-directories-first'
 alias lph='lp -o orientation-requested=4'
 alias lpp='lp -o prettyprint'
@@ -188,14 +186,22 @@ gh () {
 }
 
 
+l () {
+    ls -lF --color --group-directories-first $1 | less
+}
+
+la () {
+    ls -alF --color --group-directories-first  $1 | less
+}
+
 ll () {
 
-	ls -AlvF --color --group-directories-first $1 | less 
+	ls -AlF --color --group-directories-first $1 | less 
 }
 
 lm () {
 
-	ls -AlvF --color --group-directories-first $1 | more
+	ls -AlF --color --group-directories-first $1 | more
 }
 
 inf () {
