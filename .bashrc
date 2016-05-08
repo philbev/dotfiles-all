@@ -140,7 +140,7 @@ fi
 #fi
 
 dh () {
-    du $@ -d 1 -xh | sort -rh
+    du "$@" -d 1 -xh | sort -rh
 }
 
 rsync-slack64 () {
@@ -175,7 +175,7 @@ rsync-german () {
 }
 
 g () {
-	g++ -o ${1%.cpp} $@
+	g++ -o ${1%.cpp} "$@"
 }
 
 gh () {
@@ -183,30 +183,30 @@ gh () {
         echo "grep for <search-item> in history:-"
         echo "Usage: gh <search-item>"
     fi
-    history | grep $@ 2>/dev/null
+    history | grep "$@" 2>/dev/null
 }
 
 
 l () {
-    ls -lF --color --group-directories-first $@ | less
+    ls -lF --color --group-directories-first "$@" | less
 }
 
 la () {
-    ls -alF --color --group-directories-first  $@ | less
+    ls -alF --color --group-directories-first  "$a" | less
 }
 
 ll () {
 
-	ls -AlF --color --group-directories-first $@ | less 
+	ls -AlF --color --group-directories-first "$a" | less 
 }
 
 lm () {
 
-	ls -AlF --color --group-directories-first $@ | more
+	ls -AlF --color --group-directories-first "$@" | more
 }
 
 inf () {
-	info coreutils $@ "invocation"
+	info coreutils "$@" "invocation"
 }
 
 mydate () {
