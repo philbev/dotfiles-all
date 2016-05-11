@@ -131,9 +131,9 @@ nnoremap T ^gU$yypv$r=|"					<Alt>+T = Uppercase whole line and underline.
 nnoremap OA gk|"						<Up> = Cursor up one virtual line.
 nnoremap OB gj|"						<Down> = Cursor down one virtual line.
 nnoremap i :set ic! ic?<CR>|"					<Alt>+i = Toggle 'Ignorecase' option.
-nnoremap zz :nnoremap j jzz<CR><Bar>:nnoremap k kzz<CR>
-nnoremap zb :nnoremap j jzb<CR><Bar>:nnoremap k kzb<CR>
-nnoremap zt :nnoremap j jzt<CR><Bar>:nnoremap k kzt<CR>
+"nnoremap zz :nnoremap j jzz<CR><Bar>:nnoremap k kzz<CR>
+"nnoremap zb :nnoremap j jzb<CR><Bar>:nnoremap k kzb<CR>
+"nnoremap zt :nnoremap j jzt<CR><Bar>:nnoremap k kzt<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	     SOME INSERT COMPLETIONS			"
