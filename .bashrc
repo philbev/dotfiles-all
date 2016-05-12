@@ -128,9 +128,9 @@ fi
 # The "root" user needs its initialization files updated regularly to keep in sync with user "philbev".
 # This should only be run as superuser, hence the "if" statement. While we are at it, we'll update
 # the /etc/skel directory as well.
-if [ $USER = root ]; then
-	/usr/local/sbin/syncusers
-fi
+#if [ $USER = root ]; then
+	#/usr/local/sbin/syncusers
+#fi
 
 # The following allows root user to launch GUI programmes from the command line. Thanks
 # to AlienBob for this one :-)
