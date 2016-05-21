@@ -1,0 +1,17 @@
+*
+!.bash_logout
+!.bash_profile
+!.bashrc
+!.crontab
+!.emacs
+!.gvimrc
+!.inputrc
+!.msmtprc
+!.nvimrc
+!.vimrc
+!README.md
+!.gdbinit
+!.gitconfig
+!.gitignore
+!.git-completion.bash
+!.functions.sh
