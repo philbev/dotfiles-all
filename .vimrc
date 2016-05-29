@@ -27,6 +27,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'ratazzi/blackboard.vim'
+Plugin 'shawncplus/Vim-tocterm'
+Plugin 'joelfrederico/vim-HiLinkTrace'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
