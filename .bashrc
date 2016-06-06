@@ -69,6 +69,7 @@ alias lh='ls -lhF --color --group-directories-first'
 alias lph='lp -o orientation-requested=4'
 alias lpp='lp -o prettyprint'
 alias lpph='lp -o orientation-requested=4 -o prettyprint'
+alias lsblk='lsblk -o vendor,model,type,name,fstype,label,mountpoint,partlabel'
 alias startx='startx -- -nolisten tcp'
 alias v=nvim
 alias vib='vi $HOME/.bashrc'
