@@ -25,10 +25,21 @@ fi
 export PATH=$PATH:/usr/local/bin/android-studio/bin:/usr/local/bin/android-sdk-linux/platform-tools	# Needed for Android SDK
 export CDPATH=.:/usr/local:/usr/local/downloads:/usr/local/docs
 export LANG="en_GB.UTF-8"
+source .git-prompt.sh
+#ps_local='[\u:\w]$(__git_ps1 " (%s)")\$ '
 ps_local='\[\033[1;34m\][\u:\w]\$ \[\033[0m\]'
 ps_ssh="\033[1;35m(\h) $ps_local"
 who -m | grep -q '([^:]\+)' && PS1="$ps_ssh" || PS1="$ps_local"
 export PS1
+export GIT_PS1_SHOWCOLORHINTS=true
+ export GIT_PS1_SHOWDIRTYSTATE=true
+if [[ -d .git ]]; then
+    #PROMPT_COMMAND='history -a;__git_ps1 " (%s)"'
+    PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+else
+    PROMPT_COMMAND='history -a'
+fi
+export PROMPT_COMMAND
 export LESS="-eFRX"
 export HISTCONTROL=ignoredups:ignorespace:erasedups
 export HISTTIMEFORMAT="%c: "
