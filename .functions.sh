@@ -77,15 +77,19 @@ etime (){
 #################################
 
 is_git_dir () {
+    MODIFIED=false
+    STAGED=false
     BRANCH=$(git branch | sed -n '/^\*/s/^\* //p')
     if [[ -d .git ]]; then
 	if git status | grep -q 'Changes not staged'; then
-	    #echo -n "$(tput setaf 5)$(tput bold)Changes made to repository!$(tput sgr0)"
+	    MODIFIED=true
 	    echo -n "$(tput setaf 5)$(tput bold)($BRANCH)$(tput sgr0)"
 	fi
 	if git status | grep -q 'Changes to be committed'; then
-	    #echo "$(tput setaf 5)$(tput bold)Changes need to be committed!$(tput sgr0)"
+	    STAGED=true
 	    echo -n "$(tput setaf 2)$(tput bold)($BRANCH)$(tput sgr0)"
 	fi
+	if [ "$MODIFIED" = "true" -a "$STATUS" = "true" ]]; then
+	    echo -n "$(tput setaf 3)$(tput bold)($BRANCH)$(tput sgr0)" 
     fi
 }
