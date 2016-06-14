@@ -94,14 +94,13 @@ function PreCommand() {
 
   # Do stuff.
   #echo "Running PreCommand"	# PUT COMMAND HERE
-  is_git_dir			# is_git_dir() function in ~/.functions.
 }
 trap "PreCommand" DEBUG
 
 # This will run after the execution of the previous full command line.  We don't
 # want it PostCommand to execute when first starting a bash session (i.e., at
 # the first prompt).
-FIRST_PROMPT=1
+#FIRST_PROMPT=1	    # Commented out as is needed on first prompt an affects $PS1 only.
 function PostCommand() {
   AT_PROMPT=1
 
@@ -112,6 +111,7 @@ function PostCommand() {
 
   # Do stuff.
   #echo "Running PostCommand"
+  is_git_dir			# is_git_dir() function in ~/.functions.
 }
 PROMPT_COMMAND="PostCommand"
 
