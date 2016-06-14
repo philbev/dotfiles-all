@@ -96,5 +96,8 @@ is_git_dir () {
 	if [ "$MODIFIED" != "true" -a "$STAGED" = "true" ]; then 
 	    echo -n "$(tput setaf 2)$(tput bold)($BRANCH +)$(tput sgr0)"
 	fi
+	if [ "$MODIFIED" != "true" -a "$STAGED" != "true" ]; then 
+	    echo -n "$(tput setaf 4)$(tput bold)($BRANCH)$(tput sgr0)"
+	fi
     fi
 }
