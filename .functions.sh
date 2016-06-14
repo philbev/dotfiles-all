@@ -77,10 +77,10 @@ etime (){
 #################################
 
 is_git_dir () {
-    MODIFIED=false
-    STAGED=false
-    BRANCH=$(git branch | sed -n '/^\*/s/^\* //p')
     if [[ -d .git ]]; then
+	MODIFIED=false
+	STAGED=false
+	BRANCH=$(git branch | sed -n '/^\*/s/^\* //p')
 	if git status | grep -q 'Changes not staged'; then
 	    MODIFIED=true
 	fi
