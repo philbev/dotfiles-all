@@ -83,13 +83,18 @@ is_git_dir () {
     if [[ -d .git ]]; then
 	if git status | grep -q 'Changes not staged'; then
 	    MODIFIED=true
-	    echo -n "$(tput setaf 5)$(tput bold)($BRANCH)$(tput sgr0)"
 	fi
 	if git status | grep -q 'Changes to be committed'; then
 	    STAGED=true
-	    echo -n "$(tput setaf 2)$(tput bold)($BRANCH)$(tput sgr0)"
 	fi
-	if [ "$MODIFIED" = "true" -a "$STATUS" = "true" ]]; then
-	    echo -n "$(tput setaf 3)$(tput bold)($BRANCH)$(tput sgr0)" 
+	if [ "$MODIFIED" = "true" -a "$STAGED" = "true" ]; then 
+	    echo -n "$(tput setaf 3)$(tput bold)($BRANCH *+)$(tput sgr0)" 
+	fi
+	if [ "$MODIFIED" = "true" -a "$STAGED" != "true" ]; then 
+	    echo -n "$(tput setaf 5)$(tput bold)($BRANCH *)$(tput sgr0)"
+	fi
+	if [ "$MODIFIED" != "true" -a "$STAGED" = "true" ]; then 
+	    echo -n "$(tput setaf 2)$(tput bold)($BRANCH +)$(tput sgr0)"
+	fi
     fi
 }
