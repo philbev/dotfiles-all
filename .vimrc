@@ -31,6 +31,7 @@ Plugin 'ratazzi/blackboard.vim'
 Plugin 'shawncplus/Vim-tocterm'
 Plugin 'joelfrederico/vim-HiLinkTrace'
 Plugin 'ron89/thesaurus_query.vim'
+Plugin 'morhetz/gruvbox'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -87,9 +88,24 @@ set history=1000
 let g:clang_close_preview = 1
 set omnifunc=syntaxcomplete#Complete
 set cursorline
-if &background == "light"
-    colorscheme darkbg
-endif
+"if &background == "light"
+    "colorscheme darkbg
+"endif
+" The "^[" is a single character. You enter it by pressing Ctrl+v and then ESC.
+set t_8f=[38;2;%lu;%lu;%lum
+set t_8b=[48;2;%lu;%lu;%lum
+
+" Change the color scheme here.
+"colorscheme gruvbox
+
+" Makes the background transparent. Leave these out if you're not using a transparent
+" terminal.
+highlight Normal ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
+
+" This is what sets vim to use 24-bit colors. It will also work for any version of neovim
+" newer than 0.1.4.
+set termguicolors
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	    AUTOCOMMANDS GO HERE			"
