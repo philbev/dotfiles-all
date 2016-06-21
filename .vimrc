@@ -95,8 +95,8 @@ set cursorline
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
 
+set termguicolors
 " Change the color scheme here.
-"colorscheme gruvbox
 
 " Makes the background transparent. Leave these out if you're not using a transparent
 " terminal.
@@ -105,7 +105,7 @@ highlight NonText ctermbg=NONE guibg=NONE
 
 " This is what sets vim to use 24-bit colors. It will also work for any version of neovim
 " newer than 0.1.4.
-set termguicolors
+"colorscheme gruvbox
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	    AUTOCOMMANDS GO HERE			"
@@ -113,7 +113,7 @@ set termguicolors
 augroup group1
     autocmd!
     au VimEnter * NoMatchParen
-    au VimEnter,BufRead,BufEnter,ColorScheme * colorscheme darkbg
+    "au VimEnter,BufRead,BufEnter,ColorScheme * colorscheme darkbg
     "au VimEnter * AirlineTheme base16-isotope
     "au VimEnter * AirlineTheme base16-default
     au BufWritePost .vimrc source $MYVIMRC
