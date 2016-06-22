@@ -13,8 +13,6 @@ if [[ -f ~/.git-completion.bash ]]; then
     source .git-completion.bash
 fi
 
-#source .git-prompt.sh
-
 
 ###################################################################################################
 #			ENVIRONMENT VARIABLES							  #
@@ -26,12 +24,10 @@ fi
 export PATH=$PATH:/usr/local/bin/android-studio/bin:/usr/local/bin/android-sdk-linux/platform-tools	# Needed for Android SDK
 export CDPATH=.:/usr/local:/usr/local/downloads:/usr/local/docs
 export LANG="en_GB.UTF-8"
-#ps_local='[\u:\w]$(__git_ps1 " (%s)")\$ '
-ps_local='\[\033[1;34m\][\u:\w]\$ \[\033[0m\]'
+ps_local='$(is_git_dir)\[\033[1;34m\][\u:\w]\$ \[\033[0m\]'
 ps_ssh="\033[1;35m(\h) $ps_local"
 who -m | grep -q '([^:]\+)' && PS1="$ps_ssh" || PS1="$ps_local"
 export PS1
-export PROMPT_COMMAND
 export LESS="-eFRX"
 export HISTCONTROL=ignoredups:ignorespace:erasedups
 export HISTTIMEFORMAT="%c: "
@@ -85,38 +81,6 @@ alias viv='vi $HOME/.vimrc'
 ###################################################################################################
 #				FUNCTIONS							  #
 ###################################################################################################
-# This will run before any command is executed.
-function PreCommand() {
-  if [ -z "$AT_PROMPT" ]; then
-    return
-  fi
-  unset AT_PROMPT
-
-  # Do stuff.
-  #echo "Running PreCommand"	# PUT COMMAND HERE
-}
-trap "PreCommand" DEBUG
-
-# This will run after the execution of the previous full command line.  We don't
-# want it PostCommand to execute when first starting a bash session (i.e., at
-# the first prompt).
-#FIRST_PROMPT=1	    # Commented out as is needed on first prompt an affects $PS1 only.
-function PostCommand() {
-  AT_PROMPT=1
-
-  if [ -n "$FIRST_PROMPT" ]; then
-    unset FIRST_PROMPT
-    return
-  fi
-
-  # Do stuff.
-  #echo "Running PostCommand"
-  is_git_dir			# is_git_dir() function in ~/.functions.
-}
-PROMPT_COMMAND="PostCommand"
-
-
-
 
 # Let's back-up okular bookmark file to directory where it will not be deleted when KDE
 # is upgraded.
@@ -136,12 +100,6 @@ fi
 	#/usr/local/sbin/syncusers
 #fi
 
-# The following allows root user to launch GUI programmes from the command line. Thanks
-# to AlienBob for this one :-)
-#if [[ $USER == root ]]
-#then
-    #xauth merge ~philbev/.Xauthority
-#fi
 
 dh () {
     du "$@" -d 1 -xh | sort -rh
