@@ -10,7 +10,7 @@ if [[ -f $HOME/.functions.sh ]]; then
 fi
 
 if [[ -f ~/.git-completion.bash ]]; then
-    source .git-completion.bash
+    source ~/.git-completion.bash
 fi
 
 
@@ -36,6 +36,7 @@ export HISTFILESIZE=10000
 export HISTSIZE=1000
 export HISTIGNORE=l:ll:lm:c:a:h:la:lh
 export PROMPT_COMMAND="history -a"
+export PROMPT_DIRTRIM=2
 export REPOS=/usr/local/downloads/repositories
 export GREP_COLORS="ms=01;34:fn=01;32"
 export GVFS_DISABLE_FUSE=1
