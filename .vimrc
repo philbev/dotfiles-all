@@ -95,7 +95,10 @@ set cursorline
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
 
-set termguicolors
+if !has("gui-running")
+    set termguicolors
+    highlight SpellBad ctermbg=NONE guibg=Red guifg=White
+endif
 " Change the color scheme here.
 
 " Makes the background transparent. Leave these out if you're not using a transparent
