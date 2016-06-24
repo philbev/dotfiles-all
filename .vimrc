@@ -98,6 +98,7 @@ set t_8b=[48;2;%lu;%lu;%lum
 if !has("gui-running")
     set termguicolors
     highlight SpellBad ctermbg=NONE guibg=Red guifg=White
+    highlight  CursorLine cterm=NONE guibg=Grey40
 endif
 " Change the color scheme here.
 
