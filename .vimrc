@@ -89,7 +89,7 @@ let g:clang_close_preview = 1
 set omnifunc=syntaxcomplete#Complete
 set cursorline
 if &background == "light"
-    colorscheme darkbg
+    set background=dark
 endif
 " The "^[" is a single character. You enter it by pressing Ctrl+v and then ESC.
 set t_8f=[38;2;%lu;%lu;%lum
