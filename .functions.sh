@@ -141,4 +141,9 @@ gitn () {
 	    git log --decorate --oneline --graph HEAD~20..HEAD
     		;;
     esac
+
+    # While we're at it let's generate a (very simple) completion.
 }
+
+complete -W "1 2 3 4 5 6 7 8 9 10 15" gitn
+
