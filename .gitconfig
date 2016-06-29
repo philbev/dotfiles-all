@@ -14,3 +14,7 @@
 [color "diff"]
     new = magenta bold
     old = green bold
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
