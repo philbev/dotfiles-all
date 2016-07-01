@@ -75,25 +75,9 @@ let g:clang_close_preview = 1
 set omnifunc=syntaxcomplete#Complete
 set cursorline
 
-if has('nvim')
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-    set history&
-    colorscheme elflord
-else
-    set history=300
-    colorscheme default
-endif
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set history&
 
-"if $USER == "root"
-"set background=dark
-"endif
-
-
-if $TERM != "xterm-256color"
-    colorscheme lightbg
-else
-    colorscheme darkbg
-endif
 
 "AUTOCOMMANDS GO HERE
 augroup group2
