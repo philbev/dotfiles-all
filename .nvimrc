@@ -70,6 +70,8 @@ set nospell
 set complete+=d,kspell
 set cpo+=$
 set dictionary=/usr/dict/words
+set thesaurus=/usr/local/docs/mthesaur.txt
+let g:python_host_prog = '/usr/bin'
 set listchars=tab:➤\ ,eol:⤦,space:·
 set noexpandtab shiftwidth=4 tabstop=8 softtabstop=4
 set ignorecase smartcase
