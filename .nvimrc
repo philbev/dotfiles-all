@@ -17,8 +17,22 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-surround'
+Plugin 'godlygeek/tabular'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'scrooloose/nerdtree'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'ratazzi/blackboard.vim'
+Plugin 'shawncplus/Vim-tocterm'
+Plugin 'joelfrederico/vim-HiLinkTrace'
+Plugin 'ron89/thesaurus_query.vim'
+Plugin 'morhetz/gruvbox'
+
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
