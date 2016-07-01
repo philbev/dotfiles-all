@@ -76,6 +76,7 @@ set omnifunc=syntaxcomplete#Complete
 set cursorline
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set bg=dark
 set history&
 
 
