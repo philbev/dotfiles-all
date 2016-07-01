@@ -81,7 +81,7 @@ set hlsearch
 set number relativenumber
 set pastetoggle=<F11>
 "set statusline=%<%t\ %y%m%r[%{\&ff}]\ \ \ \ [Buffer:\ %n]\ \ \ ASCII:\ %b:0x%B%=%-14.(%l,%c%V%)\ %P
-set statusline=%t\ %y%m%r[%{\&ff}]\ [Buffer:\ %n][ASCII:\ %b\ (Dec)\ :\ 0x%B\ (Hex)]%=%([Line:%l\ of\ %L,Column:%c%V][%p%%]%)
+"set statusline=%t\ %y%m%r[%{\&ff}]\ [Buffer:\ %n][ASCII:\ %b\ (Dec)\ :\ 0x%B\ (Hex)]%=%([Line:%l\ of\ %L,Column:%c%V][%p%%]%)
 set runtimepath+=~/.vim/ftplugin
 set noundofile
 set history=1000
@@ -118,7 +118,7 @@ augroup group1
     autocmd!
     au VimEnter * NoMatchParen
     "au VimEnter,BufRead,BufEnter,ColorScheme * colorscheme darkbg
-    "au VimEnter * AirlineTheme base16-isotope
+    au VimEnter * AirlineTheme xtermlight
     "au VimEnter * AirlineTheme base16-default
     au BufWritePost .vimrc source $MYVIMRC
     "au VimEnter  * AirlineTheme base16-harmonic16
