@@ -76,6 +76,7 @@ set omnifunc=syntaxcomplete#Complete
 set cursorline
 
 if has('nvim')
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
     set history&
     colorscheme elflord
 else
