@@ -81,7 +81,7 @@ is_git_dir () {
 	MODIFIED=false
 	STAGED=false
 	BRANCH=$(git branch | sed -n '/^\*/s/^\* //p')
-	if git status | grep -q 'Changes not staged'; then
+	if git status | grep -Eq 'Changes not staged for commit:|Untracked files:'; then
 	    MODIFIED=true
 	fi
 	if git status | grep -q 'Changes to be committed'; then
