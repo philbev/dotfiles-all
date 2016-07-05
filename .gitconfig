@@ -18,3 +18,5 @@
 	tool = vimdiff
 [mergetool]
 	prompt = false
+[credential]
+	helper = store
