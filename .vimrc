@@ -102,10 +102,9 @@ if !has("gui-running")
 endif
 " Change the color scheme here.
 
-" Makes the background transparent. Leave these out if you're not using a transparent
-" terminal.
-highlight Normal ctermbg=NONE guibg=NONE
-highlight NonText ctermbg=NONE guibg=NONE
+" Makes the background for all konsole backgrounds, no matter what the colour.
+highlight Normal ctermbg=NONE guibg=#404040 guifg=White
+highlight NonText ctermbg=NONE guibg=#404040 guifg=White
 
 " This is what sets vim to use 24-bit colors. It will also work for any version of neovim
 " newer than 0.1.4.
