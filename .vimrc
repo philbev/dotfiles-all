@@ -92,9 +92,11 @@ set cursorline
 if &background == "light"
     set background=dark
 endif
-" The "^[" is a single character. You enter it by pressing Ctrl+v and then ESC.
-set t_8f=[38;2;%lu;%lu;%lum
-set t_8b=[48;2;%lu;%lu;%lum
+" The two lines below are not needed if TERM is set to xterm-256color.
+" Thus in this case they are no longer needed and will be commented out before
+" eventually they will be deleted.
+"set t_8f=[38;2;%lu;%lu;%lum
+"set t_8b=[48;2;%lu;%lu;%lum
 
 if !has("gui-running")
     set termguicolors
