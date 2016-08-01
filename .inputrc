@@ -34,9 +34,9 @@ set skip-completed-text on
 ############### MISCELLANEOUS MACROS ##############################
 "[1;5A": "cd .."                #<Control>+<Up> 
 "`": "$()OD"                      #<`>
-"g": "\C-e | grep "               #<Alt>+g
-"m": "\C-e | more"                #<Alt>+m
-"l": "\C-e | less"                #<Alt>+l
+g": "\C-e | grep "               #<Alt>+g
+m": "\C-e | more"                #<Alt>+m
+l": "\C-e | less"                #<Alt>+l
 "1": "!:1 "                       #<Alt>+1 - First argument of previous command
 "2": "!:2 "                       #<Alt>+2 - Second argument of previous command
 "3": "!:3 "                       #<Alt>+3 - Third argument of previous command
