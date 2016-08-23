@@ -53,7 +53,6 @@ shopt -s histappend
 alias ..="cd .."
 alias a=alias
 alias c=clear
-alias cat=less
 alias dot='. $HOME/.bash_profile'
 alias dot='. $HOME/.bashrc'
 alias ej0='eject -T /dev/sr0'
