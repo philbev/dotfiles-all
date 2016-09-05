@@ -91,7 +91,8 @@ let g:clang_close_preview = 1
 set omnifunc=syntaxcomplete#Complete
 set cursorline
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
 set bg=dark
 set history&
 
