@@ -33,6 +33,7 @@ Plugin 'joelfrederico/vim-HiLinkTrace'
 Plugin 'ron89/thesaurus_query.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'joequery/Stupid-EasyMotion'
+Plugin 'easymotion/vim-easymotion'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
