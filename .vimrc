@@ -34,6 +34,7 @@ Plugin 'ron89/thesaurus_query.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'chazy/cscope_maps'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
