@@ -15,6 +15,7 @@
  '(custom-safe-themes
    (quote
     ("962dacd99e5a99801ca7257f25be7be0cebc333ad07be97efd6ff59755e6148f" default)))
+ '(org-agenda-files (quote ("~/bash.org")))
  '(package-selected-packages
    (quote
     (org-gcal org-bullets evil-org yasnippet airline-themes powerline org))))
