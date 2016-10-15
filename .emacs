@@ -15,7 +15,9 @@
  '(custom-safe-themes
    (quote
     ("962dacd99e5a99801ca7257f25be7be0cebc333ad07be97efd6ff59755e6148f" default)))
- '(org-agenda-files (quote ("~/bash.org")))
+ '(org-agenda-files
+   (quote
+    ("~/mylife.org" "~/vim.org" "~/emacs.org" "~/bash.org")))
  '(package-selected-packages
    (quote
     (org-gcal org-bullets evil-org yasnippet airline-themes powerline org))))
@@ -35,6 +37,8 @@
 
 (setq package-enable-at-startup nil)
 (package-initialize)
+
+(require 'org)
 
 ;; Evil configuration
 (setq evil-want-C-i-jump nil)
