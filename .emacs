@@ -39,6 +39,7 @@
 (package-initialize)
 
 (require 'org)
+(define-key org-mode-map (kbd "\C-c a") 'org-agenda)
 
 ;; Evil configuration
 (setq evil-want-C-i-jump nil)
