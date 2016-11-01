@@ -18,6 +18,7 @@
  '(org-agenda-files
    (quote
     ("~/mylife.org" "~/vim.org" "~/emacs.org" "~/bash.org")))
+ '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
     (org-gcal org-bullets evil-org yasnippet airline-themes powerline org))))
