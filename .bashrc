@@ -13,6 +13,10 @@ if [[ -f ~/.git-completion.bash ]]; then
     source ~/.git-completion.bash
 fi
 
+# Give some colour to man pages.
+if [[ -f /home/philbev/.less_colours.sh	]]; then
+	source ~/.less_colours.sh
+fi
 
 ###################################################################################################
 #			ENVIRONMENT VARIABLES							  #
