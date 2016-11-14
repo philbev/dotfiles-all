@@ -44,6 +44,7 @@
 ;; <S-left> and <S-right> don't work in konsole so using 'Control' rather than 'Shift' modifier key.
 (define-key org-mode-map (kbd "<C-left>") 'org-shiftleft)
 (define-key org-mode-map (kbd "<C-right>") 'org-shiftright)
+(setq org-icalendar-include-todo t)
 
 ;; Evil configuration
 (setq evil-want-C-i-jump nil)
