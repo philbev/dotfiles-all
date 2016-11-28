@@ -21,13 +21,13 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (org-gcal org-bullets evil-org yasnippet airline-themes powerline org))))
+    (org-journal ## org-gcal org-bullets evil-org yasnippet airline-themes powerline org org-journal-dir))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 122 :width normal)))))
 
 
 (require 'package)
@@ -41,6 +41,7 @@
 
 (require 'org)
 (define-key org-mode-map (kbd "\C-c a") 'org-agenda)
+;(define-key org-mode-map (kbd "\C-c\C-j") 'org-journal-new-entry)
 ;; <S-left> and <S-right> don't work in konsole so using 'Control' rather than 'Shift' modifier key.
 (define-key org-mode-map (kbd "<C-left>") 'org-shiftleft)
 (define-key org-mode-map (kbd "<C-right>") 'org-shiftright)
@@ -70,3 +71,5 @@
 ;;(require 'org-bullets)
 ;;(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
+(setq org-journal-dir "/usr/local/docs/journal/")
+(require 'org-journal)
