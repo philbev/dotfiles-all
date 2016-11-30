@@ -46,6 +46,8 @@
 (define-key org-mode-map (kbd "<C-left>") 'org-shiftleft)
 (define-key org-mode-map (kbd "<C-right>") 'org-shiftright)
 (setq org-icalendar-include-todo t)
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(define-key global-map "\C-cc" 'org-capture)
 
 ;; Evil configuration
 (setq evil-want-C-i-jump nil)
@@ -68,8 +70,16 @@
       airline-utf-glyph-readonly            #xe0a2
       airline-utf-glyph-linenumber          #xe0a1)
 
-;;(require 'org-bullets)
-;;(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
+<<<<<<< HEAD
 (setq org-journal-dir "/usr/local/docs/journal/")
 (require 'org-journal)
+=======
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+             "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+	     "* %?\nEntered on %U\n  %i\n  %a")))
+>>>>>>> emacs
