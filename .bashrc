@@ -77,6 +77,7 @@ alias lsblk='lsblk -o vendor,model,type,name,fstype,label,mountpoint,partlabel'
 alias startx='startx -- -nolisten tcp'
 alias v=nvim
 alias vib='vi $HOME/.bashrc'
+alias vie='emacs -g 120x50+1000+200'
 alias vil='vi $HOME/.bash_logout'
 alias vip='vi $HOME/.bash_profile'
 alias viv='vi $HOME/.vimrc'
