@@ -73,13 +73,22 @@
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
-<<<<<<< HEAD
-(setq org-journal-dir "/usr/local/docs/journal/")
+;(setq org-journal-dir "/usr/local/docs/journal/")
 (require 'org-journal)
-=======
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
-             "* TODO %?\n  %i\n  %a")
-        ("j" "Journal" entry (file+datetree "~/org/journal.org")
-	     "* %?\nEntered on %U\n  %i\n  %a")))
->>>>>>> emacs
+      '(("t" "Todo" entry (file+headline "~/Dropbox/Apps/Emacs/tasks.org" "Tasks")
+             "* TODO \n  - %?\n  %i\n  %a")
+	("c" "Computing Stuff" entry (file+headline "~/Dropbox/Apps/Emacs/computer_stuff.org" "New Captures")
+	                  "* TODO \n  - %?\n  %i\n  %a")
+	("d" "Desktop Notes" entry (file+headline "~/Dropbox/Apps/Emacs/desktop_notes.org" "New Captures")
+	                  "* TODO \n  - %?\n  %i\n  %a")
+	("e" "Emacs" entry (file+headline "~/Dropbox/Apps/Emacs/emacs.org" "New Captures")
+	                  "* TODO \n  - %?\n  %i\n  %a")
+	("g" "GDB" entry (file+headline "~/Dropbox/Apps/Emacs/gdb.org" "New Capture")
+	                  "* TODO \n  - %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/Dropbox/Apps/Emacs/journal.org")
+	     "* \n  - %?\nEntered on %U\n  %i\n  %a")
+	("m" "Mylife" entry (file+headline "~/Dropbox/Apps/Emacs/mylife.org" "New Captures")
+	                  "* TODO \n  - %?\n  %i\n  %a")
+	("v" "Vim" entry (file+headline "~/Dropbox/Apps/Emacs/vim.org" "New Capture")
+	                  "* TODO \n  - %?\n  %i\n  %a")))
