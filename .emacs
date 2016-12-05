@@ -94,3 +94,6 @@
 	                  "* TODO \n  - %?\n  %i\n  %a")
 	("v" "Vim" entry (file+headline "~/Dropbox/Apps/Emacs/vim.org" "New Capture")
 	                  "* TODO \n  - %?\n  %i\n  %a")))
+
+;; auto close bracket insertion. New in emacs 24
+(electric-pair-mode 1)
