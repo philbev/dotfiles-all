@@ -70,8 +70,10 @@
       airline-utf-glyph-readonly            #xe0a2
       airline-utf-glyph-linenumber          #xe0a1)
 
-(require 'org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(if (not (display-graphic-p))
+  (ignore)
+  (require 'org-bullets)
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 ;(setq org-journal-dir "/usr/local/docs/journal/")
 (require 'org-journal)
