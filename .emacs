@@ -17,7 +17,7 @@
     ("962dacd99e5a99801ca7257f25be7be0cebc333ad07be97efd6ff59755e6148f" default)))
  '(org-agenda-files
    (quote
-    ("~/mylife.org" "~/vim.org" "~/emacs.org" "~/bash.org")))
+    ("~/Dropbox/Apps/Emacs/mylife.org" "~/vim.org" "~/emacs.org" "~/bash.org")))
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
