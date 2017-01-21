@@ -105,7 +105,8 @@ endif
 if !has("gui-running")
     set termguicolors
     highlight SpellBad ctermbg=NONE guibg=Red guifg=White
-    highlight  CursorLine cterm=NONE guibg=Grey40
+    highlight CursorLine cterm=NONE guibg=Grey40
+    highlight MatchParen guibg=red
 endif
 " Change the color scheme here.
 
@@ -122,7 +123,6 @@ highlight NonText ctermbg=NONE guibg=#404040 guifg=White
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup group1
     autocmd!
-    au VimEnter * NoMatchParen
     "au VimEnter,BufRead,BufEnter,ColorScheme * colorscheme darkbg
     au VimEnter * AirlineTheme xtermlight
     "au VimEnter * AirlineTheme base16-default
