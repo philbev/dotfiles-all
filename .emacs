@@ -15,6 +15,7 @@
  '(custom-safe-themes
    (quote
     ("962dacd99e5a99801ca7257f25be7be0cebc333ad07be97efd6ff59755e6148f" default)))
+ '(global-linum-mode t)
  '(org-agenda-files
    (quote
     ("~/Dropbox/Apps/Emacs/mylife.org" "~/vim.org" "~/emacs.org" "~/bash.org")))
@@ -27,7 +28,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 122 :width normal)))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 122 :width normal))))
+ '(linum ((t (:inherit (default shadow) :foreground "light gray" :weight bold)))))
 
 
 (require 'package)
