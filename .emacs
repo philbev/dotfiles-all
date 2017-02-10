@@ -29,6 +29,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 122 :width normal))))
+ '(hl-line ((t (:background "dim gray"))))
  '(linum ((t (:inherit (default shadow) :foreground "light gray" :weight bold)))))
 
 
@@ -100,3 +101,5 @@
 ;; auto close bracket insertion. New in emacs 24
 (electric-pair-mode 1)
 (put 'narrow-to-region 'disabled nil)
+; Save emacs sessions
+(desktop-save-mode 1)
