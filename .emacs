@@ -22,14 +22,15 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (rainbow-delimiters which-key org-journal ## org-gcal org-bullets evil-org yasnippet airline-themes powerline org org-journal-dir))))
+    (rainbow-delimiters org-journal ## org-gcal org-bullets evil-org yasnippet airline-themes powerline org org-journal-dir))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 122 :width normal))))
- '(hl-line ((t (:background "dim gray"))))
+ '(cursor ((t (:background "PeachPuff"))))
+ '(hl-line ((t (:background "#454545"))))
  '(linum ((t (:inherit (default shadow) :foreground "light gray" :weight bold))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "white"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "red"))))
@@ -48,7 +49,7 @@
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
 (setq package-enable-at-startup nil)
-(package-initialize)
+;;(package-initialize)
 
 (require 'org)
 (define-key org-mode-map (kbd "\C-c a") 'org-agenda)
@@ -123,3 +124,6 @@
 ;;Coloured parentheses for lisp
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;;Highlight the cursor line.
+(global-hl-line-mode)
