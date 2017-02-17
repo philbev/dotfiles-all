@@ -4,10 +4,7 @@
 !.bashrc
 !.crontab
 !.emacs.d/init.el
-<<<<<<< HEAD
 .emacs
-=======
->>>>>>> 1408d61bb2f24282dbb84f2cc1fd566dc0133d16
 !.gvimrc
 !.inputrc
 !.msmtprc
