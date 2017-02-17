@@ -3,7 +3,8 @@
 !.bash_profile
 !.bashrc
 !.crontab
-!.emacs
+!.emacs.d/init.el
+.emacs
 !.gvimrc
 !.inputrc
 !.msmtprc
