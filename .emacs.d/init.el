@@ -18,7 +18,7 @@
  '(global-linum-mode t)
  '(org-agenda-files
    (quote
-    ("~/Dropbox/Apps/Emacs/mylife.org" "~/vim.org" "~/emacs.org" "~/bash.org")))
+    ("~/Dropbox/Apps/Emacs/mylife.org" "~/vim.org" "~/bash.org")))
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
