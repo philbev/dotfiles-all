@@ -16,9 +16,7 @@
    (quote
     ("962dacd99e5a99801ca7257f25be7be0cebc333ad07be97efd6ff59755e6148f" default)))
  '(global-linum-mode t)
- '(org-agenda-files
-   (quote
-    ("~/Dropbox/Apps/Emacs/mylife.org" "~/vim.org" "~/bash.org")))
+ '(org-agenda-files (quote ("~/Dropbox/Apps/Emacs/mylife.org" "~/vim.org")))
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
@@ -62,9 +60,9 @@
 (define-key global-map "\C-cc" 'org-capture)
 
 ;; Evil configuration
-(setq evil-want-C-i-jump nil)
-(require 'evil)
-(evil-mode t)
+;;(setq evil-want-C-i-jump nil)
+;;(require 'evil)
+;;(evil-mode -1)
 
 (require 'powerline)
 (powerline-center-evil-theme)
@@ -127,3 +125,10 @@
 
 ;;Highlight the cursor line.
 (global-hl-line-mode)
+
+;;Some key binding
+(global-set-key (kbd "<f5>") 'flyspell-mode)
+(global-set-key (kbd "C-<f5>") 'linum-mode)
+(global-set-key (kbd "C-z") 'evil-mode)
+
+(savehist-mode)
