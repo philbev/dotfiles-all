@@ -171,7 +171,7 @@ nnoremap c c|"						<ALT>+c = Close window.
 nnoremap o o|"						<ALT>+o = Only window (Close all others).
 nnoremap s s|"						<ALT>+s = Split window.
 nnoremap v v|"						<ALT>+v = Split window vertically.
-noremap w w|"						<ALT>+w = Next window.
+nnoremap w w|"						<ALT>+w = Next window.
 nnoremap # |"						<ALT>+# = Edit alternate buffer.
 nnoremap [1;5B |"						<CTRL>+<DOWN> = Scroll up one line.
 nnoremap [1;3B ddp|"						<ALT>+<DOWN> = Move text on current line down one line.
