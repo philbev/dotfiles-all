@@ -130,5 +130,6 @@
 (global-set-key (kbd "<f5>") 'flyspell-mode)
 (global-set-key (kbd "C-<f5>") 'linum-mode)
 (global-set-key (kbd "C-z") 'evil-mode)
-
+(global-set-key (kbd "C-a") 'back-to-indentation)
+(global-set-key (kbd "M-m") 'move-beginning-of-line)
 (savehist-mode)
