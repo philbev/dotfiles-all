@@ -20,7 +20,7 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (rainbow-delimiters org-journal ## org-gcal org-bullets evil-org yasnippet airline-themes powerline org org-journal-dir))))
+    (linum-relative rainbow-delimiters org-journal ## org-gcal org-bullets evil-org yasnippet airline-themes powerline org org-journal-dir))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -133,3 +133,7 @@
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "M-m") 'move-beginning-of-line)
 (savehist-mode)
+
+;;Relative line numbers just like vim :-)
+(require 'linum-relative)
+(linum-relative-on)
