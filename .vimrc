@@ -37,7 +37,6 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'chazy/cscope_maps'
 Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-speeddating'
-Plugin 'luochen1990/rainbow'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
