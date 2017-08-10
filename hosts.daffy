@@ -7,6 +7,8 @@
 192.168.1.10	yosemite.looney.co.uk	yosemite    yos    sam	# Samsung TV
 192.168.1.11	porky.looney.co.uk	porky	    yv		# Youview
 192.168.1.12	sylvester.looney.co.uk	sylvester   blue	# Panasonic Blu-ray player
+192.168.1.14	fire.looney.co.uk	fire			# Amazon Fire TV
+192.168.1.22	now.looney.co.uk	now			# Now TV
 212.58.244.66	www.bbc.co.uk		bbc    beeb    auntie	# Test for internet connection.
 # The lines below are hopefully temporary until my or Plusnet's DNS issues are resolved.
 91.109.244.240	slackware.uk		slackware   slack
