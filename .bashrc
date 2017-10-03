@@ -48,6 +48,7 @@ export CXXFLAGS='-std=c++14 -g -Wall'
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export SLACK_DIR=/usr/local/downloads/repositories/slackware64/latest
 shopt -s histappend
+shopt -s checkwinsize	#Hopefully this will stop bash from messing up my screen occasionally.
 
 
 
