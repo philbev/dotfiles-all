@@ -58,8 +58,8 @@ sie sind               they are
 USEFUL BASH COMMAND-LINE SHORTCUTS
 ==================================
            
-Ctrl-], Alt-S       - Character search
-Alt-Ctrl-], Alt-Q   - Character search backward
+Ctrl-], Alt-Q       - Character search
+Alt-Ctrl-], Alt-S  - Character search backward
 Ctrl-X Ctrl-U       - undo
 Ctr--               - undo
 Ctrl-T              - Transpose characters
