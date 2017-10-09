@@ -28,7 +28,17 @@ fi
 export PATH=$PATH:/usr/local/bin/android-studio/bin:/usr/local/bin/android-sdk-linux/platform-tools	# Needed for Android SDK
 export CDPATH=.:/usr/local:/usr/local/downloads:/usr/local/docs
 export LANG="en_GB.UTF-8"
-ps_local='$(is_git_dir)\[\033[1;34m\][\u:\w]\$ \[\033[0m\]'
+
+# Need to source ~/.bashrc every time a directory is changed so as to get the status of git.
+function cd() {
+    new_directory="$*";
+    if [ $# -eq 0 ]; then
+        new_directory=${HOME};
+    fi;
+    builtin cd "${new_directory}" && . ~/.bashrc
+}
+
+ps_local='\[\033[1;35m\]$(is_git_dir)\[\033[1;34m\][\u:\w]\$ \[\033[0m\]'
 ps_ssh="\033[1;35m(\h) $ps_local"
 who -m | grep -q '([^:]\+)' && PS1="$ps_ssh" || PS1="$ps_local"
 export PS1

@@ -72,42 +72,6 @@ etime (){
     printf "Time elapsed = %02d:%02d:%02d\n" $hrs $mins $secs
 }
 
-#################################
-#	   CHECK GIT STATUS	#
-#################################
-
-is_git_dir () {
-    if [[ -d .git ]]; then
-	MODIFIED=false
-	STAGED=false
-	BRANCH=$(git branch | sed -n '/^\*/s/^\* //p')
-	if git status | grep -Eq 'Changes not staged for commit:|Untracked files:'; then
-	    MODIFIED=true
-	fi
-	if git status | grep -q 'Changes to be committed'; then
-	    STAGED=true
-	fi
-	#if [ "$MODIFIED" = "true" -a "$STAGED" = "true" ]; then 
-	    #echo -n "$(tput setaf 3)$(tput bold)($BRANCH *+)$(tput sgr0)" 
-	    #echo -n "\[\033[1;33m\]($BRANCH *+)\[\033[0m]\]" 
-	#if
-	if [ "$MODIFIED" = "true" -a "$STAGED" != "true" ]; then 
-	    #echo -n "$(tput setaf 5)$(tput bold)($BRANCH *)$(tput sgr0)"
-	    #echo -en "\033[1;35m($BRANCH *+)\033[0m]" 
-	    echo -n "(Modified)"
-	fi
-	if [ "$MODIFIED" != "true" -a "$STAGED" = "true" ]; then 
-	    #echo -n "$(tput setaf 2)$(tput bold)($BRANCH +)$(tput sgr0)"
-	    #echo -n "\[\033[1;32m\]($BRANCH *+)\[\033[0m]\]" 
-	    echo -n "(Staged)"
-	fi
-	#if [ "$MODIFIED" != "true" -a "$STAGED" != "true" ]; then 
-	    #echo -n "$(tput setaf 4)$(tput bold)($BRANCH)$(tput sgr0)"
-	    #echo -n "\[\033[1;34m\]($BRANCH *+)\[\033[0m]\]" 
-	#fi
-    fi
-}
-
 gitn () {
     case $1 in
     	1)
@@ -152,3 +116,30 @@ gitn () {
 # While we're at it let's generate a (very simple) completion.
 complete -W "1 2 3 4 5 6 7 8 9 10 15" gitn
 
+
+is_git_dir () {
+if [[ -d .git ]]; then
+    MODIFIED=false
+    STAGED=false
+    BRANCH=$(git branch | sed -n '/^\*/s/^\* //p')
+    if git status | grep -Eq 'Changes not staged for commit:|Untracked files:'; then
+	MODIFIED=true
+    fi
+    if git status | grep -q 'Changes to be committed'; then
+	STAGED=true
+    fi
+    if [[ $MODIFIED == "true" && $STAGED == "false" ]]; then
+	echo "($BRANCH-Modified)"
+    fi
+    if [[ $MODIFIED == "false" && $STAGED == "true" ]]; then
+	echo "($BRANCH-Staged)"
+    fi
+    if [[ $MODIFIED == "true" && $STAGED == "true" ]]; then
+	echo "($BRANCH-Modified+Staged)"
+    fi
+    if [[ $MODIFIED == "false" && $STAGED == "false" ]]; then
+	:   #Do nothing
+    fi
+fi
+
+}
