@@ -117,6 +117,8 @@ set history=1000
 let g:clang_close_preview = 1
 set omnifunc=syntaxcomplete#Complete
 set cursorline
+" This reduces the leaving insert mode. The delay was caused by airline.
+setlocal timeoutlen=100 ttimeoutlen=0
 if &background == "light"
     set background=dark
 endif
