@@ -129,13 +129,13 @@ if [[ -d .git ]]; then
 	STAGED=true
     fi
     if [[ $MODIFIED == "true" && $STAGED == "false" ]]; then
-	echo "($BRANCH-Modified)"
+	echo "($BRANCH)"
     fi
     if [[ $MODIFIED == "false" && $STAGED == "true" ]]; then
-	echo "($BRANCH-Staged)"
+	echo "($BRANCH)"
     fi
     if [[ $MODIFIED == "true" && $STAGED == "true" ]]; then
-	echo "($BRANCH-Modified+Staged)"
+	echo "($BRANCH)"
     fi
     if [[ $MODIFIED == "false" && $STAGED == "false" ]]; then
 	:   #Do nothing
