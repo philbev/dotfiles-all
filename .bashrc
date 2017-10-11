@@ -18,6 +18,12 @@ if [[ -f /home/philbev/.less_colours.sh	]]; then
 	source ~/.less_colours.sh
 fi
 
+# Give some colour to man pages.
+if [[ -f /home/philbev/.colors	]]; then
+	source ~/.colors
+fi
+
+
 ###################################################################################################
 #			ENVIRONMENT VARIABLES							  #
 ###################################################################################################
