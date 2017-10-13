@@ -117,6 +117,7 @@ gitn () {
 complete -W "1 2 3 4 5 6 7 8 9 10 15" gitn
 
 
+# is_git_dir() function returns the git branch only if there have been modifications.
 is_git_dir () {
 if [[ -d .git ]]; then
     MODIFIED=false
