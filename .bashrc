@@ -44,7 +44,7 @@ function cd() {
     builtin cd "${new_directory}" && . ~/.bashrc
 }
 
-ps_local='\[\033[1;35m\]$(is_git_dir)\[\033[1;34m\][\u:\w]\$ \[\033[0m\]'
+ps_local="\[$bold$yellowfg\]$(is_git_dir)\[$bold$cyanfg\][\u:\w]\$ \[\033[0m\]"
 ps_ssh="\033[1;35m(\h) $ps_local"
 who -m | grep -q '([^:]\+)' && PS1="$ps_ssh" || PS1="$ps_local"
 export PS1
