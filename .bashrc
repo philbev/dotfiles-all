@@ -18,11 +18,15 @@ if [[ -f /home/philbev/.less_colours.sh	]]; then
 	source ~/.less_colours.sh
 fi
 
-# Give some colour to man pages.
+# Define some variables to be used for colours
 if [[ -f /home/philbev/.colors	]]; then
 	source ~/.colors
 fi
 
+# To reflect status of git.
+if [[ -f ~/.set_prompt.sh ]]; then
+    source ~/.set_prompt.sh
+fi
 
 ###################################################################################################
 #			ENVIRONMENT VARIABLES							  #
