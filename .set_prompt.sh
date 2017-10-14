@@ -10,16 +10,16 @@ if [[ -d .git ]]; then	#Are wi in a git repository?
 	STAGED=true
     fi
     if [[ $MODIFIED == "true" && $STAGED == "false" ]]; then
-	export PS1="\[$bold$yellowfg\]($BRANCH)\[$bold$cyanfg\][\u:\w]\$ \[\033[0m\]"
+	export PS1="\[$bold$yellowfg\]($BRANCH)\[$bold$cyanfg\][\u:\w]\\$ \[\033[0m\]"
     fi
     if [[ $MODIFIED == "false" && $STAGED == "true" ]]; then
-	export PS1="\[$bold$greenfg\]($BRANCH)\[$bold$cyanfg\][\u:\w]\$ \[\033[0m\]"
+	export PS1="\[$bold$greenfg\]($BRANCH)\[$bold$cyanfg\][\u:\w]\\$ \[\033[0m\]"
     fi
     if [[ $MODIFIED == "true" && $STAGED == "true" ]]; then
-	export PS1="\[$bold$magentafg\]($BRANCH)\[$bold$cyanfg\][\u:\w]\$ \[\033[0m\]"
+	export PS1="\[$bold$magentafg\]($BRANCH)\[$bold$cyanfg\][\u:\w]\\$ \[\033[0m\]"
     fi
     if [[ $MODIFIED == "false" && $STAGED == "false" ]]; then
-	export PS1="$bold$cyanfg\][\u:\w]\$ \[\033[0m\]"
+	export PS1="$bold$cyanfg\][\u:\w]\\$ \[\033[0m\]"
     fi
 fi
 
