@@ -14,12 +14,12 @@ if [[ -f ~/.git-completion.bash ]]; then
 fi
 
 # Give some colour to man pages.
-if [[ -f /home/philbev/.less_colours.sh	]]; then
+if [[ -f ~/.less_colours.sh	]]; then
 	source ~/.less_colours.sh
 fi
 
 # Define some variables to be used for colours
-if [[ -f /home/philbev/.colors	]]; then
+if [[ -f ~/.colors	]]; then
 	source ~/.colors
 fi
 
