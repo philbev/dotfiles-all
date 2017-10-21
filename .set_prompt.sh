@@ -22,6 +22,6 @@ if [[ -d .git ]]; then	#Are wi in a git repository?
 	export PS1="\[$bold$cyanfg\][\u:\w]\\$ \[\033[0m\]"
     fi
 else
-    export PS1="$bold$cyanfg\][\u:\w]\\$ \[\033[0m\]"
+    export PS1="\[$bold$cyanfg\][\u:\w]\\$ \[\033[0m\]"
 fi
 
