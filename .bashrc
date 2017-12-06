@@ -99,8 +99,10 @@ alias startx='startx -- -nolisten tcp'
 alias v=nvim
 alias vib='vi $HOME/.bashrc'
 alias vie='vi $HOME/.emacs'
+alias vii='nvim /home/philbev/.config/nvim/init.vim'
 alias vil='vi $HOME/.bash_logout'
 alias vip='vi $HOME/.bash_profile'
+alias vin='nvim /home/philbev/.config/nvim/init.vim'
 alias viv='vi $HOME/.vimrc'
 
 
