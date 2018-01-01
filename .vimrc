@@ -1,59 +1,77 @@
 " MY /HOME/.VIMRC INITIALISATION FILE
 
 set nocompatible
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		VUNDLE CONFIGURATION				"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype off
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	    Vim-plug configuration					"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+"call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/ftplugin/')
 
-" Keep Plugin commands between vundle#begin/end.
+" Make sure you use single quotes
 
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-surround'
-Plugin 'godlygeek/tabular'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Rip-Rip/clang_complete'
-Plugin 'scrooloose/nerdtree'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'ratazzi/blackboard.vim'
-Plugin 'shawncplus/Vim-tocterm'
-Plugin 'joelfrederico/vim-HiLinkTrace'
-Plugin 'ron89/thesaurus_query.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'joequery/Stupid-EasyMotion'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'chazy/cscope_maps'
-Plugin 'jceb/vim-orgmode'
-Plugin 'tpope/vim-speeddating'
-Plugin 'machakann/vim-highlightedyank'
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Rip-Rip/clang_complete'
+Plug 'scrooloose/nerdtree'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'ratazzi/blackboard.vim'
+Plug 'shawncplus/Vim-tocterm'
+Plug 'joelfrederico/vim-HiLinkTrace'
+Plug 'ron89/thesaurus_query.vim'
+Plug 'morhetz/gruvbox'
+Plug 'joequery/Stupid-EasyMotion'
+Plug 'easymotion/vim-easymotion'
+Plug 'chazy/cscope_maps'
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'machakann/vim-highlightedyank'
+" Any valid git URL is allowed
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
-" plugin from http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-"Plugin 'ascenator/L9', {'name': 'newL9'}
+" Multiple Plug commands can be written in a single line using | separators
+"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-" All of your Plugins must be added before the following line
-call vundle#end()	     " required
+" On-demand loading
+"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+
+" Using a non-master branch
+"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+
+" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
+"Plug 'fatih/vim-go', { 'tag': '*' }
+
+" Plugin options
+"Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+
+" Plugin outside ~/.vim/plugged with post-update hook
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" Unmanaged plugin (manually installed and updated)
+"Plug '~/my-prototype-plugin'
+
+" Initialize plugin system
+call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"		Plug-vim configuration ends			     "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
