@@ -24,3 +24,4 @@
 !.less_colours.sh
 !.colors
 !.set_prompt.sh
+!.vim/ftplugin/*.vim

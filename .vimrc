@@ -9,7 +9,7 @@ set nocompatible
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
 "call plug#begin('~/.vim/plugged')
-call plug#begin('~/.vim/ftplugin/')
+call plug#begin('~/.vim/plugged/')
 
 " Make sure you use single quotes
 
@@ -137,7 +137,7 @@ set number relativenumber
 set pastetoggle=<F11>
 "set statusline=%<%t\ %y%m%r[%{\&ff}]\ \ \ \ [Buffer:\ %n]\ \ \ ASCII:\ %b:0x%B%=%-14.(%l,%c%V%)\ %P
 "set statusline=%t\ %y%m%r[%{\&ff}]\ [Buffer:\ %n][ASCII:\ %b\ (Dec)\ :\ 0x%B\ (Hex)]%=%([Line:%l\ of\ %L,Column:%c%V][%p%%]%)
-set runtimepath+=~/.vim/ftplugin
+set runtimepath+=~/.vim/plugged
 set noundofile
 set history=1000
 let g:clang_close_preview = 1
