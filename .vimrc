@@ -143,8 +143,6 @@ set history=1000
 let g:clang_close_preview = 1
 set omnifunc=syntaxcomplete#Complete
 set cursorline
-" This reduces the leaving insert mode. The delay was caused by airline.
-setlocal timeoutlen=100 ttimeoutlen=0
 if &background == "light"
     set background=dark
 endif
@@ -226,7 +224,6 @@ nnoremap i :set ic! ic?<CR>|"					<Alt>+i = Toggle 'Ignorecase' option.
 inoremap  |"		<Ctrl>+f = Filename completion.
 inoremap  |"		<Ctrl>+d = Macro completion.
 inoremap  |"		<Ctrl>+l = Whole line completion.
-inoremap u <Esc>gUiw`]a|"	<Alt>+u = Make word upper case.
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	     SOME VISUAL MODE MAPPINGS			"
