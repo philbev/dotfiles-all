@@ -101,6 +101,7 @@ alias lpph='lp -o orientation-requested=4 -o prettyprint'
 alias lsblk='lsblk -o model,type,name,fstype,size,label,mountpoint,partlabel'
 alias startx='startx -- -nolisten tcp'
 alias v=nvim
+alias vi=nvim
 alias vib='vi $HOME/.bashrc'
 alias vie='vi $HOME/.emacs'
 alias vii='nvim /home/philbev/.config/nvim/init.vim'
