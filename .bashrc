@@ -53,7 +53,7 @@ ps_ssh="\033[1;35m(\h) $ps_local"
 who -m | grep -q '([^:]\+)' && PS1="$ps_ssh" || PS1="$ps_local"
 export PS1
 export LESS="-eFRX"
-if $USER != "root"
+if [[ $USER != "root" ]]; then
     export HISTCONTROL=ignoredups:ignorespace:erasedups
 else
     export HISTCONTROL=ignoredups:ignorespace
