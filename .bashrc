@@ -53,10 +53,14 @@ ps_ssh="\033[1;35m(\h) $ps_local"
 who -m | grep -q '([^:]\+)' && PS1="$ps_ssh" || PS1="$ps_local"
 export PS1
 export LESS="-eFRX"
-export HISTCONTROL=ignoredups:ignorespace:erasedups
+if $USER != "root"
+    export HISTCONTROL=ignoredups:ignorespace:erasedups
+else
+    export HISTCONTROL=ignoredups:ignorespace
+fi
 export HISTTIMEFORMAT="%c: "
 export QUEUEDIR=/home/philbev/.sbopkg/queues	# Needed for Sbopkg
-export HISTFILESIZE=10000
+export HISTFILESIZE=50000
 export HISTSIZE=1000
 export HISTIGNORE=l:ll:lm:c:a:h:la:lh
 export PROMPT_COMMAND="history -a;source ~/.set_prompt.sh"
