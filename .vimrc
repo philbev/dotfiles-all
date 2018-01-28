@@ -130,6 +130,7 @@ set noexpandtab shiftwidth=4 tabstop=8 softtabstop=4
 set ignorecase smartcase
 set wildmode=full wildmenu
 set laststatus=2
+set showcmd
 set hidden
 set nobackup
 set hlsearch
