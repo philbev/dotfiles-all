@@ -147,11 +147,38 @@ set cursorline
 if &background == "light"
     set background=dark
 endif
-" The two lines below are not needed if TERM is set to xterm-256color.
-" Thus in this case they are no longer needed and will be commented out before
-" eventually they will be deleted.
-"set t_8f=[38;2;%lu;%lu;%lum
-"set t_8b=[48;2;%lu;%lu;%lum
+
+if !has("nvim")
+    execute "set <M-a>=\ea"
+    execute "set <M-b>=\eb"
+    execute "set <M-c>=\ec"
+    execute "set <M-d>=\ed"
+    execute "set <M-e>=\ee"
+    execute "set <M-f>=\ef"
+    execute "set <M-g>=\eg"
+    execute "set <M-h>=\eh"
+    execute "set <M-i>=\ei"
+    execute "set <M-j>=\ej"
+    execute "set <M-k>=\ek"
+    execute "set <M-l>=\el"
+    execute "set <M-m>=\em"
+    execute "set <M-n>=\en"
+    execute "set <M-o>=\eo"
+    execute "set <M-p>=\ep"
+    execute "set <M-q>=\eq"
+    execute "set <M-r>=\er"
+    execute "set <M-s>=\es"
+    execute "set <M-t>=\et"
+    execute "set <M-u>=\eu"
+    execute "set <M-v>=\ev"
+    execute "set <M-w>=\ew"
+    execute "set <M-x>=\ex"
+    execute "set <M-y>=\ey"
+    execute "set <M-z>=\ez"
+    execute "set <M-/>=\e/"
+    execute "set <M-\\>=\e\\"
+    execute "set <M-.>=\e."
+endif
 
 if !has("gui-running")
     set termguicolors
@@ -189,18 +216,19 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	    KEY MAPPINGS GO HERE"			"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap / :bn<cr>|"						<ALT>+/ = Next buffer.
-nnoremap \ :bp<cr>|"						<ALT>+\ = Previous buffer.
-nnoremap . :bp<cr>|"						<ALT>+. = Previous buffer.
+"nnoremap / :bn<cr>|"						<ALT>+/ = Next buffer.
+nnoremap <M-/> :bn<cr>|"						<ALT>+/ = Next buffer.
+nnoremap <M-\> :bp<cr>|"						<ALT>+\ = Previous buffer.
+nnoremap <M-.> :bp<cr>|"						<ALT>+. = Previous buffer.
 nnoremap [3;3~ :bd<cr>|"					<Alt>+<Del> = Delete buffer.
-nnoremap N n|"						<ALT>+N = New window.
-nnoremap n |"						<ALT>+n = Next window.
-nnoremap c c|"						<ALT>+c = Close window.
-nnoremap o o|"						<ALT>+o = Only window (Close all others).
-nnoremap s s|"						<ALT>+s = Split window.
-nnoremap v v|"						<ALT>+v = Split window vertically.
-nnoremap w w|"						<ALT>+w = Next window.
-nnoremap # |"						<ALT>+# = Edit alternate buffer.
+nnoremap <M-N> n|"						<ALT>+N = New window.
+nnoremap <M-n> |"						<ALT>+n = Next window.
+nnoremap <M-c> c|"						<ALT>+c = Close window.
+nnoremap <M-o> o|"						<ALT>+o = Only window (Close all others).
+nnoremap <M-s> s|"						<ALT>+s = Split window.
+nnoremap <M-v> v|"						<ALT>+v = Split window vertically.
+nnoremap <M-w> w|"						<ALT>+w = Next window.
+nnoremap <M-#> |"						<ALT>+# = Edit alternate buffer.
 nnoremap [1;5B |"						<CTRL>+<DOWN> = Scroll up one line.
 nnoremap [1;3B ddp|"						<ALT>+<DOWN> = Move text on current line down one line.
 vnoremap [1;3B dp`[V`]|"					<ALT>+<DOWN> = Move selected lines down one line.
