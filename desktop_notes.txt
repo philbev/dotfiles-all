@@ -1,3 +1,6 @@
+########################################################################
+###			ITALIAN					    ####
+########################################################################
 Essere - to be
 
 io sono noi siamo
@@ -41,7 +44,9 @@ e - closed like late
 Ɔ - open like got (ò)
 o - closed like goat
 
-
+########################################################################
+###		    GERMAN					    ####
+########################################################################
 
 Alt-Gr+A = ä
 Alt-Gr+= = ö
@@ -55,8 +60,9 @@ wir sind              we are
 ihr seid               you are
 sie sind               they are
 
-USEFUL BASH COMMAND-LINE SHORTCUTS
-==================================
+########################################################################
+###		USEFUL BASH COMMAND-LINE SHORTCUTS		    ####
+########################################################################
            
 Ctrl-], Alt-Q       - Character search
 Alt-Ctrl-], Alt-S  - Character search backward
@@ -78,8 +84,9 @@ Alt-BackSpace       - Kill the word behind point
 Ctrl-W              - Kill the word behind point (white space as boundary)
 Alt-A               - Kill whole line
 
-GDB CHEATSHEET
-==============
+########################################################################
+###		    GDB CHEATSHEET				    ###
+########################################################################
 
 For gdb to run correctly the compiler g++ must be run with the -g option to
 include gdb debugging symbols.E.g.
@@ -130,13 +137,24 @@ Basic commands from within gdb:
 
 	Hitting "Enter" repeats the previous command.
 
-
-USEFUL VIM HELP PAGES
-=====================
+########################################################################
+###	    USEFUL VIM HELP PAGES				     ###
+########################################################################
 
 :h - ins-completion
 :h - key-notation
 :h - \%V
 :h - cmdline-special
 :h - :let-environment
+
+
+#########################################################################
+###		    MOUSE EFFECTS				      ###		    
+#########################################################################
+
+Mark mouse pointer on screen = Shift + Meta
+Clear last mark = Shift + Meta + F12
+Clear all marks = Shift + Meta + F11
+Track mouse = Ctrl + Meta 
+Toggle mouse click animation = Ctrl + Alt + Z
 
