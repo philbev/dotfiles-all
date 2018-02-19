@@ -127,11 +127,6 @@ if has('nvim')
     set guicursor=
     "Displays cursor in terminal mode. Useful when pasting.
     :hi! TermCursorNC ctermfg=15 guifg=#fdf6e3 ctermbg=14 guibg=#93a1a1 cterm=NONE gui=NONE
-    "In terminal mode use <A-r> to paste from registers while in 'insert'
-    "mode.
-    tnoremap <expr> <A-r> '<C-\><C-N>"'.nr2char(getchar()).'pi'
-    "Allows escape key to be used in terminal mode.
-    tnoremap <Esc> <C-\><C-n>
 endif
 
 if !has("gui-running")
@@ -210,6 +205,28 @@ inoremap @sb ß|"	<Window>+b
 inoremap @sB ß|"	<Window>+<Shift>+B
 inoremap @ss ß|"	<Window>+s
 inoremap @sS ß|"	<Window>+<Shift>+S
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"		TERMINAL KEY MAPPINGS		       "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has('nvim')
+    tnoremap <M-/> :bn<cr>|"		<ALT>+/ = Next buffer.
+    tnoremap <M-\> :bp<cr>|"		<ALT>+\ = Previous buffer.
+    tnoremap <M-.> :bp<cr>|"		<ALT>+. = Previous buffer.
+    tnoremap <M-Del> :bd<cr>|"		<Alt>+<Del> = Delete buffer.
+    tnoremap <M-N> n|"		<ALT>+N = New window.
+    tnoremap <M-n> |"		<ALT>+n = Next window.
+    tnoremap <M-c> c|"		<ALT>+c = Close window.
+    tnoremap <M-o> o|"		<ALT>+o = Only window (Close all others).
+    tnoremap <M-s> s|"		<ALT>+s = Split window.
+    tnoremap <M-v> v|"		<ALT>+v = Split window vertically.
+    tnoremap <M-w> w|"		<ALT>+w = Next window.
+    tnoremap <M-#> |"			<ALT>+# = Edit alternate buffer.
+    "In terminal mode use <A-r> to paste from registers while in 'insert' mode.
+    tnoremap <expr> <A-r> '<C-\><C-N>"'.nr2char(getchar()).'pi'
+    "Allows escape key to be used in terminal mode.
+    tnoremap <Esc> <C-\><C-n>
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	    FUNCTION KEYS <F1> TO <F12>			"
