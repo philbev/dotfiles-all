@@ -14,7 +14,7 @@
  '(custom-enabled-themes (quote (tsdh-dark)))
  '(custom-safe-themes
    (quote
-    ("962dacd99e5a99801ca7257f25be7be0cebc333ad07be97efd6ff59755e6148f" default)))
+    ("b59d7adea7873d58160d368d42828e7ac670340f11f36f67fa8071dbf957236a" "962dacd99e5a99801ca7257f25be7be0cebc333ad07be97efd6ff59755e6148f" default)))
  '(global-linum-mode t)
  '(org-agenda-files (quote ("~/Dropbox/Apps/Emacs/mylife.org")))
  '(org-log-into-drawer t)
@@ -112,9 +112,9 @@
 (desktop-save-mode 1)
 
 ;; Configuration of package 'which-key'
-(add-to-list 'load-path "path/to/which-key.el")
-(require 'which-key)
-(which-key-mode)
+;(add-to-list 'load-path "path/to/which-key.el")
+;(require 'which-key)
+;(which-key-mode)
 
 ;; Don't want a toolbar at the top
 (tool-bar-mode -1)
@@ -143,6 +143,6 @@
 
 
 ;; Evil configuration
-;;(setq evil-want-C-i-jump nil)
-;;(require 'evil)
-;;(evil-mode -1)
+(setq evil-want-C-i-jump nil)
+(require 'evil)
+(evil-mode -1)
