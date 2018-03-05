@@ -280,7 +280,7 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeShowBookmarks=1
 
-nnoremap <M-F1> :echo "		VIM FUNCTION KEYS\n
+nnoremap <M-O>3P :echo "		VIM FUNCTION KEYS\n
 	\		⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺\n\n
 		\<ALT>+<F1>	- Display Function Keys.\n
 		\<F1>		- Vim help.\n
