@@ -20,7 +20,7 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (linum-relative rainbow-delimiters org-journal ## org-gcal org-bullets evil-org yasnippet airline-themes powerline org org-journal-dir))))
+    (which-key linum-relative rainbow-delimiters org-journal ## org-gcal org-bullets evil-org yasnippet airline-themes powerline org org-journal-dir))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -112,9 +112,9 @@
 (desktop-save-mode 1)
 
 ;; Configuration of package 'which-key'
-;(add-to-list 'load-path "path/to/which-key.el")
-;(require 'which-key)
-;(which-key-mode)
+(add-to-list 'load-path "path/to/which-key.el")
+(require 'which-key)
+(which-key-mode)
 
 ;; Don't want a toolbar at the top
 (tool-bar-mode -1)
