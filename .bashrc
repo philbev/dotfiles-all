@@ -104,11 +104,11 @@ alias v=nvim
 alias vi=nvim
 alias vib='vi $HOME/.bashrc'
 alias vie='vi $HOME/.emacs'
-alias vii='nvim /home/philbev/.config/nvim/init.vim'
+alias vii='nvim $HOME/.config/nvim/init.vim'
 alias vil='vi $HOME/.bash_logout'
 alias vip='vi $HOME/.bash_profile'
-alias vin='nvim /home/philbev/.config/nvim/init.vim'
-alias viv='vi $HOME/.vimrc'
+alias vin='nvim $HOME/.config/nvim/init.vim'
+alias viv='vim $HOME/.vimrc'
 
 
 
