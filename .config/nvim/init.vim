@@ -46,6 +46,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
+Plug 'Yggdroot/indentLine'
 "" Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 "" The plugins below are for vimOrganizer
@@ -76,6 +77,8 @@ Plug 'hsitz/VimOrganizer'
 " Initialize plugin system
 call plug#end()
 
+filetype plugin indent on
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		Plug-vim configuration ends			     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -94,6 +97,14 @@ au VimEnter * let g:airline_right_sep = '⮂'
 
 let g:airline#extensions#whitespace#enabled = 0
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"		INDENTlINE				"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  let g:indentLine_enabled = 1
+  let g:indentLine_concealcursor = 0
+  let g:indentLine_char = '┆'
+  let g:indentLine_faster = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		CONFIGURATION OPTIONS GO HERE		"
