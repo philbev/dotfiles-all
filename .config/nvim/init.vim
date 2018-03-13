@@ -47,6 +47,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
 Plug 'Yggdroot/indentLine'
+Plug 'ryanoasis/vim-devicons'
+Plug 'edkolev/promptline.vim'
 "" Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 "" The plugins below are for vimOrganizer
@@ -97,6 +99,9 @@ au VimEnter * let g:airline_right_sep = '⮂'
 
 let g:airline#extensions#whitespace#enabled = 0
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#left_sep = '⮀'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		INDENTlINE				"
