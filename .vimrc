@@ -46,6 +46,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'chazy/cscope_maps'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
+Plug 'Yggdroot/indentLine'
+Plug 'ryanoasis/vim-devicons'
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
