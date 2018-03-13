@@ -20,3 +20,5 @@
 	prompt = false
 [credential]
 	helper = store
+[core]
+	editor = nvim
