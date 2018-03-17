@@ -36,6 +36,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 "Plug 'garbas/vim-snipmate'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'ratazzi/blackboard.vim'
 Plug 'shawncplus/Vim-tocterm'
 Plug 'joelfrederico/vim-HiLinkTrace'
@@ -103,6 +105,18 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#left_sep = '⮀'
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"		ULTISNIPS CONFIGURATION		 		    "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:UltiSnipsEditSplit = 'horizontal'
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsListSnippets = '<c-s>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
+let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+let g:UltiSnipsSnippetDirectories=["vim-snippets", "UltiSnips"]
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
