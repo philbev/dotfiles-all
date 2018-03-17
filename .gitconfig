@@ -12,8 +12,8 @@
     changed = red bold
     untracked = magenta bold
 [color "diff"]
-    new = magenta bold
-    old = green bold
+    old = magenta bold
+    new = green bold
 [merge]
 	tool = vimdiff
 [mergetool]
