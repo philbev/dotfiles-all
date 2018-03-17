@@ -32,7 +32,9 @@ Plug 'Rip-Rip/clang_complete'
 Plug 'scrooloose/nerdtree'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
+"Plug 'garbas/vim-snipmate'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'ratazzi/blackboard.vim'
 Plug 'shawncplus/Vim-tocterm'
 Plug 'joelfrederico/vim-HiLinkTrace'
@@ -103,13 +105,26 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#left_sep = '⮀'
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	MULTISNIPS CONFIGURATION					"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:UltiSnipsEditSplit = 'horizontal'
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsListSnippets = '<c-s>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
+let g:UltiSnipsSnippetsDir = '~/.local/share/nvim/site/UltiSnips'
+let g:UltiSnipsSnippetDirectories=["vim-snippets", "UltiSnips"]
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		INDENTlINE				"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-  let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = 0
-  let g:indentLine_char = '┆'
-  let g:indentLine_faster = 1
+let g:indentLine_enabled = 1
+let g:indentLine_concealcursor = 0
+let g:indentLine_char = '┆'
+let g:indentLine_faster = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		CONFIGURATION OPTIONS GO HERE		"
