@@ -106,11 +106,12 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#left_sep = '⮀'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	MULTISNIPS CONFIGURATION					"
+"	    ULTISNIPS CONFIGURATION					"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsExpandTrigger = '<tab>'
+"let g:UltiSnipsListSnippets = '<tab>'
 let g:UltiSnipsListSnippets = '<c-s>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
