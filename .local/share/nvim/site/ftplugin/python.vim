@@ -18,11 +18,11 @@ else
 endif
 augroup END
 
-inoremap <buffer> ( ()<Left>
-inoremap <buffer> { {}<Left>
-inoremap <buffer> ' ''<Left>
-inoremap <buffer> " ""<Left>
-inoremap <buffer> [ []<Left>
+"inoremap <buffer> ( ()<Left>
+"inoremap <buffer> { {}<Left>
+"inoremap <buffer> ' ''<Left>
+"inoremap <buffer> " ""<Left>
+"inoremap <buffer> [ []<Left>
 inoremap <buffer> <leader>p #!/usr/bin/python3
 nnoremap <buffer> <leader>p I#!/usr/bin/python3<CR>
 
