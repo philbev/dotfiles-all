@@ -153,4 +153,32 @@ fi
 
 }
 
+#####################################################
+#  c() A FUNCTION TO CHANGE TO POPULAR DIRECTORIES  #
+#####################################################
+
+cusage () {
+    echo "Usage: c a|d|p|r|v"
+    return 1
+}
+
+c () {
+if [[ $1 != 'a' && $1 != 'd' && $1 != 'p' && $1 != 'r' && $1 != v ]]; then
+    cusage
+fi
+
+    case $1 in
+	a )
+	    cd /usr/local/audio/mp3 ;;
+	d )
+	    cd /usr/local/docs ;;
+	p )
+	    cd /usr/local/pictures ;;
+	r )
+	    cd /usr/local/downloads/repositories/;;
+	v )
+	    cd /usr/local/videos ;;
+
+	esac
+}
 
