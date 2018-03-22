@@ -81,7 +81,7 @@ shopt -s checkwinsize	#Hopefully this will stop bash from messing up my screen o
 ###################################################################################################
 alias ..="cd .."
 alias a=alias
-alias c=clear
+#alias c=clear
 alias dot='. $HOME/.bash_profile'
 alias dot='. $HOME/.bashrc'
 alias ej0='eject -T /dev/sr0'
