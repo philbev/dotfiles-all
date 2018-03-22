@@ -36,7 +36,6 @@ if [[ $USER != root ]]; then
     export LS_OPTIONS=${LS_OPTIONS/auto/always}
 fi
 export PATH=$PATH:/usr/local/bin/android-studio/bin:/usr/local/bin/android-sdk-linux/platform-tools	# Needed for Android SDK
-export CDPATH=.:/usr/local:/usr/local/downloads:/usr/local/docs
 export LANG="en_GB.UTF-8"
 
 # Need to source ~/.bashrc every time a directory is changed so as to get the status of git.
@@ -82,6 +81,11 @@ shopt -s checkwinsize	#Hopefully this will stop bash from messing up my screen o
 alias ..="cd .."
 alias a=alias
 #alias c=clear
+alias cda='cd /usr/local/audio/mp3'
+alias cdd='cd /usr/local/docs'
+alias cdp='cd /usr/local/pictures'
+alias cdr='cd /usr/local/downloads/repositories'
+alias cdv='cd /usr/local/videos'
 alias dot='. $HOME/.bash_profile'
 alias dot='. $HOME/.bashrc'
 alias ej0='eject -T /dev/sr0'
