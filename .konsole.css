@@ -1,0 +1,11 @@
+QTabBar::tab:selected {
+    background: #777777;
+    /*color: #ff0000;*/
+    font-weight: bold;
+}
+
+QTabBar::tab {
+    background: #404040;
+    min-width: 200px;
+}
+
