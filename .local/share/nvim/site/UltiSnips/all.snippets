@@ -5,3 +5,15 @@ West Bridgford
 Nottingham
 NG2 7HB
 endsnippet  
+
+snippet example "Print visual text - example"
+${1:print("${VISUAL:Default text}")}$0
+
+$1
+endsnippet
+
+snippet test "Just a test :-)" 
+<${1:div}>
+    ${2:"Body text"}
+</${1/(\w+)\s.*/$1/}>
+endsnippet  
