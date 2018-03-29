@@ -25,10 +25,14 @@ TAB: menu-complete
 "[Z": menu-complete-backward      #<Shift>+<TAB>
 "[2~": complete                   #<Insert>
 set disable-completion off
-set show-all-if-ambiguous off
+set show-all-if-ambiguous on
 set visible-stats on
 set colored-stats on
 set skip-completed-text on
+set colored-completion-prefix on
+set colored-stats on
+set completion-ignore-case on
+set completion-map-case on
 
 
 ############### MISCELLANEOUS MACROS ##############################
