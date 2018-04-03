@@ -107,6 +107,7 @@ alias lsblk='lsblk -o model,type,name,fstype,size,label,mountpoint,partlabel'
 alias startx='startx -- -nolisten tcp'
 alias v=nvim
 alias vi=nvim
+alias vim='TERM=xterm-256color vim'
 alias vib='vi $HOME/.bashrc'
 alias vie='vi $HOME/.emacs'
 alias vii='nvim $HOME/.config/nvim/init.vim'
