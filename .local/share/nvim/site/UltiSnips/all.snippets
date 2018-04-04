@@ -12,8 +12,34 @@ ${1:print("${VISUAL:Default text}")}$0
 $1
 endsnippet
 
-snippet test "Just a test :-)" 
-<${1:div}>
-    ${2:"Body text"}
-</${1/(\w+)\s.*/$1/}>
-endsnippet  
+snippet " "Double quotes" 
+"${1:${VISUAL}}"
+endsnippet
+
+snippet ' "Single quotes" 
+'${1:${VISUAL}}'
+endsnippet
+
+snippet ( "Parentheses" 
+(${1:${VISUAL}})
+endsnippet
+snippet { "Curly brackets" 
+{${1:${VISUAL}}}
+endsnippet
+
+snippet [ "Square brackets" 
+[${1:${VISUAL}}]
+endsnippet
+
+snippet ] "Square brackets" 
+[${1:${VISUAL}}]
+endsnippet
+
+snippet < "Angled brackets" 
+<${1:${VISUAL}}>
+endsnippet
+
+snippet > "Angled brackets" 
+<${1:${VISUAL}}>
+endsnippet
+
