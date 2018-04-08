@@ -5,26 +5,26 @@
 $include /etc/inputrc
 
 ############## EMACS FUNCTIONS #####################
-"q": character-search             #<Alt>+q
-"a": kill-whole-line              #<Alt>+a
-"s": character-search-backward    #<Alt>+s
-"[1;5C": forward-word             #<Ctrl>+<Right>
-"[1;5D": backward-word            #<Ctrl>+<Left>
-"x": shell-expand-line            #<Alt>+x
-"[A": history-search-backward	    #<Up>
-"[B": history-search-forward	    #<Down>
+"\eq": character-search             #<Alt>+q
+"\ea": kill-whole-line              #<Alt>+a
+"\es": character-search-backward    #<Alt>+s
+"\e[1;5C": forward-word             #<Ctrl>+<Right>
+"\e[1;5D": backward-word            #<Ctrl>+<Left>
+"\ex": shell-expand-line            #<Alt>+x
+"\e[A": history-search-backward	    #<Up>
+"\e[B": history-search-forward	    #<Down>
 
 ############### FUNCTION KEYS ##############################
-"OP": "less /home/philbev/.key_bindings.txt"        #<F1>
-"OQ": "bind 'set show-all-if-ambiguous on'"         #<F2>
-"OR": "bind 'set show-all-if-ambiguous off'"        #<F3>
-"[24~": "bind -f /home/philbev/.inputrc"            #<F12>
+"\eOP": "less /home/philbev/.key_bindings.txt"        #<F1>
+"\eOQ": "bind 'set show-all-if-ambiguous on'"         #<F2>
+"\eOR": "bind 'set show-all-if-ambiguous off'"        #<F3>
+"\e[24~": "bind -f /home/philbev/.inputrc"            #<F12>
 
 
 ################ COMPLETION FUNCTIONS + VARIABLES ##########
 TAB: menu-complete
-"[Z": menu-complete-backward      #<Shift>+<TAB>
-"[2~": complete                   #<Insert>
+"\e[Z": menu-complete-backward      #<Shift>+<TAB>
+"\e[2~": complete                   #<Insert>
 set disable-completion off
 set show-all-if-ambiguous on
 set visible-stats on
@@ -38,17 +38,17 @@ set menu-complete-display-prefix on
 
 
 ############### MISCELLANEOUS MACROS ##############################
-"[1;5A": "cd .."                #<Control>+<Up> 
-"`": "$()OD"                      #<`>
-#g": "\C-e | grep "               #<Alt>+g
-#m": "\C-e | more"                #<Alt>+m
-#l": "\C-e | less"                #<Alt>+l
-"1": "!:1 "                       #<Alt>+1 - First argument of previous command
-"2": "!:2 "                       #<Alt>+2 - Second argument of previous command
-"3": "!:3 "                       #<Alt>+3 - Third argument of previous command
-"4": "!:4 "                       #<Alt>+4 - Fourth argument of previous command
-"5": "!:5 "                       #<Alt>+5 - Fifth argument of previous command
-",": "!^ "                        #<Alt>+^ - First argument of previous command
+"\e[1;5A": "cd .."                #<Control>+<Up> 
+"`": "$()\eOD"                      #<`>
+#\eg": "\C-e | grep "               #<Alt>+g
+#\em": "\C-e | more"                #<Alt>+m
+#\el": "\C-e | less"                #<Alt>+l
+"\e1": "!:1 "                       #<Alt>+1 - First argument of previous command
+"\e2": "!:2 "                       #<Alt>+2 - Second argument of previous command
+"\e3": "!:3 "                       #<Alt>+3 - Third argument of previous command
+"\e4": "!:4 "                       #<Alt>+4 - Fourth argument of previous command
+"\e5": "!:5 "                       #<Alt>+5 - Fifth argument of previous command
+"\e,": "!^ "                        #<Alt>+^ - First argument of previous command
 
 
 #"@sf": character-search-backward  #<WinKey>+f
