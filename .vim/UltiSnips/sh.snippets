@@ -1,0 +1,45 @@
+snippet #! "Bash:#!: file header"
+#!/bin/bash
+$0
+endsnippet
+
+snippet case "Bash:case:" 
+case ${1:WORD} in
+    ${2:PATTERN} )
+	$3;;
+    ${4:PATTERN} )
+	$5;;
+    ${6:PATTERN} )
+	$7;;
+esac$0
+endsnippet
+
+snippet if "Bash:if: with VISUAL placeholder" 
+if [[ ${1:CONDITION} ]]; then
+    ${2:${VISUAL:STATEMENTS}}
+fi
+endsnippet
+
+snippet for "Bash:for: count"
+for (( ${1:COUNT}; $1 < ${2:LIMIT}; $1++ )); do
+    ${3:STATEMENTS_HERE}
+done$0
+endsnippet
+
+snippet fori "Bash:for in" 
+for ${1:WORD} in ${2:LIST}; do
+${3:COMMANDS}
+done$0
+endsnippet
+
+snippet wh "Bash:while: with VISUAL placeholder"
+while [[ ${1:condition} ]]; do
+    ${2:${VISUAL:statements}}
+done$0
+endsnippet
+
+snippet until "Bash:until: with VISUAL placeholder" 
+until [[ ${1:CONDITION} ]]; do
+    ${2:${VISUAL:COMMANDS}}
+done
+endsnippet
