@@ -118,6 +118,13 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsSnippetsDir = '~/.local/share/nvim/site/UltiSnips'
 let g:UltiSnipsSnippetDirectories=["vim-snippets", "UltiSnips"]
 
+""""""""""""""""""""""""""""
+"  DEOPLETE CONFIGURATION  "
+""""""""""""""""""""""""""""
+
+let g:deoplete#enable_at_startup = 1
+inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Up>"
+inoremap <expr> <Up> pumvisible() ? "\<C-n>" : "\<Down>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		INDENTlINE				"
@@ -133,7 +140,6 @@ let g:indentLine_faster = 1
 filetype plugin indent on
 syntax on
 "setlocal timeoutlen=100 ttimeoutlen=0
-let g:deoplete#enable_at_startup = 1
 set undofile
 set spelllang=en
 set nospell
