@@ -99,8 +99,8 @@ call plug#end()
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-au VimEnter * let g:airline_left_sep = '▶'
-au VimEnter * let g:airline_right_sep = '◀'
+au VimEnter * let g:airline_left_sep = ''
+au VimEnter * let g:airline_right_sep = ''
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
