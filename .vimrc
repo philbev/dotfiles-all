@@ -131,7 +131,7 @@ set complete+=d,kspell
 set cpo+=$
 set dictionary=/usr/dict/words
 set thesaurus=/usr/local/docs/mthesaur.txt
-set listchars=tab:➤\ ,eol:⤦,space:·
+set listchars=tab:➤\ ,eol:↲,space:·
 set noexpandtab shiftwidth=4 tabstop=8 softtabstop=4
 set ignorecase smartcase
 set wildmode=full wildmenu
