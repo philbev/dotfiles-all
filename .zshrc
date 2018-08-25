@@ -32,6 +32,8 @@ if [[ $TERM = linux ]]; then
 	setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu
 fi
 
+PS1=$'\e[1;38;2;255;255;0m[%m@%n]%% \e[0m'
+
 export LESS="-eFRX"
 export LANG=en_GB.UTF-8
 
