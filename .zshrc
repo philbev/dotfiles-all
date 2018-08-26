@@ -17,7 +17,7 @@ compinit
 
 autoload -Uz promptinit
 promptinit
-prompt fire red magenta blue white white
+#prompt fire red magenta blue white white
 
 # End of lines added by compinstall
 
@@ -32,7 +32,13 @@ if [[ $TERM = linux ]]; then
 	setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu
 fi
 
-PS1=$'\e[1;38;2;255;255;0m[%m@%n]%% \e[0m'
+PS1=$'%{\e[1;38;2;255;255;0m%}[%n@%M]%% %{\e[0m%}'
+RPS1=$'%{\e[1;38;2;255;0;0m%}[%w%D{th %b %Y} %T]%{\e[0m%}'
+fpath=( ~/.zfuncs "${fpath[@]}" )
+autoload -Uz hello	    # This is just an example.
+autoload -Uz print_dir
+precmd_functions=(print_dir)
+
 
 export LESS="-eFRX"
 export LANG=en_GB.UTF-8
@@ -92,3 +98,5 @@ bindkey "[3~" delete-char		# <Del> key
 bindkey "[F" end-of-line		# <End> key
 bindkey "[H" beginning-of-line	# <Home> key
 
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
