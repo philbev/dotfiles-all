@@ -125,13 +125,15 @@ alias viv='vim $HOME/.vimrc'
 
 # Let's back-up okular bookmark file to directory where it will not be deleted when KDE
 # is upgraded.
-slackver=`cat /etc/slackware-version | sed 's/Slackware //'`
-if [ ! -d /usr/local/backups/okular-$slackver ]; then
+if [[ -f /etc/slackver-version ]]; then		# Only if running Slacware OS.
+    slackver=`cat /etc/slackware-version | sed 's/Slackware //'`
+    if [ ! -d /usr/local/backups/okular-$slackver ]; then
 	mkdir -vp /usr/local/backups/okular-$slackver
-fi
-if [ /home/philbev/.kde/share/apps/okular/bookmarks.xml -nt /usr/local/backups/okular-${slackver}/bookmarks.xml ]; then
+    fi
+    if [ /home/philbev/.kde/share/apps/okular/bookmarks.xml -nt /usr/local/backups/okular-${slackver}/bookmarks.xml ]; then
 	echo "Backing up Okular bookmarks....."
 	cp -v /home/philbev/.kde/share/apps/okular/bookmarks.xml /usr/local/backups/okular-${slackver}/bookmarks.xml
+    fi
 fi
 
 # The "root" user needs its initialization files updated regularly to keep in sync with user "philbev".
