@@ -35,9 +35,9 @@ fi
 PS1=$'%{\e[1;38;2;255;255;0m%}[%n@%M]%% %{\e[0m%}'
 RPS1=$'%{\e[1;38;2;255;0;0m%}[%w%D{th %b %Y} %T]%{\e[0m%}'
 fpath=( ~/.zfuncs "${fpath[@]}" )
-autoload -Uz hello	    # This is just an example.
-autoload -Uz print_dir
-precmd_functions=(print_dir)
+#autoload -Uz hello	    # This is just an example.
+#autoload -Uz print_dir
+#precmd_functions=(print_dir)
 
 
 export LESS="-eFRX"
