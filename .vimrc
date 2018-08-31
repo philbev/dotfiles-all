@@ -49,7 +49,6 @@ Plug 'chazy/cscope_maps'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'Yggdroot/indentLine'
-Plug 'ryanoasis/vim-devicons'
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -62,6 +61,8 @@ endif
 Plug 'machakann/vim-highlightedyank'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+" Vin-devicons should be the last plug-in to be installed.
+Plug 'ryanoasis/vim-devicons'
 
 " Multiple Plug commands can be written in a single line using | separators
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -171,6 +172,7 @@ highlight WarningMsg term=standout ctermfg=224 guifg=White guibg=Red
 " This is what sets vim to use 24-bit colors. It will also work for any version of neovim
 " newer than 0.1.4.
 "colorscheme gruvbox
+"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	    AUTOCOMMANDS GO HERE			"

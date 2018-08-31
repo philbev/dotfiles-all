@@ -49,12 +49,12 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
 Plug 'Yggdroot/indentLine'
-Plug 'ryanoasis/vim-devicons'
 Plug 'edkolev/promptline.vim'
 "" Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 "" The plugins below are for vimOrganizer
 Plug 'hsitz/VimOrganizer'
+Plug 'ryanoasis/vim-devicons'
 
 " Multiple Plug commands can be written in a single line using | separators
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
