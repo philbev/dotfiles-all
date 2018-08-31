@@ -124,6 +124,7 @@ let g:UltiSnipsSnippetDirectories=["vim-snippets", "UltiSnips"]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		CONFIGURATION OPTIONS GO HERE		"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set encoding=utf-8
 filetype plugin indent on
 syntax on
 set spelllang=en
