@@ -97,6 +97,7 @@ alias viv='vim $HOME/.vimrc'
 bindkey "[3~" delete-char		# <Del> key
 bindkey "[F" end-of-line		# <End> key
 bindkey "[H" beginning-of-line	# <Home> key
+bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
 
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
