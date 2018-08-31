@@ -127,6 +127,7 @@ let g:UltiSnipsSnippetDirectories=["vim-snippets", "UltiSnips"]
 set encoding=utf-8
 filetype plugin indent on
 syntax on
+set incsearch
 set spelllang=en
 set nospell
 set complete+=d,kspell
