@@ -99,7 +99,13 @@ bindkey "[F" end-of-line		# <End> key
 bindkey "[H" beginning-of-line	# <Home> key
 bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
 
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+# Slackware and Arch Linux store powerlevel9k files in different directories.
+if [[ -f /etc/slackware-version ]]; then
+    source  ~/powerlevel9k/powerlevel9k.zsh-theme
+else
+    source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+fi
+
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='yellow'
