@@ -87,12 +87,13 @@ alias v=nvim
 alias vi=nvim
 alias vim='TERM=xterm-256color vim'
 alias vib='vi $HOME/.bashrc'
-alias vie='vi $HOME/.emacs'
+alias vie='vi $HOME/.emacs.d/init.el'
 alias vii='nvim $HOME/.config/nvim/init.vim'
 alias vil='vi $HOME/.zlogout'
 alias vip='vi $HOME/.zprofile'
 alias vin='nvim $HOME/.config/nvim/init.vim'
 alias viv='vim $HOME/.vimrc'
+alias viz='nvim $HOME/.zshrc'
 
 bindkey "[3~" delete-char		# <Del> key
 bindkey "[F" end-of-line		# <End> key
