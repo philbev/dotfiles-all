@@ -98,7 +98,9 @@ alias viz='nvim $HOME/.zshrc'
 bindkey "[3~" delete-char		# <Del> key
 bindkey "[F" end-of-line		# <End> key
 bindkey "[H" beginning-of-line	# <Home> key
-bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
+if [[ -f /etc/arch-release ]]; then	# pacman not in Slackware.
+    bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
+fi
 
 # Slackware and Arch Linux store powerlevel9k files in different directories.
 if [[ -f /etc/slackware-version ]]; then
