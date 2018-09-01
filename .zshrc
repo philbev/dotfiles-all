@@ -115,3 +115,5 @@ POWERLEVEL9K_DIR_HOME_FOREGROUND='yellow'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
 
 git remote update >/dev/null
+
+# Just testing :-)
