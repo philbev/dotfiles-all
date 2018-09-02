@@ -73,10 +73,6 @@ alias f='find / -name'
 alias gitl='git log --decorate --oneline --graph'
 alias grep='grep --color=auto --directories=skip'
 alias ifc='/sbin/ifconfig'
-alias l='ls -lF --color --group-directories-first | less'
-alias la='ls -alF --color --group-directories-first | less'
-alias ll='ls -AlF --color --group-directories-first | less'
-alias lm='ls -AlF --color --group-directories-first | more'
 alias lh='ls -lhF --color --group-directories-first | less'
 alias lph='lp -o orientation-requested=4'
 alias lpp='lp -o prettyprint'
@@ -114,3 +110,28 @@ POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='yellow'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
 
+###############
+#  FUNCTIONS  #
+###############
+
+l () {
+    ls -lF --color --group-directories-first "$@" | less
+}
+
+la () {
+    ls -alF --color --group-directories-first  "$@" | less
+}
+
+ll () {
+
+	ls -AlF --color --group-directories-first "$@" | less 
+}
+
+lm () {
+
+	ls -AlF --color --group-directories-first "$@" | more
+}
+
+inf () {
+	info coreutils "$@" "invocation"
+}
