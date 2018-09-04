@@ -205,6 +205,7 @@ nnoremap o o|"						<ALT>+o = Only window (Close all others).
 nnoremap s s|"						<ALT>+s = Split window.
 nnoremap v v|"						<ALT>+v = Split window vertically.
 nnoremap w w|"						<ALT>+w = Next window.
+nnoremap z 1GO#!/usr/bin/zsh<ESC>:set ft=zsh<CR>|"		<Alt+z> = Insert #! and set filetype.
 nnoremap # |"						<ALT>+# = Edit alternate buffer.
 nnoremap [1;5B |"						<CTRL>+<DOWN> = Scroll up one line.
 nnoremap [1;3B ddp|"						<ALT>+<DOWN> = Move text on current line down one line.
@@ -227,6 +228,7 @@ nnoremap i :set ic! ic?<CR>|"					<Alt>+i = Toggle 'Ignorecase' option.
 "	     SOME INSERT COMPLETIONS			"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+inoremap z 1G#!/usr/bin/zsh<Esc>:set ft=zsh<CR>
 inoremap  |"		<Ctrl>+f = Filename completion.
 inoremap  |"		<Ctrl>+d = Macro completion.
 inoremap  |"		<Ctrl>+l = Whole line completion.
