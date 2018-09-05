@@ -101,9 +101,9 @@ fi
 # Slackware and Arch Linux store powerlevel9k files in different directories.
 if [[ -f /etc/slackware-version ]]; then
     source  ~/powerlevel9k/powerlevel9k.zsh-theme
-else
-    source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 fi
+#else
+    #source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
