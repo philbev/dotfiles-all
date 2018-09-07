@@ -124,7 +124,7 @@ let g:UltiSnipsSnippetDirectories=["vim-snippets", "UltiSnips"]
 
 let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Up>"
-inoremap <expr> <Up> pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Down>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		INDENTlINE				"
