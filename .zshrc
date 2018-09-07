@@ -114,6 +114,47 @@ POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
 #  FUNCTIONS  #
 ###############
 
+dh () {
+    du "$@" -d 1 -xh | sort -rh
+}
+
+if [[ -f /etc/slackware-version ]]; then
+    rsync-slack64 () {
+    repo=/usr/local/downloads/repositories/slackware64
+    wget -q -P /tmp http://ftp.slackware.uk/slackware/slackware64-current/ChangeLog.txt
+    if diff /tmp/ChangeLog.txt $repo/latest/ChangeLog.txt >/dev/null; then
+	rm -v /tmp/ChangeLog.txt
+	echo -e "\033[1;35m"NO CHANGES! Nothing to download"\033[0m"
+    else
+	rm -v /tmp/ChangeLog.txt
+	rsync -avh --delete --progress /$repo/latest/ $repo/previous
+	rsync -avh --delete --progress --exclude=source rsync://rsync.slackware.uk/slackware/slackware64-current/ $repo/latest
+    fi
+}
+fi
+
+
+rsync-italian () {
+    rsync -avh --progress --delete  /usr/local/docs/italian/ /home/philbev/Dropbox/italian
+}
+
+rsync-german () {
+    rsync -avh --progress --delete /usr/local/docs/german/ /home/philbev/Dropbox/german
+}
+
+g () {
+	g++ -o ${1%.cpp} "$@"
+}
+
+gh () {
+    if [[ $# != 1 ]]; then
+        echo "grep for <search-item> in history:-"
+        echo "Usage: gh <search-item>"
+    fi
+    history | grep "$@" 2>/dev/null
+}
+
+
 l () {
     ls -lF --color --group-directories-first "$@" | less
 }
