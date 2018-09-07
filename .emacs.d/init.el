@@ -20,13 +20,14 @@
  '(org-log-into-drawer t)
  '(package-selected-packages
    (quote
-    (which-key linum-relative rainbow-delimiters org-journal ## org-gcal org-bullets evil-org yasnippet airline-themes powerline org org-journal-dir))))
+    (which-key linum-relative rainbow-delimiters org-journal ## org-gcal org-bullets evil-org yasnippet airline-themes powerline org org-journal-dir)))
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 122 :width normal))))
+ '(default ((t (:family "Hack" :foundry "SRC" :slant normal :weight normal :height 120 :width normal))))
  '(cursor ((t (:background "PeachPuff"))))
  '(hl-line ((t (:background "#454545"))))
  '(linum ((t (:inherit (default shadow) :foreground "light gray" :weight bold))))
