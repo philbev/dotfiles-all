@@ -99,11 +99,8 @@ if [[ -f /etc/arch-release ]]; then	# pacman not in Slackware.
 fi
 
 # Slackware and Arch Linux store powerlevel9k files in different directories.
-if [[ -f /etc/slackware-version ]]; then
-    source  ~/powerlevel9k/powerlevel9k.zsh-theme
-fi
-#else
-    #source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+[[ -f ~/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/powerlevel9k/powerlevel9k.zsh-theme
+[[ -f /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme ]] && source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
