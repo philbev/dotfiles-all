@@ -162,16 +162,6 @@ rsync-slack64 () {
     fi
 }
 
-rsync-multilib () {
-    rsync -avh --delete --progress ftp.slackware.uk::people/alien/multilib/current/ $REPOS/multilib/temp
-    if diff -rq $REPOS/multilib/latest $REPOS/multilib/temp >/dev/null; then
-        echo -e "\033[1;35m"No updates available"\033[0m"
-    else
-        rsync -avh --delete --progress $REPOS/multilib/latest/ $REPOS/multilib/previous
-        rsync -avh --delete --progress $REPOS/multilib/temp/ $REPOS/multilib/latest
-    fi
-}
-
 rsync-italian () {
     rsync -avh --progress --delete  /usr/local/docs/italian/ /home/philbev/Dropbox/italian
 }
