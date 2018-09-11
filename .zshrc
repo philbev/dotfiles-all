@@ -32,7 +32,7 @@ if [[ $TERM = linux ]]; then
 	setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu
 fi
 
-PS1=$'%{\e[1;38;2;255;255;0m%}[%n@%M]%% %{\e[0m%}'
+PS1=$'%{\e[1;38;2;0;255;0m%}[%n@%M]%% %{\e[0m%}'
 RPS1=$'%{\e[1;38;2;255;0;0m%}[%w%D{th %b %Y} %T]%{\e[0m%}'
 fpath=( ~/.zfuncs "${fpath[@]}" )
 #autoload -Uz hello	    # This is just an example.
