@@ -12,9 +12,9 @@ endif
 augroup samba_1
     autocmd!
     if has('nvim')
-	autocmd BufEnter,BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/samba.vim
+	autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/samba.vim
     else
-	autocmd BufEnter,BufWritePost <buffer> source ~/.vim/ftplugin/samba.vim
+	autocmd BufWritePost <buffer> source ~/.vim/ftplugin/samba.vim
     endif
 augroup END
 

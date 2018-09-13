@@ -12,9 +12,9 @@ endif
 augroup python_1
     autocmd!
 if has('nvim')
-    autocmd BufEnter,BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/python.vim
+    autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/python.vim
 else
-    autocmd BufEnter,BufWritePost <buffer> source ~/.vim/ftplugin/python.vim
+    autocmd BufWritePost <buffer> source ~/.vim/ftplugin/python.vim
 endif
 augroup END
 

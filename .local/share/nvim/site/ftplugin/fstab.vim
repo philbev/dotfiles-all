@@ -12,9 +12,9 @@ endif
 augroup fstab_1
     autocmd!
     if has ('nvim')
-    autocmd BufEnter,BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/fstab.vim
+    autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/fstab.vim
 else
-    autocmd BufEnter,BufWritePost <buffer> source ~/.vim/ftplugin/fstab.vim
+    autocmd BufWritePost <buffer> source ~/.vim/ftplugin/fstab.vim
 endif
 augroup END
 

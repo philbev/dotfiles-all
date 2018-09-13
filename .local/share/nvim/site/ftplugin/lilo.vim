@@ -12,9 +12,9 @@ endif
 augroup lilo_1
     autocmd!
     if has('nvim')
-	autocmd BufEnter,BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/lilo.vim
+	autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/lilo.vim
     else
-	autocmd BufEnter,BufWritePost <buffer> source ~/.vim/ftplugin/lilo.vim
+	autocmd BufWritePost <buffer> source ~/.vim/ftplugin/lilo.vim
     endif
 augroup END
 

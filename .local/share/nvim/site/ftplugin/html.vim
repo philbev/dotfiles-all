@@ -13,9 +13,9 @@ endif
 augroup html_1
     autocmd!
     if has('nvim')
-	autocmd BufEnter,BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/html.vim
+	autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/html.vim
     else
-	autocmd BufEnter,BufWritePost <buffer> source ~/.vim/ftplugin/html.vim
+	autocmd BufWritePost <buffer> source ~/.vim/ftplugin/html.vim
     endif
 augroup END
 

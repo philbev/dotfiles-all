@@ -12,9 +12,9 @@ endif
 augroup bash_1
     autocmd!
 if has('nvim')
-    autocmd BufEnter,BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/sh.vim
+    autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/sh.vim
 else
-    autocmd BufEnter,BufWritePost <buffer> source ~/.vim/ftplugin/sh.vim
+    autocmd BufWritePost <buffer> source ~/.vim/ftplugin/sh.vim
 endif
 augroup END
 

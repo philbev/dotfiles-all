@@ -9,9 +9,9 @@ endif
 augroup snippet_1
     autocmd!
     if has('nvim')
-	autocmd BufEnter,BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/snippet.vim
+	autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/snippet.vim
     else
-	autocmd BufEnter,BufWritePost <buffer> source ~/.vim/ftplugin/snippet.vim
+	autocmd BufWritePost <buffer> source ~/.vim/ftplugin/snippet.vim
     endif
 augroup END
 
