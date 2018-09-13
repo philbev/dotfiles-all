@@ -13,9 +13,9 @@ endif
 augroup apache_1
     autocmd!
     if has('nvim')
-	autocmd BufEnter,BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/apache.vim
+	autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/apache.vim
     else
-	autocmd BufEnter,BufWritePost <buffer> source ~/.vim/ftplugin/apache.vim
+	autocmd BufWritePost <buffer> source ~/.vim/ftplugin/apache.vim
     endif
 augroup END
 

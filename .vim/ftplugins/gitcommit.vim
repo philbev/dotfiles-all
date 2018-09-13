@@ -14,9 +14,9 @@ endif
 augroup git_commit
     autocmd!
     if has('nvim')
-	autocmd BufEnter,BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/gitcommit.vim
+	autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/gitcommit.vim
     else
-	autocmd BufEnter,BufWritePost <buffer> source ~/.vim/ftplugin/gitcommit.vim
+	autocmd BufWritePost <buffer> source ~/.vim/ftplugin/gitcommit.vim
     endif
 augroup END
 

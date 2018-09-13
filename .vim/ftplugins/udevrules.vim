@@ -13,6 +13,6 @@ setlocal spellfile=~/.vim/spell/en.utf-8.add,~/.local/share/nvim/site/spell/udev
 
 augroup udevrules_1
     autocmd!
-    autocmd BufEnter,BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/udevrules.vim
+    autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/udevrules.vim
 augroup END
 
