@@ -102,7 +102,7 @@ fi
 [[ -f ~/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/powerlevel9k/powerlevel9k.zsh-theme
 [[ -f /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme ]] && source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ON_NEWLINE=false
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='yellow'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
