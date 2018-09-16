@@ -37,7 +37,6 @@ if [[ $USER != root ]]; then
 fi
 export PATH=$PATH:/usr/local/bin/android-studio/bin:/usr/local/bin/android-sdk-linux/platform-tools	# Needed for Android SDK
 export LANG="en_GB.UTF-8"
-export LC_CTYPE="en_GB.UTF-8"
 
 # Need to source ~/.bashrc every time a directory is changed so as to get the status of git.
 function cd() {
