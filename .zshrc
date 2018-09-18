@@ -27,6 +27,8 @@ zstyle ':completion:*' menu select
 # For autocompletion of command line switches for aliases.
 setopt COMPLETE_ALIASES
 
+# For case insensitive auto completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 if [[ $TERM = linux ]]; then
 	setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu
