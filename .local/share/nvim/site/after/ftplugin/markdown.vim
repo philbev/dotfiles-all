@@ -1,20 +1,20 @@
 set spelllang=en
 if has('nvim')
-    nnoremap <buffer> <F10> :e ~/.local/share/nvim/site/ftplugin/markdown.vim<CR>|"             - <F10> Edit markdown .vim
-    nnoremap <buffer> <S-F10> :so ~/.local/share/nvim/site/ftplugin/markdown.vim<CR>            - <F10> Source markdown .vim
+    nnoremap <buffer> <F10> :e ~/.local/share/nvim/site/after/ftplugin/markdown.vim<CR>|"             - <F10> Edit markdown .vim
+    nnoremap <buffer> <S-F10> :so ~/.local/share/nvim/site/after/ftplugin/markdown.vim<CR>|"            - <F10> Source markdown .vim
     setlocal spellfile=~/.local/share/nvim/site/spell/en.utf-8.add,~/.local/share/nvim/site/spell/markdown.utf-8.add
 else
-    nnoremap <buffer> <F10> :e ~/.vim/ftplugin/markdown.vim<CR>|"             - <F10> Edit markdown .vim
-    nnoremap <buffer> <S-F10> :so ~/.vim/ftplugin/markdown.vim<CR>            - <F10> Source markdown .vim
+    nnoremap <buffer> <F10> :e ~/.vim/after/ftplugin/markdown.vim<CR>|"             - <F10> Edit markdown .vim
+    nnoremap <buffer> <S-F10> :so ~/.vim/after/ftplugin/markdown.vim<CR>|"            - <F10> Source markdown .vim
     setlocal spellfile=~/.vim/spell/en.utf-8.add,~/.local/share/nvim/site/spell/markdown.utf-8.add
 endif
 
 augroup markdown_1
     autocmd!
     if has('nvim')
-	autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/ftplugin/apache.vim
+	autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/after/ftplugin/markdown.vim
     else
-	autocmd BufWritePost <buffer> source ~/.vim/ftplugin/apache.vim
+	autocmd BufWritePost <buffer> source ~/.vim/after/ftplugin/markdown.vim
     endif
 augroup END
 
