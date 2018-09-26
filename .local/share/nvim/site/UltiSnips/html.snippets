@@ -1,0 +1,20 @@
+snippet t "Simple tag snippet" 
+<${1:div}>$0</${1/(\w+).*/$1/}>
+endsnippet
+
+#snippet th "Table header" 
+#<th>$1${1/.*/\u$0/}</th> $0
+#endsnippet
+
+snippet h "HTML header" 
+<html>
+    <head>
+	<link rel="stylesheet" type="text/css" href="${1:style.css}">
+    </head>
+    <body>
+	$0	
+    </body>
+</html>
+
+
+endsnippet
