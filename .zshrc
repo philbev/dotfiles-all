@@ -41,6 +41,7 @@ fpath=( ~/.zfuncs "${fpath[@]}" )
 #autoload -Uz print_dir
 #precmd_functions=(print_dir)
 
+setopt hist_ignore_space
 
 export LESS="-eFRX"
 export LANG=en_GB.UTF-8
