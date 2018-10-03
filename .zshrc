@@ -45,7 +45,7 @@ setopt hist_ignore_space
 
 export LESS="-eFRX"
 export LANG=en_GB.UTF-8
-
+export EDITOR=/usr/bin/nvim
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
 zle -N up-line-or-beginning-search
