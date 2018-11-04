@@ -51,6 +51,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
 Plug 'Yggdroot/indentLine'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'edkolev/promptline.vim'
 "" Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
