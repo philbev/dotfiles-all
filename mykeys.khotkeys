@@ -3,7 +3,7 @@ DataCount=1
 
 [Data_1]
 Comment=Comment
-DataCount=13
+DataCount=14
 Enabled=true
 Name=My Shortcuts
 SystemGroup=0
@@ -41,23 +41,22 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_10Triggers0]
-Key=
+Key=Ctrl+Alt+K
 Type=SHORTCUT
 Uuid={a1cef3d8-60b4-4c1c-83c1-be8560e1bf7e}
 
 [Data_1_11]
-Comment=Comment
+Comment=Launch ranger file manager.
 Enabled=true
-Name=Test
+Name=Ranger
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_11Actions]
 ActionsCount=1
 
 [Data_1_11Actions0]
-DestinationWindow=0
-Input=T:H:E:Shift+D:0:G:I:S:D:E:Shift+':D
-Type=KEYBOARD_INPUT
+CommandURL=konsole -e /usr/bin/ranger
+Type=COMMAND_URL
 
 [Data_1_11Conditions]
 Comment=
@@ -68,14 +67,14 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_11Triggers0]
-Key=Ctrl+Alt+Shift+P
+Key=Ctrl+Alt+R
 Type=SHORTCUT
-Uuid={4cc1d91a-715e-46d6-9ded-cd029dc075d7}
+Uuid={789d8635-62c0-4814-8a42-831d265b0e60}
 
 [Data_1_12]
 Comment=Comment
 Enabled=true
-Name=Test2
+Name=Test
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_12Actions]
@@ -83,7 +82,7 @@ ActionsCount=1
 
 [Data_1_12Actions0]
 DestinationWindow=0
-Input=T:H:E:Shift+D:O:G:I:S:D:3:Shift+':D
+Input=T:H:E:Shift+D:0:G:I:S:D:E:Shift+':D
 Type=KEYBOARD_INPUT
 
 [Data_1_12Conditions]
@@ -95,22 +94,23 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_12Triggers0]
-Key=Ctrl+Alt+Shift+L
+Key=Ctrl+Alt+Shift+P
 Type=SHORTCUT
-Uuid={1e5b019b-e2ce-4082-acfc-3f1b437c8b67}
+Uuid={4cc1d91a-715e-46d6-9ded-cd029dc075d7}
 
 [Data_1_13]
 Comment=Comment
 Enabled=true
-Name=Thunderbird
+Name=Test2
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_13Actions]
 ActionsCount=1
 
 [Data_1_13Actions0]
-CommandURL=thunderbird
-Type=COMMAND_URL
+DestinationWindow=0
+Input=T:H:E:Shift+D:O:G:I:S:D:3:Shift+':D
+Type=KEYBOARD_INPUT
 
 [Data_1_13Conditions]
 Comment=
@@ -121,7 +121,33 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_13Triggers0]
-Key=
+Key=Ctrl+Alt+Shift+L
+Type=SHORTCUT
+Uuid={1e5b019b-e2ce-4082-acfc-3f1b437c8b67}
+
+[Data_1_14]
+Comment=Comment
+Enabled=true
+Name=Thunderbird
+Type=SIMPLE_ACTION_DATA
+
+[Data_1_14Actions]
+ActionsCount=1
+
+[Data_1_14Actions0]
+CommandURL=thunderbird
+Type=COMMAND_URL
+
+[Data_1_14Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_1_14Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_1_14Triggers0]
+Key=Ctrl+Alt+T
 Type=SHORTCUT
 Uuid={3615ec99-0864-4644-adf3-b74e716f8e24}
 
