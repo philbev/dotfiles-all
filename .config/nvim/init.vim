@@ -51,6 +51,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
 Plug 'Yggdroot/indentLine'
+Plug 'vim-latex/vim-latex'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'edkolev/promptline.vim'
 "" Any valid git URL is allowed
@@ -164,6 +165,7 @@ set pastetoggle=<F11>
 "set statusline=%t\ %y%m%r[%{\&ff}]\ [Buffer:\ %n][ASCII:\ %b\ (Dec)\ :\ 0x%B\ (Hex)]%=%([Line:%l\ of\ %L,Column:%c%V][%p%%]%)
 "set runtimepath+=~/.vim/ftplugin
 let g:clang_close_preview = 1
+let g:tex_flavor="latex"
 set omnifunc=syntaxcomplete#Complete
 set cursorline
 if &background == "light"
