@@ -1,3 +1,24 @@
 snippet ;\  "Literal backslash" 
 \textbackslash{${1:${VISUAL:Default text}}}$0
 endsnippet
+
+snippet temp "Template for LaTeX documents" b
+\documentclass${1:[12pt,a4paper]}{${2:article}}
+
+\author{${3:${VISUAL:Phil Bevan}}}
+\title{${4:${VISUAL:Title goes here}}}
+
+
+\begin{document}
+
+\maketitle
+
+\section{${5:${VISUAL:Introduction}}}
+
+$0
+
+\subsection{A Subsection :-)}
+
+\end{document}
+
+endsnippet
