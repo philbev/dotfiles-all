@@ -1,4 +1,5 @@
 setlocal spelllang=en
+set foldcolumn=4
 if has('nvim')
 	nnoremap <buffer> <F10> :edit ~/.local/share/nvim/site/after/ftplugin/tex.vim<CR>
 	nnoremap <buffer> <F22> :source ~/.local/share/nvim/site/after/ftplugin/tex.vim<CR>
@@ -17,5 +18,7 @@ augroup tex_1
 	autocmd BufWritePost <buffer> source ~/.vim/after/ftplugin/tex.vim
     endif
 augroup END
+
+highlight Folded guifg=black gui=bold guibg=cyan
 
 let g:tex_flavor="latex"
