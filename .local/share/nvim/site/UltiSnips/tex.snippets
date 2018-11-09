@@ -1,5 +1,19 @@
+snippet < "Less than - LaTeX"  i
+{\textless}
+endsnippet
+
+snippet > "Greater than - LaTeX" i
+{\textgreater}
+endsnippet
+
 snippet ;\  "Literal backslash" 
 \textbackslash{${1:${VISUAL:Default text}}}$0
+endsnippet
+
+snippet \sub "LaTeX subsection" b
+\subsection{${1:subsection name}}
+\label{${2:sub:subsection_name}}
+
 endsnippet
 
 snippet temp "Template for LaTeX documents" b
