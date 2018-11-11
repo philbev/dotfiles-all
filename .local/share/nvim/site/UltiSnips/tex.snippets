@@ -6,27 +6,29 @@ snippet > "Greater than - LaTeX" i
 {\textgreater}
 endsnippet
 
-snippet ;\  "Literal backslash" 
-\textbackslash{${1:${VISUAL:Default text}}}$0
+snippet \  "Literal backslash" i
+\textbackslash
+endsnippet
+
+snippet "bold|bf" "Bold text" ir
+\textbf{${1:${VISUAL}}}
+endsnippet
+
+snippet latex "LaTeX" i
+{\LaTeX}
 endsnippet
 
 snippet \sub "LaTeX subsection" b
 \subsection{${1:subsection name}}
 \label{${2:sub:subsection_name}}
-
 endsnippet
 
 snippet temp "Template for LaTeX documents" b
 \documentclass${1:[12pt,a4paper]}{${2:article}}
-
 \author{${3:${VISUAL:Phil Bevan}}}
 \title{${4:${VISUAL:Title goes here}}}
-
-
 \begin{document}
-
 \maketitle
-
 \section{${5:${VISUAL:Introduction}}}
 
 $0
