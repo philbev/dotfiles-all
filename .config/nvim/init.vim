@@ -244,6 +244,17 @@ vnoremap < <gv
 vnoremap <M-Down> dp`[V`]|"					<ALT>+<DOWN> = Move selected lines down one line.
 vnoremap <M-Up> dkkp`[V`]|"					<ALT>+<UP> = Move selected lines up one line.
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	    OPERATOR PENDING MAPPING		       "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+onoremap ( :execute "normal! 0f(vi("<CR>
+onoremap { :execute "normal! 0f{vi{"<CR>
+onoremap [ :execute "normal! 0f[vi["<CR>
+onoremap < :execute "normal! 0f<vi<"<CR>
+onoremap " :execute "normal! 0f\"vi\""<CR>
+onoremap ' :execute "normal! 0f'vi'"<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	    WINDOWS KEYS FOR GERMAN CHARACTERS		"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
