@@ -322,8 +322,6 @@ augroup group1
     autocmd!
     au VimEnter * AirlineTheme xtermlight
     au BufWritePost ~/.config/nvim/init.vim source $MYVIMRC
-    au BufNewFile *.html 0r ~/.vim/templates/skeleton.html
-    au BufNewFile *.py 0r ~/.vim/templates/skeleton.py
     au BufNewFile *.h source ~/.vim/cpp_header.vim
     au BufReadPost *
 		\ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit' 
