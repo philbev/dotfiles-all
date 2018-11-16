@@ -288,7 +288,7 @@ if has('nvim')
     "In terminal mode use <A-r> to paste from registers while in 'insert' mode.
     tnoremap <expr> <A-r> '<C-\><C-N>"'.nr2char(getchar()).'pi'
     "Allows escape key to be used in terminal mode.
-    tnoremap <Esc> <C-\><C-n>
+    tnoremap <esc> <c-\><c-n>
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
