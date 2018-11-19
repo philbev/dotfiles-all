@@ -27,3 +27,5 @@ inoremap <buffer> <M-2> <ESC>:s/^ *//<CR>yyp:s/./-/g<CR>:nohlsearch<CR>a|"  - <M
 " Toggle folding in markdown files.
 nnoremap <M-f> zA
 setlocal foldcolumn=4
+nnoremap <buffer> <tab> za
+nnoremap <buffer> <s-tab> zA

@@ -329,6 +329,8 @@ augroup group1
 		\ | endif
 augroup END
 
+let g:vim_markdown_folding_style_pythonic = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		NERDTREE OPTIONS HERE			"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
