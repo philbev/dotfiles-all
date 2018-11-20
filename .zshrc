@@ -37,6 +37,7 @@ fi
 PS1=$'%{\e[1;38;2;0;255;0m%}[%n@%M]%% %{\e[0m%}'
 RPS1=$'%{\e[1;38;2;255;0;0m%}[%w%D{th %b %Y} %T]%{\e[0m%}'
 fpath=( ~/.zfuncs "${fpath[@]}" )
+path=(~/.gem/ruby/2.5.0/bin "${path[@]}")
 autoload -Uz gitx
 #precmd_functions=(print_dir)
 
