@@ -1,2 +1,2 @@
 # dotfiles
-All the important dofiles in my home directory
+All the important dotiles in my home directory
