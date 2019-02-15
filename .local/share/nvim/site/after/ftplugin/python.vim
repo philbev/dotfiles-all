@@ -9,6 +9,8 @@ else
 setlocal spellfile=~/.vim/spell/en.utf-8.add,~/.vim/spell/python.utf-8.add
 endif
 
+setlocal textwidth=79
+
 augroup python_1
     autocmd!
 if has('nvim')
@@ -32,6 +34,7 @@ nnoremap <buffer> <leader>p I#!/usr/bin/python3<CR>
 if has('nvim')
     nnoremap <buffer> <F5> :w<bar>terminal /usr/bin/python3 %<cr>
     nnoremap <buffer> <M-p> :w<bar>terminal /usr/bin/python3 %<cr>
+    nnoremap <buffer> <F8> : ALEFix<cr>
 else
     nnoremap <buffer> <F5> :w<bar>!/usr/bin/python3 %<cr>
     nnoremap <buffer> <M-p> :w<bar>!/usr/bin/python3 %<cr>
