@@ -20,6 +20,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 " Make sure you use single quotes
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'w0rp/ale'
 Plug 'junegunn/vim-easy-align'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -137,6 +138,16 @@ let g:indentLine_enabled = 1
 let g:indentLine_concealcursor = 0
 let g:indentLine_char = '┆'
 let g:indentLine_faster = 1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	     ALE CONGIGURATION				   "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:ale_linters = {'python': ['flake8'], 'vim': ['vint']}
+let g:ale_fixers = {'python': ['autopep8']}
+let g:ale_fix_on_save = 1
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		CONFIGURATION OPTIONS GO HERE		"
