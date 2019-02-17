@@ -163,17 +163,17 @@ l () {
 }
 
 la () {
-    ls -AlvF --color --group-directories-first  "$@" | less
+    ls -AlvF --color=auto --group-directories-first  "$@" | less
 }
 
 ll () {
 
-	ls -lF --color --group-directories-first "$@" | less 
+	ls -lF --color=auto --group-directories-first "$@" | less 
 }
 
 lm () {
 
-	ls -lF --color --group-directories-first "$@" | more
+	ls -lF --color=auto --group-directories-first "$@" | more
 }
 
 inf () {

@@ -184,17 +184,17 @@ l () {
 }
 
 la () {
-    ls -alF --color --group-directories-first  "$@" | less
+    ls -alF --color=auto  --group-directories-first  "$@" | less
 }
 
 ll () {
 
-	ls -AlF --color --group-directories-first "$@" | less 
+	ls -AlF --color=auto  --group-directories-first "$@" | less 
 }
 
 lm () {
 
-	ls -AlF --color --group-directories-first "$@" | more
+	ls -AlF --color=auto  --group-directories-first "$@" | more
 }
 
 inf () {
