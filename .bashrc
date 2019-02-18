@@ -7,7 +7,7 @@
 
 # Load all my functions from $HOME/.functions.sh
 if [[ -f $HOME/.functions.sh ]]; then
-    . $HOME/.functions.sh
+    . "$HOME"/.functions.sh
 fi
 
 if [[ -f ~/.git-completion.bash ]]; then
@@ -124,12 +124,12 @@ alias viv='vim $HOME/.vimrc'
 # is upgraded.
 if [[ -f /etc/slackver-version ]]; then		# Only if running Slacware OS.
     slackver=`cat /etc/slackware-version | sed 's/Slackware //'`
-    if [ ! -d /usr/local/backups/okular-$slackver ]; then
-	mkdir -vp /usr/local/backups/okular-$slackver
+    if [ ! -d /usr/local/backups/okular-"$slackver" ]; then
+	mkdir -vp /usr/local/backups/okular-"$slackver"
     fi
-    if [ /home/philbev/.kde/share/apps/okular/bookmarks.xml -nt /usr/local/backups/okular-${slackver}/bookmarks.xml ]; then
+    if [ /home/philbev/.kde/share/apps/okular/bookmarks.xml -nt /usr/local/backups/okular-"${slackver}"/bookmarks.xml ]; then
 	echo "Backing up Okular bookmarks....."
-	cp -v /home/philbev/.kde/share/apps/okular/bookmarks.xml /usr/local/backups/okular-${slackver}/bookmarks.xml
+	cp -v /home/philbev/.kde/share/apps/okular/bookmarks.xml /usr/local/backups/okular-"${slackver}"/bookmarks.xml
     fi
 fi
 
@@ -167,7 +167,7 @@ rsync-german () {
 }
 
 g () {
-	g++ -o ${1%.cpp} "$@"
+	g++ -o "${1%.cpp}" "$@"
 }
 
 gh () {
