@@ -1,3 +1,5 @@
+set encoding=utf-8
+scriptencoding utf-8
 " MY /HOME/.CONFIG/NVIM/INIT.VIM INITIALISATION FILE
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -8,7 +10,10 @@
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
     silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
 		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    augroup vplug
+	autocmd!
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    augroup END
 endif
 
 " Specify a directory for plugins
@@ -99,10 +104,11 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-"au VimEnter * let g:airline_left_sep = '▶'
-au VimEnter * let g:airline_left_sep = ''
-"au VimEnter * let g:airline_right_sep = '◀'
-au VimEnter * let g:airline_right_sep = ''
+augroup airGroup
+    autocmd!
+    au VimEnter * let g:airline_left_sep = ''
+    au VimEnter * let g:airline_right_sep = ''
+augroup END
 
 let g:airline#extensions#whitespace#enabled = 0
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
@@ -121,7 +127,7 @@ let g:UltiSnipsListSnippets = '<c-s>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsSnippetsDir = '~/.local/share/nvim/site/UltiSnips'
-let g:UltiSnipsSnippetDirectories=["vim-snippets", "UltiSnips"]
+let g:UltiSnipsSnippetDirectories=['vim-snippets', 'UltiSnips']
 
 """"""""""""""""""""""""""""
 "  DEOPLETE CONFIGURATION  "
@@ -159,7 +165,7 @@ set undofile
 set spelllang=en
 set nospell
 set complete+=d,kspell
-set cpo+=$
+set cpoptions+=$
 set dictionary=/usr/dict/words
 set thesaurus=/usr/local/docs/mthesaur.txt
 set listchars=tab:➤\ ,eol:↲,space:·
@@ -176,10 +182,10 @@ set pastetoggle=<F11>
 "set statusline=%t\ %y%m%r[%{\&ff}]\ [Buffer:\ %n][ASCII:\ %b\ (Dec)\ :\ 0x%B\ (Hex)]%=%([Line:%l\ of\ %L,Column:%c%V][%p%%]%)
 "set runtimepath+=~/.vim/ftplugin
 let g:clang_close_preview = 1
-let g:tex_flavor="latex"
+let g:tex_flavor='latex'
 set omnifunc=syntaxcomplete#Complete
 set cursorline
-if &background == "light"
+if &background ==# 'light'
     set background=dark
 endif
 set inccommand=nosplit
@@ -190,7 +196,7 @@ if has('nvim')
     :hi! TermCursorNC ctermfg=15 guifg=#fdf6e3 ctermbg=14 guibg=#93a1a1 cterm=NONE gui=NONE
 endif
 
-if !has("gui-running")
+if !has('gui-running')
     set termguicolors
     highlight SpellBad ctermbg=NONE guibg=Red guifg=White
     highlight CursorLine cterm=NONE guibg=Grey40

@@ -46,6 +46,7 @@ setopt hist_ignore_space
 export LESS="-eFRX"
 export LANG=en_GB.UTF-8
 export EDITOR=/usr/bin/nvim
+export SHELLCHECK_OPTS="-e SC1090 -e SC2154 -e SC2012"
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
 zle -N up-line-or-beginning-search

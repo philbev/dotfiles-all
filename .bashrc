@@ -52,6 +52,7 @@ ps_local="\[$bold$yellowfg\]$(is_git_dir)\[$bold$cyanfg\][\u:\w]\$ \[\033[0m\]"
 ps_ssh="\033[1;35m(\h) $ps_local"
 who -m | grep -q '([^:]\+)' && PS1="$ps_ssh" || PS1="$ps_local"
 export PS1
+export SHELLCHECK_OPTS="-e SC1090 -e SC2154 -e SC2012"
 export LESS="-eFRX"
 export HISTCONTROL=ignoredups:ignorespace:erasedups
 export HISTTIMEFORMAT="%c: "
@@ -123,7 +124,7 @@ alias viv='vim $HOME/.vimrc'
 # Let's back-up okular bookmark file to directory where it will not be deleted when KDE
 # is upgraded.
 if [[ -f /etc/slackver-version ]]; then		# Only if running Slacware OS.
-    slackver=`cat /etc/slackware-version | sed 's/Slackware //'`
+    slackver=$(sed 's/Slackware //' </etc/slackware-version)
     if [ ! -d /usr/local/backups/okular-"$slackver" ]; then
 	mkdir -vp /usr/local/backups/okular-"$slackver"
     fi

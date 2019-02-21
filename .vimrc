@@ -1,6 +1,8 @@
+set encoding=utf-8
+scriptencoding utf-8
+
 " MY /HOME/.VIMRC INITIALISATION FILE
 
-set nocompatible
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	    Vim-plug configuration					"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -9,7 +11,10 @@ set nocompatible
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
 		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    augroup vplug
+	autocmd!
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    augroup END
 endif
 
 " Specify a directory for plugins
@@ -21,6 +26,7 @@ call plug#begin('~/.vim/plugged/')
 " Make sure you use single quotes
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'w0rp/ale'
 Plug 'junegunn/vim-easy-align'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -102,8 +108,11 @@ call plug#end()
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-au VimEnter * let g:airline_left_sep = ''
-au VimEnter * let g:airline_right_sep = ''
+augroup airgroup
+    autocmd!
+    au VimEnter * let g:airline_left_sep = ''
+    au VimEnter * let g:airline_right_sep = ''
+augroup END
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -120,20 +129,27 @@ let g:UltiSnipsListSnippets = '<c-s>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
-let g:UltiSnipsSnippetDirectories=["vim-snippets", "UltiSnips"]
+let g:UltiSnipsSnippetDirectories=['vim-snippets', 'UltiSnips']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	     ALE CONGIGURATION				   "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:ale_linters = {'python': ['flake8'], 'vim': ['vint']}
+let g:ale_fixers = {'python': ['autopep8']}
+let g:ale_fix_on_save = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		CONFIGURATION OPTIONS GO HERE		"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set encoding=utf-8
 filetype plugin indent on
 syntax on
 set incsearch
 set spelllang=en
 set nospell
 set complete+=d,kspell
-set cpo+=$
+set cpoptions+=$
 set dictionary=/usr/dict/words
 set thesaurus=/usr/local/docs/mthesaur.txt
 set listchars=tab:➤\ ,eol:↲,space:·
@@ -155,11 +171,11 @@ set history=1000
 let g:clang_close_preview = 1
 set omnifunc=syntaxcomplete#Complete
 set cursorline
-if &background == "light"
+if &background ==# 'light'
     set background=dark
 endif
 
-if !has("gui-running")
+if !has('gui-running')
     set termguicolors
     highlight SpellBad ctermbg=NONE guibg=Red guifg=White
     highlight CursorLine cterm=NONE guibg=Grey40
