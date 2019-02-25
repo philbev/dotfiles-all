@@ -15,6 +15,7 @@ augroup markdown_1
 	autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/after/ftplugin/apache.vim
     else
 	autocmd BufWritePost <buffer> source ~/.vim/after/ftplugin/apache.vim
+	autocmd BufEnter <buffer> setlocal conceallevel=0
     endif
 augroup END
 
