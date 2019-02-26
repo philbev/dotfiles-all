@@ -131,6 +131,15 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 let g:UltiSnipsSnippetDirectories=['vim-snippets', 'UltiSnips']
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"		INDENTlINE				"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indentLine_enabled = 1
+let g:indentLine_concealcursor = 0
+let g:indentLine_char = '┆'
+let g:indentLine_faster = 1
+let g:indentLine_setConceal = 0
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	     ALE CONGIGURATION				   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
