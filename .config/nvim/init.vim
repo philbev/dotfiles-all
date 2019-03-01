@@ -153,8 +153,11 @@ let g:indentLine_setConceal = 0
 
 let g:ale_linters = {'python': ['flake8'], 'vim': ['vint']}
 let g:ale_fixers = {'python': ['autopep8']}
+" With neovim plug-in 'deoplete' completion  doen't play well with ALE linter
+" (get far too many error messages) when in insert mode. So configured to lint
+" only in normal mode.
+let g:ale_lint_on_text_changed='normal'
 let g:ale_fix_on_save = 1
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		CONFIGURATION OPTIONS GO HERE		"
