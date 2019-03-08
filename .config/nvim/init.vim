@@ -159,6 +159,16 @@ let g:ale_fixers = {'python': ['autopep8']}
 let g:ale_lint_on_text_changed='normal'
 let g:ale_fix_on_save = 1
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"          THESAURUS CONFIGURATION                         "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"let g:tq_enabled_backends=["datamuse_com","thesaurus_com","openoffice_en","mthesaur_txt"]
+let g:tq_enabled_backends=['openoffice_en','datamuse_com','mthesaur_txt']
+let g:tq_openoffice_en_file='/usr/local/downloads/MyThes-1.0/th_en_US_new'
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		CONFIGURATION OPTIONS GO HERE		"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
