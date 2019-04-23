@@ -229,6 +229,9 @@ highlight WarningMsg term=standout ctermfg=224 guifg=White guibg=Red
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		Key mapping starts here				     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nmap <silent> <C-j> <Plug>(ale_next)
+nmap <silent> <C-k> <Plug>(ale_previous)
 nnoremap <M-/> :bn<cr>|"					<ALT>+/ = Next buffer.
 nnoremap <M-\> :bp<cr>|"					<ALT>+\ = Previous buffer.
 nnoremap <M-.> :bp<cr>|"					<ALT>+. = Previous buffer.
@@ -361,6 +364,7 @@ augroup group1
 augroup END
 
 let g:vim_markdown_folding_style_pythonic = 1
+let g:livepreview_previewer = 'okular'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		NERDTREE OPTIONS HERE			"
@@ -376,4 +380,3 @@ nnoremap <M-O>3P :echo "		VIM FUNCTION KEYS\n
 		\<F4>		- Toggle relative/absolute number.\n
 		\<F9>		- Toggle NERDTree.\n
 		\<F12>		- Source ~/.vimrc.\n"<CR>
-
