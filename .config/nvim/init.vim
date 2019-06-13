@@ -179,7 +179,7 @@ set undofile
 set spelllang=en
 set nospell
 set complete+=d,kspell
-set cpoptions+=$
+"set cpoptions+=$
 set dictionary=/usr/dict/words
 set thesaurus=/usr/local/docs/mthesaur.txt
 set listchars=tab:➤\ ,eol:↲,space:·
