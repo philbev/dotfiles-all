@@ -10,6 +10,12 @@ snippet \  "Literal backslash" i
 \textbackslash
 endsnippet
 
+snippet beg "Begin/end of environment" i
+begin{${1:document}}
+$0
+end{$1}
+endsnippet
+
 snippet "bold|bf" "Bold text" ir
 \textbf{${1:${VISUAL}}}
 endsnippet
@@ -33,9 +39,14 @@ snippet temp "Template for LaTeX documents" b
 
 $0
 
-\subsection{A Subsection :-)}
+\subsection{${6:A Subsection}}
 
 \end{document}
 
 endsnippet
 
+snippet transform "Example transformation" 
+begin{${1:default value}}
+$0
+end{${1/(^\w+).*/$1/}}
+endsnippet
