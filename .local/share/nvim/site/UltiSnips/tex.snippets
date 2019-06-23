@@ -11,9 +11,10 @@ snippet \  "Literal backslash" i
 endsnippet
 
 snippet beg "Begin/end of environment" i
-begin{${1:document}}
+\begin{${1:document}}
+${VISUAL}
+\end{$1}
 $0
-end{$1}
 endsnippet
 
 snippet "bold|bf" "Bold text" ir
