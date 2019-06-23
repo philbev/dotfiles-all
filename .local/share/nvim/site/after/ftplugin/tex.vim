@@ -22,6 +22,7 @@ augroup END
 highlight Folded guifg=black gui=bold guibg=cyan
 
 let g:tex_flavor='latex'
+set updatetime=100
 
 norea <buffer> carb carbohydrates
 norea <buffer> carbs carbohydrates
