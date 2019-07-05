@@ -23,6 +23,8 @@ highlight Folded guifg=black gui=bold guibg=cyan
 
 let g:tex_flavor='latex'
 set updatetime=100
+setlocal expandtab
+setlocal textwidth=80
 
 norea <buffer> carb carbohydrates
 norea <buffer> carbs carbohydrates
