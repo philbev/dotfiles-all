@@ -57,6 +57,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
 Plug 'Yggdroot/indentLine'
+Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'vim-latex/vim-latex'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'edkolev/promptline.vim'
@@ -217,6 +218,7 @@ if !has('gui-running')
     highlight MatchParen guibg=red
 endif
 " Change the color scheme here.
+colorscheme dracula
 
 " Makes the background for all konsole backgrounds, no matter what the colour.
 highlight Normal ctermbg=NONE guibg=#404040 guifg=White

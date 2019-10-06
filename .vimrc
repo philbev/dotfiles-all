@@ -57,6 +57,7 @@ Plug 'chazy/cscope_maps'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'Yggdroot/indentLine'
+Plug 'dracula/vim', { 'as': 'dracula' }
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -191,6 +192,7 @@ if !has('gui-running')
     highlight MatchParen guibg=red
 endif
 " Change the color scheme here.
+colorscheme dracula
 
 " Makes the background for all konsole backgrounds, no matter what the colour.
 highlight Normal ctermbg=NONE guibg=#404040 guifg=White
@@ -198,10 +200,6 @@ highlight NonText ctermbg=NONE guibg=#404040 guifg=White
 highlight Search term=reverse ctermbg=11 ctermfg=0 guibg=DarkGray guifg=Black
 highlight WarningMsg term=standout ctermfg=224 guifg=White guibg=Red
 
-" This is what sets vim to use 24-bit colors. It will also work for any version of neovim
-" newer than 0.1.4.
-"colorscheme gruvbox
-"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	    AUTOCOMMANDS GO HERE			"
