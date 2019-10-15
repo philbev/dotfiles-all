@@ -1,0 +1,37 @@
+snippet col "Coloured text in zsh" b
+echo "\$\{BOLD}\$\{${1:COLOUR}}${2:${VISUAL:DEFAULT TEXT}}\$\{RESET}"$0
+endsnippet
+
+snippet 'yell|yellow' "Yellow text in zsh" r
+${1:\$\{BOLD\}}\$\{YELLOW}${2:${VISUAL:DEFAULT TEXT}}${3:\$\{RESET\}}$0
+endsnippet
+
+snippet 'mag|magenta' "Magenta text in zsh" r
+${1:\$\{BOLD\}}\$\{MAGENTA}${2:${VISUAL:DEFAULT TEXT}}${3:\$\{RESET\}}$0
+endsnippet
+
+snippet 'cyan' "Cyan text in zsh" r
+${1:\$\{BOLD\}}\$\{CYAN}${2:${VISUAL:DEFAULT TEXT}}${3:\$\{RESET\}}$0
+endsnippet
+
+snippet 'red' "Red text in zsh" r
+${1:\$\{BOLD\}}\$\{RED}${2:${VISUAL:DEFAULT TEXT}}${3:\$\{RESET\}}$0
+endsnippet
+
+snippet 'green' "Green text in zsh" r
+${1:\$\{BOLD\}}\$\{GREEN}${2:${VISUAL:DEFAULT TEXT}}${3:\$\{RESET\}}$0
+endsnippet
+
+snippet 'blue' "Blue text in zsh" r
+${1:\$\{BOLD\}}\$\{BLUE}${2:${VISUAL:DEFAULT TEXT}}${3:\$\{RESET\}}$0
+endsnippet
+
+snippet 'white' "White text in zsh" r
+${1:\$\{BOLD\}}\$\{WHITE}${2:${VISUAL:DEFAULT TEXT}}${3:\$\{RESET\}}$0
+endsnippet
+
+snippet 'black' "Black text in zsh" r
+${1:\$\{BOLD\}}\$\{BLACK}${2:${VISUAL:DEFAULT TEXT}}${3:\$\{RESET\}}$0
+endsnippet
+
+# vim: set filetype=snippets :
