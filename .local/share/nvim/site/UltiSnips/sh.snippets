@@ -16,19 +16,19 @@ endsnippet
 
 snippet if "Bash:if: with VISUAL placeholder" 
 if [[ ${1:CONDITION} ]]; then
-    ${2:${VISUAL:STATEMENTS}}
+    ${2:${VISUAL:STATEMENTS_HERE}}
 fi
 endsnippet
 
-snippet for "Bash:for: count"
+snippet forc "For loop with count (bash and zsh"
 for (( ${1:COUNT}; $1 < ${2:LIMIT}; $1++ )); do
-    ${3:STATEMENTS_HERE}
+    ${3:${VISUAL:STATEMENTS_HERE}}
 done$0
 endsnippet
 
-snippet fori "Bash:for in" 
+snippet for "For loop (bash and zsh" 
 for ${1:WORD} in ${2:LIST}; do
-${3:COMMANDS}
+    ${3:${VISUAL:STATEMENTS_HERE}}
 done$0
 endsnippet
 
