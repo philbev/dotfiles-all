@@ -21,12 +21,32 @@ promptinit
 
 # End of lines added by compinstall
 
+
+#######################################################################
+#                          KEY BINDINGS HERE                          #
+#######################################################################
+
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey '\eq' push-line-or-edit
+bindkey "\e[A" up-line-or-beginning-search 
+bindkey "\e[B" down-line-or-beginning-search
+bindkey "[3~" delete-char		# <Del> key
+bindkey "[F" end-of-line		# <End> key
+bindkey "[H" beginning-of-line	# <Home> key
+if [[ -f /etc/arch-release ]]; then	# pacman not in Slackware.
+    bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
+fi
+
+
+#######################################################################
+#                  OPTIONS AND FUNCTIONS GO HERE                      #
+#######################################################################
+
 # For autocompletion with an arrow-key driven interface.
 zstyle ':completion:*' menu select
-
 # For autocompletion of command line switches for aliases.
 setopt COMPLETE_ALIASES
-
 # For case insensitive auto completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
@@ -34,26 +54,29 @@ if [[ $TERM = linux ]]; then
 	setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu
 fi
 
+autoload -Uz gitx
+autoload -Uz up-line-or-beginning-search
+autoload -Uz down-line-or-beginning-search
+setopt hist_ignore_space
+source .colors
+
+#unalias run-help
+autoload run-help
+HELPDIR=/usr/share/zsh/$ZSH_VERSION/help
+
+
+#######################################################################
+#                       VARIABLES (PARAMETERS)                        #
+#######################################################################
+
 PS1=$'%{\e[1;38;2;0;255;0m%}[%n@%M]%% %{\e[0m%}'
 RPS1=$'%{\e[1;38;2;255;0;0m%}[%w%D{th %b %Y} %T]%{\e[0m%}'
 fpath=( ~/.zfuncs "${fpath[@]}" )
 path=(~/.gem/ruby/2.5.0/bin "${path[@]}")
-autoload -Uz gitx
-#precmd_functions=(print_dir)
-
-setopt hist_ignore_space
-
 export LESS="-eFRX"
 export LANG=en_GB.UTF-8
 export EDITOR=/usr/bin/nvim
 export SHELLCHECK_OPTS="-e SC1090 -e SC2154 -e SC2012"
-autoload -Uz up-line-or-beginning-search
-autoload -Uz down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "\e[A" up-line-or-beginning-search 
-bindkey "\e[B" down-line-or-beginning-search
-source .colors
 
 
 ###################################################################################################
@@ -96,12 +119,6 @@ alias vin='nvim $HOME/.config/nvim/init.vim'
 alias viv='vim $HOME/.vimrc'
 alias viz='nvim $HOME/.zshrc'
 
-bindkey "[3~" delete-char		# <Del> key
-bindkey "[F" end-of-line		# <End> key
-bindkey "[H" beginning-of-line	# <Home> key
-if [[ -f /etc/arch-release ]]; then	# pacman not in Slackware.
-    bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
-fi
 
 # Slackware and Arch Linux store powerlevel9k files in different directories.
 [[ -f ~/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/powerlevel9k/powerlevel9k.zsh-theme
