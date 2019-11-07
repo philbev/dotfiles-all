@@ -118,7 +118,8 @@ alias vip='vi $HOME/.zprofile'
 alias vin='nvim $HOME/.config/nvim/init.vim'
 alias viv='vim $HOME/.vimrc'
 alias viz='nvim $HOME/.zshrc'
-
+alias -s txt=nvim
+alias -s md=nvim
 
 # Slackware and Arch Linux store powerlevel9k files in different directories.
 [[ -f ~/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/powerlevel9k/powerlevel9k.zsh-theme
