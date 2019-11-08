@@ -43,8 +43,8 @@ fi
 
 # Show vim status when in vi mode.
 function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    RPS2=%S${RPS1}
+    RPS1="${${KEYMAP/vicmd/-- %SNORMAL%s --}/(main|viins)/-- %SINSERT%s--}"
+    RPS2=$RPS1
     zle reset-prompt
 }
 
