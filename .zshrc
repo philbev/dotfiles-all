@@ -26,6 +26,7 @@ promptinit
 #                          KEY BINDINGS HERE                          #
 #######################################################################
 
+bindkey -v
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey '\eq' push-line-or-edit
@@ -34,10 +35,21 @@ bindkey "\e[B" down-line-or-beginning-search
 bindkey "[3~" delete-char		# <Del> key
 bindkey "[F" end-of-line		# <End> key
 bindkey "[H" beginning-of-line	# <Home> key
+bindkey -M  viins "" history-incremental-search-backward
+bindkey -M  viins "" history-incremental-search-backward
 if [[ -f /etc/arch-release ]]; then	# pacman not in Slackware.
     bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
 fi
 
+# Show vim status when in vi mode.
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    RPS2=%S${RPS1}
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
 
 #######################################################################
 #                  OPTIONS AND FUNCTIONS GO HERE                      #
@@ -69,8 +81,8 @@ HELPDIR=/usr/share/zsh/$ZSH_VERSION/help
 #                       VARIABLES (PARAMETERS)                        #
 #######################################################################
 
-PS1=$'%{\e[1;38;2;0;255;0m%}[%n@%M]%% %{\e[0m%}'
-RPS1=$'%{\e[1;38;2;255;0;0m%}[%w%D{th %b %Y} %T]%{\e[0m%}'
+#PS1=$'%{\e[1;38;2;0;255;0m%}[%n@%M]%% %{\e[0m%}'
+#RPS1=$'%{\e[1;38;2;255;0;0m%}[%w%D{th %b %Y} %T]%{\e[0m%}'
 fpath=( ~/.zfuncs "${fpath[@]}" )
 path=(~/.gem/ruby/2.5.0/bin "${path[@]}")
 export LESS="-eFRX"
@@ -121,17 +133,17 @@ alias viz='nvim $HOME/.zshrc'
 alias -s txt=nvim
 alias -s md=nvim
 
-# Slackware and Arch Linux store powerlevel9k files in different directories.
-[[ -f ~/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/powerlevel9k/powerlevel9k.zsh-theme
-[[ -f /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme ]] && source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-
-POWERLEVEL9K_PROMPT_ON_NEWLINE=false
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='red'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='yellow'
-POWERLEVEL9K_DIR_HOME_BACKGROUND='red'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='red'
+## Slackware and Arch Linux store powerlevel9k files in different directories.
+#[[ -f ~/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/powerlevel9k/powerlevel9k.zsh-theme
+#[[ -f /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme ]] && source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+#
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=false
+#POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
+#POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='red'
+#POWERLEVEL9K_DIR_HOME_FOREGROUND='yellow'
+#POWERLEVEL9K_DIR_HOME_BACKGROUND='red'
+#POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
+#POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='red'
 
 ###############
 #  FUNCTIONS  #
