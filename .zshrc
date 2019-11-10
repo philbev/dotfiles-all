@@ -4,7 +4,7 @@ HISTSIZE=1500
 SAVEHIST=1500
 setopt appendhistory autocd extendedglob
 unsetopt beep nomatch
-bindkey -e
+bindkey -v
 # End of lines configured by zsh-newuser-install
 
 
@@ -29,27 +29,18 @@ promptinit
 bindkey -v
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-bindkey '\eq' push-line-or-edit
 bindkey "\e[A" up-line-or-beginning-search 
 bindkey "\e[B" down-line-or-beginning-search
+bindkey '\eq' push-line-or-edit
 bindkey "[3~" delete-char		# <Del> key
 bindkey "[F" end-of-line		# <End> key
 bindkey "[H" beginning-of-line	# <Home> key
-bindkey -M  viins "" history-incremental-search-backward
-bindkey -M  viins "" history-incremental-search-backward
+#bindkey -M  viins "" history-incremental-search-backward
+bindkey "" history-incremental-search-backward
+#bindkey -M  vicmd "" history-incremental-search-backward
 if [[ -f /etc/arch-release ]]; then	# pacman not in Slackware.
     bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
 fi
-
-# Show vim status when in vi mode.
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- %SNORMAL%s --}/(main|viins)/-- %SINSERT%s--}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
 
 #######################################################################
 #                  OPTIONS AND FUNCTIONS GO HERE                      #
@@ -70,7 +61,7 @@ autoload -Uz gitx
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
 setopt hist_ignore_space
-source .colors
+source ~/.colors
 
 #unalias run-help
 autoload run-help
@@ -81,8 +72,6 @@ HELPDIR=/usr/share/zsh/$ZSH_VERSION/help
 #                       VARIABLES (PARAMETERS)                        #
 #######################################################################
 
-#PS1=$'%{\e[1;38;2;0;255;0m%}[%n@%M]%% %{\e[0m%}'
-#RPS1=$'%{\e[1;38;2;255;0;0m%}[%w%D{th %b %Y} %T]%{\e[0m%}'
 fpath=( ~/.zfuncs "${fpath[@]}" )
 path=(~/.gem/ruby/2.5.0/bin "${path[@]}")
 export LESS="-eFRX"
@@ -133,6 +122,22 @@ alias viz='nvim $HOME/.zshrc'
 alias -s txt=nvim
 alias -s md=nvim
 
+#######################################################################
+#                              PROMPTING                              #
+#######################################################################
+
+# Show vim status when in vi mode.
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/-- %SNORMAL%s --}/(main|viins)/-- %SINSERT%s --}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+prompt='%B%F{196}%n%F{255}@%F{226}%m%F{40}[%2~]%f%b: '
+
 ## Slackware and Arch Linux store powerlevel9k files in different directories.
 #[[ -f ~/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/powerlevel9k/powerlevel9k.zsh-theme
 #[[ -f /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme ]] && source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
@@ -145,9 +150,9 @@ alias -s md=nvim
 #POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
 #POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='red'
 
-###############
-#  FUNCTIONS  #
-###############
+#######################################################################
+#                              FUNCTIONS                              #
+#######################################################################
 
 dh () {
     du "$@" -d 1 -xh | sort -rh
