@@ -35,9 +35,8 @@ bindkey '\eq' push-line-or-edit
 bindkey "[3~" delete-char		# <Del> key
 bindkey "[F" end-of-line		# <End> key
 bindkey "[H" beginning-of-line	# <Home> key
-#bindkey -M  viins "" history-incremental-search-backward
 bindkey "" history-incremental-search-backward
-#bindkey -M  vicmd "" history-incremental-search-backward
+bindkey -s '`' '$()\ei'
 if [[ -f /etc/arch-release ]]; then	# pacman not in Slackware.
     bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
 fi
