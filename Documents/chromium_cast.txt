@@ -1,0 +1,5 @@
+To enable casting on chromium web browser enter the the URL below into chromium:
+    chrome://flags/#load-media-router-component-extension
+then change value to 'enable'
+
+
