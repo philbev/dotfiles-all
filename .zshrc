@@ -128,7 +128,7 @@ alias -s md=nvim
 
 # Show vim status when in vi mode.
 function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- %SNORMAL%s --}/(main|viins)/-- %SINSERT%s --}"
+    RPS1="${${KEYMAP/vicmd/-- %SNORMAL%s --}/(main|viins)/-- INSERT --}"
     RPS2=$RPS1
     zle reset-prompt
 }
