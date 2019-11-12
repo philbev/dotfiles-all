@@ -78,6 +78,7 @@ export LANG=en_GB.UTF-8
 export EDITOR=/usr/bin/nvim
 export SHELLCHECK_OPTS="-e SC1090 -e SC2154 -e SC2012"
 
+autoload precmd
 
 ###################################################################################################
 #				ALIASES								  #
@@ -127,7 +128,7 @@ alias -s md=nvim
 
 # Show vim status when in vi mode.
 function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- %SNORMAL%s --}/(main|viins)/-- INSERT --}"
+    RPS1="${${KEYMAP/vicmd/** %SNORMAL%s **}/(main|viins)/** INSERT **}"
     RPS2=$RPS1
     zle reset-prompt
 }
@@ -135,7 +136,7 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-prompt='%B%F{196}%n%F{255}@%F{226}%m%F{40}[%2~]%f%b: '
+prompt="%B%F{226}(${BRANCH})%F{196}[%F{51}%n%F{196}:%F{201}%2~%F{196}]%f%b%% "
 
 ## Slackware and Arch Linux store powerlevel9k files in different directories.
 #[[ -f ~/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/powerlevel9k/powerlevel9k.zsh-theme
