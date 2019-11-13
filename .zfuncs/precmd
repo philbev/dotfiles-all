@@ -1,0 +1,25 @@
+#!/usr/bin/zsh
+BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null)
+
+PS1='%B%F{51}[%n:%2~]%#%b%f '
+
+if [[ $(git status -s) =~ '^ M' ]]; then
+    PS1="%B%F{226}(${BRANCH})%F{51}[%n:%2~]%#%b%f "
+    MODIFIED=true
+else
+    unset MODIFIED
+fi
+
+if [[ $(git status -s) =~ '^A' ]]; then
+    PS1="%B%F{201}(${BRANCH})%F{51}[%n:%2~]%#%b%f "
+    ADDED=true
+else
+    unset ADDED
+fi
+
+if [[ $(git status -s) =~ '^M' ]]; then
+    PS1="%B%F{46}(${BRANCH})%F{51}[%n:%2~]%#%b%f "
+    STAGED=true
+else
+    unset STAGED
+fi
