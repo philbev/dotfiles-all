@@ -80,6 +80,7 @@ export EDITOR=/usr/bin/nvim
 export SHELLCHECK_OPTS="-e SC1090 -e SC2154 -e SC2012"
 
 autoload precmd
+precmd
 
 ###################################################################################################
 #				ALIASES								  #
