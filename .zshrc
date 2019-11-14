@@ -33,6 +33,7 @@ bindkey "\e[A" up-line-or-beginning-search
 bindkey "\e[B" down-line-or-beginning-search
 bindkey "\eh" run-help
 bindkey '\eq' push-line-or-edit
+bindkey "\e." insert-last-word
 bindkey "[3~" delete-char		# <Del> key
 bindkey "[F" end-of-line		# <End> key
 bindkey "[H" beginning-of-line	# <Home> key
