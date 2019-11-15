@@ -122,8 +122,10 @@ alias vip='vi $HOME/.zprofile'
 alias vin='nvim $HOME/.config/nvim/init.vim'
 alias viv='vim $HOME/.vimrc'
 alias viz='nvim $HOME/.zshrc'
-alias -s txt=nvim
 alias -s md=nvim
+alias -s pdf=okular
+alias -s tex=nvim
+alias -s txt=nvim
 
 #######################################################################
 #                              PROMPTING                              #
