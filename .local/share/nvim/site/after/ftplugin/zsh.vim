@@ -27,4 +27,15 @@ inoremap <buffer> ( ()<left>
 inoremap <buffer> [ []<left>
 inoremap <buffer> { {}<left>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             ABBREVIATIONS HERE                             "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+iabbrev black 16
+iabbrev red 196
+iabbrev green 46
+iabbrev yellow 226
+iabbrev blue 21
+iabbrev magenta 201
+iabbrev cyan 51
+iabbrev white 231
