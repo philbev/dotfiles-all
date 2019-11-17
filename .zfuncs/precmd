@@ -27,8 +27,7 @@ if [[ -d .git ]]; then
     if [[ $(git status -s | grep '^D') ]]; then				# File(s) removed from repository.
         DELETED=true
     else
-        DELETED="NOT SET"
-	unset DELETED
+        unset DELETED
     fi
     
     if [ $MODIFIED ]; then    
@@ -39,14 +38,13 @@ if [[ -d .git ]]; then
         PS1="%B%F{46}(${BRANCH})%F{51}[%n:%2~]%#%b%f "			# Green prompt.
     fi
 
-    if [[ $MODIFIED && $ADDED || $MODIFIED && $DELETED ]]; then
-        PS1="%B%F{201}(${BRANCH})%F{51}[%n:%2~]%#%b%f "			# Magenta prompt.
-    fi
 
     if [ $DELETED ]; then
         PS1="%B%F{196}(${BRANCH})%F{51}[%n:%2~]%#%b%f "			# Red prompt.
     fi
 
-    # This line below to be uncommented for debugging purposes.
-    print "MODIFIED = $MODIFIED ADDED = $ADDED STAGED = $STAGED DELETED = $DELETED"
+    if [[ ($MODIFIED && $ADDED) || ($MODIFIED && $DELETED) ]]; then
+        PS1="%B%F{201}(${BRANCH})%F{51}[%n:%2~]%#%b%f "			# Magenta prompt.
+    fi
+
 fi
