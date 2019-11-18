@@ -30,6 +30,7 @@ bindkey -v
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "\e[A" up-line-or-beginning-search 
+bindkey "	" expand-or-complete-prefix	# <Tab> key
 bindkey "\e[B" down-line-or-beginning-search
 bindkey "\eh" run-help
 bindkey '\eq' push-line-or-edit
