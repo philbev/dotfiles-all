@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xbel>
+<xbel dbusName="okular" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info" xmlns:kdepriv="http://www.kde.org/kdepriv" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks">
+ <folder href="file:///tmp/vim-latex-live-preview-6_jlt_wv/home/phil/Documents/latex/git/git.pdf">
+  <title>/tmp/vim-latex-live-preview-6_jlt_wv/home/phil/Documents/latex/git/git.pdf</title>
+  <bookmark href="file:///tmp/vim-latex-live-preview-6_jlt_wv/home/phil/Documents/latex/git/git.pdf#0;C2:0.499462:0.795144:1">
+   <title>#1</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+ </folder>
+ <folder href="file:///home/phil/Calibre Library/Stephenson, Peter/A User's Guide to Z-Shell (162)/A User's Guide to Z-Shell - Stephenson, Peter.pdf">
+  <title>/home/phil/Calibre Library/Stephenson, Peter/A User's Guide to Z-Shell (162)/A User's Guide to Z-Shell - Stephenson, Peter.pdf</title>
+  <bookmark href="file:///home/phil/Calibre%20Library/Stephenson,%20Peter/A%20User's%20Guide%20to%20Z-Shell%20(162)/A%20User's%20Guide%20to%20Z-Shell%20-%20Stephenson,%20Peter.pdf#196;C2:0.499462:0.0204856:1">
+   <title>Using associative arrays</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Stephenson,%20Peter/A%20User's%20Guide%20to%20Z-Shell%20(162)/A%20User's%20Guide%20to%20Z-Shell%20-%20Stephenson,%20Peter.pdf#195;C2:0.498682:0.953532:1">
+   <title>5.4.2
+ Using associative arrays
+</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Stephenson,%20Peter/A%20User's%20Guide%20to%20Z-Shell%20(162)/A%20User's%20Guide%20to%20Z-Shell%20-%20Stephenson,%20Peter.pdf#199;C2:0.498682:0.269517:1">
+   <title>5.4.3
+ Substituted substitutions, top- and tailing, etc.
+</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Stephenson,%20Peter/A%20User's%20Guide%20to%20Z-Shell%20(162)/A%20User's%20Guide%20to%20Z-Shell%20-%20Stephenson,%20Peter.pdf#67;C2:0.499561:0.306691:1">
+   <title>3.2.6
+ Parameter control
+ / Local parameters</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Stephenson,%20Peter/A%20User's%20Guide%20to%20Z-Shell%20(162)/A%20User's%20Guide%20to%20Z-Shell%20-%20Stephenson,%20Peter.pdf#71;C2:0.499561:0.63197:1">
+   <title>Associative arrays
+</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Stephenson,%20Peter/A%20User's%20Guide%20to%20Z-Shell%20(162)/A%20User's%20Guide%20to%20Z-Shell%20-%20Stephenson,%20Peter.pdf#69;C2:0.499561:0.342007:1">
+   <title>Numeric parameters
+</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Stephenson,%20Peter/A%20User's%20Guide%20to%20Z-Shell%20(162)/A%20User's%20Guide%20to%20Z-Shell%20-%20Stephenson,%20Peter.pdf#75;C2:0.499561:0.69145:1">
+   <title>Reading into parameters
+</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+ </folder>
+ <folder href="file:///home/phil/Calibre Library/Paul Falstad/Zsh Manual (163)/Zsh Manual - Paul Falstad.pdf">
+  <title>/home/phil/Calibre Library/Paul Falstad/Zsh Manual (163)/Zsh Manual - Paul Falstad.pdf</title>
+  <bookmark href="file:///home/phil/Calibre%20Library/Paul%20Falstad/Zsh%20Manual%20(163)/Zsh%20Manual%20-%20Paul%20Falstad.pdf#2;C2:0.499561:0.249071:1">
+   <title>Table of Contents</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+ </folder>
+ <folder href="file:///home/phil/Calibre Library/Susan Stevens/Kiddle_3766Front .fm (165)/Kiddle_3766Front .fm - Susan Stevens.pdf">
+  <title>/home/phil/Calibre Library/Susan Stevens/Kiddle_3766Front .fm (165)/Kiddle_3766Front .fm - Susan Stevens.pdf</title>
+ </folder>
+ <folder href="file:///home/phil/Calibre Library/Oliver Kiddle, Jerry Peek, Peter Stephenson/From Bash to Z Shell - Conquering the Command Line (165)/From Bash to Z Shell - Conquering the Comm - Oliver Kiddle, Jerry Peek, Peter Stephenso.pdf">
+  <title>/home/phil/Calibre Library/Oliver Kiddle, Jerry Peek, Peter Stephenson/From Bash to Z Shell - Conquering the Command Line (165)/From Bash to Z Shell - Conquering the Comm - Oliver Kiddle, Jerry Peek, Peter Stephenso.pdf</title>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#6;C2:0.499736:0.181818:1">
+   <title>Contents</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#26;C2:-0.105159:-0.0930931:2">
+   <title>1. Introduction to Shells</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#50;C2:-0.105159:-0.0930931:2">
+   <title>2. Using Shell Features Together</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#76;C2:-0.105159:-0.0930931:2">
+   <title>3. More Shell Features</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#94;C2:-0.105159:-0.0930931:2">
+   <title>4. Entering and Editing the Command Line</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#130;C2:-0.105159:-0.0930931:2">
+   <title>5. Starting the Shell</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#146;C2:-0.105159:-0.0930931:2">
+   <title>6. More About Shell History</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#164;C2:-0.105159:-0.0930931:2">
+   <title>7. Prompts</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#190;C2:-0.105159:-0.0930931:2">
+   <title>8. Files and Directories</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#220;C2:-0.105159:-0.0930931:2">
+   <title>9. Pattern Matching</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#254;C2:-0.105159:-0.0930931:2">
+   <title>10. Completion</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#284;C2:0.233721:0.071554:1">
+   <title>11. Jobs and Processes</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#302;C2:-0.105159:-0.0930931:2">
+   <title>12. Variables</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#330;C2:-0.105159:-0.0930931:2">
+   <title>13. Scripting and Functions</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#370;C2:-0.105159:-0.0930931:2">
+   <title>14. Writing Editor Commands</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#394;C2:-0.105159:-0.0930931:2">
+   <title>15. Writing Completion Functions</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#432;C2:-0.105159:-0.0930931:2">
+   <title>Appendix A - Unix Programs</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#438;C2:-0.105159:-0.0930931:2">
+   <title>Appendix B - External Resources</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#440;C2:-0.105159:-0.0930931:2">
+   <title>Appendix C - Glossary</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#448;C2:-0.105159:-0.0930931:2">
+   <title>Index</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+ </folder>
+</xbel>
