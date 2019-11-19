@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xbel>
-<xbel dbusName="okular" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info" xmlns:kdepriv="http://www.kde.org/kdepriv" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks">
+<xbel xmlns:kdepriv="http://www.kde.org/kdepriv" dbusName="okular" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info">
  <folder href="file:///tmp/vim-latex-live-preview-6_jlt_wv/home/phil/Documents/latex/git/git.pdf">
   <title>/tmp/vim-latex-live-preview-6_jlt_wv/home/phil/Documents/latex/git/git.pdf</title>
   <bookmark href="file:///tmp/vim-latex-live-preview-6_jlt_wv/home/phil/Documents/latex/git/git.pdf#0;C2:0.499462:0.795144:1">
@@ -249,6 +249,169 @@
    </info>
   </bookmark>
   <bookmark href="file:///home/phil/Calibre%20Library/Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenson/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Command%20Line%20(165)/From%20Bash%20to%20Z%20Shell%20-%20Conquering%20the%20Comm%20-%20Oliver%20Kiddle,%20Jerry%20Peek,%20Peter%20Stephenso.pdf#448;C2:-0.105159:-0.0930931:2">
+   <title>Index</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+ </folder>
+ <folder href="file:///usr/local/docs/ebooks/bash/From Bash to Z Shell.pdf">
+  <title>/usr/local/docs/ebooks/bash/From Bash to Z Shell.pdf</title>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#6;C2:0.499736:0.176236:1">
+   <title>Contents</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#26;C2:-0.105159:-0.0930931:2">
+   <title>1. Introduction to Shells</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#50;C2:-0.105159:-0.0930931:2">
+   <title>2. Using Shell Features Together</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#76;C2:-0.105159:-0.0930931:2">
+   <title>3. More Shell Features</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#94;C2:-0.105159:-0.0930931:2">
+   <title>4. Entering and Editing the Command Line</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#130;C2:-0.105159:-0.0930931:2">
+   <title>5. Starting the Shell</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#146;C2:-0.105159:-0.0930931:2">
+   <title>6. More About Shell History</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#164;C2:-0.105159:-0.0930931:2">
+   <title>7. Prompts</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#190;C2:-0.105159:-0.0930931:2">
+   <title>8. Files and Directories</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#220;C2:-0.105159:-0.0930931:2">
+   <title>9. Pattern Matching</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#254;C2:-0.105159:-0.0930931:2">
+   <title>10. Completion</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#284;C2:-0.105159:-0.0930931:2">
+   <title>11. Jobs and Processes</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#302;C2:-0.105159:-0.0930931:2">
+   <title>12. Variables</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#330;C2:-0.105159:-0.0930931:2">
+   <title>13. Scripting and Functions</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#370;C2:-0.105159:-0.0930931:2">
+   <title>14. Writing Editor Commands</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#394;C2:-0.105159:-0.0930931:2">
+   <title>15. Writing Completion Functions</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#432;C2:-0.105159:-0.0930931:2">
+   <title>Appendix A: Unix Programs</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#438;C2:-0.105159:-0.0930931:2">
+   <title>Appendix B: External Resources</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#440;C2:0.231395:0.071554:1">
+   <title>Appendix C: Glossary</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+  <bookmark href="file:///usr/local/docs/ebooks/bash/From%20Bash%20to%20Z%20Shell.pdf#448;C2:-0.105159:-0.0930931:2">
    <title>Index</title>
    <info>
     <metadata owner="http://freedesktop.org">
