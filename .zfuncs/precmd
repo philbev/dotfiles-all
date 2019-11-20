@@ -34,7 +34,7 @@ if [[ -d .git ]]; then
 	PS1="%B%F{226}(${BRANCH})%F{51}[%n:%2~]%#%b%f "			# Yellow prompt.
     fi
 
-    if [ $ADDED ]; then
+    if [[ $ADDED || $STAGED ]]; then
         PS1="%B%F{46}(${BRANCH})%F{51}[%n:%2~]%#%b%f "			# Green prompt.
     fi
 
