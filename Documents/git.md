@@ -286,6 +286,5 @@ git stash store [-m|--message <message>] [-q|--quiet] <commit>
     Store a given stash created via git stash create (which is a dangling merge
     commit) in the stash ref, updating the stash reflog. This is intended to be
     useful for scripts. It is probably not the command you want to use; see
-    "push"
-	              above.
+    "push" above.
 ```
