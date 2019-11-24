@@ -10,8 +10,8 @@ if [[ -f $HOME/.functions.sh ]]; then
     . "$HOME"/.functions.sh
 fi
 
-if [[ -f ~/.git-completion.bash ]]; then
-    source ~/.git-completion.bash
+if [[ -f /usr/share/bash-completion/bash_completion ]]; then
+    source /usr/share/bash-completion/bash_completion
 fi
 
 # Give some colour to man pages.
