@@ -96,9 +96,9 @@ filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		PLUG-VIM CONFIGURATION ENDS			     "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
 "		VIM-AIRLINE CONFIGURATION				"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -117,9 +117,8 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#left_sep = '⮀'
-"}}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
 "	    ULTISNIPS CONFIGURATION					"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -132,7 +131,7 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsSnippetsDir = '~/.local/share/nvim/site/UltiSnips'
 let g:UltiSnipsSnippetDirectories=['vim-snippets', 'UltiSnips']
 
-""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""}}}
 "  DEOPLETE CONFIGURATION  "{{{
 """"""""""""""""""""""""""""
 
@@ -140,8 +139,8 @@ let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		INDENTlINE				"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"		INDENTlINE				"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indentLine_enabled = 1
 let g:indentLine_concealcursor = 0
@@ -150,8 +149,8 @@ let g:indentLine_faster = 1
 let g:indentLine_setConceal = 0
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	     ALE CONGIGURATION				   "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"	     ALE CONGIGURATION				   "{{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:ale_linters = {'python': ['flake8'], 'vim': ['vint']}
@@ -163,8 +162,8 @@ let g:ale_lint_on_text_changed='normal'
 let g:ale_fix_on_save = 1
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"          THESAURUS CONFIGURATION                         "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"          THESAURUS CONFIGURATION                         "{{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "let g:tq_enabled_backends=["datamuse_com","thesaurus_com","openoffice_en","mthesaur_txt"]
@@ -172,8 +171,8 @@ let g:tq_enabled_backends=['openoffice_en','datamuse_com','mthesaur_txt']
 let g:tq_openoffice_en_file='/usr/local/downloads/MyThes-1.0/th_en_US_new'
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		CONFIGURATION OPTIONS GO HERE		"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"		CONFIGURATION OPTIONS GO HERE		"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
 syntax on
@@ -230,8 +229,8 @@ highlight WarningMsg term=standout ctermfg=224 guifg=White guibg=Red
 "au InsertEnter * highlight StatusLine term=NONE gui=bold guibg=green
 "au InsertLeave * highlight StatusLine term=NONE gui=bold guibg=blue
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		Key mapping starts here				     "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"		Key mapping starts here				     "{{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nmap <silent> <C-j> <Plug>(ale_next)
@@ -260,9 +259,12 @@ nnoremap <M-T> ^gU$yypv$r=|"					<Alt>+T = Uppercase whole line and underline.
 nnoremap <Up> gk|"						<Up> = Cursor up one virtual line.
 nnoremap <Down> gj|"						<Down> = Cursor down one virtual line.
 nnoremap <M-i> :set ic! ic?<CR>|"				<Alt>+i = Toggle 'Ignorecase' option.
+if &foldenable
+    nnoremap <tab> za
+endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	     SOME INSERT COMPLETIONS			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"	     SOME INSERT COMPLETIONS			"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 inoremap <M-z> 1G#!/usr/bin/zsh<Esc>:set ft=zsh<CR>
@@ -273,8 +275,8 @@ inoremap  |"		<Ctrl>+l = Whole line completion.
 "when leaving 'insert' mode with escape key.
 "inoremap u <Esc>gUiw`]a|"	<Alt>+u = Make word upper case.
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	     SOME VISUAL MODE MAPPINGS			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"	     SOME VISUAL MODE MAPPINGS			"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 vnoremap > >gv
@@ -282,8 +284,8 @@ vnoremap < <gv
 vnoremap <M-Down> dp`[V`]|"					<ALT>+<DOWN> = Move selected lines down one line.
 vnoremap <M-Up> dkkp`[V`]|"					<ALT>+<UP> = Move selected lines up one line.
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    OPERATOR PENDING MAPPING		       "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"	    OPERATOR PENDING MAPPING		       "{{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 onoremap ( :execute "normal! 0f(vi("<CR>
@@ -293,8 +295,8 @@ onoremap < :execute "normal! 0f<vi<"<CR>
 onoremap " :execute "normal! 0f\"vi\""<CR>
 onoremap ' :execute "normal! 0f'vi'"<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    WINDOWS KEYS FOR GERMAN CHARACTERS		"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"	    WINDOWS KEYS FOR GERMAN CHARACTERS		"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 inoremap @sa ä|"	<Window>+a
 inoremap @sA Ä|"	<Window>+<Shift>+A
@@ -307,8 +309,8 @@ inoremap @sB ß|"	<Window>+<Shift>+B
 inoremap @ss ß|"	<Window>+s
 inoremap @sS ß|"	<Window>+<Shift>+S
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		TERMINAL KEY MAPPINGS		       "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"		TERMINAL KEY MAPPINGS		       "{{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('nvim')
     tnoremap <M-/> :bn<cr>|"		<ALT>+/ = Next buffer.
@@ -329,8 +331,8 @@ if has('nvim')
     tnoremap <esc> <c-\><c-n>
 endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    FUNCTION KEYS <F1> TO <F12>			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"	    FUNCTION KEYS <F1> TO <F12>			"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F2> :set hlsearch! hlsearch?|"		<F2> - Toggle option 'hlsearch'
 nnoremap <F3> :set spell! spell?|"			<F3> - Toggle option 'spell'
@@ -341,8 +343,8 @@ nnoremap <S-F12> :so $MYVIMRC<CR>|"			<S-F12> - Edit $MYVIMRC
 nnoremap <F24> :so $MYVIMRC<CR>|"			<S-F12> - Edit $MYVIMRC
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		ABBREVIATIONS GO HERE			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"		ABBREVIATIONS GO HERE			"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "inoreab #! #!/bin/bash<ESC>:set ft=sh<CR>o
@@ -353,8 +355,8 @@ inoreab gm philbevan40@gmail.com
 inoreab pb Phil Bevan
 inoreab pba Phil Bevan<cr>172 Boxley Drive<cr>West Bridgford<cr>Nottingham<cr>NG2 7HB
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    AUTOCOMMANDS GO HERE			"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"	    AUTOCOMMANDS GO HERE			"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup group1
     autocmd!
@@ -372,10 +374,14 @@ let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_folding_style_pythonic = 0
 let g:livepreview_previewer = 'okular'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		NERDTREE OPTIONS HERE			"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"		NERDTREE OPTIONS HERE			"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeShowBookmarks=1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+"                             VIM FUNCTION KEYS				    "{{{
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap <M-O>3P :echo "		VIM FUNCTION KEYS\n
 	\		⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺\n\n
@@ -386,5 +392,5 @@ nnoremap <M-O>3P :echo "		VIM FUNCTION KEYS\n
 		\<F4>		- Toggle relative/absolute number.\n
 		\<F9>		- Toggle NERDTree.\n
 		\<F12>		- Source ~/.vimrc.\n"<CR>
-"
+"}}}
 " vim:foldenable:foldmethod=marker
