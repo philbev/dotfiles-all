@@ -4,7 +4,6 @@
 if [[ -d .git ]]; then
     BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null)
     
-    PS1="%B%F{51}($BRANCH)[%n:%2~]%#%b%f "		# Default prompt without any changes in git repository.
     PS1="($BRANCH)%B%F{51}[%n:%2~]%#%b%f "		# Default prompt without any changes in git repository.
 
     if [[ $(git status -s) =~ '^ M' ]]; then				# File(s) modified (yellow).
