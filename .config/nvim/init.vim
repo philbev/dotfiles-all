@@ -3,7 +3,7 @@ scriptencoding utf-8
 " MY /HOME/.CONFIG/NVIM/INIT.VIM INITIALISATION FILE
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    Vim-plug configuration					"
+"	    Vim-plug configuration					"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " The follwing lines automatically installs vim-plug if not already installed.
@@ -95,10 +95,11 @@ call plug#end()
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		Plug-vim configuration ends			     "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"		PLUG-VIM CONFIGURATION ENDS			     "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		Vim-airline Configuration				"
+"		VIM-AIRLINE CONFIGURATION				"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if !exists('g:airline_symbols')
@@ -116,9 +117,10 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#left_sep = '⮀'
+"}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    ULTISNIPS CONFIGURATION					"
+"	    ULTISNIPS CONFIGURATION					"{{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:UltiSnipsEditSplit = 'horizontal'
@@ -131,7 +133,7 @@ let g:UltiSnipsSnippetsDir = '~/.local/share/nvim/site/UltiSnips'
 let g:UltiSnipsSnippetDirectories=['vim-snippets', 'UltiSnips']
 
 """"""""""""""""""""""""""""
-"  DEOPLETE CONFIGURATION  "
+"  DEOPLETE CONFIGURATION  "{{{
 """"""""""""""""""""""""""""
 
 let g:deoplete#enable_at_startup = 1
@@ -367,6 +369,7 @@ augroup END
 
 let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_style_pythonic = 0
 let g:livepreview_previewer = 'okular'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -383,3 +386,5 @@ nnoremap <M-O>3P :echo "		VIM FUNCTION KEYS\n
 		\<F4>		- Toggle relative/absolute number.\n
 		\<F9>		- Toggle NERDTree.\n
 		\<F12>		- Source ~/.vimrc.\n"<CR>
+"
+" vim:foldenable:foldmethod=marker
