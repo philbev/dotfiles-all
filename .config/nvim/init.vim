@@ -1,12 +1,12 @@
+" MY /HOME/.CONFIG/NVIM/INIT.VIM INITIALISATION FILE
 set encoding=utf-8
 scriptencoding utf-8
-" MY /HOME/.CONFIG/NVIM/INIT.VIM INITIALISATION FILE
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    Vim-plug configuration					"{{{
+"	    VIM-PLUG CONFIGURATION					"{{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" The follwing lines automatically installs vim-plug if not already installed.
+" The following lines automatically installs vim-plug if not already installed.
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
     silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
 		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -96,11 +96,9 @@ filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "		PLUG-VIM CONFIGURATION ENDS			     "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		VIM-AIRLINE CONFIGURATION				"{{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}1
+"	VIM-AIRLINE CONFIGURATION				"{{{2
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -117,9 +115,9 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#left_sep = '⮀'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	    ULTISNIPS CONFIGURATION					"{{{
+"}}}2
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	    ULTISNIPS CONFIGURATION					"{{{2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:UltiSnipsEditSplit = 'horizontal'
@@ -132,7 +130,7 @@ let g:UltiSnipsSnippetsDir = '~/.local/share/nvim/site/UltiSnips'
 let g:UltiSnipsSnippetDirectories=['vim-snippets', 'UltiSnips']
 
 """"""""""""""""""""""""""""}}}
-"  DEOPLETE CONFIGURATION  "{{{
+"  DEOPLETE CONFIGURATION  "{{{2
 """"""""""""""""""""""""""""
 
 let g:deoplete#enable_at_startup = 1
@@ -140,7 +138,7 @@ inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		INDENTlINE				"{{{
+"		INDENTlINE				"{{{2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indentLine_enabled = 1
 let g:indentLine_concealcursor = 0
@@ -150,12 +148,12 @@ let g:indentLine_setConceal = 0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	     ALE CONGIGURATION				   "{{{
+"	     ALE CONFIGURATION				   "{{{2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:ale_linters = {'python': ['flake8'], 'vim': ['vint']}
 let g:ale_fixers = {'python': ['autopep8']}
-" With neovim plug-in 'deoplete' completion  doen't play well with ALE linter
+" With neovim plug-in 'deoplete' completion  doesn't play well with ALE linter
 " (get far too many error messages) when in insert mode. So configured to lint
 " only in normal mode.
 let g:ale_lint_on_text_changed='normal'
@@ -163,7 +161,7 @@ let g:ale_fix_on_save = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"          THESAURUS CONFIGURATION                         "{{{
+"          THESAURUS CONFIGURATION                         "{{{2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "let g:tq_enabled_backends=["datamuse_com","thesaurus_com","openoffice_en","mthesaur_txt"]
@@ -172,17 +170,15 @@ let g:tq_openoffice_en_file='/usr/local/downloads/MyThes-1.0/th_en_US_new'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		CONFIGURATION OPTIONS GO HERE		"{{{
+"		CONFIGURATION OPTIONS GO HERE		"{{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
 syntax on
-"setlocal timeoutlen=100 ttimeoutlen=0
 set undofile
 set spelllang=en
 set nospell
-set complete+=d,kspell
-"set cpoptions+=$
-set dictionary=/usr/dict/words
+set dictionary=/usr/share/dict/words
+set complete+=d,k=/usr/share/dict/british-english
 set thesaurus=/usr/local/docs/mthesaur.txt
 set listchars=tab:➤\ ,eol:↲,space:·
 set noexpandtab shiftwidth=4 tabstop=8 softtabstop=4
@@ -230,7 +226,7 @@ highlight WarningMsg term=standout ctermfg=224 guifg=White guibg=Red
 "au InsertLeave * highlight StatusLine term=NONE gui=bold guibg=blue
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		Key mapping starts here				     "{{{
+"		KEY MAPPING STARTS HERE				     "{{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nmap <silent> <C-j> <Plug>(ale_next)
@@ -261,22 +257,25 @@ nnoremap <Down> gj|"						<Down> = Cursor down one virtual line.
 nnoremap <M-i> :set ic! ic?<CR>|"				<Alt>+i = Toggle 'Ignorecase' option.
 if &foldenable
     nnoremap <tab> za
+    nnoremap <A-j> ]z
+    nnoremap <A-k> [z
+    set foldcolumn=4
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	     SOME INSERT COMPLETIONS			"{{{
+"	     SOME INSERT COMPLETIONS			"{{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 inoremap <M-z> 1G#!/usr/bin/zsh<Esc>:set ft=zsh<CR>
 inoremap  |"		<Ctrl>+f = Filename completion.
 inoremap  |"		<Ctrl>+d = Macro completion.
 inoremap  |"		<Ctrl>+l = Whole line completion.
-"Line below commented out as it seems to slow things down. Very noticable
+"Line below commented out as it seems to slow things down. Very noticeable
 "when leaving 'insert' mode with escape key.
 "inoremap u <Esc>gUiw`]a|"	<Alt>+u = Make word upper case.
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	     SOME VISUAL MODE MAPPINGS			"{{{
+"	     SOME VISUAL MODE MAPPINGS			"{{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 vnoremap > >gv
@@ -285,7 +284,7 @@ vnoremap <M-Down> dp`[V`]|"					<ALT>+<DOWN> = Move selected lines down one line
 vnoremap <M-Up> dkkp`[V`]|"					<ALT>+<UP> = Move selected lines up one line.
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	    OPERATOR PENDING MAPPING		       "{{{
+"	    OPERATOR PENDING MAPPING		       "{{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 onoremap ( :execute "normal! 0f(vi("<CR>
@@ -296,7 +295,7 @@ onoremap " :execute "normal! 0f\"vi\""<CR>
 onoremap ' :execute "normal! 0f'vi'"<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	    WINDOWS KEYS FOR GERMAN CHARACTERS		"{{{
+"	    WINDOWS KEYS FOR GERMAN CHARACTERS		"{{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 inoremap @sa ä|"	<Window>+a
 inoremap @sA Ä|"	<Window>+<Shift>+A
@@ -310,7 +309,7 @@ inoremap @ss ß|"	<Window>+s
 inoremap @sS ß|"	<Window>+<Shift>+S
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		TERMINAL KEY MAPPINGS		       "{{{
+"		TERMINAL KEY MAPPINGS		       "{{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('nvim')
     tnoremap <M-/> :bn<cr>|"		<ALT>+/ = Next buffer.
@@ -332,19 +331,19 @@ if has('nvim')
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	    FUNCTION KEYS <F1> TO <F12>			"{{{
+"	    FUNCTION KEYS <F1> TO <F12>			"{{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F2> :set hlsearch! hlsearch?|"		<F2> - Toggle option 'hlsearch'
 nnoremap <F3> :set spell! spell?|"			<F3> - Toggle option 'spell'
-nnoremap <F4> :set relativenumber! relativenumber?|"	<F4> - Toggle option 'number'
+nnoremap <F4> :set relativenumber! relativenumber?|"	<F4> - Toggle option 'relativenumber'
 nnoremap <F9> :NERDTreeToggle|"			<F9> - Toggle NERDTree
 nnoremap <F12> :e $MYVIMRC<CR>|"			<S-F12> - Edit $MYVIMRC
-nnoremap <S-F12> :so $MYVIMRC<CR>|"			<S-F12> - Edit $MYVIMRC
-nnoremap <F24> :so $MYVIMRC<CR>|"			<S-F12> - Edit $MYVIMRC
+nnoremap <S-F12> :so $MYVIMRC<CR>|"			<S-F12> - Source $MYVIMRC
+nnoremap <F24> :so $MYVIMRC<CR>|"			<S-F12> - Source $MYVIMRC
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		ABBREVIATIONS GO HERE			"{{{
+"		ABBREVIATIONS GO HERE			"{{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "inoreab #! #!/bin/bash<ESC>:set ft=sh<CR>o
@@ -356,7 +355,7 @@ inoreab pb Phil Bevan
 inoreab pba Phil Bevan<cr>172 Boxley Drive<cr>West Bridgford<cr>Nottingham<cr>NG2 7HB
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	    AUTOCOMMANDS GO HERE			"{{{
+"	    AUTOCOMMANDS GO HERE			"{{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup group1
     autocmd!
@@ -375,22 +374,22 @@ let g:vim_markdown_folding_style_pythonic = 0
 let g:livepreview_previewer = 'okular'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		NERDTREE OPTIONS HERE			"{{{
+"		NERDTREE OPTIONS HERE			"{{{1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeShowBookmarks=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"                             VIM FUNCTION KEYS				    "{{{
+"                             VIM FUNCTION KEYS				    "{{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap <M-O>3P :echo "		VIM FUNCTION KEYS\n
 	\		⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺\n\n
-		\<ALT>+<F1>	- Display Function Keys.\n
+		\<A-F1>		- Display Function Keys.\n
 		\<F1>		- Vim help.\n
 		\<F2>		- Toggle highlight search.\n
 		\<F3>		- Toggle spell checking.\n
 		\<F4>		- Toggle relative/absolute number.\n
 		\<F9>		- Toggle NERDTree.\n
-		\<F12>		- Source ~/.vimrc.\n"<CR>
+		\<S-F12>	- Source ~/.vimrc.\n"<CR>
 "}}}
-" vim:foldenable:foldmethod=marker
+" vim:foldenable:foldmethod=marker:ft=nvim
