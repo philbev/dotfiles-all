@@ -77,13 +77,12 @@ HELPDIR=/usr/share/zsh/$ZSH_VERSION/help
 fpath=( ~/.zfuncs "${fpath[@]}" )
 path=(~/.gem/ruby/2.5.0/bin "${path[@]}")
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
-export LESS="-eFRX"
 export LANG=en_GB.UTF-8
 export EDITOR=/usr/bin/nvim
 export SHELLCHECK_OPTS="-e SC1090 -e SC2154 -e SC2012"
 # Less colours. Needs package to be installed.
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
-export LESS='-R '
+export LESS="-eFRX"
 
 autoload precmd
 precmd
@@ -169,7 +168,7 @@ man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
     LESS_TERMCAP_me=$'\e[0m' \
     LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_so=$'\e[38;2;0;255;0m' \
     LESS_TERMCAP_ue=$'\e[0m' \
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
