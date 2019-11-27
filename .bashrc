@@ -63,7 +63,7 @@ export HISTIGNORE=l:ll:lm:c:a:h:la:lh
 export PROMPT_COMMAND="history -a;source ~/.set_prompt.sh"
 export PROMPT_DIRTRIM=3
 export REPOS=/usr/local/downloads/repositories
-export GREP_COLORS="ms=01;34:fn=01;32"
+export GREP_COLORS='ms=01;38;5;196:fn=01;38;5;201:ln=01;38;5;46'
 export GVFS_DISABLE_FUSE=1
 export CXXFLAGS='-std=c++14 -g -Wall'
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'

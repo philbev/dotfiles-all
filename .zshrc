@@ -80,9 +80,10 @@ export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 export LANG=en_GB.UTF-8
 export EDITOR=/usr/bin/nvim
 export SHELLCHECK_OPTS="-e SC1090 -e SC2154 -e SC2012"
-# Less colours. Needs package to be installed.
+# Less colours. Needs 'source-highlight' package to be installed.
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 export LESS="-eFRX"
+export GREP_COLORS='ms=01;38;5;196:fn=01;38;5;201:ln=01;38;5;46'
 
 autoload precmd
 precmd
