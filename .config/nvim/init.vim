@@ -257,6 +257,7 @@ nnoremap <Down> gj|"						<Down> = Cursor down one virtual line.
 nnoremap <M-i> :set ic! ic?<CR>|"				<Alt>+i = Toggle 'Ignorecase' option.
 if &foldenable
     nnoremap <tab> za
+    nnoremap <S-tab> zA
     nnoremap <A-j> ]z
     nnoremap <A-k> [z
     set foldcolumn=4
