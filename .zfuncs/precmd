@@ -2,7 +2,7 @@
 
 
 if [[ -d .git ]]; then
-    BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null)
+    export BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null)
     
     PS1="($BRANCH)%B%F{51}[%n:%2~]%#%b%f "		# Default prompt without any changes in git repository.
 
