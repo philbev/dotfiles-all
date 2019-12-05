@@ -65,8 +65,12 @@ autoload -Uz down-line-or-beginning-search
 setopt hist_ignore_space
 source ~/.colors
 
-#unalias run-help
-autoload run-help
+autoload -Uz run-help
+autoload -Uz run-help-git
+autoload -Uz run-help-ip
+autoload -Uz run-help-sudo
+unalias 'run-help' 2>/dev/null
+alias help=run-help
 HELPDIR=/usr/share/zsh/$ZSH_VERSION/help
 
 
