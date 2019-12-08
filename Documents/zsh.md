@@ -4,6 +4,20 @@ To find out if if an option is set or not:
 ```bash
     echo $options[<option name>]
 ```
+## Arrays
+
+To create an array (indexed):
+>   array=(item1 item2 item3 ...)
+
+Note! Array indexes start at 1 not 0 as in most other languages.
+
+To print all elements of an array:
+>   echo ${array[@}}
+>   echo ${array}
+
+To print the number of elements in an array:
+>   echo ${#array[@]}
+>   echo ${#array}
 ## History Expansion{{{2
 ###  ``` ^<string to be omitted>```{{{3
 At the command line the *^<string>*, the *string* following the *^* character
