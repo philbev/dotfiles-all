@@ -1,4 +1,4 @@
-# Lines configured by zsh-newuser-install
+#             LINES CONFIGURED BY ZSH-NEWUSER-INSTALL                 #
 HISTFILE=~/.histfile
 HISTSIZE=1500
 SAVEHIST=1500
@@ -22,9 +22,9 @@ promptinit
 # End of lines added by compinstall
 
 
-#######################################################################
+
 #                          KEY BINDINGS HERE                          #
-#######################################################################
+
 
 bindkey -v
 zle -N up-line-or-beginning-search
@@ -44,9 +44,9 @@ if [[ -f /etc/arch-release ]]; then	# pacman not in Slackware.
     bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
 fi
 
-#######################################################################
+
 #                  OPTIONS AND FUNCTIONS GO HERE                      #
-#######################################################################
+
 
 # For autocompletion with an arrow-key driven interface.
 zstyle ':completion:*' menu select
@@ -74,9 +74,9 @@ alias help=run-help
 HELPDIR=/usr/share/zsh/$ZSH_VERSION/help
 
 
-#######################################################################
+
 #                       VARIABLES (PARAMETERS)                        #
-#######################################################################
+
 
 fpath=( ~/.zfuncs "${fpath[@]}" )
 path=(~/.gem/ruby/2.5.0/bin "${path[@]}")
@@ -92,9 +92,8 @@ export GREP_COLORS='ms=01;38;5;196:fn=01;38;5;201:ln=01;38;5;46'
 autoload precmd
 precmd
 
-###################################################################################################
-#				ALIASES								  #
-###################################################################################################
+#                               ALIASES                               #
+
 alias ..="cd .."
 alias a=alias
 alias cda='cd /usr/local/audio/mp3'
@@ -136,9 +135,9 @@ alias -s pdf=okular
 alias -s tex=nvim
 alias -s txt=nvim
 
-#######################################################################
+
 #                              PROMPTING                              #
-#######################################################################
+
 
 # Show vim status when in vi mode.
 function zle-line-init zle-keymap-select {
@@ -164,10 +163,9 @@ prompt="%B%F{226}(${BRANCH})%F{196}[%F{51}%n%F{196}:%F{201}%2~%F{196}]%f%b%% "
 #POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
 #POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='red'
 
-#######################################################################
-#                              FUNCTIONS                              #
-#######################################################################
 
+#                              FUNCTIONS                              #
+## man()                                                             ##
 # Colourisation of man pages.
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
@@ -179,38 +177,27 @@ man() {
     command man "$@"
 }
 
+## dh()                                                              ##
 dh () {
     du "$@" -d 1 -xh | sort -rh
 }
 
-if [[ -f /etc/slackware-version ]]; then
-    rsync-slack64 () {
-    repo=/usr/local/downloads/repositories/slackware64
-    wget -q -P /tmp http://ftp.slackware.uk/slackware/slackware64-current/ChangeLog.txt
-    if diff /tmp/ChangeLog.txt $repo/latest/ChangeLog.txt >/dev/null; then
-	rm -v /tmp/ChangeLog.txt
-	echo -e "\033[1;35m"NO CHANGES! Nothing to download"\033[0m"
-    else
-	rm -v /tmp/ChangeLog.txt
-	rsync -avh --delete --progress /$repo/latest/ $repo/previous
-	rsync -avh --delete --progress --exclude=source rsync://rsync.slackware.uk/slackware/slackware64-current/ $repo/latest
-    fi
-}
-fi
-
-
+## rsync-italian()                                                   ##
 rsync-italian () {
     rsync -avh --progress --delete  /usr/local/docs/italian/ /home/philbev/Dropbox/italian
 }
 
+## rsync-german()                                                    ##
 rsync-german () {
     rsync -avh --progress --delete /usr/local/docs/german/ /home/philbev/Dropbox/german
 }
 
+## g()                                                               ##
 g () {
 	g++ -o ${1%.cpp} "$@"
 }
 
+## gh()                                                              ##
 gh () {
     if [[ $# != 1 ]]; then
         echo "grep for <search-item> in history:-"
@@ -220,24 +207,29 @@ gh () {
 }
 
 
+## l()                                                               ##
 l () {
     ls -lF --color --group-directories-first "$@" | less
 }
 
+## la()                                                              ##
 la () {
     ls -AlvF --color=auto --group-directories-first  "$@" | less
 }
 
+## ll()                                                              ##
 ll () {
 
 	ls -lF --color=auto --group-directories-first "$@" | less 
 }
 
+## lm()                                                              ##
 lm () {
 
 	ls -lF --color=auto --group-directories-first "$@" | more
 }
 
+## inf()                                                             ##
 inf () {
 	info coreutils "$@" "invocation"
 }
