@@ -39,3 +39,30 @@ iabbrev blue 21
 iabbrev magenta 201
 iabbrev cyan 51
 iabbrev white 231
+
+"				FOLDING					    "
+
+setlocal foldcolumn=4
+setlocal foldmethod=expr
+setlocal foldexpr=ZshFolds()
+
+function! ZshFolds()
+    let thisline = getline(v:lnum)
+    if match(thisline, '^###.*###$') >= 0
+	return '>3'
+    elseif match(thisline, '^##.*##$') >= 0
+	return '>2'
+    elseif match(thisline, '^#.*#$') >= 0
+	return '>1'
+    else
+	return '='
+    endif
+    return '1'
+endfunction
+
+function! ZshFoldText()
+  let foldsize = (v:foldend-v:foldstart)
+  return getline(v:foldstart).' ('.foldsize.' lines)'
+endfunction
+setlocal foldtext=ZshFoldText()
+

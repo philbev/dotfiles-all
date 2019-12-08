@@ -27,6 +27,28 @@ inoremap <buffer> <M-2> <ESC>:s/^ *//<CR>yyp:s/./-/g<CR>:nohlsearch<CR>a|"  - <M
 
 " Toggle folding in markdown files.
 nnoremap <M-f> zA
-setlocal foldcolumn=4
 nnoremap <buffer> <tab> za
 nnoremap <buffer> <s-tab> zA
+setlocal foldcolumn=4
+setlocal foldmethod=expr
+setlocal foldexpr=MarkdownFolds()
+
+function! MarkdownFolds()
+    let thisline = getline(v:lnum)
+    if match(thisline, '^###') >= 0
+	return '>3'
+    elseif match(thisline, '^##') >= 0
+	return '>2'
+    elseif match(thisline, '^#') >= 0
+	return '>1'
+    else
+	return '='
+    endif
+    return '1'
+endfunction
+
+function! MarkdownFoldText()
+  let foldsize = (v:foldend-v:foldstart)
+  return getline(v:foldstart).' ('.foldsize.' lines)'
+endfunction
+setlocal foldtext=MarkdownFoldText()
