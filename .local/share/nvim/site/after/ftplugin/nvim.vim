@@ -30,3 +30,31 @@ inoreabbrev <buffer> vmap vnoremap <buffer>
 inoreabbrev <buffer> vnoremap vnoremap <buffer>
 inoreabbrev <buffer> cmap cnoremap <buffer>
 inoreabbrev <buffer> cnoremap cnoremap <buffer>
+
+
+"				FOLDING					    "
+
+setlocal foldcolumn=4
+setlocal foldmethod=expr
+setlocal foldexpr=VimFolds()
+
+function! VimFolds()
+    let thisline = getline(v:lnum)
+    if match(thisline, '^""".*"""$') >= 0
+	return '>3'
+    elseif match(thisline, '^"".*""$') >= 0
+	return '>2'
+    elseif match(thisline, '^".*"$') >= 0
+	return '>1'
+    else
+	return '='
+    endif
+    return '1'
+endfunction
+
+function! VimFoldText()
+  let foldsize = (v:foldend-v:foldstart)
+  return getline(v:foldstart).' ('.foldsize.' lines)'
+endfunction
+setlocal foldtext=VimFoldText()
+

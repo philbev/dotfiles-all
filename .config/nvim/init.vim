@@ -1,10 +1,8 @@
-" MY /HOME/.CONFIG/NVIM/INIT.VIM INITIALISATION FILE
+" MY /HOME/.CONFIG/NVIM/INIT.VIM INITIALISATION FILE "
 set encoding=utf-8
 scriptencoding utf-8
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    VIM-PLUG CONFIGURATION					"{{{1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM-PLUG CONFIGURATION                             "
 
 " The following lines automatically installs vim-plug if not already installed.
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -61,9 +59,9 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'vim-latex/vim-latex'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'edkolev/promptline.vim'
-"" Any valid git URL is allowed
+" Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-"" The plugins below are for vimOrganizer
+" The plugins below are for vimOrganizer
 Plug 'hsitz/VimOrganizer'
 Plug 'ryanoasis/vim-devicons'
 
@@ -94,31 +92,10 @@ call plug#end()
 
 filetype plugin indent on
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		PLUG-VIM CONFIGURATION ENDS			     "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}1
-"	VIM-AIRLINE CONFIGURATION				"{{{2
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
+" PLUGIN CONFIGURATIONS                              "
+"" ULTISNIPS CONFIGURATION           ""
 
-augroup airGroup
-    autocmd!
-    au VimEnter * let g:airline_left_sep = ''
-    au VimEnter * let g:airline_right_sep = ''
-augroup END
-
-let g:airline#extensions#whitespace#enabled = 0
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#left_sep = '⮀'
-"}}}2
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    ULTISNIPS CONFIGURATION					"{{{2
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsExpandTrigger = '<tab>'
@@ -129,17 +106,17 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsSnippetsDir = '~/.local/share/nvim/site/UltiSnips'
 let g:UltiSnipsSnippetDirectories=['vim-snippets', 'UltiSnips']
 
-""""""""""""""""""""""""""""}}}
-"  DEOPLETE CONFIGURATION  "{{{2
-""""""""""""""""""""""""""""
+
+"" DEOPLETE CONFIGURATION            ""
+
 
 let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		INDENTlINE				"{{{2
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" INDENTlINE                        ""
+
 let g:indentLine_enabled = 1
 let g:indentLine_concealcursor = 0
 let g:indentLine_char = '┆'
@@ -147,9 +124,9 @@ let g:indentLine_faster = 1
 let g:indentLine_setConceal = 0
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	     ALE CONFIGURATION				   "{{{2
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" ALE CONFIGURATION                 ""
+
 
 let g:ale_linters = {'python': ['flake8'], 'vim': ['vint']}
 let g:ale_fixers = {'python': ['autopep8']}
@@ -160,18 +137,23 @@ let g:ale_lint_on_text_changed='normal'
 let g:ale_fix_on_save = 1
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"          THESAURUS CONFIGURATION                         "{{{2
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" THESAURUS CONFIGURATION           ""
+
 
 "let g:tq_enabled_backends=["datamuse_com","thesaurus_com","openoffice_en","mthesaur_txt"]
 let g:tq_enabled_backends=['openoffice_en','datamuse_com','mthesaur_txt']
 let g:tq_openoffice_en_file='/usr/local/downloads/MyThes-1.0/th_en_US_new'
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		CONFIGURATION OPTIONS GO HERE		"{{{1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" NERDTREE OPTIONS HERE             ""
+
+let NERDTreeShowBookmarks=1
+
+
+" CONFIGURATION OPTIONS GO HERE	                     "
+
 filetype plugin indent on
 syntax on
 set undofile
@@ -225,9 +207,9 @@ highlight WarningMsg term=standout ctermfg=224 guifg=White guibg=Red
 "au InsertEnter * highlight StatusLine term=NONE gui=bold guibg=green
 "au InsertLeave * highlight StatusLine term=NONE gui=bold guibg=blue
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		KEY MAPPING STARTS HERE				     "{{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" KEY MAPPING                                        "
+"" NORMAL MODE                       ""
 
 nmap <silent> <C-j> <Plug>(ale_next)
 nmap <silent> <C-k> <Plug>(ale_previous)
@@ -263,30 +245,30 @@ if &foldenable
     set foldcolumn=4
 endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	     SOME INSERT COMPLETIONS			"{{{1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" INSERT MODE                       ""
+
 
 inoremap <M-z> 1G#!/usr/bin/zsh<Esc>:set ft=zsh<CR>
-inoremap  |"		<Ctrl>+f = Filename completion.
-inoremap  |"		<Ctrl>+d = Macro completion.
-inoremap  |"		<Ctrl>+l = Whole line completion.
-"Line below commented out as it seems to slow things down. Very noticeable
-"when leaving 'insert' mode with escape key.
-"inoremap u <Esc>gUiw`]a|"	<Alt>+u = Make word upper case.
+inoremap  |""		<Ctrl>+f = Filename completion.
+inoremap  |""		<Ctrl>+d = Macro completion.
+inoremap  |""		<Ctrl>+l = Whole line completion.
+""Line below commented out as it seems to slow things down. Very noticeable
+""when leaving 'insert' mode with escape key.
+""inoremap u <Esc>gUiw`]a|""	<Alt>+u = Make word upper case.
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	     SOME VISUAL MODE MAPPINGS			"{{{1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" VISUAL MODE                       ""
+
 
 vnoremap > >gv
 vnoremap < <gv
-vnoremap <M-Down> dp`[V`]|"					<ALT>+<DOWN> = Move selected lines down one line.
-vnoremap <M-Up> dkkp`[V`]|"					<ALT>+<UP> = Move selected lines up one line.
+vnoremap <M-Down> dp`[V`]|""					<ALT>+<DOWN> = Move selected lines down one line.
+vnoremap <M-Up> dkkp`[V`]|""					<ALT>+<UP> = Move selected lines up one line.
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	    OPERATOR PENDING MAPPING		       "{{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" OPERATOR PENDING MODE             ""
+
 
 onoremap ( :execute "normal! 0f(vi("<CR>
 onoremap { :execute "normal! 0f{vi{"<CR>
@@ -295,9 +277,9 @@ onoremap < :execute "normal! 0f<vi<"<CR>
 onoremap " :execute "normal! 0f\"vi\""<CR>
 onoremap ' :execute "normal! 0f'vi'"<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	    WINDOWS KEYS FOR GERMAN CHARACTERS		"{{{1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" WINDOWS KEYS FOR GERMAN CHARACTERS""
+
 inoremap @sa ä|"	<Window>+a
 inoremap @sA Ä|"	<Window>+<Shift>+A
 inoremap @so ö|"	<Window>+o
@@ -309,9 +291,9 @@ inoremap @sB ß|"	<Window>+<Shift>+B
 inoremap @ss ß|"	<Window>+s
 inoremap @sS ß|"	<Window>+<Shift>+S
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		TERMINAL KEY MAPPINGS		       "{{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" TERMINAL MODE                     ""
+
 if has('nvim')
     tnoremap <M-/> :bn<cr>|"		<ALT>+/ = Next buffer.
     tnoremap <M-\> :bp<cr>|"		<ALT>+\ = Previous buffer.
@@ -331,9 +313,9 @@ if has('nvim')
     tnoremap <esc> <c-\><c-n>
 endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	    FUNCTION KEYS <F1> TO <F12>			"{{{1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" FUNCTION KEYS <F1> TO <F12>       ""
+
 nnoremap <F2> :set hlsearch! hlsearch?|"		<F2> - Toggle option 'hlsearch'
 nnoremap <F3> :set spell! spell?|"			<F3> - Toggle option 'spell'
 nnoremap <F4> :set relativenumber! relativenumber?|"	<F4> - Toggle option 'relativenumber'
@@ -343,9 +325,8 @@ nnoremap <S-F12> :so $MYVIMRC<CR>|"			<S-F12> - Source $MYVIMRC
 nnoremap <F24> :so $MYVIMRC<CR>|"			<S-F12> - Source $MYVIMRC
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		ABBREVIATIONS GO HERE			"{{{1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" ABBREVIATIONS                                      "
 
 "inoreab #! #!/bin/bash<ESC>:set ft=sh<CR>o
 inoreab @g phil@philbevan40@gmail.com
@@ -355,9 +336,9 @@ inoreab gm philbevan40@gmail.com
 inoreab pb Phil Bevan
 inoreab pba Phil Bevan<cr>172 Boxley Drive<cr>West Bridgford<cr>Nottingham<cr>NG2 7HB
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"	    AUTOCOMMANDS GO HERE			"{{{1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" AUTOCOMMANDS                                       "
+
 augroup group1
     autocmd!
     au VimEnter * AirlineTheme xtermlight
@@ -374,14 +355,9 @@ let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_folding_style_pythonic = 0
 let g:livepreview_previewer = 'okular'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"		NERDTREE OPTIONS HERE			"{{{1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let NERDTreeShowBookmarks=1
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
-"                             VIM FUNCTION KEYS				    "{{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM FUNCTION KEYS                                  "
+
 
 nnoremap <M-O>3P :echo "		VIM FUNCTION KEYS\n
 	\		⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺\n\n
@@ -392,5 +368,4 @@ nnoremap <M-O>3P :echo "		VIM FUNCTION KEYS\n
 		\<F4>		- Toggle relative/absolute number.\n
 		\<F9>		- Toggle NERDTree.\n
 		\<S-F12>	- Source ~/.vimrc.\n"<CR>
-"}}}
-" vim:foldenable:foldmethod=marker:ft=nvim
+
