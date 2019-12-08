@@ -1,4 +1,4 @@
-# Zsh Tips and tricks {{{1
+# Zsh Tips and tricks 
 
 To find out if if an option is set or not:
 ```bash
@@ -18,8 +18,8 @@ To print all elements of an array:
 To print the number of elements in an array:
 >   echo ${#array[@]}
 >   echo ${#array}
-## History Expansion{{{2
-###  ``` ^<string to be omitted>```{{{3
+## History Expansion
+###  ``` ^<string to be omitted>```
 At the command line the *^<string>*, the *string* following the *^* character
 is removed from the previous command in the history. E.g:-
 >   % cal 1222 1995
@@ -40,7 +40,7 @@ Mo Tu We Th Fr Sa Su
 18 19 20 21 22 23 24
 25 26 27 28 29 30 31
 ```                    
-### ```!:X```{{{3
+### ```!:X```
 Where X is:-
 ```bash
        0      The first input word (command).
@@ -53,5 +53,3 @@ Where X is:-
        x*     Abbreviates `x-$'.
        x-     Like `x*' but omitting word $.
 ```
-
-vim:foldenable:foldmethod=marker
