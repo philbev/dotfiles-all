@@ -7,10 +7,10 @@ scriptencoding utf-8
 " The following lines automatically installs vim-plug if not already installed.
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
     silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     augroup vplug
-	autocmd!
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+        autocmd!
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
     augroup END
 endif
 
@@ -152,7 +152,7 @@ let g:tq_openoffice_en_file='/usr/local/downloads/MyThes-1.0/th_en_US_new'
 let NERDTreeShowBookmarks=1
 
 
-" CONFIGURATION OPTIONS GO HERE	                     "
+" CONFIGURATION OPTIONS GO HERE                      "
 
 filetype plugin indent on
 syntax on
@@ -163,7 +163,7 @@ set dictionary=/usr/share/dict/words
 set complete+=d,k=/usr/share/dict/british-english
 set thesaurus=/usr/local/docs/mthesaur.txt
 set listchars=tab:➤\ ,eol:↲,space:·
-set noexpandtab shiftwidth=4 tabstop=8 softtabstop=4
+set expandtab shiftwidth=4 tabstop=8 softtabstop=4
 set ignorecase smartcase
 set wildmode=full wildmenu
 set laststatus=2
@@ -213,30 +213,30 @@ highlight WarningMsg term=standout ctermfg=224 guifg=White guibg=Red
 
 nmap <silent> <C-j> <Plug>(ale_next)
 nmap <silent> <C-k> <Plug>(ale_previous)
-nnoremap <M-/> :bn<cr>|"					<ALT>+/ = Next buffer.
-nnoremap <M-\> :bp<cr>|"					<ALT>+\ = Previous buffer.
-nnoremap <M-.> :bp<cr>|"					<ALT>+. = Previous buffer.
-nnoremap <M-Del> :bd<cr>|"					<Alt>+<Del> = Delete buffer.
-nnoremap <M-N> n|"						<ALT>+N = New window.
-nnoremap <M-n> |"						<ALT>+n = Next window.
-nnoremap <M-c> c|"						<ALT>+c = Close window.
-nnoremap <M-o> o|"						<ALT>+o = Only window (Close all others).
-nnoremap <M-s> s|"						<ALT>+s = Split window.
-nnoremap <M-v> v|"						<ALT>+v = Split window vertically.
-nnoremap <M-w> w|"						<ALT>+w = Next window.
-nnoremap <M-z> 1GO#!/usr/bin/zsh<ESC>:set ft=zsh<CR>|"		<Alt+z> = Insert #! and set filetype.
-nnoremap <M-#> |"						<ALT>+# = Edit alternate buffer.
-nnoremap <C-Down> |"						<CTRL>+<DOWN> = Scroll up one line.
-nnoremap <M-Down> ddp|"						<ALT>+<DOWN> = Move text on current line down one line.
-nnoremap <C-Up> |"						<CTRL>+<UP> = Scroll up one line.
-nnoremap <M-Up> ddkP|"						<ALT>+<DOWN> = Move text on current line up one line.
-nnoremap <Leader>b 1GO#!/usr/bin/bash<ESC>:set ft=sh<CR>|"	\b = Insert #! and set filetype.
-nnoremap <M-l> :set list! list?<CR>|"				<Alt>+l = Display whitespace characters.
-nnoremap <M-e> :set expandtab! expandtab?<CR>|"			<Alt>+e = Toggle 'Expandtab' and display.
-nnoremap <M-T> ^gU$yypv$r=|"					<Alt>+T = Uppercase whole line and underline.
-nnoremap <Up> gk|"						<Up> = Cursor up one virtual line.
-nnoremap <Down> gj|"						<Down> = Cursor down one virtual line.
-nnoremap <M-i> :set ic! ic?<CR>|"				<Alt>+i = Toggle 'Ignorecase' option.
+nnoremap <M-/> :bn<cr>|"                                        <ALT>+/ = Next buffer.
+nnoremap <M-\> :bp<cr>|"                                        <ALT>+\ = Previous buffer.
+nnoremap <M-.> :bp<cr>|"                                        <ALT>+. = Previous buffer.
+nnoremap <M-Del> :bd<cr>|"                                      <Alt>+<Del> = Delete buffer.
+nnoremap <M-N> n|"                                            <ALT>+N = New window.
+nnoremap <M-n> |"                                           <ALT>+n = Next window.
+nnoremap <M-c> c|"                                            <ALT>+c = Close window.
+nnoremap <M-o> o|"                                            <ALT>+o = Only window (Close all others).
+nnoremap <M-s> s|"                                            <ALT>+s = Split window.
+nnoremap <M-v> v|"                                            <ALT>+v = Split window vertically.
+nnoremap <M-w> w|"                                            <ALT>+w = Next window.
+nnoremap <M-z> 1GO#!/usr/bin/zsh<ESC>:set ft=zsh<CR>|"          <Alt+z> = Insert #! and set filetype.
+nnoremap <M-#> |"                                             <ALT>+# = Edit alternate buffer.
+nnoremap <C-Down> |"                                          <CTRL>+<DOWN> = Scroll up one line.
+nnoremap <M-Down> ddp|"                                         <ALT>+<DOWN> = Move text on current line down one line.
+nnoremap <C-Up> |"                                            <CTRL>+<UP> = Scroll up one line.
+nnoremap <M-Up> ddkP|"                                          <ALT>+<DOWN> = Move text on current line up one line.
+nnoremap <Leader>b 1GO#!/usr/bin/bash<ESC>:set ft=sh<CR>|"      \b = Insert #! and set filetype.
+nnoremap <M-l> :set list! list?<CR>|"                           <Alt>+l = Display whitespace characters.
+nnoremap <M-e> :set expandtab! expandtab?<CR>|"                 <Alt>+e = Toggle 'Expandtab' and display.
+nnoremap <M-T> ^gU$yypv$r=|"                                    <Alt>+T = Uppercase whole line and underline.
+nnoremap <Up> gk|"                                              <Up> = Cursor up one virtual line.
+nnoremap <Down> gj|"                                            <Down> = Cursor down one virtual line.
+nnoremap <M-i> :set ic! ic?<CR>|"                               <Alt>+i = Toggle 'Ignorecase' option.
 if &foldenable
     nnoremap <tab> za
     nnoremap <S-tab> zA
@@ -250,12 +250,12 @@ endif
 
 
 inoremap <M-z> 1G#!/usr/bin/zsh<Esc>:set ft=zsh<CR>
-inoremap  |""		<Ctrl>+f = Filename completion.
-inoremap  |""		<Ctrl>+d = Macro completion.
-inoremap  |""		<Ctrl>+l = Whole line completion.
+inoremap  |""             <Ctrl>+f = Filename completion.
+inoremap  |""             <Ctrl>+d = Macro completion.
+inoremap  |""             <Ctrl>+l = Whole line completion.
 ""Line below commented out as it seems to slow things down. Very noticeable
 ""when leaving 'insert' mode with escape key.
-""inoremap u <Esc>gUiw`]a|""	<Alt>+u = Make word upper case.
+""inoremap u <Esc>gUiw`]a|""  <Alt>+u = Make word upper case.
 
 
 "" VISUAL MODE                       ""
@@ -263,8 +263,8 @@ inoremap  |""		<Ctrl>+l = Whole line completion.
 
 vnoremap > >gv
 vnoremap < <gv
-vnoremap <M-Down> dp`[V`]|""					<ALT>+<DOWN> = Move selected lines down one line.
-vnoremap <M-Up> dkkp`[V`]|""					<ALT>+<UP> = Move selected lines up one line.
+vnoremap <M-Down> dp`[V`]|""                                    <ALT>+<DOWN> = Move selected lines down one line.
+vnoremap <M-Up> dkkp`[V`]|""                                    <ALT>+<UP> = Move selected lines up one line.
 
 
 "" OPERATOR PENDING MODE             ""
@@ -280,33 +280,33 @@ onoremap ' :execute "normal! 0f'vi'"<CR>
 
 "" WINDOWS KEYS FOR GERMAN CHARACTERS""
 
-inoremap @sa ä|"	<Window>+a
-inoremap @sA Ä|"	<Window>+<Shift>+A
-inoremap @so ö|"	<Window>+o
-inoremap @sO Ö|"	<Window>+<Shift>+O
-inoremap @su ü|"	<Window>+u
-inoremap @sU Ü|"	<Window>+<Shift>+U
-inoremap @sb ß|"	<Window>+b
-inoremap @sB ß|"	<Window>+<Shift>+B
-inoremap @ss ß|"	<Window>+s
-inoremap @sS ß|"	<Window>+<Shift>+S
+inoremap @sa ä|"        <Window>+a
+inoremap @sA Ä|"        <Window>+<Shift>+A
+inoremap @so ö|"        <Window>+o
+inoremap @sO Ö|"        <Window>+<Shift>+O
+inoremap @su ü|"        <Window>+u
+inoremap @sU Ü|"        <Window>+<Shift>+U
+inoremap @sb ß|"        <Window>+b
+inoremap @sB ß|"        <Window>+<Shift>+B
+inoremap @ss ß|"        <Window>+s
+inoremap @sS ß|"        <Window>+<Shift>+S
 
 
 "" TERMINAL MODE                     ""
 
 if has('nvim')
-    tnoremap <M-/> :bn<cr>|"		<ALT>+/ = Next buffer.
-    tnoremap <M-\> :bp<cr>|"		<ALT>+\ = Previous buffer.
-    tnoremap <M-.> :bp<cr>|"		<ALT>+. = Previous buffer.
-    tnoremap <M-Del> :bd<cr>|"		<Alt>+<Del> = Delete buffer.
-    tnoremap <M-N> n|"		<ALT>+N = New window.
-    tnoremap <M-n> |"		<ALT>+n = Next window.
-    tnoremap <M-c> c|"		<ALT>+c = Close window.
-    tnoremap <M-o> o|"		<ALT>+o = Only window (Close all others).
-    tnoremap <M-s> s|"		<ALT>+s = Split window.
-    tnoremap <M-v> v|"		<ALT>+v = Split window vertically.
-    tnoremap <M-w> w|"		<ALT>+w = Next window.
-    tnoremap <M-#> |"			<ALT>+# = Edit alternate buffer.
+    tnoremap <M-/> :bn<cr>|"            <ALT>+/ = Next buffer.
+    tnoremap <M-\> :bp<cr>|"            <ALT>+\ = Previous buffer.
+    tnoremap <M-.> :bp<cr>|"            <ALT>+. = Previous buffer.
+    tnoremap <M-Del> :bd<cr>|"          <Alt>+<Del> = Delete buffer.
+    tnoremap <M-N> n|"                <ALT>+N = New window.
+    tnoremap <M-n> |"               <ALT>+n = Next window.
+    tnoremap <M-c> c|"                <ALT>+c = Close window.
+    tnoremap <M-o> o|"                <ALT>+o = Only window (Close all others).
+    tnoremap <M-s> s|"                <ALT>+s = Split window.
+    tnoremap <M-v> v|"                <ALT>+v = Split window vertically.
+    tnoremap <M-w> w|"                <ALT>+w = Next window.
+    tnoremap <M-#> |"                 <ALT>+# = Edit alternate buffer.
     "In terminal mode use <A-r> to paste from registers while in 'insert' mode.
     tnoremap <expr> <A-r> '<C-\><C-N>"'.nr2char(getchar()).'pi'
     "Allows escape key to be used in terminal mode.
@@ -316,13 +316,13 @@ endif
 
 "" FUNCTION KEYS <F1> TO <F12>       ""
 
-nnoremap <F2> :set hlsearch! hlsearch?|"		<F2> - Toggle option 'hlsearch'
-nnoremap <F3> :set spell! spell?|"			<F3> - Toggle option 'spell'
-nnoremap <F4> :set relativenumber! relativenumber?|"	<F4> - Toggle option 'relativenumber'
-nnoremap <F9> :NERDTreeToggle|"			<F9> - Toggle NERDTree
-nnoremap <F12> :e $MYVIMRC<CR>|"			<S-F12> - Edit $MYVIMRC
-nnoremap <S-F12> :so $MYVIMRC<CR>|"			<S-F12> - Source $MYVIMRC
-nnoremap <F24> :so $MYVIMRC<CR>|"			<S-F12> - Source $MYVIMRC
+nnoremap <F2> :set hlsearch! hlsearch?|"              <F2> - Toggle option 'hlsearch'
+nnoremap <F3> :set spell! spell?|"                    <F3> - Toggle option 'spell'
+nnoremap <F4> :set relativenumber! relativenumber?|"  <F4> - Toggle option 'relativenumber'
+nnoremap <F9> :NERDTreeToggle|"                       <F9> - Toggle NERDTree
+nnoremap <F12> :e $MYVIMRC<CR>|"                        <S-F12> - Edit $MYVIMRC
+nnoremap <S-F12> :so $MYVIMRC<CR>|"                     <S-F12> - Source $MYVIMRC
+nnoremap <F24> :so $MYVIMRC<CR>|"                       <S-F12> - Source $MYVIMRC
 
 
 
@@ -345,9 +345,9 @@ augroup group1
     au BufWritePost ~/.config/nvim/init.vim source $MYVIMRC
     au BufNewFile *.h source ~/.vim/cpp_header.vim
     au BufReadPost *
-		\ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit' 
-		\ |   exe "normal! g`\""
-		\ | endif
+                \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+                \ |   exe "normal! g`\""
+                \ | endif
 augroup END
 
 let g:vim_markdown_folding_style_pythonic = 1
@@ -359,13 +359,13 @@ let g:livepreview_previewer = 'okular'
 " VIM FUNCTION KEYS                                  "
 
 
-nnoremap <M-O>3P :echo "		VIM FUNCTION KEYS\n
-	\		⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺\n\n
-		\<A-F1>		- Display Function Keys.\n
-		\<F1>		- Vim help.\n
-		\<F2>		- Toggle highlight search.\n
-		\<F3>		- Toggle spell checking.\n
-		\<F4>		- Toggle relative/absolute number.\n
-		\<F9>		- Toggle NERDTree.\n
-		\<S-F12>	- Source ~/.vimrc.\n"<CR>
+nnoremap <M-O>3P :echo "                VIM FUNCTION KEYS\n
+        \               ⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺\n\n
+                \<A-F1>         - Display Function Keys.\n
+                \<F1>           - Vim help.\n
+                \<F2>           - Toggle highlight search.\n
+                \<F3>           - Toggle spell checking.\n
+                \<F4>           - Toggle relative/absolute number.\n
+                \<F9>           - Toggle NERDTree.\n
+                \<S-F12>        - Source ~/.vimrc.\n"<CR>
 

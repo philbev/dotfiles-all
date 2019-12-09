@@ -1,4 +1,9 @@
-#             LINES CONFIGURED BY ZSH-NEWUSER-INSTALL                 #
+# ~/.zshrc: Configuration file for zsh.
+# Lines beginning with a single '#' are comments as usual.
+# Lines beginning with a '##' are level 1 folds.
+# Lines beginning with a '###' are level 2 folds etc.
+#
+## LINES CONFIGURED BY ZSH-NEWUSER-INSTALL
 HISTFILE=~/.histfile
 HISTSIZE=1500
 SAVEHIST=1500
@@ -20,32 +25,26 @@ promptinit
 #prompt fire red magenta blue white white
 
 # End of lines added by compinstall
-
-
-
-#                          KEY BINDINGS HERE                          #
-
-
+## KEY BINDINGS
 bindkey -v
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-bindkey "\e[A" up-line-or-beginning-search 
-bindkey "	" expand-or-complete-prefix	# <Tab> key
+bindkey "\e[A" up-line-or-beginning-search
+bindkey "       " expand-or-complete-prefix     # <Tab> key
 bindkey "\e[B" down-line-or-beginning-search
 bindkey "\eh" run-help
 bindkey '\eq' push-line-or-edit
 bindkey "\e." insert-last-word
-bindkey "[3~" delete-char		# <Del> key
-bindkey "[F" end-of-line		# <End> key
-bindkey "[H" beginning-of-line	# <Home> key
+bindkey "[3~" delete-char             # <Del> key
+bindkey "[F" end-of-line              # <End> key
+bindkey "[H" beginning-of-line        # <Home> key
 bindkey "" history-incremental-search-backward
 bindkey -s '`' '$()\ei'
-if [[ -f /etc/arch-release ]]; then	# pacman not in Slackware.
+if [[ -f /etc/arch-release ]]; then     # pacman not in Slackware.
     bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
 fi
 
-
-#                  OPTIONS AND FUNCTIONS GO HERE                      #
+## OPTIONS AND FUNCTIONS
 
 
 # For autocompletion with an arrow-key driven interface.
@@ -56,7 +55,7 @@ setopt COMPLETE_ALIASES
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 if [[ $TERM = linux ]]; then
-	setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu
+    setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu
 fi
 
 autoload -Uz gitx
@@ -75,7 +74,7 @@ HELPDIR=/usr/share/zsh/$ZSH_VERSION/help
 
 
 
-#                       VARIABLES (PARAMETERS)                        #
+## VARIABLES (PARAMETERS)
 
 
 fpath=( ~/.zfuncs "${fpath[@]}" )
@@ -92,7 +91,7 @@ export GREP_COLORS='ms=01;38;5;196:fn=01;38;5;201:ln=01;38;5;46'
 autoload precmd
 precmd
 
-#                               ALIASES                               #
+## ALIASES
 
 alias ..="cd .."
 alias a=alias
@@ -136,7 +135,7 @@ alias -s tex=nvim
 alias -s txt=nvim
 
 
-#                              PROMPTING                              #
+## PROMPTING
 
 
 # Show vim status when in vi mode.
@@ -151,7 +150,7 @@ zle -N zle-keymap-select
 
 prompt="%B%F{226}(${BRANCH})%F{196}[%F{51}%n%F{196}:%F{201}%2~%F{196}]%f%b%% "
 
-## Slackware and Arch Linux store powerlevel9k files in different directories.
+# Slackware and Arch Linux store powerlevel9k files in different directories.
 #[[ -f ~/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/powerlevel9k/powerlevel9k.zsh-theme
 #[[ -f /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme ]] && source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 #
@@ -164,8 +163,8 @@ prompt="%B%F{226}(${BRANCH})%F{196}[%F{51}%n%F{196}:%F{201}%2~%F{196}]%f%b%% "
 #POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='red'
 
 
-#                              FUNCTIONS                              #
-## man()                                                             ##
+## FUNCTIONS
+### man()
 # Colourisation of man pages.
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
@@ -177,27 +176,27 @@ man() {
     command man "$@"
 }
 
-## dh()                                                              ##
+### dh()
 dh () {
     du "$@" -d 1 -xh | sort -rh
 }
 
-## rsync-italian()                                                   ##
+### rsync-italian()
 rsync-italian () {
     rsync -avh --progress --delete  /usr/local/docs/italian/ /home/philbev/Dropbox/italian
 }
 
-## rsync-german()                                                    ##
+### rsync-german()
 rsync-german () {
     rsync -avh --progress --delete /usr/local/docs/german/ /home/philbev/Dropbox/german
 }
 
-## g()                                                               ##
+### g()
 g () {
-	g++ -o ${1%.cpp} "$@"
+    g++ -o ${1%.cpp} "$@"
 }
 
-## gh()                                                              ##
+### gh()
 gh () {
     if [[ $# != 1 ]]; then
         echo "grep for <search-item> in history:-"
@@ -207,31 +206,31 @@ gh () {
 }
 
 
-## l()                                                               ##
+### l()
 l () {
     ls -lF --color --group-directories-first "$@" | less
 }
 
-## la()                                                              ##
+### la()
 la () {
     ls -AlvF --color=auto --group-directories-first  "$@" | less
 }
 
-## ll()                                                              ##
+### ll()
 ll () {
 
-	ls -lF --color=auto --group-directories-first "$@" | less 
+    ls -lF --color=auto --group-directories-first "$@" | less
 }
 
-## lm()                                                              ##
+### lm()
 lm () {
 
-	ls -lF --color=auto --group-directories-first "$@" | more
+    ls -lF --color=auto --group-directories-first "$@" | more
 }
 
-## inf()                                                             ##
+### inf()
 inf () {
-	info coreutils "$@" "invocation"
+    info coreutils "$@" "invocation"
 }
 
 # This needs to be at the end of the file as something else is overwriting it.
