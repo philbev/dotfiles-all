@@ -1,5 +1,3 @@
-"File /home/philbev/.vim/after/ftplugins/html.vim
-setlocal spelllang=en
 if has('nvim')
     nnoremap <buffer> <F10> :edit ~/.local/share/nvim/site/after/ftplugin/html.vim<CR>
     nnoremap <buffer> <F22> :source ~/.local/share/nvim/site/after/ftplugin/html.vim<CR>
