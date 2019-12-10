@@ -1,9 +1,7 @@
 #!/usr/bin/bash
 # MY /home/.bashrc INITIALISATION FILE
 
-###################################################################################################
-#	    SOURCED FILES									  #
-###################################################################################################
+## SOURCED FILES
 
 # Load all my functions from $HOME/.functions.sh
 if [[ -f $HOME/.functions.sh ]]; then
@@ -15,13 +13,13 @@ if [[ -f /usr/share/bash-completion/bash_completion ]]; then
 fi
 
 # Give some colour to man pages.
-if [[ -f ~/.less_colours.sh	]]; then
-	source ~/.less_colours.sh
+if [[ -f ~/.less_colours.sh     ]]; then
+        source ~/.less_colours.sh
 fi
 
 # Define some variables to be used for colours
-if [[ -f ~/.colors	]]; then
-	source ~/.colors
+if [[ -f ~/.colors      ]]; then
+        source ~/.colors
 fi
 
 # To reflect status of git.
@@ -29,14 +27,14 @@ if [[ -f ~/.set_prompt.sh ]]; then
     source ~/.set_prompt.sh
 fi
 
-###################################################################################################
-#			ENVIRONMENT VARIABLES							  #
-###################################################################################################
+
+## ENVIRONMENT VARIABLES
+
 
 if [[ $USER != root ]]; then
     export LS_OPTIONS=${LS_OPTIONS/auto/always}
 fi
-export PATH=$PATH:/usr/local/bin/android-studio/bin:/usr/local/bin/android-sdk-linux/platform-tools	# Needed for Android SDK
+export PATH=$PATH:/usr/local/bin/android-studio/bin:/usr/local/bin/android-sdk-linux/platform-tools     # Needed for Android SDK
 export LANG="en_GB.UTF-8"
 
 # Need to source ~/.bashrc every time a directory is changed so as to get the status of git.
@@ -56,7 +54,7 @@ export SHELLCHECK_OPTS="-e SC1090 -e SC2154 -e SC2012"
 export LESS="-eFRX"
 export HISTCONTROL=ignoredups:ignorespace:erasedups
 export HISTTIMEFORMAT="%c: "
-export QUEUEDIR=/home/philbev/.sbopkg/queues	# Needed for Sbopkg
+export QUEUEDIR=/home/philbev/.sbopkg/queues    # Needed for Sbopkg
 export HISTFILESIZE=50000
 export HISTSIZE=1000
 export HISTIGNORE=l:ll:lm:c:a:h:la:lh
@@ -70,13 +68,13 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 export SLACK_DIR=/usr/local/downloads/repositories/slackware64/latest
 export EDITOR=nvim
 shopt -s histappend
-shopt -s checkwinsize	#Hopefully this will stop bash from messing up my screen occasionally.
+shopt -s checkwinsize   #Hopefully this will stop bash from messing up my screen occasionally.
 
 
 
-###################################################################################################
-#				ALIASES								  #
-###################################################################################################
+
+## ALIASES
+
 alias ..="cd .."
 alias a=alias
 #alias c=clear
@@ -115,37 +113,14 @@ alias vip='vi $HOME/.bash_profile'
 alias vin='nvim $HOME/.config/nvim/init.vim'
 alias viv='vim $HOME/.vimrc'
 
+## FUNCTIONS
 
-
-###################################################################################################
-#				FUNCTIONS							  #
-###################################################################################################
-
-# Let's back-up okular bookmark file to directory where it will not be deleted when KDE
-# is upgraded.
-if [[ -f /etc/slackver-version ]]; then		# Only if running Slacware OS.
-    slackver=$(sed 's/Slackware //' </etc/slackware-version)
-    if [ ! -d /usr/local/backups/okular-"$slackver" ]; then
-	mkdir -vp /usr/local/backups/okular-"$slackver"
-    fi
-    if [ /home/philbev/.kde/share/apps/okular/bookmarks.xml -nt /usr/local/backups/okular-"${slackver}"/bookmarks.xml ]; then
-	echo "Backing up Okular bookmarks....."
-	cp -v /home/philbev/.kde/share/apps/okular/bookmarks.xml /usr/local/backups/okular-"${slackver}"/bookmarks.xml
-    fi
-fi
-
-# The "root" user needs its initialization files updated regularly to keep in sync with user "philbev".
-# This should only be run as superuser, hence the "if" statement. While we are at it, we'll update
-# the /etc/skel directory as well.
-#if [ $USER = root ]; then
-	#/usr/local/sbin/syncusers
-#fi
-
-
+### dh ()
 dh () {
     du "$@" -d 1 -xh | sort -rh
 }
 
+### rsync-slack64 ()
 rsync-slack64 () {
     repo=/usr/local/downloads/repositories/slackware64
     wget -q -P /tmp http://ftp.slackware.uk/slackware/slackware64-current/ChangeLog.txt
@@ -154,23 +129,27 @@ rsync-slack64 () {
         echo -e "\033[1;35m"NO CHANGES! Nothing to download"\033[0m"
     else
         rm -v /tmp/ChangeLog.txt
-	    rsync -avh --delete --progress /$repo/latest/ $repo/previous
-	    rsync -avh --delete --progress --exclude=source rsync://rsync.slackware.uk/slackware/slackware64-current/ $repo/latest
+            rsync -avh --delete --progress /$repo/latest/ $repo/previous
+            rsync -avh --delete --progress --exclude=source rsync://rsync.slackware.uk/slackware/slackware64-current/ $repo/latest
     fi
 }
 
+### rsync-italian ()
 rsync-italian () {
     rsync -avh --progress --delete  /usr/local/docs/italian/ /home/philbev/Dropbox/italian
 }
 
+### rsync-german ()
 rsync-german () {
     rsync -avh --progress --delete /usr/local/docs/german/ /home/philbev/Dropbox/german
 }
 
+### g ()
 g () {
-	g++ -o "${1%.cpp}" "$@"
+        g++ -o "${1%.cpp}" "$@"
 }
 
+### gh ()
 gh () {
     if [[ $# != 1 ]]; then
         echo "grep for <search-item> in history:-"
@@ -179,29 +158,34 @@ gh () {
     history | grep "$@" 2>/dev/null
 }
 
-
+### l ()
 l () {
     ls -lF --color --group-directories-first "$@" | less
 }
 
+### la ()
 la () {
     ls -alF --color=auto  --group-directories-first  "$@" | less
 }
 
+### ll ()
 ll () {
 
-	ls -AlF --color=auto  --group-directories-first "$@" | less 
+    ls -AlF --color=auto  --group-directories-first "$@" | less
 }
 
+### lm ()
 lm () {
 
-	ls -AlF --color=auto  --group-directories-first "$@" | more
+        ls -AlF --color=auto  --group-directories-first "$@" | more
 }
 
+### inf ()
 inf () {
-	info coreutils "$@" "invocation"
+        info coreutils "$@" "invocation"
 }
 
+### mydate ()
 mydate () {
     date
 }

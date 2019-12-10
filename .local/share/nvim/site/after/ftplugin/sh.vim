@@ -27,3 +27,26 @@ inoremap <buffer> ( ()<left>
 inoremap <buffer> [ []<left>
 inoremap <buffer> { {}<left>
 
+setlocal foldenable
+setlocal foldcolumn=3
+setlocal foldmethod=expr
+setlocal foldexpr=BashFolds()
+
+function! BashFolds()
+    let thisline=getline(v:lnum)
+    if match(thisline, '^## ') >=0
+        return '>1'
+    elseif match(thisline, '^### ') >=0
+        return '>2'
+    elseif match(thisline, '^#### ') >=0
+        return '>3'
+    else
+        return '='
+    endif
+endfunction
+
+function! BashFoldText()
+  let foldsize = (v:foldend-v:foldstart)
+  return getline(v:foldstart).' ('.foldsize.' lines)'
+endfunction
+setlocal foldtext=BashFoldText()
