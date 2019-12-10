@@ -1,11 +1,9 @@
+" MY /HOME/.VIMRC INITIALISATION FILE
+
 set encoding=utf-8
 scriptencoding utf-8
 
-" MY /HOME/.VIMRC INITIALISATION FILE
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    Vim-plug configuration					"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" VIM-PLUG CONFIGURATION
 
 " The follwing lines automatically installs vim-plug if not already installed.
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -44,7 +42,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 "Plug 'garbas/vim-snipmate'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ratazzi/blackboard.vim'
 Plug 'shawncplus/Vim-tocterm'
@@ -98,13 +96,9 @@ Plug 'ryanoasis/vim-devicons'
 " Initialize plugin system
 call plug#end()
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		Plug-vim configuration ends			     "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plug-vim configuration ends
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		AIRLINE CONFIGURATION				    "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" AIRLINE CONFIGURATION
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -120,9 +114,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#left_sep = ''
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		ULTISNIPS CONFIGURATION		 		    "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" ULTISNIPS CONFIGURATION
 
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsExpandTrigger = '<c-j>'
@@ -132,27 +124,21 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 let g:UltiSnipsSnippetDirectories=['vim-snippets', 'UltiSnips']
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		INDENTlINE				"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" INDENTlINE
 let g:indentLine_enabled = 1
 let g:indentLine_concealcursor = 0
 let g:indentLine_char = '┆'
 let g:indentLine_faster = 1
 let g:indentLine_setConceal = 0
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	     ALE CONGIGURATION				   "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" ALE CONGIGURATION
 
 let g:ale_linters = {'python': ['flake8'], 'vim': ['vint']}
 let g:ale_fixers = {'python': ['autopep8']}
 let g:ale_fix_on_save = 1
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		CONFIGURATION OPTIONS GO HERE		"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" CONFIGURATION OPTION
 filetype plugin indent on
 syntax on
 set incsearch
@@ -201,9 +187,7 @@ highlight Search term=reverse ctermbg=11 ctermfg=0 guibg=DarkGray guifg=Black
 highlight WarningMsg term=standout ctermfg=224 guifg=White guibg=Red
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    AUTOCOMMANDS GO HERE			"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" AUTOCOMMANDS
 augroup group1
     autocmd!
     "au VimEnter,BufRead,BufEnter,ColorScheme * colorscheme darkbg
@@ -216,9 +200,7 @@ augroup group1
     au BufNewFile *.h source ~/.vim/cpp_header.vim
 augroup END
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    KEY MAPPINGS GO HERE"			"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" KEY MAPPINGS
 nnoremap / :bn<cr>|"						<ALT>+/ = Next buffer.
 nnoremap \ :bp<cr>|"						<ALT>+\ = Previous buffer.
 nnoremap . :bp<cr>|"						<ALT>+. = Previous buffer.
@@ -249,25 +231,19 @@ nnoremap i :set ic! ic?<CR>|"					<Alt>+i = Toggle 'Ignorecase' option.
 "nnoremap zb :nnoremap j jzb<CR><Bar>:nnoremap k kzb<CR>
 "nnoremap zt :nnoremap j jzt<CR><Bar>:nnoremap k kzt<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	     SOME INSERT COMPLETIONS			"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" INSERT COMPLETIONS
 
 inoremap z 1G#!/usr/bin/zsh<Esc>:set ft=zsh<CR>
 inoremap  |"		<Ctrl>+f = Filename completion.
 inoremap  |"		<Ctrl>+d = Macro completion.
 inoremap  |"		<Ctrl>+l = Whole line completion.
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	     SOME VISUAL MODE MAPPINGS			"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" VISUAL MODE MAPPINGS
 
 vnoremap > >gv
 vnoremap < <gv
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    WINDOWS KEYS FOR GERMAN CHARACTERS		"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" WINDOWS KEYS FOR GERMAN CHARACTERS
 inoremap @sa ä|"	<Window>+a
 inoremap @sA Ä|"	<Window>+<Shift>+A
 inoremap @so ö|"	<Window>+o
@@ -279,9 +255,7 @@ inoremap @sB ß|"	<Window>+<Shift>+B
 inoremap @ss ß|"	<Window>+s
 inoremap @sS ß|"	<Window>+<Shift>+S
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	    FUNCTION KEYS <F1> TO <F12>			"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" FUNCTION KEYS <F1> TO <F12>
 nnoremap <F2> :set hlsearch! hlsearch?|"		<F2> - Toggle option 'hlsearch'
 nnoremap <F3> :set spell! spell?|"			<F3> - Toggle option 'spell'
 nnoremap <F4> :set relativenumber! relativenumber?|"	<F4> - Toggle option 'number'
@@ -290,9 +264,7 @@ nnoremap <F12> :e ~/.vimrc<CR>|"			<S-F12> - Edit ~/.vimrc
 nnoremap <S-F12> :so ~/.vimrc<CR>|"			<S-F12> - Edit ~/.vimrc
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		ABBREVIATIONS GO HERE			"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" ABBREVIATIONS
 
 "inoreab #! #!/bin/bash<ESC>:set ft=sh<CR>o
 inoreab @g phil@philbevan40@gmail.com
@@ -302,9 +274,7 @@ inoreab gm philbevan40@gmail.com
 inoreab pb Phil Bevan
 inoreab pba Phil Bevan<cr>Flat 3<cr>90 Loughborough Road<cr>West Bridgford<cr>Nottingham<cr>NG2 7JH
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"		NERDTREE OPTIONS HERE			"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" NERDTREE OPTIONS
 let NERDTreeShowBookmarks=1
 
 nnoremap O3P :echo "		VIM FUNCTION KEYS\n
@@ -316,4 +286,5 @@ nnoremap O3P :echo "		VIM FUNCTION KEYS\n
 		\<F4>		- Toggle relative/absolute number.\n
 		\<F9>		- Toggle NERDTree.\n
 		\<F12>		- Source ~/.vimrc.\n"<CR>
+
 

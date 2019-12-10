@@ -94,6 +94,24 @@ filetype plugin indent on
 
 
 " PLUGIN CONFIGURATIONS                              "
+"
+"" AIRLINE CONFIGURATION             ""
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif 
+augroup airgroup
+    autocmd!
+    au VimEnter * let g:airline_left_sep = ''
+    au VimEnter * let g:airline_right_sep = ''
+augroup END
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#left_sep = ''
+
+"" VIM-MARKDOWN CONFIGURATION        ""
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
 "" ULTISNIPS CONFIGURATION           ""
 
 
