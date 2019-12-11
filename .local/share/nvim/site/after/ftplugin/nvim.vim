@@ -12,15 +12,13 @@ endif
 augroup vim_1
     autocmd!
     if has('nvim')
-	autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/after/ftplugin/nvim.vim
+        autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/after/ftplugin/nvim.vim
     else
-	autocmd BufWritePost <buffer> source ~/.vim/after/ftplugin/nvim.vim
+        autocmd BufWritePost <buffer> source ~/.vim/after/ftplugin/nvim.vim
     endif
 augroup END
 
-"""""""""""""""""""""""""""""""""""""""""""""""""
-"	ABBREVIATIONS GO HERE			"
-"""""""""""""""""""""""""""""""""""""""""""""""""
+"" ABBREVIATIONS GO HERE
 inoreabbrev <buffer> iab inoreabbrev <buffer>
 inoreabbrev <buffer> inorea inoreabbrev <buffer>
 inoreabbrev <buffer> set setlocal
@@ -32,7 +30,7 @@ inoreabbrev <buffer> cmap cnoremap <buffer>
 inoreabbrev <buffer> cnoremap cnoremap <buffer>
 
 
-"				FOLDING					    "
+"" FOLDING
 
 setlocal foldcolumn=4
 setlocal foldmethod=expr
@@ -40,14 +38,14 @@ setlocal foldexpr=VimFolds()
 
 function! VimFolds()
     let thisline = getline(v:lnum)
-    if match(thisline, '^""".*"""$') >= 0
-	return '>3'
-    elseif match(thisline, '^"".*""$') >= 0
-	return '>2'
-    elseif match(thisline, '^".*"$') >= 0
-	return '>1'
+    if match(thisline, '^"""" ') >= 0
+        return '>3'
+    elseif match(thisline, '^""" ') >= 0
+        return '>2'
+    elseif match(thisline, '^"" ') >= 0
+        return '>1'
     else
-	return '='
+        return '='
     endif
     return '1'
 endfunction
