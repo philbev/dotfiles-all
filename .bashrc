@@ -2,7 +2,6 @@
 # MY /home/.bashrc INITIALISATION FILE
 
 ## SOURCED FILES
-
 # Load all my functions from $HOME/.functions.sh
 if [[ -f $HOME/.functions.sh ]]; then
     . "$HOME"/.functions.sh
@@ -29,22 +28,11 @@ fi
 
 
 ## ENVIRONMENT VARIABLES
-
-
 if [[ $USER != root ]]; then
     export LS_OPTIONS=${LS_OPTIONS/auto/always}
 fi
 export PATH=$PATH:/usr/local/bin/android-studio/bin:/usr/local/bin/android-sdk-linux/platform-tools     # Needed for Android SDK
 export LANG="en_GB.UTF-8"
-
-# Need to source ~/.bashrc every time a directory is changed so as to get the status of git.
-function cd() {
-    new_directory="$*";
-    if [ $# -eq 0 ]; then
-        new_directory=${HOME};
-    fi;
-    builtin cd "${new_directory}" && . ~/.bashrc
-}
 
 ps_local="\[$bold$yellowfg\]$(is_git_dir)\[$bold$cyanfg\][\u:\w]\$ \[\033[0m\]"
 ps_ssh="\033[1;35m(\h) $ps_local"
@@ -70,14 +58,9 @@ export EDITOR=nvim
 shopt -s histappend
 shopt -s checkwinsize   #Hopefully this will stop bash from messing up my screen occasionally.
 
-
-
-
 ## ALIASES
-
 alias ..="cd .."
 alias a=alias
-#alias c=clear
 alias cda='cd /usr/local/audio/mp3'
 alias cdd='cd /usr/local/docs'
 alias cdp='cd /usr/local/pictures'
@@ -114,6 +97,15 @@ alias vin='nvim $HOME/.config/nvim/init.vim'
 alias viv='vim $HOME/.vimrc'
 
 ## FUNCTIONS
+### cd ()
+# Need to source ~/.bashrc every time a directory is changed so as to get the status of git.
+function cd() {
+    new_directory="$*";
+    if [ $# -eq 0 ]; then
+        new_directory=${HOME};
+    fi;
+    builtin cd "${new_directory}" && . ~/.bashrc
+}
 
 ### dh ()
 dh () {
