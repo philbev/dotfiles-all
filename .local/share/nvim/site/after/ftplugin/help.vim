@@ -1,4 +1,6 @@
-setlocal spelllang=en
+setlocal spelllang=en_gb,en_us
+scriptencoding utf-8
+
 if has('nvim')
     nnoremap <buffer> <F10> :edit ~/.local/share/nvim/site/after/ftplugin/help.vim<CR>
     nnoremap <buffer> <F22> :source ~/.local/share/nvim/site/after/ftplugin/help.vim<CR>
@@ -12,9 +14,9 @@ endif
 augroup help_1
     autocmd!
     if has('nvim')
-	autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/after/ftplugin/help.vim
+        autocmd BufWritePost <buffer> source ~/.local/share/nvim/site/after/ftplugin/help.vim
     else
-	autocmd BufWritePost <buffer> source ~/.vim/after/ftplugin/help.vim
+        autocmd BufWritePost <buffer> source ~/.vim/after/ftplugin/help.vim
     endif
 augroup END
 
