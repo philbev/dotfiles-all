@@ -56,6 +56,7 @@ Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'Yggdroot/indentLine'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'vim/killersheep'
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
