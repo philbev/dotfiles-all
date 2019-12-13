@@ -64,6 +64,7 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " The plugins below are for vimOrganizer
 Plug 'hsitz/VimOrganizer'
 Plug 'ryanoasis/vim-devicons'
+Plug 'vim/killersheep'
 
 " Multiple Plug commands can be written in a single line using | separators
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -255,14 +256,6 @@ nnoremap <M-T> ^gU$yypv$r=|"                                    <Alt>+T = Upperc
 nnoremap <Up> gk|"                                              <Up> = Cursor up one virtual line.
 nnoremap <Down> gj|"                                            <Down> = Cursor down one virtual line.
 nnoremap <M-i> :set ic! ic?<CR>|"                               <Alt>+i = Toggle 'Ignorecase' option.
-if &foldenable
-    nnoremap <tab> za
-    nnoremap <S-tab> zA
-    nnoremap <A-j> ]z
-    nnoremap <A-k> [z
-    set foldcolumn=4
-endif
-
 
 """ INSERT MODE
 
@@ -364,7 +357,7 @@ augroup group1
     au BufNewFile *.h source ~/.vim/cpp_header.vim
     au BufReadPost *
                 \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
-                \ |   exe "normal! g`\
+                \ |   exe "normal! g`\""
                 \ | endif
 augroup END
 
