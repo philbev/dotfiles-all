@@ -18,19 +18,23 @@ else
 endif
 augroup END
 
-
-"Back quotes converted to recommended format $(...)
+"" KEY MAPPING
+" Back quotes converted to recommended format $(...)
 inoremap <buffer> ` $()<esc>i
-
 inoremap <buffer> " ""<left>
 inoremap <buffer> ( ()<left>
 inoremap <buffer> [ []<left>
 inoremap <buffer> { {}<left>
 
+"" Folding
 setlocal foldenable
 setlocal foldcolumn=3
 setlocal foldmethod=expr
 setlocal foldexpr=BashFolds()
+nnoremap <buffer> <tab> za
+nnoremap <buffer> <S-tab> zA
+nnoremap <buffer> <A-j> zMzjzo
+nnoremap <buffer> <A-k> zMzkzo
 
 function! BashFolds()
     let thisline=getline(v:lnum)

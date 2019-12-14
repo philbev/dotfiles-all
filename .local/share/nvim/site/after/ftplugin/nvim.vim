@@ -32,9 +32,14 @@ inoreabbrev <buffer> cnoremap cnoremap <buffer>
 
 "" FOLDING
 
-setlocal foldcolumn=4
+setlocal foldenable
+setlocal foldcolumn=3
 setlocal foldmethod=expr
 setlocal foldexpr=VimFolds()
+nnoremap <buffer> <tab> za
+nnoremap <buffer> <S-tab> zA
+nnoremap <buffer> <A-j> zMzjzo
+nnoremap <buffer> <A-k> zMzkzo
 
 function! VimFolds()
     let thisline = getline(v:lnum)

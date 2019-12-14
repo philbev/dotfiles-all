@@ -18,18 +18,15 @@ else
 endif
 augroup END
 
-
+"" KEY MAPPING
 "Back quotes converted to recommended format $(...)
 inoremap <buffer> ` $()<esc>i
-
 inoremap <buffer> " ""<left>
 inoremap <buffer> ( ()<left>
 inoremap <buffer> [ []<left>
 inoremap <buffer> { {}<left>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             ABBREVIATIONS HERE                             "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" ABBREVIATIONS
 
 iabbrev black 16
 iabbrev red 196
@@ -40,7 +37,12 @@ iabbrev magenta 201
 iabbrev cyan 51
 iabbrev white 231
 
-"				FOLDING					    "
+"" FOLDING
+
+nnoremap <buffer> <tab> za
+nnoremap <buffer> <S-tab> zA
+nnoremap <buffer> <A-j> zMzjzo
+nnoremap <buffer> <A-k> zMzkzo
 
 setlocal foldcolumn=4
 setlocal foldmethod=expr
@@ -49,13 +51,13 @@ setlocal foldexpr=ZshFolds()
 function! ZshFolds()
     let thisline = getline(v:lnum)
     if match(thisline, '^####') >= 0
-	return '>3'
+        return '>3'
     elseif match(thisline, '^###') >= 0
-	return '>2'
+        return '>2'
     elseif match(thisline, '^##') >= 0
-	return '>1'
+        return '>1'
     else
-	return '='
+        return '='
     endif
     return '1'
 endfunction
