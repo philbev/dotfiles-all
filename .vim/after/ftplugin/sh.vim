@@ -1,4 +1,6 @@
 setlocal spelllang=en
+scriptencoding utf-8
+
 if has('nvim')
     nnoremap <buffer> <F10> :edit ~/.local/share/nvim/site/after/ftplugin/sh.vim<CR>
     nnoremap <buffer> <F22> :source ~/.local/share/nvim/site/after/ftplugin/sh.vim<CR>
@@ -26,4 +28,35 @@ inoremap <buffer> " ""<left>
 inoremap <buffer> ( ()<left>
 inoremap <buffer> [ []<left>
 inoremap <buffer> { {}<left>
+
+"" FOLDING
+""" LOCAL OPTIONS
+setlocal foldenable
+setlocal foldmethod=expr
+setlocal foldcolumn=3
+setlocal foldexpr=BashFolds()
+setlocal foldtext=BashFoldText()
+""" FOLDING KEY MAPPING
+nnoremap <buffer> <tab> za
+nnoremap <buffer> <S-tab> zA
+nnoremap <buffer> j zMzjzo
+nnoremap <buffer> k zMzkzo
+""" FOLD FUNCTIONS
+function! BashFolds()
+    let thisline = getline(v:lnum)
+    if match(thisline, '^## ') >= 0
+	return '>1'
+    elseif match(thisline, '^### ') >= 0
+	return '>2'
+    elseif match(thisline, '^#### ') >= 0
+	return '>3'
+    else
+	return '='
+    endif
+endfunction
+
+function! BashFoldText()
+    let foldsize = (v:foldend-v:foldstart)
+    return getline(v:foldstart).' ('.foldsize.' lines)'
+endfunction
 

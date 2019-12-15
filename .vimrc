@@ -179,7 +179,7 @@ if !has('gui-running')
     highlight MatchParen guibg=red
 endif
 " Change the color scheme here.
-colorscheme dracula
+colorscheme desert
 
 " Makes the background for all konsole backgrounds, no matter what the colour.
 highlight Normal ctermbg=NONE guibg=#404040 guifg=White
