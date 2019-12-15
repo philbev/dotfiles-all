@@ -186,7 +186,7 @@ highlight Normal ctermbg=NONE guibg=#404040 guifg=White
 highlight NonText ctermbg=NONE guibg=#404040 guifg=White
 highlight Search term=reverse ctermbg=11 ctermfg=0 guibg=DarkGray guifg=Black
 highlight WarningMsg term=standout ctermfg=224 guifg=White guibg=Red
-
+highlight Folded guifg=yellow guibg=blue
 
 "" AUTOCOMMANDS
 augroup group1
