@@ -25,4 +25,37 @@ inoremap <buffer> <M-1> <ESC>:s/^ *//<CR>yyp:s/./=/g<CR>:nohlsearch<CR>a|"  - <M
 nnoremap <buffer> <M-2> :s/^ *//<CR>yyp:s/./-/g<CR>:nohlsearch<CR>|"        - <M-2> Header 2
 inoremap <buffer> <M-2> <ESC>:s/^ *//<CR>yyp:s/./-/g<CR>:nohlsearch<CR>a|"  - <M-2> Header 2
 
+"" FOLDING
+""" LOCAL OPTIONS
+setlocal foldenable
+setlocal foldmethod=expr
+setlocal foldcolumn=3
+setlocal foldexpr=MarkDownFolds()
+setlocal foldtext=MarkFoldText()
+
+""" KEY MAPPING
+nnoremap <buffer> <tab> za
+nnoremap <buffer> <S-tab> zA
+
+"""FUNCTIONS
+function! MarkDownFolds()
+    let thisline = getline(v:lnum)
+    if match(thisline, '^# ') >= 0
+	return '>1'
+    elseif match(thisline, '^## ') >= 0
+	return '>2'
+    elseif match(thisline, '^### ') >= 0
+	return '>3'
+    elseif match(thisline, '^#### ') >= 0
+	return '>4'
+    else
+	return '='
+    endif
+endfunction
+
+function! MarkFoldText()
+    let foldsize = (v:foldend-v:foldstart)
+    return getline(v:foldstart).' ('.foldsize.' lines)'
+endfunction
+
 
