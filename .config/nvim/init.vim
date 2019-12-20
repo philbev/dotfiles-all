@@ -123,7 +123,8 @@ let g:UltiSnipsListSnippets = '<c-s>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 let g:UltiSnipsSnippetsDir = '~/.local/share/nvim/site/UltiSnips'
-let g:UltiSnipsSnippetDirectories=['vim-snippets', 'UltiSnips']
+"let g:UltiSnipsSnippetDirectories=['vim-snippets', 'UltiSnips']
+let g:UltiSnipsSnippetDirectories=['~/.local/share/nvim/site/UltiSnips']
 
 
 """ DEOPLETE CONFIGURATION
