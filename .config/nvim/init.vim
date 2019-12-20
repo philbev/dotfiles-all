@@ -150,6 +150,8 @@ let g:indentLine_setConceal = 0
 
 let g:ale_linters = {'python': ['flake8'], 'vim': ['vint']}
 let g:ale_fixers = {'python': ['autopep8']}
+"flake8 errors and warnings can be ignored. A comma separated list.
+let g:ale_python_flake8_options = '--ignore=E266'
 " With neovim plug-in 'deoplete' completion  doesn't play well with ALE linter
 " (get far too many error messages) when in insert mode. So configured to lint
 " only in normal mode.
