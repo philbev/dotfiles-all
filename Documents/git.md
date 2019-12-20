@@ -9,11 +9,11 @@ has become one of the most popular DVCS as it is very powerful and not too
 difficult to learn, though there are myriads of commands/options to learn.
 To get help
 
->	$ git help
+>       $ git help
 
 or
 
->	$ git command --help
+>       $ git command --help
 
 ## Installation of Git
 
@@ -22,14 +22,14 @@ With a full installation of Slackware all git resources should be in place.
 If not it can be installed from the installation media with 'installpkg'.
 From the root of the Slackware
 media cd into directory 'slackware64/d' and the issue command
->	$ installpkg git 
+>       $ installpkg git
 
->	$ installpkg new
+>       $ installpkg new
 
 ### Arch Linux
 Git is not installed by default on Arch so needs to be installed manually:-
 
->	$ sudo pacman -S git
+>       $ sudo pacman -S git
 
 ## Verification
 To verify the correct installation:
@@ -63,7 +63,7 @@ $ git config --global user.email '<email address>'
 
 The configuration can be listed with:
 
->	$ git config --list
+>       $ git config --list
 
 NOTE!
 
@@ -77,7 +77,7 @@ Once git has been installed and configured in one of two ways:
 ```bash
 $ git init
     Used when there are existing files in the directory.  This method creates a
-    directory *.git* where all the repository files are located. 
+    directory *.git* where all the repository files are located.
 ```
 
 ```bash
@@ -112,7 +112,7 @@ $ git commit
 
 ```bash
 $ git log
-    Displays various basic information about the repository. 
+    Displays various basic information about the repository.
 
 $ git log --stat
     Displays extra information about file names an number of additions and deletions.
@@ -223,8 +223,8 @@ git stash branch <branchname> [<stash>]
 ```
 ```bash
 git stash [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]
-	    [-u|--include-untracked] [-a|--all] [-m|--message <message>]
-	    [--] [<pathspec>...]]
+            [-u|--include-untracked] [-a|--all] [-m|--message <message>]
+            [--] [<pathspec>...]]
 
     Save your local modifications to a new stash entry and roll them back to
     HEAD (in the working tree and in the index). The <message> part is optional
@@ -235,7 +235,7 @@ git stash [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]
     unwanted stash entry. The two exceptions to this are stash -p which acts as
     alias for stash push -p and pathspecs, which are allowed after a double
     hyphen -- for disambiguation.
-    
+
     When pathspec is given to git stash push, the new stash entry records the
     modified states only for the files that match the pathspec. The index
     entries and working tree files are then rolled back to the state in HEAD
