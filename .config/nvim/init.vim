@@ -175,7 +175,7 @@ let g:tq_openoffice_en_file='/usr/local/downloads/MyThes-1.0/th_en_US_new'
 let NERDTreeShowBookmarks=1
 
 "" VIMWIKI WITH MARKDOWN SUPPORT
-let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+"let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 " helppage -> :h vimwiki-syntax
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
