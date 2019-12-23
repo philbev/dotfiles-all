@@ -62,6 +62,11 @@ autoload -Uz gitx
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
 setopt hist_ignore_space
+# Autopushd options
+setopt autopushd
+setopt pushdsilent
+setopt pushdminus
+setopt pushdignoredups
 source ~/.colors
 
 autoload -Uz run-help
@@ -70,12 +75,10 @@ autoload -Uz run-help-ip
 autoload -Uz run-help-sudo
 unalias 'run-help' 2>/dev/null
 alias help=run-help
-HELPDIR=/usr/share/zsh/$ZSH_VERSION/help
 
 
 
 ## VARIABLES (PARAMETERS)
-
 
 fpath=( ~/.zfuncs "${fpath[@]}" )
 path=(~/.gem/ruby/2.5.0/bin "${path[@]}")
@@ -87,6 +90,8 @@ export SHELLCHECK_OPTS="-e SC1090 -e SC2154 -e SC2012"
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 export LESS="-eFRX"
 export GREP_COLORS='ms=01;38;5;196:fn=01;38;5;201:ln=01;38;5;46'
+export HELPDIR=/usr/share/zsh/$ZSH_VERSION/help
+export DIRSTACKSIZE=20          # Needed for autopushd.
 
 autoload precmd
 precmd
@@ -101,6 +106,7 @@ alias cdp='cd /usr/local/pictures'
 alias cdr='cd /usr/local/downloads/repositories'
 alias cdv='cd /usr/local/videos'
 alias cdw='cd /usr/local/downloads'
+alias dirv='dirs -v'
 alias dot='. $HOME/.zshrc'
 alias ej0='eject -T /dev/sr0'
 alias ej1='eject -T /dev/sr1'
