@@ -67,7 +67,7 @@ Blockquotes
 
 Unordered Lists
 ----------------
- 
+
  * Item 1
  * Item 2
  * Item 3
@@ -103,7 +103,7 @@ Images
 GITHUB MARKDOWN
 ===============
 
-     
+
 <!-- Code Blocks -->
 
 Code Blocks
