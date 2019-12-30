@@ -288,12 +288,12 @@ vnoremap <M-Up> dkkp`[V`]|""                                    <ALT>+<UP> = Mov
 """ OPERATOR PENDING MODE
 
 
-onoremap ( :execute "normal! 0f(vi("<CR>
-onoremap { :execute "normal! 0f{vi{"<CR>
-onoremap [ :execute "normal! 0f[vi["<CR>
-onoremap < :execute "normal! 0f<vi<"<CR>
-onoremap " :execute "normal! 0f\"vi\""<CR>
-onoremap ' :execute "normal! 0f'vi'"<CR>
+onoremap <silent> ( :execute "normal! 0f(vi("<CR>
+onoremap <silent> { :execute "normal! 0f{vi{"<CR>
+onoremap <silent> [ :execute "normal! 0f[vi["<CR>
+onoremap <silent> < :execute "normal! 0f<vi<"<CR>
+onoremap <silent> " :execute "normal! f\"vi\""<CR>
+onoremap <silent> ' :execute "normal! f'vi'"<CR>
 
 
 """ WINDOWS KEYS FOR GERMAN CHARACTERS
