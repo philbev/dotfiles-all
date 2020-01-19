@@ -242,3 +242,5 @@ inf () {
 # This needs to be at the end of the file as something else is overwriting it.
 # Powerlevel9k seems to be the main culprit.
 export LC_CTYPE=en_GB.UTF-8
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
