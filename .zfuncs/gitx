@@ -9,7 +9,7 @@ if [[ $1 -gt $number_logs ]]; then
 fi
 
 if [[ $# == 0 ]]; then
-    git log --decorate --oneline --graph 
+    git log --decorate --oneline --graph
 else
     git log --decorate --oneline --graph HEAD~${1}..HEAD
 fi
