@@ -12,7 +12,7 @@ fg (){
     gimp $(fd -I --type f --exclude=aur --color=always 'png$|jpg$|arw$' $@ | fzf -m --ansi)
 }
 
-c (){
-    $(fd -I --type d  --exclude='/run' --exclude='/windata'  --exclude='/media'\
+fc (){
+    $(fd -IH --type d  --exclude='/run' --exclude='/windata'  --exclude='/media'\
        --exclude='/mnt' --color=always . / |fzf -e --ansi)
 }
