@@ -6,7 +6,7 @@
 ## LINES CONFIGURED BY ZSH-NEWUSER-INSTALL
 HISTFILE=~/.histfile
 HISTSIZE=1500
-SAVEHIST=1500
+SAVEHIST=15000
 setopt appendhistory autocd extendedglob
 unsetopt beep nomatch
 bindkey -v
@@ -61,7 +61,14 @@ fi
 autoload -Uz gitx
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_all_dups
 setopt hist_ignore_space
+setopt hist_find_no_dups
+setopt hist_save_no_dups
+setopt hist_beep
 # Autopushd options
 setopt autopushd
 setopt pushdsilent
