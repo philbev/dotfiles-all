@@ -216,7 +216,8 @@ endif
 set inccommand=nosplit
 if has('nvim')
     "This prevents random characters on Command-line.
-    set guicursor=
+    "set guicursor=
+    set guicursor=n-v-c:block
     "Displays cursor in terminal mode. Useful when pasting.
     :hi! TermCursorNC ctermfg=15 guifg=#fdf6e3 ctermbg=14 guibg=#93a1a1 cterm=NONE gui=NONE
 endif
