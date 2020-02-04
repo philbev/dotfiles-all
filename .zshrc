@@ -155,14 +155,16 @@ alias -s txt=nvim
 
 
 # Show vim status when in vi mode.
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/** %SNORMAL%s **}/(main|viins)/** INSERT **}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
+# Incompatible with cursor styles for insert and command modes below,
+# so commented out temporarily. Maybe deleted in the future.
+#function zle-line-init zle-keymap-select {
+#    RPS1="${${KEYMAP/vicmd/** %SNORMAL%s **}/(main|viins)/** INSERT **}"
+#    RPS2=$RPS1
+#    zle reset-prompt
+#}
+#
+#zle -N zle-line-init
+#zle -N zle-keymap-select
 
 prompt="%B%F{226}(${BRANCH})%F{196}[%F{51}%n%F{196}:%F{201}%2~%F{196}]%f%b%% "
 
@@ -180,6 +182,58 @@ prompt="%B%F{226}(${BRANCH})%F{196}[%F{51}%n%F{196}:%F{201}%2~%F{196}]%f%b%% "
 
 
 ## FUNCTIONS
+
+### Select bracketed
+# Text object for matching characters between matching pairs of brackets
+#
+# So for example, given (( i+1 )), the vi command ci( will change
+# all the text between matching colons.
+#
+# The following is an example of how to enable this:
+autoload -U select-bracketed
+zle -N select-bracketed
+for m in visual viopp; do
+    for c in {a,i}${(s..)^:-'()[]{}<>bB'}; do
+        bindkey -M $m $c select-bracketed
+    done
+done
+
+### select-quoted
+# Text object for matching characters between a particular delimiter
+#
+# So for example, given "text", the vi command vi" will select
+# all the text between the double quotes
+#
+# The following is an example of how to enable this:
+autoload -U select-quoted
+zle -N select-quoted
+for m in visual viopp; do
+    for c in {a,i}{\',\",\`}; do
+        bindkey -M $m $c select-quoted
+    done
+done
+
+### Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[2 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[6 q'
+  fi
+}
+zle -N zle-keymap-select
+zle-line-init() {
+    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    echo -ne "\e[6 q"
+}
+zle -N zle-line-init
+echo -ne '\e[6 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[6 q' ;} # Use beam shape cursor for each new prompt.+
+
 ### man()
 # Colourisation of man pages.
 man() {
