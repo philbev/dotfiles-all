@@ -166,19 +166,29 @@ alias -s txt=nvim
 #zle -N zle-line-init
 #zle -N zle-keymap-select
 
+### Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[2 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[6 q'
+  fi
+}
+zle -N zle-keymap-select
+zle-line-init() {
+    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    echo -ne "\e[6 q"
+}
+zle -N zle-line-init
+echo -ne '\e[6 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[6 q' ;} # Use beam shape cursor for each new prompt.+
+
 prompt="%B%F{226}(${BRANCH})%F{196}[%F{51}%n%F{196}:%F{201}%2~%F{196}]%f%b%% "
 
-# Slackware and Arch Linux store powerlevel9k files in different directories.
-#[[ -f ~/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/powerlevel9k/powerlevel9k.zsh-theme
-#[[ -f /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme ]] && source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-#
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=false
-#POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
-#POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='red'
-#POWERLEVEL9K_DIR_HOME_FOREGROUND='yellow'
-#POWERLEVEL9K_DIR_HOME_BACKGROUND='red'
-#POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
-#POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='red'
 
 
 ## FUNCTIONS
@@ -213,26 +223,6 @@ for m in visual viopp; do
     done
 done
 
-### Change cursor shape for different vi modes.
-function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] ||
-     [[ $1 = 'block' ]]; then
-    echo -ne '\e[2 q'
-  elif [[ ${KEYMAP} == main ]] ||
-       [[ ${KEYMAP} == viins ]] ||
-       [[ ${KEYMAP} = '' ]] ||
-       [[ $1 = 'beam' ]]; then
-    echo -ne '\e[6 q'
-  fi
-}
-zle -N zle-keymap-select
-zle-line-init() {
-    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    echo -ne "\e[6 q"
-}
-zle -N zle-line-init
-echo -ne '\e[6 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[6 q' ;} # Use beam shape cursor for each new prompt.+
 
 ### man()
 # Colourisation of man pages.
