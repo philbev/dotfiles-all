@@ -133,7 +133,7 @@ alias lh='ls -lhF --color --group-directories-first | less'
 alias lph='lp -o orientation-requested=4'
 alias lpp='lp -o prettyprint'
 alias lpph='lp -o orientation-requested=4 -o prettyprint'
-alias lsblk='lsblk -o model,type,name,fstype,size,label,mountpoint,partlabel'
+alias lk='lsblk -o model,type,name,fstype,size,label,mountpoint,partlabel'
 alias startx='startx -- -nolisten tcp'
 alias v=nvim
 alias vi=nvim
