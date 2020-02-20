@@ -106,6 +106,9 @@ autoload -Uz fuzzy_funcs        # fzf functions defined here.
 fuzzy_funcs
 autoload precmd
 precmd
+# This sets the $LS_COLORS variable. For arch linux /etc/DIR_COLORS does
+# not exist so must be generated with "eval $(dircolors -b /etc/DIR_COLORS)"
+eval $(dircolors /etc/DIR_COLORS)
 
 ## ALIASES
 
