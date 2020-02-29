@@ -159,7 +159,10 @@ EFI partition:
     mount /dev/sdX /mnt/boot/efi
 ```
 
-## Install
+## Install Base System
+
+Edit the /etc/pacman.d/mirrorlist file with vim and move United Kingdom servers
+to the top.
 
 Install basic software with:
 
@@ -369,17 +372,16 @@ Wireless connection
     ip a
 ```
 
-## Create New User
+## Create User Accounts
+
+Create New User
 
 ```bash
     useradd -m -g users -G wheel <username>
-
-```
-
-```bash
     passwd <username>
 ```
 
+## Sudo
 Sudo has now to be configured.
 
 ```bash
