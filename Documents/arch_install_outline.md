@@ -164,6 +164,10 @@ EFI partition:
 Edit the /etc/pacman.d/mirrorlist file with vim and move United Kingdom servers
 to the top.
 
+```bash
+    vim /etc/pacman.d/mirrorlist
+```
+
 Install basic software with:
 
 ```bash
@@ -393,7 +397,7 @@ Edit accordingly.
 ## Graphics
 
 ```bash
-    pacman -S nvidia nvidia-utils
+    pacman -S nvidia-dkms nvidia-utils nvidia-settings
 
 ```
 
