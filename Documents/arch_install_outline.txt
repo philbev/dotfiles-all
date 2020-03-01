@@ -209,6 +209,12 @@ Grub Configuration
 Exit Installation and unmount
 -----------------------------
 
+Exit the new install and re-enter arch boot by typing
+    exit
+or
+    <CTRL-D>
+at the command prompt.
+
 Unmount new partitions
     umount -R /mnt
 or

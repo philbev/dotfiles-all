@@ -318,8 +318,9 @@ Note! wireless_tools and wpa_supplicant are only needed for machines with wi-fi.
 
 ## Exit Installation and unmount
 
-Re
-```bashturn to Arch boot disk
+Return to Arch boot disk
+
+```bash
     exit
 ```
 
