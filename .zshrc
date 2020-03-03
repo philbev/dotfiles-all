@@ -227,6 +227,8 @@ for m in visual viopp; do
     done
 done
 
+autoload czech_chars.zsh
+czech_chars.zsh
 
 ### man()
 # Colourisation of man pages.
