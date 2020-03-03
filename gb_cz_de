@@ -1,4 +1,4 @@
-// $XKeyboardConfig$ 
+// $XKeyboardConfig$
 
 // based on a keyboard map from an 'xkb/symbols/gb' file
 //
@@ -50,23 +50,23 @@ xkb_symbols "basic" {
     include "level3(ralt_switch_multikey)"
 };
 
-partial alphanumeric_keys 
-xkb_symbols "intl" { 
+partial alphanumeric_keys
+xkb_symbols "intl" {
 
-    // Describes the differences between a very simple en_US 
-    // keyboard and a very simple U.K. keyboard layout with 
-    // dead keys. By Phil Jones (philjones1@blueyonder.co.uk) 
+    // Describes the differences between a very simple en_US
+    // keyboard and a very simple U.K. keyboard layout with
+    // dead keys. By Phil Jones (philjones1@blueyonder.co.uk)
 
-    // Includes the following keys: 
-    // dead_grave 
-    // dead_acute 
-    // dead_circumflex 
-    // dead_tilde 
-    // dead_diaeresis 
+    // Includes the following keys:
+    // dead_grave
+    // dead_acute
+    // dead_circumflex
+    // dead_tilde
+    // dead_diaeresis
 
-    include "latin" 
+    include "latin"
 
-    name[Group1]="United Kingdom - International (with dead keys)"; 
+    name[Group1]="United Kingdom - International (with dead keys)";
 
     key <AE02>  { [   2,  dead_diaeresis,      twosuperior,     onehalf ] };
     key <AE03>  { [   3,        sterling,    threesuperior,    onethird ] };
@@ -138,7 +138,7 @@ xkb_symbols "dvorakukp" {
 };
 
 // Copied from macintosh_vndr/gb
-partial alphanumeric_keys 
+partial alphanumeric_keys
 xkb_symbols "mac" {
 
     // Describes the differences between a very simple en_US
@@ -152,7 +152,7 @@ xkb_symbols "mac" {
     key <AE03> {	[               3,        sterling,       numbersign	]	};
 
     // End alphanumeric section
-    
+
     include "level3(ralt_switch)"
 };
 
