@@ -1,5 +1,5 @@
 #########################################################################
-###	    LIST OF EMACS PACKAGES TO INSTALL				#
+###         LIST OF EMACS PACKAGES TO INSTALL                           #
 #########################################################################
 
 org-bullets
@@ -13,7 +13,7 @@ evil
 
 
 ########################################################################
-###			ITALIAN					    ####
+###                     ITALIAN                                     ####
 ########################################################################
 Essere - to be
 
@@ -59,7 +59,7 @@ e - closed like late
 o - closed like goat
 
 ########################################################################
-###		    GERMAN					    ####
+###                 GERMAN                                          ####
 ########################################################################
 
 Alt-Gr+A = ä
@@ -75,9 +75,9 @@ ihr seid               you are
 sie sind               they are
 
 ########################################################################
-###		USEFUL BASH COMMAND-LINE SHORTCUTS		    ####
+###             USEFUL BASH COMMAND-LINE SHORTCUTS                  ####
 ########################################################################
-           
+
 Ctrl-], Alt-Q       - Character search
 Alt-Ctrl-], Alt-S  - Character search backward
 Ctrl-X Ctrl-U       - undo
@@ -99,60 +99,60 @@ Ctrl-W              - Kill the word behind point (white space as boundary)
 Alt-A               - Kill whole line
 
 ########################################################################
-###		    GDB CHEATSHEET				    ###
+###                 GDB CHEATSHEET                                  ###
 ########################################################################
 
 For gdb to run correctly the compiler g++ must be run with the -g option to
 include gdb debugging symbols.E.g.
-	g++ -g -o <progname> <progname>.cpp
+        g++ -g -o <progname> <progname>.cpp
 
 To use the debugger
-	gdb <progname>
+        gdb <progname>
 
 Basic commands from within gdb:
-	[q]uit                    -  Quit gdb.
-	[r]un                     -  Run the programme from the start. Runs to completion
-			             or to the next breakpoint or watch. Programme
-			             arguments can be appended to the "run" command.
-	[star]t                   -  Run the programme to start of main(). Programme
-			             arguments can be appended to the "start" command.
-	[p]rint                   -  Displays the variable specified. Also sets a variable's
-			             value. E.g. "p var = 1" sets var to 1.
-	[b]reak                   -  Sets breakpoint at a line number or function name. With
-			             multiple source files it is advisable to specify the
-			             filename to prevent confusion. E.g.
-				     b <filename.cpp>:13
-	[dis]able                 -  Disable breakpoints. With no breakpoint number,
-			             disables all.
-	[en]able                  -  Enable breakpoints.
-			             Where 13 is the line number.
-	[s]tep                    -  Step into function.
-	[n]ext                    -  Next line of code (steps over functions)
-	[fin]ish                  -  Run untilut fo function (step out)
-	[u]ntil                   -  When in loop run until loop finishes.
-	[u]ntil line              -  Run until line number is reached. Useful to get out of loops.
-	[c]ontinue                -  Run to next breakpoint or end of programme.
-	[l]ist                    -  List 10 lines of source code.
-	x                         -  examine memory directly
-	[wa]tch                   -  set a watch for when a variable is written.: return
-			             to the debugger once this happens
-	[r]watch                  -  set a watch for when a variable is read: return to
-			             the debugger once this happens
-	[i]nfo [wat]ch            -  show info on watchpoints
-	[i]nfo [b]reak            -  show info on breakpoints
-	[d]elete #                -  delete watchpoint or breakpoint "#"
-	set var name=value        -  set the value of variable "name" to "value"
-	[f]rame #                 -  set the current frame to #. Variables you reference
-				     etc. will be those within that context.
-	[i]nfo [lo]cals           -  Prints all the variables in	current frame (scope).
-	info functions            -  Prints all functions
-	bt                           show the call frames for your program. Useful to see
-			             the arguments of current function.
+        [q]uit                    -  Quit gdb.
+        [r]un                     -  Run the programme from the start. Runs to completion
+                                     or to the next breakpoint or watch. Programme
+                                     arguments can be appended to the "run" command.
+        [star]t                   -  Run the programme to start of main(). Programme
+                                     arguments can be appended to the "start" command.
+        [p]rint                   -  Displays the variable specified. Also sets a variable's
+                                     value. E.g. "p var = 1" sets var to 1.
+        [b]reak                   -  Sets breakpoint at a line number or function name. With
+                                     multiple source files it is advisable to specify the
+                                     filename to prevent confusion. E.g.
+                                     b <filename.cpp>:13
+        [dis]able                 -  Disable breakpoints. With no breakpoint number,
+                                     disables all.
+        [en]able                  -  Enable breakpoints.
+                                     Where 13 is the line number.
+        [s]tep                    -  Step into function.
+        [n]ext                    -  Next line of code (steps over functions)
+        [fin]ish                  -  Run untilut fo function (step out)
+        [u]ntil                   -  When in loop run until loop finishes.
+        [u]ntil line              -  Run until line number is reached. Useful to get out of loops.
+        [c]ontinue                -  Run to next breakpoint or end of programme.
+        [l]ist                    -  List 10 lines of source code.
+        x                         -  examine memory directly
+        [wa]tch                   -  set a watch for when a variable is written.: return
+                                     to the debugger once this happens
+        [r]watch                  -  set a watch for when a variable is read: return to
+                                     the debugger once this happens
+        [i]nfo [wat]ch            -  show info on watchpoints
+        [i]nfo [b]reak            -  show info on breakpoints
+        [d]elete #                -  delete watchpoint or breakpoint "#"
+        set var name=value        -  set the value of variable "name" to "value"
+        [f]rame #                 -  set the current frame to #. Variables you reference
+                                     etc. will be those within that context.
+        [i]nfo [lo]cals           -  Prints all the variables in        current frame (scope).
+        info functions            -  Prints all functions
+        bt                           show the call frames for your program. Useful to see
+                                     the arguments of current function.
 
-	Hitting "Enter" repeats the previous command.
+        Hitting "Enter" repeats the previous command.
 
 ########################################################################
-###	    USEFUL VIM HELP PAGES				     ###
+###         USEFUL VIM HELP PAGES                                    ###
 ########################################################################
 
 :h - ins-completion
@@ -163,12 +163,12 @@ Basic commands from within gdb:
 
 
 #########################################################################
-###		    MOUSE EFFECTS				      ###		    
+###                 MOUSE EFFECTS                                     ###
 #########################################################################
 
 Mark mouse pointer on screen = Shift + Meta
 Clear last mark = Shift + Meta + F12
 Clear all marks = Shift + Meta + F11
-Track mouse = Ctrl + Meta 
+Track mouse = Ctrl + Meta
 Toggle mouse click animation = Ctrl + Alt + Z
 
