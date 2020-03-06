@@ -137,6 +137,8 @@ alias lph='lp -o orientation-requested=4'
 alias lpp='lp -o prettyprint'
 alias lpph='lp -o orientation-requested=4 -o prettyprint'
 alias lk='lsblk -o model,type,name,fstype,size,label,mountpoint,partlabel'
+alias sp='sudo pacman -S'
+alias sps='sudo pacman -Ss'
 alias startx='startx -- -nolisten tcp'
 alias v=nvim
 alias vi=nvim
