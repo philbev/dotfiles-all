@@ -55,7 +55,6 @@ Plug 'tpope/vim-speeddating'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
-Plug 'Yggdroot/indentLine'
 Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'vim-latex/vim-latex'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
@@ -139,17 +138,6 @@ let g:UltiSnipsSnippetDirectories=['~/.local/share/nvim/site/UltiSnips']
 let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
-
-
-""" INDENTlINE
-
-let g:indentLine_enabled = 1
-let g:indentLine_concealcursor = 0
-let g:indentLine_char = '┆'
-let g:indentLine_faster = 1
-let g:indentLine_setConceal = 0
-
-
 
 """ ALE CONFIGURATION
 
