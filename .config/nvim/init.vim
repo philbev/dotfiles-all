@@ -23,7 +23,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 " Make sure you use single quotes
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-"Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
 Plug 'junegunn/vim-easy-align'
 Plug 'vim-airline/vim-airline'
@@ -167,10 +166,6 @@ let g:tq_openoffice_en_file='/usr/local/downloads/MyThes-1.0/th_en_US_new'
 
 let NERDTreeShowBookmarks=1
 
-""" VIMWIKI WITH MARKDOWN SUPPORT
-" helppage -> :h vimwiki-syntax
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
 "" CONFIGURATION OPTIONS GO HERE
 
 filetype plugin indent on
