@@ -425,7 +425,7 @@ Install Plasma and applications
     pacman -S plasma kde-applications xdg-user-dirs packagekit-qt5
 ```
 
-### Gnome
+### Gnome [optional]
 
 Install and enable desktop manager gdm
 

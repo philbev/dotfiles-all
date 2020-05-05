@@ -1,5 +1,5 @@
-	Installation of Arch Linux with Plasma and/or Gnome
-	===================================================
+    Installation of Arch Linux with Plasma and/or Gnome
+    ===================================================
 
 Pre-installation
 ----------------
@@ -196,7 +196,7 @@ Packages
 Install the following packages:
     pacman -S grub efibootmgr networkmanager network-manager-applet \
     wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base devel \
-    linux-headers
+    linux-headers intel-ucode
 Note! wireless_tools and wpa_supplicant are only needed for machines with wi-fi.
 
 Grub install
@@ -282,8 +282,8 @@ Plasma
 Install Plasma and applications
     pacman -S plasma kde-applications xdg-user-dirs packagekit-qt5
 
-Gnome
------
+Gnome [optional]
+----------------
 
 Install and enable desktop manager gdm
     pacman -S gdm
