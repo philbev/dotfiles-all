@@ -139,11 +139,9 @@ Home partition:
 
 /usr/local partition:
 
-```bash
-    mkdir -p /mnt/usr/local
 
-```
-
+Do not mount rhe /usr/local directory yet  as this interferes with pacman
+install later on.
 ```bash
     mount /dev/sdX /mnt/usr/local
 ```
@@ -174,6 +172,10 @@ Install basic software with:
     pacstrap /mnt base linux linux-firmware gvim neovim
 ```
 
+```bash
+    mkdir -p /mnt/usr/local
+
+```
 ## Fstab
 
 Generate the /etc/fstab file:
@@ -209,7 +211,7 @@ Create swap file:
 Edit /etc/fstab and append with:
 
 ```bash
-    /swapfile none swap 0 0
+    /swapfile none swap defaults    0 0
 ```
 
 ## Time
@@ -220,7 +222,7 @@ Set timezone:
     ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 ```
 
-Synchronise system and harware clocks:
+Synchronise system and hardware clocks:
 
 ```bash
     hwclock --systohc --localtime
@@ -299,7 +301,7 @@ Install the following packages:
 ```bash
     pacman -S grub efibootmgr networkmanager network-manager-applet \
     wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base devel \
-    linux-headers
+    linux-headers git zsh
 ```
 
 Note! wireless_tools and wpa_supplicant are only needed for machines with wi-fi.
@@ -390,7 +392,7 @@ Create New User
 Sudo has now to be configured.
 
 ```bash
-    visudo
+    EDITOR=nvim visudo
 ```
 
 Edit accordingly.
@@ -398,7 +400,7 @@ Edit accordingly.
 ## Graphics
 
 ```bash
-    pacman -S nvidia-dkms nvidia-utils nvidia-settings
+    pacman -S xf86-video-amdgpu
 
 ```
 
