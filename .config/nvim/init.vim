@@ -215,8 +215,10 @@ endif
 colorscheme default
 
 " Makes the background for all konsole backgrounds, no matter what the colour.
-highlight Normal ctermbg=NONE guibg=#404040 guifg=White
-highlight NonText ctermbg=NONE guibg=#404040 guifg=White
+highlight Normal ctermbg=NONE guibg=NONE guifg=White
+highlight NonText ctermbg=NONE guibg=NONE guifg=White
+"highlight Normal ctermbg=NONE guibg=#404040 guifg=White
+"highlight NonText ctermbg=NONE guibg=#404040 guifg=White
 "highlight Search term=reverse ctermbg=11 ctermfg=0 guibg=DarkGray guifg=Black
 highlight WarningMsg term=standout ctermfg=224 guifg=White guibg=Red
 "au InsertEnter * highlight StatusLine term=NONE gui=bold guibg=green
