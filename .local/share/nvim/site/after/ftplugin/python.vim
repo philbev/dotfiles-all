@@ -29,7 +29,7 @@ inoremap <buffer> <leader>p #!/usr/bin/python3
 nnoremap <buffer> <leader>p I#!/usr/bin/python3<CR>
 
 " Using terminal in nvim as :! commannds are causing problems
-" with python input methods. This is documented as a bug in 
+" with python input methods. This is documented as a bug in
 " neovim and will hopefully be fixed in the near future
 if has('nvim')
     nnoremap <buffer> <F5> :w<bar>terminal /usr/bin/python3 %<cr>
