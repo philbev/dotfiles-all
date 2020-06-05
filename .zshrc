@@ -307,3 +307,4 @@ inf () {
 export LC_CTYPE=en_GB.UTF-8
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+neofetch
