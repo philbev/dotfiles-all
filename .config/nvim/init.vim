@@ -63,6 +63,7 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " The plugins below are for vimOrganizer
 Plug 'hsitz/VimOrganizer'
 Plug 'ryanoasis/vim-devicons'
+Plug 'lilydjwg/colorizer'
 Plug 'vim/killersheep'
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
