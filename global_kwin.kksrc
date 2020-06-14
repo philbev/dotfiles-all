@@ -1,10 +1,10 @@
 [kwin][Global Shortcuts]
 Activate Window Demanding Attention=Ctrl+Alt+A
-Decrease Opacity=
+Decrease Opacity=Meta+O
 Expose=Ctrl+F9
 ExposeAll=Ctrl+F10; Launch (C)
 ExposeClass=Ctrl+F7
-Increase Opacity=
+Increase Opacity=Meta+Shift+O
 Invert Screen Colors=
 Kill Window=Ctrl+Alt+Esc
 MoveMouseToCenter=Meta+F6
