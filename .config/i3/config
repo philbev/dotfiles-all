@@ -219,7 +219,7 @@ bindsym mod1+Control+g exec gimp
 bindsym mod1+Control+d exec dolphin
 
 # Programmes to autostart
-exec chromium
+# exec chromium
 exec thunderbird
 exec_always picom -f
 exec --no-startup-id emacs
