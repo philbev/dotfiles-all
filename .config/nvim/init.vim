@@ -65,6 +65,7 @@ Plug 'hsitz/VimOrganizer'
 Plug 'ryanoasis/vim-devicons'
 Plug 'lilydjwg/colorizer'
 Plug 'vim/killersheep'
+Plug 'nanotech/jellybeans.vim'
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
