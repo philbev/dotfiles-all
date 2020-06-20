@@ -59,12 +59,12 @@ font-2 = unifont:fontformat=truetype:size=24:antialias=false;0
 font-3 = siji:pixelsize=14;1
 
 modules-left = i3
-modules-center = mpd
+modules-center = mpd xwindow
 modules-right = eth pulseaudio date powermenu
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
+tray-background = #2c2c2c
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -295,10 +295,12 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
+interval = 2
 
 format-volume = <label-volume> <bar-volume>
 label-volume =  %percentage%%
-label-volume-foreground = ${root.foreground}
+#label-volume-foreground = ${root.foreground}
+label-volume-foreground = #ffff00
 
 label-muted =  muted
 label-muted-foreground = #f00
