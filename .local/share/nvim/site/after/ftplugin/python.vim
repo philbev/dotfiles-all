@@ -9,7 +9,8 @@ else
 setlocal spellfile=~/.vim/spell/en.utf-8.add,~/.vim/spell/python.utf-8.add
 endif
 
-setlocal textwidth=79
+setlocal textwidth=120
+setlocal updatetime=300
 
 augroup python_1
     autocmd!
@@ -25,8 +26,8 @@ inoremap <buffer> { {}<Left>
 inoremap <buffer> ' ''<Left>
 inoremap <buffer> " ""<Left>
 inoremap <buffer> [ []<Left>
-inoremap <buffer> <leader>p #!/usr/bin/python3
-nnoremap <buffer> <leader>p I#!/usr/bin/python3<CR>
+"inoremap <buffer> <leader>p #!/usr/bin/python3
+"nnoremap <buffer> <leader>p I#!/usr/bin/python3<CR>
 
 " Using terminal in nvim as :! commannds are causing problems
 " with python input methods. This is documented as a bug in
