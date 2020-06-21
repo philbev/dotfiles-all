@@ -355,6 +355,7 @@ augroup group1
     au VimEnter * AirlineTheme xtermlight
     au BufWritePost ~/.config/nvim/init.vim source $MYVIMRC
     au BufNewFile *.h source ~/.vim/cpp_header.vim
+    au BufNewFile *.py normal i#!/usr/bin/env/ python3# -*- coding: utf-8 -*-o
     au BufReadPost *
                 \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
                 \ |   exe "normal! g`\""
@@ -379,4 +380,8 @@ nnoremap <M-O>3P :echo "                VIM FUNCTION KEYS\n
                 \<F4>           - Toggle relative/absolute number.\n
                 \<F9>           - Toggle NERDTree.\n
                 \<S-F12>        - Source ~/.vimrc.\n"<CR>
+
+
+
+
 
