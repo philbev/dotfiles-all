@@ -179,7 +179,7 @@ set dictionary=/usr/share/dict/words
 set complete+=d,k=/usr/share/dict/british-english
 set thesaurus=/usr/local/docs/mthesaur.txt
 set listchars=tab:➤\ ,eol:↲,space:·
-set expandtab shiftwidth=4 tabstop=8 softtabstop=4
+set noexpandtab shiftwidth=4 tabstop=4 softtabstop=4
 set ignorecase smartcase
 set wildmode=full wildmenu
 set laststatus=2
