@@ -8,12 +8,12 @@
 	br = branch
 	co = checkout
 [color "status"]
-    added = green
-    changed = red bold
-    untracked = magenta bold
+	added = green
+	changed = red bold
+	untracked = magenta bold
 [color "diff"]
-    old = magenta bold
-    new = green bold
+	old = magenta bold
+	new = green bold
 [merge]
 	tool = vimdiff
 [mergetool]
