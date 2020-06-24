@@ -208,6 +208,7 @@ for_window [class="Emacs"] floating enable
 
 # Assign applications to workspaces
 assign [class="Emacs"] $ws1
+assign [class="Conky"] $ws9
 
 # Key bindings
 # NOTE! mod1 = <Alt> key, $mod or mod4 = <Win> key.
@@ -223,6 +224,7 @@ bindsym mod1+Control+d exec dolphin
 exec thunderbird
 exec_always picom -f
 exec --no-startup-id emacs
+exec --no-startup-id conky -d
 
 # Assign workspaces to monitor screen
 workspace $ws1 output DisplayPort-2
