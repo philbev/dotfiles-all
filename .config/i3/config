@@ -218,6 +218,7 @@ bindsym mod1+Control+m exec emacs -g 120x100+100+200
 bindsym Control+Shift+l exec libreoffice
 bindsym mod1+Control+g exec gimp
 bindsym mod1+Control+d exec dolphin
+bindsym mod1+Control+v exec code
 
 # Programmes to autostart
 # exec chromium
