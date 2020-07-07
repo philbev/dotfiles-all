@@ -79,6 +79,7 @@ alias f='find / -name'
 alias gitl='git log --decorate --oneline --graph'
 alias grep='grep --color=auto --directories=skip'
 alias ifc='/sbin/ifconfig'
+alias ip='ip -c'
 alias lh='ls -lhF --color --group-directories-first'
 alias lph='lp -o orientation-requested=4'
 alias lpp='lp -o prettyprint'
@@ -87,14 +88,15 @@ alias lsblk='lsblk -o model,type,name,fstype,size,label,mountpoint,partlabel'
 alias startx='startx -- -nolisten tcp'
 alias v=nvim
 alias vi=nvim
-alias vim='TERM=xterm-256color vim'
 alias vib='vi $HOME/.bashrc'
 alias vie='vi $HOME/.emacs'
 alias vii='nvim $HOME/.config/nvim/init.vim'
 alias vil='vi $HOME/.bash_logout'
-alias vip='vi $HOME/.bash_profile'
+alias vim='TERM=xterm-256color vim'
 alias vin='nvim $HOME/.config/nvim/init.vim'
+alias vip='vi $HOME/.bash_profile'
 alias viv='vim $HOME/.vimrc'
+alias vm='vifmrun'
 
 ## FUNCTIONS
 ### cd ()
