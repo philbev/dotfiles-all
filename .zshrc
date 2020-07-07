@@ -1,3 +1,4 @@
+#!/usr/bin/zsh
 # ~/.zshrc: Configuration file for zsh.
 # Lines beginning with a single '#' are comments as usual.
 # Lines beginning with a '##' are level 1 folds.
@@ -132,6 +133,7 @@ alias f='find / -name'
 alias gitl='git log --decorate --oneline --graph'
 alias grep='grep --color=auto --directories=skip'
 alias ifc='/sbin/ifconfig'
+alias ip='ip -c'
 alias lh='ls -lhF --color --group-directories-first | less'
 alias lph='lp -o orientation-requested=4'
 alias lpp='lp -o prettyprint'
@@ -152,6 +154,7 @@ alias vip='vi $HOME/.zprofile'
 alias vin='nvim $HOME/.config/nvim/init.vim'
 alias viv='vim $HOME/.vimrc'
 alias viz='nvim $HOME/.zshrc'
+alias vm='vifmrun'
 alias -s md=nvim
 alias -s pdf=okular
 alias -s tex=nvim
