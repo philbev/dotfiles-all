@@ -278,12 +278,12 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = " %c"
-;date = " %a %b %y"
+;date = " %c"
+date = " %a %b %y"
 date-alt = " %Y-%m-%d"
 
-;time = %H:%M:%S
-time-alt = %H:%M:%S
+time = %H:%M:%S
+;time-alt = %H:%M:%S
 
 ;format-prefix = 
 format-prefix = 
