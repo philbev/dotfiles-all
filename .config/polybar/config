@@ -279,7 +279,7 @@ type = internal/date
 interval = 1
 
 ;date = " %c"
-date = " %a %b %y"
+date = " %a %b %d"
 date-alt = " %Y-%m-%d"
 
 time = %H:%M:%S
