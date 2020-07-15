@@ -12,7 +12,7 @@ To create an array (indexed):
 Note! Array indexes start at 1 not 0 as in most other languages.
 
 To print all elements of an array:
->   echo ${array[@}}
+>   echo ${array[@]}
 >   echo ${array}
 
 To print the number of elements in an array:
