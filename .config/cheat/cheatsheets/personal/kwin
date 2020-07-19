@@ -1,0 +1,109 @@
+---
+;syntax: javascript
+tags: [ kde, plasma, keyboard, shortcuts ]
+---
+# Activate Window Demanding Attention
+Ctrl+Alt+A
+
+# Decrease Opacity
+Meta+O
+
+# Expose
+Ctrl+F9
+
+# ExposeAll
+Ctrl+F10; Launch (C)
+
+# ExposeClass
+Ctrl+F7
+
+# Increase Opacity
+Meta+Shift+O
+
+# Kill Window
+Ctrl+Alt+Esc
+
+# MoveMouseToCenter
+Meta+F6
+
+# MoveMouseToFocus
+Meta+F5
+
+# Show Desktop
+Meta+D
+
+# ShowDesktopGrid
+Ctrl+F8
+
+# Suspend Compositing
+Alt+Shift+F12
+
+# Switch Window Down
+Meta+Alt+Down
+
+# Switch Window Left
+Meta+Alt+Left
+
+# Switch Window Right
+Meta+Alt+Right
+
+# Switch Window Up
+Meta+Alt+Up
+
+# Switch to Desktop 1
+Ctrl+F1
+
+# Switch to Desktop 2
+Ctrl+F2
+
+# Switch to Desktop 3
+Ctrl+F3
+
+# Switch to Desktop 4
+Ctrl+F4
+
+# Walk Through Windows
+Alt+Tab
+
+# Walk Through Windows (Reverse)
+Alt+Shift+Backtab
+
+# Walk Through Windows of Current Application
+Alt+`
+
+# Walk Through Windows of Current Application (Reverse)
+Alt+~
+
+# Window Close
+Alt+F4
+
+# Window Maximize
+Meta+PgUp
+
+# Window Minimize
+Meta+PgDown
+
+# Window Move
+Meta+M
+
+# Window Operations Menu
+Alt+F3
+
+# Window Quick Tile Bottom
+Meta+Down
+
+# Window Quick Tile Left
+Meta+Left
+
+# Window Quick Tile Right
+Meta+Right
+
+# Window Quick Tile Top
+Meta+Up
+
+# Window Resize
+Meta+R
+
+# view_zoom_out
+Meta+-
+
