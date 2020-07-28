@@ -59,7 +59,7 @@ font-2 = unifont:fontformat=truetype:size=24:antialias=false;0
 font-3 = siji:pixelsize=14;1
 
 modules-left = i3
-modules-center = mpd xwindow
+modules-center = mpd xwindow pacman
 modules-right = eth pulseaudio date powermenu
 
 tray-position = right
@@ -263,7 +263,7 @@ interval = 3.0
 
 format-connected-underline = #55aa55
 ;format-connected-prefix = " "
-format-connected-prefix = "ﯱ "
+format-connected-prefix = " "
 ;format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected-prefix-foreground = #55aa55
 label-connected = %local_ip%
@@ -430,6 +430,18 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/pacman]
+type = custom/script
+exec = checkupdates | wc -l
+interval = 1000
+label = Updates: %output%
+; label-pacman-foreground = #ffbb00
+format.forground = #ffbb00
+format.background = ${colors.background}
+format-prefix = " "
+format-prefix-foreground = #ffbb00
+# format-prefix-background = #ffbb00
 
 [settings]
 screenchange-reload = true
