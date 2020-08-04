@@ -33,11 +33,11 @@ inoremap <buffer> [ []<Left>
 " with python input methods. This is documented as a bug in
 " neovim and will hopefully be fixed in the near future
 if has('nvim')
-    nnoremap <buffer> <F5> :w<bar>terminal /usr/bin/python3 %<cr>
-    nnoremap <buffer> <M-p> :w<bar>terminal /usr/bin/python3 %<cr>
+    nnoremap <buffer> <F5> :w<bar>terminal /usr/bin/python3 %<cr><bar>a
+    nnoremap <buffer> <M-p> :w<bar>terminal /usr/bin/python3 %<cr><bar>a
     nnoremap <buffer> <F8> : ALEFix<cr>
 else
-    nnoremap <buffer> <F5> :w<bar>!/usr/bin/python3 %<cr>
-    nnoremap <buffer> <M-p> :w<bar>!/usr/bin/python3 %<cr>
+    nnoremap <buffer> <F5> :w<bar>!/usr/bin/python3 %<cr><bar>a
+    nnoremap <buffer> <M-p> :w<bar>!/usr/bin/python3 %<cr><bar>a
 endif
 
