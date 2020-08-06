@@ -9,7 +9,7 @@ else
 setlocal spellfile=~/.vim/spell/en.utf-8.add,~/.vim/spell/python.utf-8.add
 endif
 
-setlocal textwidth=120
+setlocal textwidth=80
 setlocal updatetime=300
 
 augroup python_1
