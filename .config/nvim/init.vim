@@ -355,7 +355,7 @@ augroup group1
     au VimEnter * AirlineTheme xtermlight
     au BufWritePost ~/.config/nvim/init.vim source $MYVIMRC
     au BufNewFile *.h source ~/.vim/cpp_header.vim
-    au BufNewFile *.py normal i#!/usr/bin/env/ python3# -*- coding: utf-8 -*-o
+    au BufNewFile *.py normal i#!/usr/bin/env python3o
     au BufReadPost *
                 \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
                 \ |   exe "normal! g`\""
