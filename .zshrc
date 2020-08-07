@@ -77,6 +77,7 @@ setopt pushdsilent
 setopt pushdminus
 setopt pushdignoredups
 source ~/.colors
+source ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 autoload -Uz run-help
 autoload -Uz run-help-git
@@ -312,3 +313,6 @@ export LC_CTYPE=en_GB.UTF-8
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 neofetch
+
+source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
