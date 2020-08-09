@@ -214,6 +214,7 @@ for_window [class="Emacs"] floating enable
 
 # Assign applications to workspaces
 assign [class="Emacs"] $ws1
+assign [class="Gimp"] $ws4
 assign [class="Conky"] $ws9
 
 # Key bindings
