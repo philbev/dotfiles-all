@@ -77,7 +77,11 @@ setopt pushdsilent
 setopt pushdminus
 setopt pushdignoredups
 source ~/.colors
-source ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+if [ -f ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]; then
+    source ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+else
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+fi
 
 autoload -Uz run-help
 autoload -Uz run-help-git
@@ -293,13 +297,13 @@ la () {
 ### ll()
 ll () {
 
-    ls -lF --color=auto --group-directories-first "$@" | less
+    ls -lF --color=always --group-directories-first "$@" | less
 }
 
 ### lm()
 lm () {
 
-    ls -lF --color=auto --group-directories-first "$@" | more
+    ls -lF --color=always --group-directories-first "$@" | more
 }
 
 ### inf()
@@ -316,3 +320,10 @@ neofetch
 
 source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
+## STYLES
+### Zsh Highlight
+
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[command]='fg=#00ff00, bold'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#ff00ff, bold'
+ZSH_HIGHLIGHT_STYLES[function]='fg=#ffff00, bold'
