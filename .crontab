@@ -9,8 +9,8 @@ MAILTO="phil@philbev.co.uk"
 # │ │ │ │ │
 # * * * * *  command_to_execute
 #*/1 * * * * echo -e "Hi there Phil :-)" | mail -s "Testing" phil@philbev.co.uk
-#*/1 * * * * echo -e "Hi there Phil :-)" 
-#*/1 * * * * echo "Hi there Phil :-)" | msmtp -a default phil@philbev.co.uk 
+#*/1 * * * * echo -e "Hi there Phil :-)"
+#*/1 * * * * echo "Hi there Phil :-)" | msmtp -a default phil@philbev.co.uk
 
 #Reminder for putting the bin out
 0 12-20 * * Mon [ $((`date +%-V` % 2)) -ne 0 ] || echo -e 'Put the blue bin out' | mail -s "Blue bin day" phil@philbev.co.uk
