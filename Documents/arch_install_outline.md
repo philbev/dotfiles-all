@@ -7,13 +7,13 @@ Download the iso from <https://www.archlinux.org/download/>
 Verify the signature:
 
 ```bash
-    gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig
+	gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig
 ```
 
 Alternatively, from an existing Arch Linux installation run:
 
 ```bash
-    pacman-key -v archlinux-version-x86_64.iso.sig
+	pacman-key -v archlinux-version-x86_64.iso.sig
 ```
 
 ### Write to USB
@@ -21,13 +21,13 @@ Alternatively, from an existing Arch Linux installation run:
 Insert USB drive and discover the device with:
 
 ```bash
-    lsblk
+	lsblk
 ```
 
 Write to USB drive
 
 ```bash
-    dd if=archlinux<version>x86_64.iso of=/dev/sdX bs=4M status=progress && sync
+	dd if=archlinux<version>x86_64.iso of=/dev/sdX bs=4M status=progress && sync
 ```
 
 Where /dev/sdX was obtained from the 'lsblk' command above.
@@ -39,7 +39,7 @@ Insert the USB stick and boot until archroot prompt is displayed.
 For non US keyboards the configuration needs changing:
 
 ```bash
-    loadkeys uk
+	loadkeys uk
 ```
 
 Works for UK PC keyboards.
@@ -47,38 +47,87 @@ Works for UK PC keyboards.
 To obtain a list of all keyboard layouts:
 
 ```bash
-    ls /usr/share/kbd/keymaps/**/*.map.gz
+	ls /usr/share/kbd/keymaps/**/*.map.gz
 ```
 
 If the font is not suitable then 'setfont' can be used:
 
 ```bash
-    setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu.gz
+	setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu.gz
 ```
 
 ## Internet
+### Wired Connection
 Check for connection with:
 
 ```bash
-    ip a
+	ip a
+	ping archlinux.org
 ```
 
-For wifi:
+### Wireless Connection
+#### Blocked Wifi
+Many laptops have a hardware button (or switch) to turn off wireless card, however, the card can also be blocked by kernel. This can be handled by rfkill. To show the current status:
 
 ```bash
-    wifi-menu
+	rfkill list
 ```
+Should output something like this:
+```
+0: phy0: Wireless LAN
+	Soft blocked: yes
+	Hard blocked: yes
+```
+If the card is hard-blocked, use the hardware button (switch) to unblock it. If the card is not hard-blocked but soft-blocked, use the following command:
+
+```
+	rfkill unblock wifi
+```
+#### Connecting with iwctl
+Start the iwctl program:
+```bash
+	iwctl
+```
+First, if you do not know your wireless device name, list all Wi-Fi devices:
+
+```bash
+[iwd]# device list
+```
+
+Then, to scan for networks:
+```bash
+[iwd]# station device scan
+```
+You can then list all available networks:
+```bash
+[iwd]# station device get-networks
+```
+Finally, to connect to a network:
+```bash
+[iwd]# station device connect SSID
+```
+If a passphrase is required, you will be prompted to enter it. Alternatively, you can supply as a command line argument:
+```bash
+$ iwctl --passphrase passphrase station device connect SSID
+```
+
+##### Tip:
+In the iwctl prompt you can auto-complete commands and device names by hitting Tab.
+
+To exit the interactive prompt, send EOF by pressing Ctrl+d.
+
+You can use all commands as command line arguments without entering an interactive prompt. For example: iwctl device wlp3s0 show.
 
 ## Time
 
 ```bash
-    timedatectl set-ntp true
+	timedatectl set-ntp true
 ```
 
 Check the service status:
 
 ```bash
-    timedatectl status
+	timedatectl status
 ```
 
 
@@ -87,13 +136,13 @@ Check the service status:
 Check partitions with:
 
 ```bash
-    lsblk -o model,type,name,fstype,size,label,mountpoint,partlabel
+	lsblk -o model,type,name,fstype,size,label,mountpoint,partlabel
 ```
 
 or
 
 ```bash
-    lsblk -o +fstype,label
+	lsblk -o +fstype,label
 ```
 
 Create partitions with 'fdisk', 'gdisk', 'cfdisk' or 'cgdisk'.
@@ -105,13 +154,13 @@ EFI partition
 NOTE!!! Not to be performed if efi partition exists. All data will be lost.
 
 ```bash
-    mkfs.fat -F32 /dev/sdX
+	mkfs.fat -F32 /dev/sdX
 ```
 
 Root partition:
 
 ```bash
-    mkfs.ext4 /dev/sdY
+	mkfs.ext4 /dev/sdY
 ```
 
 Home and /usr/local partitions:
@@ -124,17 +173,17 @@ format if using existing partitions
 Root partition:
 
 ```bash
-    mount /dev/sdX /mnt
+	mount /dev/sdX /mnt
 ```
 
 Home partition:
 
 ```bash
-    mkdir /mnt/home
+	mkdir /mnt/home
 ```
 
 ```bash
-    mount /dev/sdX /mnt/home
+	mount /dev/sdX /mnt/home
 ```
 
 /usr/local partition:
@@ -143,18 +192,18 @@ Home partition:
 Do not mount rhe /usr/local directory yet  as this interferes with pacman
 install later on.
 ```bash
-    mount /dev/sdX /mnt/usr/local
+	mount /dev/sdX /mnt/usr/local
 ```
 
 EFI partition:
 
 ```bash
-    mkdir -p /mnt/boot/efi
+	mkdir -p /mnt/boot/efi
 
 ```
 
 ```bash
-    mount /dev/sdX /mnt/boot/efi
+	mount /dev/sdX /mnt/boot/efi
 ```
 
 ## Install Base System
@@ -163,17 +212,17 @@ Edit the /etc/pacman.d/mirrorlist file with vim and move United Kingdom servers
 to the top.
 
 ```bash
-    vim /etc/pacman.d/mirrorlist
+	vim /etc/pacman.d/mirrorlist
 ```
 
 Install basic software with:
 
 ```bash
-    pacstrap /mnt base linux linux-firmware gvim neovim
+	pacstrap /mnt base linux linux-firmware gvim neovim
 ```
 
 ```bash
-    mkdir -p /mnt/usr/local
+	mkdir -p /mnt/usr/local
 
 ```
 ## Fstab
@@ -181,13 +230,13 @@ Install basic software with:
 Generate the /etc/fstab file:
 
 ```bash
-    genfstab -U /mnt >> /mnt/etc/fstab
+	genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 Check for correctness:
 
 ```bash
-    cat /mnt/etc/fstab
+	cat /mnt/etc/fstab
 ```
 
 ## Arch-root
@@ -195,23 +244,23 @@ Check for correctness:
 Log into the newly created system with:
 
 ```bash
-    arch-chroot /mnt
+	arch-chroot /mnt
 ```
 
 ## Swap
 Create swap file:
 
 ```bash
-    fallocate -l 2GB /swapfile
-    chmod 600 /swapfile
-    mkswap /swapfile
-    swapon /swapfile
+	fallocate -l 2GB /swapfile
+	chmod 600 /swapfile
+	mkswap /swapfile
+	swapon /swapfile
 ```
 
 Edit /etc/fstab and append with:
 
 ```bash
-    /swapfile none swap defaults    0 0
+	/swapfile none swap defaults	0 0
 ```
 
 ## Time
@@ -219,13 +268,13 @@ Edit /etc/fstab and append with:
 Set timezone:
 
 ```bash
-    ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
+	ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 ```
 
 Synchronise system and hardware clocks:
 
 ```bash
-    hwclock --systohc --localtime
+	hwclock --systohc --localtime
 ```
 
 ## Locales
@@ -233,7 +282,7 @@ Synchronise system and hardware clocks:
 Edit /etc/locale.gen
 
 ```bash
-    vi /etc/locale.gen
+	vi /etc/locale.gen
 ```
 
 Search for en_GB and uncomment the lines that contain it.
@@ -241,19 +290,19 @@ Search for en_GB and uncomment the lines that contain it.
 Generate locale:
 
 ```bash
-    locale-gen
+	locale-gen
 ```
 
 Edit /etc/locale.conf
 
 ```bash
-    vi /etc/locale.conf
+	vi /etc/locale.conf
 ```
 
 Insert line
 
 ```bash
-    LANG=en_GB.UTF-8
+	LANG=en_GB.UTF-8
 ```
 
 ## Internet
@@ -263,7 +312,7 @@ Insert line
 Edit /etc/hostname
 
 ```bash
-    vi /etc/hostname
+	vi /etc/hostname
 ```
 
 Insert \<hostname> of your choice.
@@ -274,15 +323,15 @@ Insert \<hostname> of your choice.
 Edit /etc/hosts
 
 ```bash
-    vi /etc/hosts
+	vi /etc/hosts
 ```
 
 Enter the following lines into the file:
 
 ```
-    127.0.0.1	localhost
-    ::1		localhost
-    127.0.1.1	<hostname>.localdomain	<hostname>
+	127.0.0.1	localhost
+	::1		localhost
+	127.0.1.1	<hostname>.localdomain	<hostname>
 ```
 
 ## Root password
@@ -290,7 +339,7 @@ Enter the following lines into the file:
 Create root password
 
 ```bash
-    passwd
+	passwd
 ```
 
 ## Grub
@@ -299,9 +348,9 @@ Create root password
 Install the following packages:
 
 ```bash
-    pacman -S grub efibootmgr networkmanager network-manager-applet \
-    wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base devel \
-    linux-headers git zsh
+	pacman -S grub efibootmgr networkmanager network-manager-applet \
+	wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base devel \
+	linux-headers git zsh
 ```
 
 Note! wireless_tools and wpa_supplicant are only needed for machines with wi-fi.
@@ -309,13 +358,13 @@ Note! wireless_tools and wpa_supplicant are only needed for machines with wi-fi.
 ### Grub install
 
 ```bash
-    grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=<boot-loader name>
+	grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=<boot-loader name>
 ```
 
 ### Grub Configuration
 
 ```bash
-    grub-mkconfig -o /boot/grub/grub.cfg
+	grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## Exit Installation and unmount
@@ -323,19 +372,19 @@ Note! wireless_tools and wpa_supplicant are only needed for machines with wi-fi.
 Return to Arch boot disk
 
 ```bash
-    exit
+	exit
 ```
 
 Unmount new partitions
 
 ```bash
-    umount -R /mnt
+	umount -R /mnt
 ```
 
 or
 
 ```bash
-    umount -a
+	umount -a
 ```
 
 Will get error messages with second method.
@@ -343,7 +392,7 @@ Will get error messages with second method.
 Reboot
 
 ```bash
-    reboot
+	reboot
 ```
 
 ## New Installation
@@ -357,12 +406,12 @@ When rebooted into the new install
 Wired connection
 
 ```bash
-    systemctl start NetworkManager
+	systemctl start NetworkManager
 
 ```
 
 ```bash
-    systemctl enable NetworkManager
+	systemctl enable NetworkManager
 ```
 
 NOTE! Uppercase 'N' and 'M' in NetworkManager.
@@ -370,13 +419,13 @@ NOTE! Uppercase 'N' and 'M' in NetworkManager.
 Wireless connection
 
 ```bash
-    nmtui
+	nmtui
 ```
 
 ### Check Internet Connection
 
 ```bash
-    ip a
+	ip a
 ```
 
 ## Create User Accounts
@@ -384,15 +433,15 @@ Wireless connection
 Create New User
 
 ```bash
-    useradd -m -g users -G wheel <username>
-    passwd <username>
+	useradd -m -g users -G wheel <username>
+	passwd <username>
 ```
 
 ## Sudo
 Sudo has now to be configured.
 
 ```bash
-    EDITOR=nvim visudo
+	EDITOR=nvim visudo
 ```
 
 Edit accordingly.
@@ -400,12 +449,12 @@ Edit accordingly.
 ## Graphics
 
 ```bash
-    pacman -S xf86-video-amdgpu
+	pacman -S xf86-video-amdgpu
 
 ```
 
 ```bash
-    pacman -S xorg
+	pacman -S xorg
 ```
 
 ## Desktop Environments
@@ -414,17 +463,17 @@ Edit accordingly.
 ### Plasma
 
 ```bash
-    pacman -S sddm
+	pacman -S sddm
 ```
 
 ```bash
-    systemctl enable sddm
+	systemctl enable sddm
 ```
 
 Install Plasma and applications
 
 ```bash
-    pacman -S plasma kde-applications xdg-user-dirs packagekit-qt5
+	pacman -S plasma kde-applications xdg-user-dirs packagekit-qt5
 ```
 
 ### Gnome [optional]
@@ -432,18 +481,18 @@ Install Plasma and applications
 Install and enable desktop manager gdm
 
 ```bash
-    pacman -S gdm
+	pacman -S gdm
 
 ```
 
 ```bash
-    systemctl enable gdm
+	systemctl enable gdm
 ```
 
 Install gnome desktop environment
 
 ```bash
-    pacman -S gnome gnome-extra
+	pacman -S gnome gnome-extra
 ```
 
 
