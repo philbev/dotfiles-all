@@ -22,15 +22,16 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 " Make sure you use single quotes
 
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'w0rp/ale'
+" shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'w0rp/ale'                       " asynchronous lint engine
 Plug 'junegunn/vim-easy-align'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'        " Colourful status line for nvim.
+Plug 'vim-airline/vim-airline-themes' " Themes for airline plugin.
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -38,15 +39,11 @@ Plug 'Rip-Rip/clang_complete'
 Plug 'scrooloose/nerdtree'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-"Plug 'garbas/vim-snipmate'
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'ratazzi/blackboard.vim'
+Plug 'honza/vim-snippets'   "Collection of snippets for ultisnips.
 Plug 'shawncplus/Vim-tocterm'
-Plug 'joelfrederico/vim-HiLinkTrace'
-Plug 'ron89/thesaurus_query.vim'
-Plug 'morhetz/gruvbox'
-Plug 'joequery/Stupid-EasyMotion'
+Plug 'joelfrederico/vim-HiLinkTrace'    "Displays highlight info: use :HLT!
+Plug 'ron89/thesaurus_query.vim'    "Thesaurus: Usage - \cs
 Plug 'easymotion/vim-easymotion'
 Plug 'chazy/cscope_maps'
 Plug 'jceb/vim-orgmode'
@@ -55,15 +52,14 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
 Plug 'dracula/vim', { 'as': 'dracula' }
-"Plug 'vim-latex/vim-latex'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'edkolev/promptline.vim'
+Plug 'edkolev/promptline.vim'       " Displays airline theme in terminal.
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " The plugins below are for vimOrganizer
 Plug 'hsitz/VimOrganizer'
 Plug 'ryanoasis/vim-devicons'
-Plug 'lilydjwg/colorizer'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }   "Colors RGB values E.g. #ffff00 
 Plug 'vim/killersheep'
 Plug 'nanotech/jellybeans.vim'
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
