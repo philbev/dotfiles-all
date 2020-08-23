@@ -170,13 +170,13 @@ format if using existing partitions
 
 ### Mount partitions
 
-Root partition:
+**Root partition:**
 
 ```bash
 	mount /dev/sdX /mnt
 ```
 
-Home partition:
+**Home partition:**
 
 ```bash
 	mkdir /mnt/home
@@ -186,16 +186,16 @@ Home partition:
 	mount /dev/sdX /mnt/home
 ```
 
-/usr/local partition:
+**/usr/local partition:**
 
 
-Do not mount rhe /usr/local directory yet  as this interferes with pacman
+Do not mount rhe **/usr/local** directory yet  as this interferes with pacman
 install later on.
 ```bash
 	mount /dev/sdX /mnt/usr/local
 ```
 
-EFI partition:
+**EFI partition:**
 
 ```bash
 	mkdir -p /mnt/boot/efi
@@ -208,11 +208,21 @@ EFI partition:
 
 ## Install Base System
 
-Edit the /etc/pacman.d/mirrorlist file with vim and move United Kingdom servers
+### 1. Utilising reflector package
+
+Download and install package **reflector**.
+```
+	sudo pacman -S reflector
+	sudo reflector -c GB --sort rate -a 6 --save /etc/pacman.d/mirrorlist
+```
+OR
+
+### 2. Manually edit pacman configuration file
+Edit the **/etc/pacman.d/mirrorlist** file with nvim and move United Kingdom servers
 to the top.
 
 ```bash
-	vim /etc/pacman.d/mirrorlist
+	nvim /etc/pacman.d/mirrorlist
 ```
 
 Install basic software with:
@@ -227,7 +237,7 @@ Install basic software with:
 ```
 ## Fstab
 
-Generate the /etc/fstab file:
+Generate the **/etc/fstab** file:
 
 ```bash
 	genfstab -U /mnt >> /mnt/etc/fstab
@@ -248,21 +258,61 @@ Log into the newly created system with:
 ```
 
 ## Swap
-Create swap file:
+
+### Swapfile
+Use dd to create a swap file the size of your choosing. For example, creating a 2 GiB swap file:
 
 ```bash
-	fallocate -l 2GB /swapfile
+	dd if=/dev/zero of=/swapfile bs=1M count=2000 status=progress
+```
+Note: Using dd to allocate a swap file is the most portable solution, see swapon(8) § Files with holes for details.
+
+Set the right permissions (a world-readable swap file is a huge local vulnerability):
+
+```bash
 	chmod 600 /swapfile
+```
+After creating the correctly sized file, format it to swap:
+```bash
 	mkswap /swapfile
+```
+Activate the swap file:
+```bash
 	swapon /swapfile
 ```
+Finally, edit the fstab configuration to add an entry for the swap file:
 
-Edit /etc/fstab and append with:
-
-```bash
-	/swapfile none swap defaults	0 0
+/etc/fstab
 ```
+/swapfile none swap defaults 0 0
+```
+For additional information, see fstab#Usage.
 
+Note: The swap file must be specified by its location on the file system not by its UUID or LABEL.
+Remove swap file
+#### Swapfile removal
+To remove a swap file, it must be turned off first and then can be removed:
+```bash
+	swapoff /swapfile
+	rm -f /swapfile
+```
+Finally remove the relevant entry from **/etc/fstab**.
+
+### Swap partition
+To set up a partition as Linux swap area, the mkswap command is used. For example:
+```bash
+	mkswap /dev/sdxy
+```
+Warning: All data on the specified partition will be lost.
+To enable the device for paging:
+```bash
+	swapon /dev/sdxy
+```
+To enable this swap partition on boot, add an entry to **/etc/fstab**:
+```
+UUID=device_UUID none swap defaults 0 0
+```
+where the device_UUID is the UUID of the swap space.
 ## Time
 
 Set timezone:
@@ -277,14 +327,13 @@ Synchronise system and hardware clocks:
 	hwclock --systohc --localtime
 ```
 
-## Locales
+## Localisation
 
-Edit /etc/locale.gen
+Edit **/etc/locale.gen**
 
 ```bash
-	vi /etc/locale.gen
+	nvim /etc/locale.gen
 ```
-
 Search for en_GB and uncomment the lines that contain it.
 
 Generate locale:
@@ -293,23 +342,31 @@ Generate locale:
 	locale-gen
 ```
 
-Edit /etc/locale.conf
+Create new file **/etc/locale.conf**
 
 ```bash
-	vi /etc/locale.conf
+	nvim /etc/locale.conf
 ```
-
 Insert line
 
 ```bash
-	LANG=en_GB.UTF-8
+LANG=en_GB.UTF-8
 ```
+If you set the keyboard layout, make the changes persistent:
 
+Create new file **/etc/vconsole.conf**:
+```
+	nvim /etc/vconsole.conf
+```
+Insert line:
+```
+KEYMAP=uk
+```
 ## Internet
 
 ### Hostname
 
-Edit /etc/hostname
+Edit **/etc/hostname**
 
 ```bash
 	vi /etc/hostname
@@ -320,7 +377,7 @@ Insert \<hostname> of your choice.
 
 ### Hosts
 
-Edit /etc/hosts
+Edit **/etc/hosts**
 
 ```bash
 	vi /etc/hosts
