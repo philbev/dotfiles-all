@@ -226,6 +226,7 @@ bindsym Control+Shift+l exec libreoffice
 bindsym mod1+g exec gimp
 bindsym mod1+d exec dolphin
 bindsym mod1+Control+v exec code
+bindsym $mod+Shift+v exec sudo virt-manager
 
 # Programmes to autostart
 # exec chromium
