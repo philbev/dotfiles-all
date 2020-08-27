@@ -221,6 +221,7 @@ assign [class="Conky"] $ws9
 # NOTE! mod1 = <Alt> key, $mod or mod4 = <Win> key.
 bindsym mod1+Control+t exec thunderbird
 bindsym mod1+Control+c exec chromium
+bindsym mod1+Control+k exec konsole
 bindsym mod1+Control+m exec emacs -g 120x100+100+200
 bindsym Control+Shift+l exec libreoffice
 bindsym mod1+g exec gimp
