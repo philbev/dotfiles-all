@@ -327,6 +327,8 @@ neofetch
 
 source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
+source ~/zsh-z/zsh-z.plugin.zsh
+
 ## STYLES
 ### Zsh Highlight
 
