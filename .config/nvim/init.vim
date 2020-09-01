@@ -59,9 +59,9 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " The plugins below are for vimOrganizer
 Plug 'hsitz/VimOrganizer'
 Plug 'ryanoasis/vim-devicons'
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }   "Colors RGB values E.g. #ffff00 
-Plug 'vim/killersheep'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }   "Colors RGB values E.g. #ffff00 Plug 'vim/killersheep'
 Plug 'nanotech/jellybeans.vim'
+Plug 'mbbill/undotree'
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -169,6 +169,7 @@ let NERDTreeShowBookmarks=1
 filetype plugin indent on
 syntax on
 set undofile
+set undodir=~/.undodir
 set spelllang=en
 set nospell
 set dictionary=/usr/share/dict/words
