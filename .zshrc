@@ -327,7 +327,11 @@ neofetch
 
 source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
-source ~/zsh-z/zsh-z.plugin.zsh
+if [[ -f ~/zsh-z/zsh-z.plugin.zsh ]]; then
+    source ~/zsh-z/zsh-z.plugin.zsh
+else
+    source /usr/share/zsh/plugins/zsh-z.plugin.zsh
+fi
 
 ## STYLES
 ### Zsh Highlight
