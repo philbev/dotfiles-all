@@ -330,7 +330,7 @@ source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlightin
 if [[ -f ~/zsh-z/zsh-z.plugin.zsh ]]; then
     source ~/zsh-z/zsh-z.plugin.zsh
 else
-    source /usr/share/zsh/plugins/zsh-z.plugin.zsh
+    source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 fi
 
 ## STYLES
