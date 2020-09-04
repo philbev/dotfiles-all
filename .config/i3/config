@@ -197,7 +197,8 @@ gaps inner 5
 gaps outer 5
 
 # Background wallpaper
-exec_always feh --bg-scale /home/phil/Pictures/wallpaper.jpg
+#exec_always feh --bg-scale /home/phil/Pictures/wallpaper.jpg
+exec_always nitrogen --restore
 
 # Keyboard layout
 exec_always setxkbmap -model pc105 -layout gb
