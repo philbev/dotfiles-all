@@ -325,7 +325,11 @@ export LC_CTYPE=en_GB.UTF-8
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 neofetch
 
-source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+if [[ -f ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsha ]]; then
+    source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+elif [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+fi
 
 if [[ -f ~/zsh-z/zsh-z.plugin.zsh ]]; then
     source ~/zsh-z/zsh-z.plugin.zsh
