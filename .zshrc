@@ -325,7 +325,7 @@ export LC_CTYPE=en_GB.UTF-8
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 neofetch
 
-if [[ -f ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsha ]]; then
+if [[ -f ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
     source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 elif [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
@@ -342,8 +342,10 @@ fi
 
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[command]='fg=#00ff00, bold'
-ZSH_HIGHLIGHT_STYLES[alias]='fg=#ff00ff, bold'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#00ffff, bold'
 ZSH_HIGHLIGHT_STYLES[function]='fg=#ffff00, bold'
+
+### Powerlevel10k
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
