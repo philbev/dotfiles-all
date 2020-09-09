@@ -36,7 +36,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'Rip-Rip/clang_complete'
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'SirVer/ultisnips'
@@ -59,7 +59,8 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " The plugins below are for vimOrganizer
 Plug 'hsitz/VimOrganizer'
 Plug 'ryanoasis/vim-devicons'
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }   "Colors RGB values E.g. #ffff00 Plug 'vim/killersheep'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }   "Colors RGB values E.g. #ffff00
+Plug 'vim/killersheep'
 Plug 'nanotech/jellybeans.vim'
 Plug 'mbbill/undotree'
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
