@@ -102,7 +102,7 @@ alias help=run-help
 ## VARIABLES (PARAMETERS)
 
 fpath=( ~/.zfuncs "${fpath[@]}" )
-path=(~/.gem/ruby/2.5.0/bin "${path[@]}")
+path=(~/.gem/ruby/2.5.0/bin ~/.local/bin "${path[@]}")
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 export LANG=en_GB.UTF-8
 export EDITOR=/usr/bin/nvim
