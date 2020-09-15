@@ -86,6 +86,7 @@ alias lph='lp -o orientation-requested=4'
 alias lpp='lp -o prettyprint'
 alias lpph='lp -o orientation-requested=4 -o prettyprint'
 alias lsblk='lsblk -o model,type,name,fstype,size,label,mountpoint,partlabel'
+alias rv='rm -v'
 alias startx='startx -- -nolisten tcp'
 alias v=nvim
 alias vi=nvim
