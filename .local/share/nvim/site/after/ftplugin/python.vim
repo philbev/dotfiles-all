@@ -11,6 +11,8 @@ endif
 
 setlocal textwidth=80
 setlocal updatetime=300
+setlocal colorcolumn=80
+setlocal cursorcolumn
 
 augroup python_1
     autocmd!
