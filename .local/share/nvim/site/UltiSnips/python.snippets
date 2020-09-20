@@ -19,3 +19,40 @@ endsnippet
 snippet 'printf|prf' "Print formatted string"  br
 print(f"${1:${VISUAL:Enter text to be printed here}}")$0
 endsnippet
+
+snippet reset "Reset ANSI colours"
+\033[0m
+endsnippet
+
+snippet 'vgreen|vgr' "Green text" r
+\033[1;38;2;0;255;0m${1:${VISUAL:Default text}}\033[0m$0
+endsnippet
+
+snippet 'vcyan|vcy' "Cyan text" r
+\033[1;38;2;0;255;255m${1:${VISUAL:Default text}}\033[0m$0
+endsnippet
+
+snippet 'vmagenta|vmag' "Magenta text" r
+\033[1;38;2;255;0;255m${1:${VISUAL:Default text}}\033[0m$0
+endsnippet
+
+snippet 'vyellow|vyel' "Yellow text" r
+\033[1;38;2;255;255;0m${1:${VISUAL:Default text}}\033[0m$0
+endsnippet
+
+snippet 'vred|vr' "Red text" r
+\033[1;38;2;255;0;0m${1:${VISUAL:Default text}}\033[0m$0
+endsnippet
+
+snippet 'vblue|vbl' "Blue text" r
+\033[1;38;2;0;0;255m${1:${VISUAL:Default text}}\033[0m$0
+endsnippet
+
+snippet 'vwhite|vwh' "White text" r
+\033[1;38;2;255;255;255m${1:${VISUAL:Default text}}\033[0m$0
+endsnippet
+
+snippet 'vblack|vbla' "Black text" r
+\033[1;38;2;0;0;0m${1:${VISUAL:Default text}}\033[0m$0
+endsnippet
+
