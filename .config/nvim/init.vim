@@ -328,7 +328,7 @@ endif
 
 """ FUNCTION KEYS <F1> TO <F12>
 
-nnoremap <F2> :set hlsearch! hlsearch?|"              <F2> - Toggle option 'hlsearch'
+nnoremap <F2> :nohlsearch<cr>|"                       <F2> - No highlight search
 nnoremap <F3> :set spell! spell?|"                    <F3> - Toggle option 'spell'
 nnoremap <F4> :set relativenumber! relativenumber?|"  <F4> - Toggle option 'relativenumber'
 nnoremap <F9> :NERDTreeToggle|"                       <F9> - Toggle NERDTree
