@@ -36,7 +36,9 @@ inoremap <buffer> [ []<Left>
 " neovim and will hopefully be fixed in the near future
 if has('nvim')
     nnoremap <buffer> <F5> :w<bar>terminal /usr/bin/python3 %<cr><bar>a
+    inoremap <buffer> <F5> <Esc>:w<bar>terminal /usr/bin/python3 %<cr><bar>a
     nnoremap <buffer> <M-p> :w<bar>terminal /usr/bin/python3 %<cr><bar>a
+    inoremap <buffer> <M-p> <Esc>:w<bar>terminal /usr/bin/python3 %<cr><bar>a
     nnoremap <buffer> <F8> : ALEFix<cr>
 else
     nnoremap <buffer> <F5> :w<bar>!/usr/bin/python3 %<cr><bar>a
