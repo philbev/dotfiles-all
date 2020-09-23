@@ -15,7 +15,7 @@ fi
 HISTFILE=~/.histfile
 HISTSIZE=1500
 SAVEHIST=15000
-setopt appendhistory autocd extendedglob
+setopt incappendhistory autocd extendedglob
 unsetopt beep nomatch
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -62,6 +62,8 @@ zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 # For case insensitive auto completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+# Automatically rehash newly installed programmes.
+zstyle ':completion:*' rehash true
 
 if [[ $TERM = linux ]]; then
     setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu
