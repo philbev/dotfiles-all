@@ -36,6 +36,10 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'Rip-Rip/clang_complete'
+Plug 'lambdalisue/fern.vim'
+Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 "Plug 'scrooloose/nerdtree'
 Plug 'Yggdroot/indentLine'
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -138,6 +142,14 @@ let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 
+""" FERN CONFIGURATION
+nnoremap <Leader>f :Fern -drawer -toggle -keep .<cr>
+"""" FixCursorHold
+" in millisecond, used for both CursorHold and CursorHoldI,
+" use updatetime instead if not defined
+let g:cursorhold_updatetime = 100
+"""" Nerdfont.vim
+let g:fern#renderer = "nerdfont"
 """ ALE CONFIGURATION
 
 
