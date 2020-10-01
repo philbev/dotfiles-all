@@ -296,24 +296,24 @@ gh () {
 
 ### l()
 l () {
-    ls -lF --color --group-directories-first "$@" | less
+    ls -lhF --color --group-directories-first "$@" | less
 }
 
 ### la()
 la () {
-    ls -AlvF --color=auto --group-directories-first  "$@" | less
+    ls -AlvhF --color=auto --group-directories-first  "$@" | less
 }
 
 ### ll()
 ll () {
 
-    ls -lF --color=always --group-directories-first "$@" | less
+    ls -lhF --color=always --group-directories-first "$@" | less
 }
 
 ### lm()
 lm () {
 
-    ls -lF --color=always --group-directories-first "$@" | more
+    ls -lhF --color=always --group-directories-first "$@" | more
 }
 
 ### inf()
