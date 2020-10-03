@@ -3,7 +3,7 @@
 # vz function opens text files in nvim. Fzf displays a preview window.
 vz (){
     nvim $(fd -HI --type f  --exclude='.cache' --exclude='.atom' --exclude=aur \
-        --exclude=chromium --exclude='.git' --color=always . $@ | fzf -e -m --ansi \
+        --exclude=chromium --exclude='.git' --color=always "$@" . | fzf -e -m --ansi \
         --preview 'bat --color=always {}')
 }
 
