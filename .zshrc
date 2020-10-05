@@ -62,8 +62,14 @@ zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 # For case insensitive auto completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-# Automatically rehash newly installed programmes.
+# Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# automatically find newly installed executables in path.
 zstyle ':completion:*' rehash true
+# Speed up completions
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
 
 if [[ $TERM = linux ]]; then
     setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu
@@ -72,19 +78,25 @@ fi
 autoload -Uz gitx
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
+set nobeep
+setopt nocaseglob               # Case insensitive globbing
+setopt nocheckjobs              # Don't warn about running processes when exiting
+setopt correct                  # Correct mistakes
 setopt extended_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
-setopt hist_ignore_all_dups
+setopt hist_ignore_all_dups     # If new command is a duplicate, remove the older one.
 setopt hist_ignore_space
 setopt hist_find_no_dups
 setopt hist_save_no_dups
 setopt hist_beep
 # Autopushd options
 setopt autopushd
+setopt numericglobsort          # Sort filenames numerically when it makes sense
 setopt pushdsilent
 setopt pushdminus
 setopt pushdignoredups
+setopt rcexpandparam            # Array expension with parameters
 source ~/.colors
 if [ -f ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]; then
     source ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
@@ -104,7 +116,7 @@ alias help=run-help
 ## VARIABLES (PARAMETERS)
 
 fpath=( ~/.zfuncs "${fpath[@]}" )
-path=(~/.gem/ruby/2.5.0/bin ~/.local/bin "${path[@]}")
+path=(~/.gem/ruby/2.7.1/bin ~/.local/bin "${path[@]}")
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 export LANG=en_GB.UTF-8
 export EDITOR=/usr/bin/nvim
