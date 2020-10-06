@@ -1,8 +1,10 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ $TERM != 'linux' ]]; then
+    if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+        source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    fi
 fi
 
 #!/usr/bin/zsh
@@ -78,7 +80,7 @@ fi
 autoload -Uz gitx
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
-set nobeep
+setopt nobeep
 setopt nocaseglob               # Case insensitive globbing
 setopt nocheckjobs              # Don't warn about running processes when exiting
 setopt correct                  # Correct mistakes
@@ -338,7 +340,12 @@ inf () {
 export LC_CTYPE=en_GB.UTF-8
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-neofetch
+
+if [[ $TERM != 'linux' ]]; then
+    neofetch
+else
+    prompt='>>> '
+fi
 
 if [[ -f ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
     source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
@@ -359,9 +366,6 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[command]='fg=#00ff00, bold'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=#00ffff, bold'
 ZSH_HIGHLIGHT_STYLES[function]='fg=#ffff00, bold'
-
-### Powerlevel10k
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
