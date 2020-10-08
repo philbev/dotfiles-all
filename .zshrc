@@ -55,31 +55,11 @@ if [[ -f /etc/arch-release ]]; then     # pacman not in Slackware.
     bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
 fi
 
-## OPTIONS AND FUNCTIONS
-
-
-# For autocompletion with an arrow-key driven interface.
-zstyle ':completion:*' menu select
-# For autocompletion of command line switches for aliases.
-setopt COMPLETE_ALIASES
-# For case insensitive auto completion
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-# Colored completion (different colors for dirs/files/etc)
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-# automatically find newly installed executables in path.
-zstyle ':completion:*' rehash true
-# Speed up completions
-zstyle ':completion:*' accept-exact '*(N)'
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
+## OPTIONS
 
 if [[ $TERM = linux ]]; then
     setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu
 fi
-
-autoload -Uz gitx
-autoload -Uz up-line-or-beginning-search
-autoload -Uz down-line-or-beginning-search
 setopt nobeep
 setopt nocaseglob               # Case insensitive globbing
 setopt nocheckjobs              # Don't warn about running processes when exiting
@@ -99,21 +79,6 @@ setopt pushdsilent
 setopt pushdminus
 setopt pushdignoredups
 setopt rcexpandparam            # Array expension with parameters
-source ~/.colors
-if [ -f ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]; then
-    source ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-else
-    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-fi
-
-autoload -Uz run-help
-autoload -Uz run-help-git
-autoload -Uz run-help-ip
-autoload -Uz run-help-sudo
-unalias 'run-help' 2>/dev/null
-alias help=run-help
-
-
 
 ## VARIABLES (PARAMETERS)
 
@@ -132,13 +97,6 @@ export DIRSTACKSIZE=20          # Needed for autopushd.
 export PYTHONPATH=${PYTHONPATH}:${HOME}/src/python/modules
 export FZF_DEFAULT_OPTS='--color light,hl:196,hl+:21,fg+:235,bg+:136,fg+:254
 --color info:46,prompt:37,spinner:108,pointer:196,marker:21'
-autoload -Uz fuzzy_funcs        # fzf functions defined here.
-fuzzy_funcs
-autoload precmd
-precmd
-# This sets the $LS_COLORS variable. For arch linux ~/.dir_colors does
-# not exist so must be generated with "eval $(dircolors -b ~/.dir_colors)"
-eval $(dircolors .dir_colors)
 
 ## ALIASES
 
@@ -190,7 +148,6 @@ alias -s pdf=okular
 alias -s tex=nvim
 alias -s txt=nvim
 
-
 ## PROMPTING
 
 
@@ -233,6 +190,38 @@ prompt="%B%F{226}(${BRANCH})%F{196}[%F{51}%n%F{196}:%F{201}%2~%F{196}]%f%b%% "
 
 ## FUNCTIONS
 
+source ~/.colors
+autoload -Uz fuzzy_funcs        # fzf functions defined here.
+fuzzy_funcs
+autoload precmd
+precmd
+# This sets the $LS_COLORS variable. For arch linux ~/.dir_colors does
+# not exist so must be generated with "eval $(dircolors -b ~/.dir_colors)"
+eval $(dircolors .dir_colors)
+### For autocompletion with an arrow-key driven interface.
+zstyle ':completion:*' menu select
+### For autocompletion of command line switches for aliases.
+setopt COMPLETE_ALIASES
+### For case insensitive auto completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+### Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+### automatically find newly installed executables in path.
+zstyle ':completion:*' rehash true
+### Speed up completions
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+autoload -Uz gitx
+autoload -Uz up-line-or-beginning-search
+autoload -Uz down-line-or-beginning-search
+autoload -Uz run-help
+autoload -Uz run-help-git
+autoload -Uz run-help-ip
+autoload -Uz run-help-sudo
+unalias 'run-help' 2>/dev/null
+alias help=run-help
 ### Select bracketed
 # Text object for matching characters between matching pairs of brackets
 #
@@ -347,11 +336,6 @@ else
     prompt='>>> '
 fi
 
-if [[ -f ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
-    source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-elif [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
-    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-fi
 
 if [[ -f ~/zsh-z/zsh-z.plugin.zsh ]]; then
     source ~/zsh-z/zsh-z.plugin.zsh
@@ -359,14 +343,31 @@ else
     source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 fi
 
-## STYLES
-### Zsh Highlight
+## PLUGINS
 
+### Zsh-highlighting
+if [[ -f ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
+    source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+elif [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+fi
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[command]='fg=#00ff00, bold'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=#00ffff, bold'
 ZSH_HIGHLIGHT_STYLES[function]='fg=#ffff00, bold'
 
+### Zsh-autosuggestions
+
+if [ -f ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]; then
+    source ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+else
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+fi
+
+### Powerlevel10k Configuration.
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+if [[ $TERM != 'linux' ]]; then
+    source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+fi
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
