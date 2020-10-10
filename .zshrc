@@ -83,7 +83,7 @@ setopt rcexpandparam            # Array expension with parameters
 ## VARIABLES (PARAMETERS)
 
 fpath=( ~/.zfuncs "${fpath[@]}" )
-path=(~/.gem/ruby/2.7.1/bin ~/.local/bin "${path[@]}")
+path=(~/.gem/ruby/2.7.2/bin ~/.local/bin "${path[@]}")
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 export LANG=en_GB.UTF-8
 export EDITOR=/usr/bin/nvim
