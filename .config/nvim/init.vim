@@ -268,6 +268,8 @@ nnoremap <M-T> ^gU$yypv$r=|"                                    <Alt>+T = Upperc
 nnoremap <Up> gk|"                                              <Up> = Cursor up one virtual line.
 nnoremap <Down> gj|"                                            <Down> = Cursor down one virtual line.
 nnoremap <M-i> :set ic! ic?<CR>|"                               <Alt>+i = Toggle 'Ignorecase' option.
+nnoremap n nzzzv|"                                              Forward to next search, centre the cursorline and open any fold.
+nnoremap N Nzzzv|"                                              Backward to next search, centre the cursorline and open any fold.
 
 """ INSERT MODE
 
