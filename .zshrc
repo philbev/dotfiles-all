@@ -198,18 +198,12 @@ precmd
 # This sets the $LS_COLORS variable. For arch linux ~/.dir_colors does
 # not exist so must be generated with "eval $(dircolors -b ~/.dir_colors)"
 eval $(dircolors .dir_colors)
-### For autocompletion with an arrow-key driven interface.
-zstyle ':completion:*' menu select
-### For autocompletion of command line switches for aliases.
-setopt COMPLETE_ALIASES
-### For case insensitive auto completion
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-### Colored completion (different colors for dirs/files/etc)
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-### automatically find newly installed executables in path.
-zstyle ':completion:*' rehash true
-### Speed up completions
-zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' menu select                              # For autocompletion with an arrow-key driven interface.
+setopt COMPLETE_ALIASES                                         # For autocompletion of command line switches for aliases.
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'          # For case insensitive auto completion
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' rehash true                              # automatically find newly installed executables in path.
+zstyle ':completion:*' accept-exact '*(N)'                      # Speed up completions
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
@@ -224,10 +218,8 @@ unalias 'run-help' 2>/dev/null
 alias help=run-help
 ### Select bracketed
 # Text object for matching characters between matching pairs of brackets
-#
 # So for example, given (( i+1 )), the vi command ci( will change
 # all the text between matching colons.
-#
 # The following is an example of how to enable this:
 autoload -U select-bracketed
 zle -N select-bracketed
