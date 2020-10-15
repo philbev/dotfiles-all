@@ -70,6 +70,7 @@ Plug 'mbbill/undotree'
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'vimwiki/vimwiki'
 " Both options are optional. You don't have to install fzf in ~/.fzf
 " and you don't have to run the install script if you use fzf only in Vim.
 
@@ -176,6 +177,10 @@ let g:tq_openoffice_en_file='/usr/local/downloads/MyThes-1.0/th_en_US_new'
 """ NERDTREE OPTIONS HERE
 
 let NERDTreeShowBookmarks=1
+
+""" VIMWIKI
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 "" CONFIGURATION OPTIONS GO HERE
 
