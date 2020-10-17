@@ -70,6 +70,7 @@ Plug 'mbbill/undotree'
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'vimwiki/vimwiki'
 " Both options are optional. You don't have to install fzf in ~/.fzf
 " and you don't have to run the install script if you use fzf only in Vim.
@@ -120,6 +121,16 @@ let g:airline#extensions#tabline#left_sep = ''
 
 """ VIM-MARKDOWN CONFIGURATION
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
+""" MARKDOWN-PREVIEW.NVIM
+
+" use a custom markdown style must be absolute path
+" like '/Users/username/markdown.css' or expand('~/markdown.css')
+let g:mkdp_markdown_css = '/home/phil/.markdown.css'
+
+" use a custom highlight style must absolute path
+" like '/Users/username/highlight.css' or expand('~/highlight.css')
+" let g:mkdp_highlight_css = '/home/phil/.markdown.css'
 
 """ ULTISNIPS CONFIGURATION
 
