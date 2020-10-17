@@ -1,4 +1,4 @@
-# Installation of Arch Linux with Plasma and/or Gnome
+[#](#) Installation of Arch Linux with Plasma and/or Gnome
 
 ## Pre-installation
 
@@ -579,4 +579,5 @@ Install gnome desktop environment
 
 
 
-NOTE! For gnome desktop install 'gnome' and 'gnome-extra' packages.
+[NOTE](NOTE)! For gnome desktop install 'gnome' and 'gnome-extra' packages.
+
