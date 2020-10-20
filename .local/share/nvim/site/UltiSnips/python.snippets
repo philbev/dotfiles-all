@@ -16,6 +16,10 @@ snippet 'print|pr' "print() with quotes"  br
 print('${1:${VISUAL:Enter text to be printed here}}')$0
 endsnippet
 
+snippet prn "print() without quotes"  b
+print(${1:${VISUAL:Enter text to be printed here}})$0
+endsnippet
+
 snippet 'printf|prf' "Print formatted string"  br
 print(f'${1:${VISUAL:Enter text to be printed here}}')$0
 endsnippet
