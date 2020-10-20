@@ -296,7 +296,7 @@ l () {
 
 ### la()
 la () {
-    ls -AlvhF --color=auto --group-directories-first  "$@" | less
+    ls -AlvhF --color --group-directories-first  "$@" | less
 }
 
 ### ll()
