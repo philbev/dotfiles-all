@@ -22,7 +22,7 @@ installed to display the text.A 'Markdown Preview Plus' is the current one.
 3. To enable the  'vim-markdown' plug-in to display normal text ':set
    conceallevel=0'
 
-___   
+___
 ## Headers
 There are 6 levels of headings in markdown analogous to the HTML headings h1
 to h6. In markdown the pound sign (#) is used. The number of hashes signifies
@@ -38,7 +38,7 @@ ___
 ## Quotes
 
 
-Quotes are defined by the  '>' symbol 
+Quotes are defined by the  '>' symbol
 
 Example
 
@@ -70,7 +70,7 @@ _Italic text with underscores._
 ___
 ## Horizontal Rule
 A horizontal rule gives a visible line break.  You can create one by putting
-three or more hypens, asterisks, or underscores 
+three or more hypens, asterisks, or underscores
 
 **NOTE!** When using vim / neovim do **not** use hypens as they confuse the folding
 in plug-in 'vim-markdown'.
@@ -84,7 +84,7 @@ Examples of folding:-
 ***
 ## Lists
 
-Create unordered lists using '-', '*', '+, 
+Create unordered lists using '-', '*', '+,
 
 Examples with each :-
 ```markdown
@@ -106,7 +106,7 @@ Example
 ```
     1. item 1
     2. item 2
-    3. item 3 
+    3. item 3
 ```
 ___
 ## Hyperlinks and References
@@ -138,7 +138,7 @@ Then use the reference style link by using your text inside of brackets followed
 Example
 
 ```markdown
-    [My Website][1] 
+    [My Website][1]
 ```
 ## Images
 
@@ -146,7 +146,7 @@ Defining an image is similar to defining a link, except you prefix it with '!'
 
 Example with using a web page:-
 ```
-    ![James Quick](https://pbs.twimg.com/profile_images/887455546890211329/tAoS7KUm_400x400.jpg) 
+    ![James Quick](https://pbs.twimg.com/profile_images/887455546890211329/tAoS7KUm_400x400.jpg)
 ```
 
 For images on local file system  do not use the internet protocol before the
@@ -162,13 +162,13 @@ Just like links, you can define images by reference in the same format.
 
 Define the reference
 ```
-    [profile]: https://pbs.twimg.com/profile_images/887455546890211329/tAoS7KUm_400x400.jpg 
+    [profile]: https://pbs.twimg.com/profile_images/887455546890211329/tAoS7KUm_400x400.jpg
 ```
 
 Use the reference
 
 ```
-    ![James Quick][profile] 
+    ![James Quick][profile]
 ```
 A live example using local file system:-
 
@@ -182,15 +182,15 @@ ___
 
 ## Code
 
-You can do inline code with backticks 
+You can do inline code with backticks
 ```
    `Inline code here.`
 ```
-You can do blocks of code by surroung it with 3 backticks 
+You can do blocks of code by surroung it with 3 backticks
 
 Example
 
-``` 
+```
     var num = 0;
     var num2 = 0;
 ```
@@ -206,11 +206,11 @@ Example Javascript
 ```javascript
     var num = 0;
     var num2 = 0;
-``` 
+```
 
 Example HTML
 
- ```html 
+ ```html
     <div>
         <p>This is an html example</p>
     </div>
@@ -232,7 +232,7 @@ a row of dashes (-) (still separated by pipes), and there must be at least 3
 dashes between each header.  The row data follows beneath (still separated by
 pipes).
 
- 
+
 Example
 
     | Header 1    | Header 2    | Header 3    |
@@ -243,7 +243,7 @@ Example
     | Row 4 Col 1 | Row 4 Col 2 | Row 4 Col 3 |
     | Row 5 Col 1 | Row 5 Col 2 | Row 5 Col 3 |
 
-The above sholdbe rendered by the browser as:-
+The above should be rendered by the browser as:-
 
 | Header 1    | Header 2    | Header 3    |
 | ----------- | ----------- | ----------- |
@@ -259,7 +259,7 @@ width sizes, but it would be much more readable.  Notice the output of the
 following two tables are the same, but the second (the raw markdown) is much
 more readable.
 
- 
+
 Example
 
     | Header 1                 | Header 2              |
@@ -268,7 +268,7 @@ Example
 
 
 
- 
+
 Example
 
     | Header 1                 | Header 2              |
@@ -279,9 +279,9 @@ Example
 You can also align (Center, left, right) the text in a column by using colons (:) in the line breaks between headers and rows.  No colon means the default **left alignment**.  Colons on each side signifies **center alignment**.  And a trailing colon means **right alignment**.
 
 
- 
+
 Example
-    
+
     | Header Left       |    Header Centre    |      Header Right |
     | ----------------- | :-----------------: | ----------------: |
     | Left              |  Center             |  Right            |
@@ -301,11 +301,11 @@ Since MarkDown gets automatically converted to HTML, you can add raw HTML
 directly to your MarkDown.
 
 
-```html 
+```html
 <p>Sample HTML Div</p>
 ```
 
-Creates this 
+Creates this
 
 <p>Sample HTML Div</p>
 
@@ -326,17 +326,12 @@ document. You can also include CSS by including a style tag.
 ```
 
 ___
-<style >
-body{
-    color: #dddddd;
-    background: #303030
-}
 </style>
 ## CSS Styles
 <style>
 body{
     color: #000000;
-    background: #999999;
+    background: #ffffff;
     font-size: 18px;
 }
 h1{
