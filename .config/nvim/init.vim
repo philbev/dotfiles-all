@@ -161,6 +161,19 @@ nnoremap <Leader>f :Fern -drawer -toggle -keep .<cr>
 let g:cursorhold_updatetime = 100
 """" Nerdfont.vim
 let g:fern#renderer = "nerdfont"
+
+""" HEXOKINASE
+let g:Hexokinase_highlighters = [
+                  \   'virtual',
+                  \   'sign_column',
+                  "\   'background',
+                  "\   'backgroundfull',
+                  "\   'foreground',
+                  \   'foregroundfull'
+                  \ ]
+
+let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsla,colour_names'
+
 """ ALE CONFIGURATION
 
 
