@@ -6,8 +6,8 @@
 For Vscode when editing a markdown file, live preview can be enacted in one of
 two ways:-
 
-1. CTRL-V toggles preview  mode.
-2. CTRL-K V - Splits the screen with the preview at the side.
+1. SHIFT-ALT-V toggles preview  mode.
+2. ALT-K V - Splits the screen with the preview at the side.
 
 ### Vim / Neovim
 With vim/neovim a web browser can if utilised for a live preview. The browser
