@@ -234,7 +234,7 @@ bindsym $mod+Shift+v exec sudo virt-manager
 
 # Programmes to autostart
 # exec chromium
-exec --no-startup-id thunderbird
+# exec --no-startup-id thunderbird
 exec_always picom -f
 exec --no-startup-id alacritty -e emacs -nw
 exec --no-startup-id conky -d
