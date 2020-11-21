@@ -290,14 +290,17 @@ nnoremap <Leader>b 1GO#!/usr/bin/bash<ESC>:set ft=sh<CR>|"      \b = Insert #! a
 nnoremap <M-l> :set list! list?<CR>|"                           <Alt>+l = Display whitespace characters.
 nnoremap <M-e> :set expandtab! expandtab?<CR>|"                 <Alt>+e = Toggle 'Expandtab' and display.
 nnoremap <M-T> ^gU$yypv$r=|"                                    <Alt>+T = Uppercase whole line and underline.
-nnoremap <Up> gk|"                                              <Up> = Cursor up one virtual line.
-nnoremap <Down> gj|"                                            <Down> = Cursor down one virtual line.
+"nnoremap <Up> gk|"                                              <Up> = Cursor up one virtual line.
+"nnoremap <Down> gj|"                                            <Down> = Cursor down one virtual line.
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
 nnoremap <M-i> :set ic! ic?<CR>|"                               <Alt>+i = Toggle 'Ignorecase' option.
 nnoremap n nzzzv|"                                              Forward to next search, centre the cursorline and open any fold.
 nnoremap N Nzzzv|"                                              Backward to next search, centre the cursorline and open any fold.
 
 """ INSERT MODE
-
 
 inoremap <M-z> 1G#!/usr/bin/zsh<Esc>:set ft=zsh<CR>
 inoremap  |""             <Ctrl>+f = Filename completion.
