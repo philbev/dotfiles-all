@@ -1,4 +1,4 @@
-[#](#) Installation of Arch Linux with Plasma and/or Gnome
+# Installation of Arch Linux with Plasma and/or Gnome
 
 ## Pre-installation
 
