@@ -351,10 +351,10 @@ ZSH_HIGHLIGHT_STYLES[function]='fg=#ffff00, bold'
 
 ### Zsh-autosuggestions
 
-if [ -f ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]; then
-    source ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+if [ -f ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    source ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 else
-    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 ### Powerlevel10k Configuration.
