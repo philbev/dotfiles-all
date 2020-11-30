@@ -253,8 +253,8 @@ workspace $ws9 output HDMI-1
 #workspace $ws10 output HDMI-A-0
 
 # Assign programs to workspaces. Use xprop from command line to get window class.
-for_window [class="Thunderbird"] move to workspace $ws3
-for_window [class="Chromium"] move to workspace $ws2
+for_window [class="Thunderbird"] move to workspace $ws3; workspace number $ws3
+for_window [class="Chromium"] move to workspace $ws2; workspace number $ws2
 
 # class                 border  backgr. text    indicator child_border
 #client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
