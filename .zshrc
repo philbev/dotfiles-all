@@ -353,8 +353,8 @@ ZSH_HIGHLIGHT_STYLES[function]='fg=#ffff00, bold'
 
 if [ -f ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     source ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-elif [ /usr/share/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then   # For ubuntu
-    source /usr/share/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [ /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then   # For ubuntu
+    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 else
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
