@@ -332,7 +332,7 @@ fi
 
 if [[ -f ~/zsh-z/zsh-z.plugin.zsh ]]; then
     source ~/zsh-z/zsh-z.plugin.zsh
-else
+elif [[ -f /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh ]]; then
     source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 fi
 
