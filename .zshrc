@@ -362,9 +362,9 @@ fi
 ### Powerlevel10k Configuration.
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 if [[ $TERM != 'linux' ]]; then
-    if [[ /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme ]]; then
+    if [[ -f /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme ]]; then
         source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-    elif [[ ~/powerlevel10k/powerlevel10k.zsh-theme ]]; then    # For Ubuntu manual install.
+    elif [[ -f ~/powerlevel10k/powerlevel10k.zsh-theme ]]; then    # For Ubuntu manual install.
         source ~/powerlevel10k/powerlevel10k.zsh-theme
     fi
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
