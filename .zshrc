@@ -321,7 +321,6 @@ inf () {
 # Powerlevel9k seems to be the main culprit.
 export LC_CTYPE=en_GB.UTF-8
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if [[ $TERM != 'linux' ]]; then
     neofetch
@@ -329,16 +328,20 @@ else
     prompt='>>> '
 fi
 
+## PLUGINS
 
+### FZF
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+### Zsh-z Plugin
 if [[ -f ~/zsh-z/zsh-z.plugin.zsh ]]; then
     source ~/zsh-z/zsh-z.plugin.zsh
 elif [[ -f /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh ]]; then
     source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 fi
 
-## PLUGINS
-
-### Zsh-highlighting
+### Zsh-syntax-highlighting
 if [[ -f ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
     source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 elif [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
