@@ -21,11 +21,6 @@ if [[ -f ~/.colors      ]]; then
         source ~/.colors
 fi
 
-# To reflect status of git.
-if [[ -f ~/.set_prompt.sh ]]; then
-    source ~/.set_prompt.sh
-fi
-
 
 ## ENVIRONMENT VARIABLES
 if [[ $USER != root ]]; then
@@ -34,10 +29,6 @@ fi
 export PATH=$PATH:/usr/local/bin/android-studio/bin:/usr/local/bin/android-sdk-linux/platform-tools     # Needed for Android SDK
 export LANG="en_GB.UTF-8"
 
-ps_local="\[$bold$yellowfg\]$(is_git_dir)\[$bold$cyanfg\][\u:\w]\$ \[\033[0m\]"
-ps_ssh="\033[1;35m(\h) $ps_local"
-who -m | grep -q '([^:]\+)' && PS1="$ps_ssh" || PS1="$ps_local"
-export PS1
 export SHELLCHECK_OPTS="-e SC1090 -e SC2154 -e SC2012"
 export LESS="-eFRX"
 export HISTCONTROL=ignoredups:ignorespace:erasedups
@@ -46,8 +37,6 @@ export QUEUEDIR=/home/philbev/.sbopkg/queues    # Needed for Sbopkg
 export HISTFILESIZE=50000
 export HISTSIZE=1000
 export HISTIGNORE=l:ll:lm:c:a:h:la:lh
-export PROMPT_COMMAND="history -a;source ~/.set_prompt.sh"
-export PROMPT_DIRTRIM=3
 export REPOS=/usr/local/downloads/repositories
 export GREP_COLORS='ms=01;38;5;196:fn=01;38;5;201:ln=01;38;5;46'
 export GVFS_DISABLE_FUSE=1
@@ -187,3 +176,5 @@ mydate () {
 }
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+eval "$(starship init bash)"
