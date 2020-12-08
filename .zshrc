@@ -55,6 +55,15 @@ if [[ -f /etc/arch-release ]]; then     # pacman not in Slackware.
     bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
 fi
 
+# To insert an unicode character in the command line use the key
+# sequence ^Xi<unicode hex number>^xi:
+#   ^xif0f9^xi prints first aid wagon :-)
+# To print unicode character with echo:
+#       echo "\uf0f9"
+autoload insert-unicode-char
+zle -N insert-unicode-char
+bindkey '^Xi' insert-unicode-char
+
 ## OPTIONS
 
 if [[ $TERM = linux ]]; then
