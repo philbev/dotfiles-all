@@ -208,8 +208,8 @@ exec_always xset dpms 1800 1800 0
 exec_always xset s 1860 600
 
 # Multiple monitors
-#exec_always xrandr --output DisplayPort-3 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-0 --off
-exec_always xrandr --output DP-1 --off --output DP-2 --off --output DP-3 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DVI-D-1 --off
+exec_always xrandr --output DisplayPort-2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-0 --off
+#exec_always xrandr --output DP-1 --off --output DP-2 --off --output DP-3 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DVI-D-1 --off
 
 # Floating windows
 for_window [class="Emacs"] floating enable
@@ -241,15 +241,15 @@ exec --no-startup-id conky -d
 exec_always --no-startup-id flameshot
 
 # Assign workspaces to monitor screen
-workspace $ws1 output DP-3
-workspace $ws2 output DP-3
-workspace $ws3 output DP-3
-workspace $ws4 output DP-3
-workspace $ws5 output DP-3
-workspace $ws6 output DP-3
-workspace $ws7 output DP-3
-workspace $ws8 output DP-3
-workspace $ws9 output HDMI-1
+workspace $ws1 output DisplayPort-2
+workspace $ws2 output DisplayPort-2
+workspace $ws3 output DisplayPort-2
+workspace $ws4 output DisplayPort-2
+workspace $ws5 output DisplayPort-2
+workspace $ws6 output DisplayPort-2
+workspace $ws7 output DisplayPort-2
+workspace $ws8 output DisplayPort-2
+workspace $ws9 output HDMI-0
 #workspace $ws10 output HDMI-A-0
 
 # Assign programs to workspaces. Use xprop from command line to get window class.
