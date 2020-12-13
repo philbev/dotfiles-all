@@ -1,3 +1,10 @@
+#!/usr/bin/zsh
+# ~/.zshrc: Configuration file for zsh.
+# Lines beginning with a single '#' are comments as usual.
+# Lines beginning with a '##' are level 1 folds.
+# Lines beginning with a '###' are level 2 folds etc.
+#
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -7,12 +14,6 @@ if [[ $TERM != 'linux' ]]; then
     fi
 fi
 
-#!/usr/bin/zsh
-# ~/.zshrc: Configuration file for zsh.
-# Lines beginning with a single '#' are comments as usual.
-# Lines beginning with a '##' are level 1 folds.
-# Lines beginning with a '###' are level 2 folds etc.
-#
 ## LINES CONFIGURED BY ZSH-NEWUSER-INSTALL
 HISTFILE=~/.histfile
 HISTSIZE=1500
