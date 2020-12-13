@@ -59,7 +59,7 @@ font-2 = unifont:fontformat=truetype:size=24:antialias=false;0
 font-3 = siji:pixelsize=14;1
 
 modules-left = i3
-modules-center = mpd xwindow
+modules-center = xwindow
 modules-right = pacman eth pulseaudio date powermenu
 
 tray-position = right
@@ -441,11 +441,11 @@ exec = checkupdates | wc -l
 interval = 900
 label = %output%
 ; label-pacman-foreground = #ffbb00
-format.forground = #ffbb00
-format.background = ${colors.background}
+;format.foreground = #ffbb00
+;format.background = ${colors.background}
 format-prefix = " "
 format-prefix-foreground = #ffbb00
-# format-prefix-background = #ffbb00
+; format-prefix-background = #ffbb00
 
 [settings]
 screenchange-reload = true

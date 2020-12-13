@@ -1,3 +1,10 @@
+#!/usr/bin/zsh
+# ~/.zshrc: Configuration file for zsh.
+# Lines beginning with a single '#' are comments as usual.
+# Lines beginning with a '##' are level 1 folds.
+# Lines beginning with a '###' are level 2 folds etc.
+#
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -7,12 +14,6 @@ if [[ $TERM != 'linux' ]]; then
     fi
 fi
 
-#!/usr/bin/zsh
-# ~/.zshrc: Configuration file for zsh.
-# Lines beginning with a single '#' are comments as usual.
-# Lines beginning with a '##' are level 1 folds.
-# Lines beginning with a '###' are level 2 folds etc.
-#
 ## LINES CONFIGURED BY ZSH-NEWUSER-INSTALL
 HISTFILE=~/.histfile
 HISTSIZE=1500
@@ -54,6 +55,15 @@ bindkey -s '`' '$()\ei'
 if [[ -f /etc/arch-release ]]; then     # pacman not in Slackware.
     bindkey -s "p" "sudo pacman --color=auto -S"   # <Alt-p>
 fi
+
+# To insert an unicode character in the command line use the key
+# sequence ^Xi<unicode hex number>^xi:
+#   ^xif0f9^xi prints first aid wagon :-)
+# To print unicode character with echo:
+#       echo "\uf0f9"
+autoload insert-unicode-char
+zle -N insert-unicode-char
+bindkey '^Xi' insert-unicode-char
 
 ## OPTIONS
 
@@ -321,7 +331,6 @@ inf () {
 # Powerlevel9k seems to be the main culprit.
 export LC_CTYPE=en_GB.UTF-8
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if [[ $TERM != 'linux' ]]; then
     neofetch
@@ -329,16 +338,20 @@ else
     prompt='>>> '
 fi
 
+## PLUGINS
 
+### FZF
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+### Zsh-z Plugin
 if [[ -f ~/zsh-z/zsh-z.plugin.zsh ]]; then
     source ~/zsh-z/zsh-z.plugin.zsh
-else
+elif [[ -f /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh ]]; then
     source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 fi
 
-## PLUGINS
-
-### Zsh-highlighting
+### Zsh-syntax-highlighting
 if [[ -f ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
     source ~/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 elif [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
@@ -353,6 +366,10 @@ ZSH_HIGHLIGHT_STYLES[function]='fg=#ffff00, bold'
 
 if [ -f ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     source ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [  -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then   # For Ubuntu Linux
+    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [  -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then   # For Manjaro Linux
+    source /usr/share/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 else
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
@@ -360,7 +377,11 @@ fi
 ### Powerlevel10k Configuration.
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 if [[ $TERM != 'linux' ]]; then
-    source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+    if [[ -f /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme ]]; then
+        source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+    elif [[ -f ~/powerlevel10k/powerlevel10k.zsh-theme ]]; then    # For Ubuntu manual install.
+        source ~/powerlevel10k/powerlevel10k.zsh-theme
+    fi
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
