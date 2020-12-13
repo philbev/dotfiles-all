@@ -365,8 +365,10 @@ ZSH_HIGHLIGHT_STYLES[function]='fg=#ffff00, bold'
 
 if [ -f ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     source ~/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-elif [ /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then   # For ubuntu
+elif [  -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then   # For Ubuntu Linux
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [  -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then   # For Manjaro Linux
+    source /usr/share/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 else
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
