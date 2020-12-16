@@ -54,6 +54,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
 Plug 'edkolev/promptline.vim'       " Displays airline theme in terminal.
+Plug 'lifepillar/vim-gruvbox8'      " Colour scheme
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " The plugins below are for vimOrganizer
@@ -243,7 +244,7 @@ if !has('gui-running')
     highlight MatchParen guibg=red
 endif
 " Change the color scheme here.
-colorscheme default
+colorscheme gruvbox8
 
 " Makes the background for all konsole backgrounds, no matter what the colour.
 highlight Normal ctermbg=NONE guibg=NONE guifg=White
