@@ -39,7 +39,6 @@ Plug 'lambdalisue/fern.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
-"Plug 'scrooloose/nerdtree'
 Plug 'Yggdroot/indentLine'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
@@ -50,23 +49,17 @@ Plug 'joelfrederico/vim-HiLinkTrace'    "Displays highlight info: use :HLT!
 Plug 'ron89/thesaurus_query.vim'    "Thesaurus: Usage - \cs
 Plug 'easymotion/vim-easymotion'
 Plug 'chazy/cscope_maps'
-Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'edkolev/promptline.vim'       " Displays airline theme in terminal.
+Plug 'lifepillar/vim-gruvbox8'      " Colour scheme
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " The plugins below are for vimOrganizer
-Plug 'hsitz/VimOrganizer'
 Plug 'ryanoasis/vim-devicons'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }   "Colors RGB values E.g. #ffff00
-Plug 'vim/killersheep'
-Plug 'nanotech/jellybeans.vim'
-Plug 'mbbill/undotree'
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -251,7 +244,7 @@ if !has('gui-running')
     highlight MatchParen guibg=red
 endif
 " Change the color scheme here.
-colorscheme default
+colorscheme gruvbox8
 
 " Makes the background for all konsole backgrounds, no matter what the colour.
 highlight Normal ctermbg=NONE guibg=NONE guifg=White
