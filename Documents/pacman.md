@@ -89,3 +89,8 @@ To list  all packages in a group:
     pacman -Sg <group>
 ```
 
+## Arch Wiki
+
+For further information on pacman including how to deal with errormessages see:
+
+https://wiki.archlinux.org/index.php/Pacman
