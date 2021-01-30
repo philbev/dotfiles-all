@@ -158,7 +158,7 @@ xkb_symbols "intl" {
     key <AD07>  { [ u,                U,            uring,  Uring     ] };
     key <AD08>  { [ i,                I,            iacute, Iacute    ] };
     key <AD09>  { [ o,                O,            oacute, Oacute    ] };
-    key <AE02>  { [ 2,                quotedbl,     doublelowquotemark ] };
+    key <AE02>  { [ 2,                at,     doublelowquotemark ] };
     key <AE03>  { [ 3,                sterling,     eacute, Eacute    ] };
     key <AE07>  { [ 7,                ampersand,    uacute, Uacute    ] };
 
