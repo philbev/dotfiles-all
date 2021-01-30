@@ -144,6 +144,24 @@ xkb_symbols "intl" {
 
     key <LSGT> { [ backslash,   bar,            backslash,      bar ] };
 
+    key <AB01>  { [ z,                Z,            zcaron, Zcaron    ] };
+    key <AB03>  { [ c,                C,            ccaron, Ccaron    ] };
+    key <AB05>  { [ b,                B,            ssharp, U1E9E     ] };
+    key <AB06>  { [ n,                N,            ncaron, Ncaron    ] };
+    key <AC01>  { [ a,                A,            aacute, Aacute    ] };
+    key <AC02>  { [ s,                S,            scaron, Scaron    ] };
+    key <AC03>  { [ d,                D,            dcaron, Dcaron    ] };
+    key <AD03>  { [ e,                E,            ecaron, Ecaron    ] };
+    key <AD04>  { [ r,                R,            rcaron, Rcaron    ] };
+    key <AD05>  { [ t,                T,            tcaron, Tcaron    ] };
+    key <AD06>  { [ y,                Y,            yacute, Yacute    ] };
+    key <AD07>  { [ u,                U,            uring,  Uring     ] };
+    key <AD08>  { [ i,                I,            iacute, Iacute    ] };
+    key <AD09>  { [ o,                O,            oacute, Oacute    ] };
+    key <AE02>  { [ 2,                quotedbl,     doublelowquotemark ] };
+    key <AE03>  { [ 3,                sterling,     eacute, Eacute    ] };
+    key <AE07>  { [ 7,                ampersand,    uacute, Uacute    ] };
+
     include "level3(ralt_switch)"
 };
 

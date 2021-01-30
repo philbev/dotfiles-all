@@ -209,7 +209,7 @@ exec_always nitrogen --restore
 #exec_always setxkbmap  -layout gb -model pc104
 
 # Eur(US) layout - seems to work best for US keyboards :-)
-exec_always setxkbmap  -layout eu -model pc104
+#exec_always setxkbmap  -layout eu -model pc104
 
 # For changes to kecaps on Keychron K3 ('home', 'page up' and 'page down' keys.
 exec_always xmodmap /home/phil/.Xmodmap
@@ -279,3 +279,4 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 # focus_on_window_activation smart|urgent|focus|none
  #focus_on_window_activation focus
+exec_always setxkbmap  -layout us -variant intl -model pc104
