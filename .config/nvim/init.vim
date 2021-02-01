@@ -23,6 +23,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 " Make sure you use single quotes
 
 " shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'w0rp/ale'                       " asynchronous lint engine
 Plug 'junegunn/vim-easy-align'
 Plug 'vim-airline/vim-airline'        " Colourful status line for nvim.
