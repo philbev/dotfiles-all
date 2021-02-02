@@ -74,7 +74,7 @@ xkb_symbols "basic"  {
         key <AD07>  { [             u,                U,                uring,              Uring     ] };
         key <AD08>  { [             i,                I,                iacute,             Iacute    ] };
         key <AD09>  { [             o,                O,                oacute,             Oacute    ] };
-        key <AE02>  { [             2,         quotedbl,                doublelowquotemark            ] };
+        key <AE02>  { [             2,               at,                doublelowquotemark            ] };
         key <AE03>  { [             3,       numbersign,                eacute,             Eacute    ] };
         key <AE07>  { [             7,        ampersand,                uacute,             Uacute    ] };
         include "level3(ralt_switch)"
