@@ -44,3 +44,5 @@ mkinitcpio -P See also:
 Thanks to Mike Shade for this information:
 
 https://mikeshade.com/posts/keychron-linux-function-keys/?fbclid=IwAR2BEpM_nbaMgU38qqtz0QUSdVT4WmUTBby88h4QhK4qXGfhHuJ6QeqPHnc
+
+JUST TESTING :-)
