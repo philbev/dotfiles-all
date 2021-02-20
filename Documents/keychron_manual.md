@@ -25,6 +25,7 @@ To toggle battery saver mode:-
 3. Lower RGB brightness - \<Fn\>+\<F5\>
 4. Increase RGB brightness - \<Fn\>+\<F6\>
 5. Switch RGB off - \<Fn\>+\<Lighting Effect\> key.
+6. Change RGB speed - \<Fn\>+\<+\> (increase) or \<Fn\>+\<-\> (decrease)
 
 ## Factory Reset
 To factory reset keyboard:-
@@ -68,3 +69,6 @@ arch:
 Thanks to Mike Shade for this information:
 
 https://mikeshade.com/posts/keychron-linux-function-keys/?fbclid=IwAR2BEpM_nbaMgU38qqtz0QUSdVT4WmUTBby88h4QhK4qXGfhHuJ6QeqPHnc
+
+## Dismantling/Reassembling
+To remove aluminium side panels use T6H bit from bit set.
