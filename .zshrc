@@ -132,11 +132,11 @@ alias grep='grep --color=auto --directories=skip'
 alias ifc='/sbin/ifconfig'
 alias ip='ip -c'
 alias lc='colorls --gs -l --sd'
-alias lh='ls -lhF --color --group-directories-first | less'
+alias lh='lsd -lhF --color=always --group-dirs first | less'
 alias lph='lp -o orientation-requested=4'
 alias lpp='lp -o prettyprint'
 alias lpph='lp -o orientation-requested=4 -o prettyprint'
-alias ls='ls --color=always --group-directories-first'
+alias ls='lsd --color=always --group-dirs first'
 alias lk='lsblk -o model,type,name,fstype,size,label,mountpoint,partlabel'
 alias rv='rm -v'
 alias sp='sudo pacman -S'
@@ -303,24 +303,24 @@ gh () {
 
 ### l()
 l () {
-    ls -lhF --color --group-directories-first "$@" | less
+    lsd -lhF --color=always --group-dirs first "$@" | less
 }
 
 ### la()
 la () {
-    ls -AlvhF --color --group-directories-first  "$@" | less
+    lsd -AlvhF --color=always --group-dirs first  "$@" | less
 }
 
 ### ll()
 ll () {
 
-    ls -lhF --color=always --group-directories-first "$@" | less
+    lsd -lhF --color=always --group-dirs first "$@" | less
 }
 
 ### lm()
 lm () {
 
-    ls -lhF --color=always --group-directories-first "$@" | more
+    lsd -lhF --color=always --group-dirs=first "$@" | more
 }
 
 ### inf()
