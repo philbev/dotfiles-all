@@ -132,7 +132,7 @@ alias grep='grep --color=auto --directories=skip'
 alias ifc='/sbin/ifconfig'
 alias ip='ip -c'
 alias lc='colorls --gs -l --sd'
-alias lh='lsd -lhF --color=always --group-dirs first | less'
+alias lh='lsd -lhF --color=always --group-dirs=first --icon=always | less'
 alias lph='lp -o orientation-requested=4'
 alias lpp='lp -o prettyprint'
 alias lpph='lp -o orientation-requested=4 -o prettyprint'
@@ -303,24 +303,24 @@ gh () {
 
 ### l()
 l () {
-    lsd -lhF --color=always --group-dirs first "$@" | less
+    lsd -lhF --color=always --group-dirs=first --icon=always "$@" | less
 }
 
 ### la()
 la () {
-    lsd -AlvhF --color=always --group-dirs first  "$@" | less
+    lsd -AlvhF --color=always --group-dirs=first --icon=always  "$@" | less
 }
 
 ### ll()
 ll () {
 
-    lsd -lhF --color=always --group-dirs first "$@" | less
+    lsd -lhF --color=always --group-dirs=first --icon=always "$@" | less
 }
 
 ### lm()
 lm () {
 
-    lsd -lhF --color=always --group-dirs=first "$@" | more
+    lsd -lhF --color=always --group-dirs=first --icon=always "$@" | more
 }
 
 ### inf()
