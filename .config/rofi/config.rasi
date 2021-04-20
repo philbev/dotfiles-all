@@ -1,0 +1,6 @@
+configuration {
+    modi: "run,drun,window,ssh";
+    font: "Hack 16";
+    show-icons: true;
+}
+@import "/usr/share/rofi/themes/Adapta-Nokto.rasi"
