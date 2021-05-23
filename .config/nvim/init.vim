@@ -65,6 +65,7 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }   "Colors RGB values E
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'ThePrimeagen/vim-be-good'
 "Plug 'vimwiki/vimwiki'
 " Both options are optional. You don't have to install fzf in ~/.fzf
 " and you don't have to run the install script if you use fzf only in Vim.
