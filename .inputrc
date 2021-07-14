@@ -38,7 +38,7 @@ set menu-complete-display-prefix on
 
 
 ############### MISCELLANEOUS MACROS ##############################
-"\e[1;5A": "cd .."                #<Control>+<Up> 
+"\e[1;5A": "cd .."                #<Control>+<Up>
 "`": "$()\eOD"                      #<`>
 #\eg": "\C-e | grep "               #<Alt>+g
 #\em": "\C-e | more"                #<Alt>+m
