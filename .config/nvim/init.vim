@@ -68,7 +68,8 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
+"Telescope plug-ins
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 " Both options are optional. You don't have to install fzf in ~/.fzf
 " and you don't have to run the install script if you use fzf only in Vim.
 
@@ -421,6 +422,6 @@ nnoremap <M-O>3P :echo "                VIM FUNCTION KEYS\n
                 \<S-F12>        - Source ~/.vimrc.\n"<CR>
 
 
-
-
-
+"" LUA
+" Loads lua/my_init.lua module
+lua require('my_init')
