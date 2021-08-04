@@ -23,7 +23,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 " Make sure you use single quotes
 
 " shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'w0rp/ale'                       " asynchronous lint engine
 Plug 'junegunn/vim-easy-align'
 Plug 'vim-airline/vim-airline'        " Colourful status line for nvim.
@@ -48,7 +47,6 @@ Plug 'honza/vim-snippets'   "Collection of snippets for ultisnips.
 Plug 'shawncplus/Vim-tocterm'
 Plug 'joelfrederico/vim-HiLinkTrace'    "Displays highlight info: use :HLT!
 Plug 'ron89/thesaurus_query.vim'    "Thesaurus: Usage - \cs
-Plug 'easymotion/vim-easymotion'
 Plug 'chazy/cscope_maps'
 Plug 'tpope/vim-speeddating'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -65,9 +63,12 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }   "Colors RGB values E
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'ThePrimeagen/vim-be-good'
 Plug 'junegunn/vim-peekaboo'
-"Plug 'vimwiki/vimwiki'
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 " Both options are optional. You don't have to install fzf in ~/.fzf
 " and you don't have to run the install script if you use fzf only in Vim.
 
