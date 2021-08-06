@@ -65,13 +65,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'junegunn/vim-peekaboo'
 " Telescope
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'          "Needed for telescope.nvim
+Plug 'nvim-lua/plenary.nvim'        "Needed for telescope.nvim
 Plug 'nvim-telescope/telescope.nvim'
 "Telescope plug-ins
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-" Both options are optional. You don't have to install fzf in ~/.fzf
-" and you don't have to run the install script if you use fzf only in Vim.
+"Neovim language server
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 
 " Multiple Plug commands can be written in a single line using | separators
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
