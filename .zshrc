@@ -386,3 +386,5 @@ if [[ $TERM != 'linux' ]]; then
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+alias luamake=/home/phil/lua-language-server/3rd/luamake/luamake
