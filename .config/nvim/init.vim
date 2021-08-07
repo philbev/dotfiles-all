@@ -49,8 +49,8 @@ Plug 'joelfrederico/vim-HiLinkTrace'    "Displays highlight info: use :HLT!
 Plug 'ron89/thesaurus_query.vim'    "Thesaurus: Usage - \cs
 Plug 'chazy/cscope_maps'
 Plug 'tpope/vim-speeddating'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
 Plug 'edkolev/promptline.vim'       " Displays airline theme in terminal.
 Plug 'lifepillar/vim-gruvbox8'      " Colour scheme
@@ -72,6 +72,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 "Neovim language server
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'nvim-lua/completion-nvim'
 
 " Multiple Plug commands can be written in a single line using | separators
