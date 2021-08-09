@@ -106,6 +106,26 @@ filetype plugin indent on
 
 "" PLUGIN CONFIGURATIONS
 "
+""" LSP CONFIGURATION
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
+" By default auto popup is enabled, turn it off by
+let g:completion_enable_auto_popup = 1
+" map <c-p> to manually trigger completion
+"imap <silent> <c-p> <Plug>(completion_trigger)
+" Or you want to use <Tab> as trigger keys
+"imap <tab> <Plug>(completion_smart_tab)
+"imap <s-tab> <Plug>(completion_smart_s_tab)
+" By default other snippets source support are disabled, turn them on by
+" possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
+let g:completion_enable_snippet = 'UltiSnips'
 """ AIRLINE CONFIGURATION
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
