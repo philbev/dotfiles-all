@@ -227,7 +227,7 @@ let NERDTreeShowBookmarks=1
 
 filetype plugin indent on
 syntax on
-set undofile
+set noundofile
 set undodir=~/.undodir
 set spelllang=en
 set nospell
