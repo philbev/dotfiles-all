@@ -419,6 +419,7 @@ augroup group1
     au BufWritePost ~/.config/nvim/init.vim source $MYVIMRC
     au BufNewFile *.h source ~/.vim/cpp_header.vim
     au BufNewFile *.py normal i#!/usr/bin/env python3o
+    au BufNewFile *.lua normal i#!/usr/bin/env luao
     au BufReadPost *
                 \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
                 \ |   exe "normal! g`\""
