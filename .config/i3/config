@@ -279,4 +279,4 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 # focus_on_window_activation smart|urgent|focus|none
  #focus_on_window_activation focus
-exec_always setxkbmap  eu -model pc104
+exec_always setxkbmap  gb -model pc105
