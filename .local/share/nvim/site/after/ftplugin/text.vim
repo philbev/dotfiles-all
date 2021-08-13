@@ -4,8 +4,6 @@ if has('nvim')
     nnoremap <buffer> <F22> :source ~/.nvim/after/ftplugin/text.vim<CR>
     setlocal spellfile=~/.local/share/nvim/site/spell/en.utf-8.add,~/.local/share/nvim/site/spell/text.utf-8.add
     setlocal dictionary+=/usr/share/dict/american-english
-    call deoplete#custom#source(
-    \ 'dictionary', 'min_pattern_length', 3)
 else
     nnoremap <buffer> <F10> :edit ~/.vim/after/ftplugin/text.vim<CR>
     nnoremap <buffer> <S-F10> :source ~/.vim/after/ftplugin/text.vim<CR>
