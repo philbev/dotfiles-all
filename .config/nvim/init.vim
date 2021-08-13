@@ -63,7 +63,6 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }   "Colors RGB values E
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'junegunn/vim-peekaboo'
 " Telescope
 Plug 'nvim-lua/popup.nvim'          "Needed for telescope.nvim
 Plug 'nvim-lua/plenary.nvim'        "Needed for telescope.nvim
