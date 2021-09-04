@@ -73,7 +73,7 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
-Plug 'nvim-lua/completion-nvim'
+"Plug 'nvim-lua/completion-nvim'
 
 " Multiple Plug commands can be written in a single line using | separators
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
