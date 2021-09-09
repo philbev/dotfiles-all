@@ -1,0 +1,26 @@
+snippet #! "Hash bang" b
+#! /usr/bin/env lua
+
+endsnippet
+
+snippet iow "io,write()" b
+io.write(${1:${VISUAL:DEFAULT TEXT}})
+endsnippet
+
+snippet 'pr\'|prs' "Print statement with single quotes" r
+print('${1:${VISUAL:SINGLE QUOTES}}')
+endsnippet
+
+snippet 'pr\"|prd' "Print statement with double quotes" r
+print("${1:${VISUAL:DOUBLE QUOTES}}")
+endsnippet
+
+snippet 'pr|p' "Without quotes" br
+print(${1:${VISUAL:NO QUOTES}})
+endsnippet
+
+snippet while "While loop" b
+while  ${1:CONDITION} do
+	${2:${VISUAL:DEFAULT TEXT}}
+end$0
+endsnippet
