@@ -43,7 +43,11 @@ Plug 'Yggdroot/indentLine'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'   "Collection of snippets for ultisnips.
+Plug 'prabirshrestha/async.vim'           " Needed or ultisnips and lsp
+Plug 'prabirshrestha/vim-lsp'             " Needed or ultisnips and lsp
+Plug 'thomasfaingnaert/vim-lsp-snippets'  " Needed or ultisnips and lsp
+Plug 'thomasfaingnaert/vim-lsp-ultisnips' " Needed or ultisnips and lsp
+Plug 'honza/vim-snippets'                 " Collection of snippets for ultisnips.
 Plug 'shawncplus/Vim-tocterm'
 Plug 'joelfrederico/vim-HiLinkTrace'    "Displays highlight info: use :HLT!
 Plug 'ron89/thesaurus_query.vim'    "Thesaurus: Usage - \cs
@@ -157,12 +161,9 @@ let g:mkdp_markdown_css = '/home/phil/.markdown.css'
 
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsExpandTrigger = '<tab>'
-"let g:UltiSnipsListSnippets = '<tab>'
 let g:UltiSnipsListSnippets = '<c-s>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
-let g:UltiSnipsSnippetsDir = '~/.local/share/nvim/site/UltiSnips'
-"let g:UltiSnipsSnippetDirectories=['vim-snippets', 'UltiSnips']
 let g:UltiSnipsSnippetDirectories=['~/.local/share/nvim/site/UltiSnips']
 
 
