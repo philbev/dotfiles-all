@@ -76,6 +76,10 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 "Neovim language server
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
+Plug 'hrsh7th/nvim-compe'
+"Plug 'hrsh7th/cmp-nvim-lsp'     " LSP source for nvim-cmp
+"Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
+Plug 'L3MON4D3/LuaSnip'         " Snippets plugin
 Plug 'nvim-telescope/telescope-media-files.nvim'
 "Plug 'nvim-lua/completion-nvim'
 
