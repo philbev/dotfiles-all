@@ -27,6 +27,10 @@ inoremap <buffer> <M-1> <ESC>:s/^ *//<CR>yyp:s/./=/g<CR>:nohlsearch<CR>a|"  - <M
 nnoremap <buffer> <M-2> :s/^ *//<CR>yyp:s/./-/g<CR>:nohlsearch<CR>|"        - <M-2> Header 2
 inoremap <buffer> <M-2> <ESC>:s/^ *//<CR>yyp:s/./-/g<CR>:nohlsearch<CR>a|"  - <M-2> Header 2
 
+colorscheme desert
+setlocal textwidth=80
+setlocal colorcolumn=80
+
 " Toggle folding in markdown files.
 nnoremap <M-f> zA
 nnoremap <buffer> <tab> za
