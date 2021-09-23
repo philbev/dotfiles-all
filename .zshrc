@@ -106,7 +106,7 @@ export HELPDIR=/usr/share/zsh/$ZSH_VERSION/help
 export DIRSTACKSIZE=20          # Needed for autopushd.
 export PYTHONPATH=${PYTHONPATH}:${HOME}/src/python/modules
 export FZF_DEFAULT_OPTS='--color light,hl:196,hl+:21,fg+:235,bg+:136,fg+:254
---color info:46,prompt:37,spinner:108,pointer:196,marker:21'
+--color info:46,prompt:37,spinner:108,pointer:196,marker:21 --multi'
 
 ## ALIASES
 
