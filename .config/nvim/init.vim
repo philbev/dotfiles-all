@@ -292,105 +292,8 @@ highlight WarningMsg term=standout ctermfg=224 guifg=White guibg=Red
 "" KEY MAPPING
 """ NORMAL MODE
 
-nmap <silent> <C-j> <Plug>(ale_next)
-nmap <silent> <C-k> <Plug>(ale_previous)
-nnoremap <M-/> :bn<cr>|"                                        <ALT>+/ = Next buffer.
-nnoremap <M-\> :bp<cr>|"                                        <ALT>+\ = Previous buffer.
-nnoremap <M-.> :bp<cr>|"                                        <ALT>+. = Previous buffer.
-nnoremap <M-Del> :bd<cr>|"                                      <Alt>+<Del> = Delete buffer.
-nnoremap <M-N> n|"                                            <ALT>+N = New window.
-nnoremap <M-n> |"                                           <ALT>+n = Next window.
-nnoremap <M-c> c|"                                            <ALT>+c = Close window.
-nnoremap <M-o> o|"                                            <ALT>+o = Only window (Close all others).
-nnoremap <M-s> s|"                                            <ALT>+s = Split window.
-nnoremap <M-v> v|"                                            <ALT>+v = Split window vertically.
-nnoremap <M-w> w|"                                            <ALT>+w = Next window.
-nnoremap <M-z> 1GO#!/usr/bin/zsh<ESC>:set ft=zsh<CR>|"          <Alt+z> = Insert #! and set filetype.
-nnoremap <M-#> |"                                             <ALT>+# = Edit alternate buffer.
-nnoremap <C-Down> |"                                          <CTRL>+<DOWN> = Scroll up one line.
-nnoremap <M-Down> ddp|"                                         <ALT>+<DOWN> = Move text on current line down one line.
-nnoremap <C-Up> |"                                            <CTRL>+<UP> = Scroll up one line.
-nnoremap <M-Up> ddkP|"                                          <ALT>+<DOWN> = Move text on current line up one line.
-nnoremap <Leader>b 1GO#!/usr/bin/bash<ESC>:set ft=sh<CR>|"      \b = Insert #! and set filetype.
-nnoremap <M-l> :set list! list?<CR>|"                           <Alt>+l = Display whitespace characters.
-nnoremap <M-e> :set expandtab! expandtab?<CR>|"                 <Alt>+e = Toggle 'Expandtab' and display.
-nnoremap <M-T> ^gU$yypv$r=|"                                    <Alt>+T = Uppercase whole line and underline.
-"nnoremap <Up> gk|"                                              <Up> = Cursor up one virtual line.
-"nnoremap <Down> gj|"                                            <Down> = Cursor down one virtual line.
-nnoremap <Up> <Nop>
-nnoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-nnoremap <M-i> :set ic! ic?<CR>|"                               <Alt>+i = Toggle 'Ignorecase' option.
-nnoremap n nzzzv|"                                              Forward to next search, centre the cursorline and open any fold.
-nnoremap N Nzzzv|"                                              Backward to next search, centre the cursorline and open any fold.
-
-""" INSERT MODE
-
-inoremap <M-z> 1G#!/usr/bin/zsh<Esc>:set ft=zsh<CR>
-inoremap  |""             <Ctrl>+f = Filename completion.
-inoremap  |""             <Ctrl>+d = Macro completion.
-inoremap  |""             <Ctrl>+l = Whole line completion.
-""Line below commented out as it seems to slow things down. Very noticeable
-""when leaving 'insert' mode with escape key.
-""inoremap u <Esc>gUiw`]a|""  <Alt>+u = Make word upper case.
-
-
-""" VISUAL MODE
-
-
-vnoremap > >gv
-vnoremap < <gv
-vnoremap <M-Down> dp`[V`]|""                                    <ALT>+<DOWN> = Move selected lines down one line.
-vnoremap <M-Up> dkkp`[V`]|""                                    <ALT>+<UP> = Move selected lines up one line.
-
-
-""" OPERATOR PENDING MODE
-
-
-onoremap <silent> ( :execute "normal! 0f(vi("<CR>
-onoremap <silent> { :execute "normal! 0f{vi{"<CR>
-onoremap <silent> [ :execute "normal! 0f[vi["<CR>
-onoremap <silent> < :execute "normal! 0f<vi<"<CR>
-onoremap <silent> " :execute "normal! f\"vi\""<CR>
-onoremap <silent> ' :execute "normal! f'vi'"<CR>
-
-
-""" WINDOWS KEYS FOR GERMAN CHARACTERS
-
-inoremap @sa ä|"        <Window>+a
-inoremap @sA Ä|"        <Window>+<Shift>+A
-inoremap @so ö|"        <Window>+o
-inoremap @sO Ö|"        <Window>+<Shift>+O
-inoremap @su ü|"        <Window>+u
-inoremap @sU Ü|"        <Window>+<Shift>+U
-inoremap @sb ß|"        <Window>+b
-inoremap @sB ß|"        <Window>+<Shift>+B
-inoremap @ss ß|"        <Window>+s
-inoremap @sS ß|"        <Window>+<Shift>+S
-
-
-""" TERMINAL MODE
-
-if has('nvim')
-    tnoremap <M-/> :bn<cr>|"            <ALT>+/ = Next buffer.
-    tnoremap <M-\> :bp<cr>|"            <ALT>+\ = Previous buffer.
-    tnoremap <M-.> :bp<cr>|"            <ALT>+. = Previous buffer.
-    tnoremap <M-Del> :bd<cr>|"          <Alt>+<Del> = Delete buffer.
-    tnoremap <M-N> n|"                <ALT>+N = New window.
-    tnoremap <M-n> |"               <ALT>+n = Next window.
-    tnoremap <M-c> c|"                <ALT>+c = Close window.
-    tnoremap <M-o> o|"                <ALT>+o = Only window (Close all others).
-    tnoremap <M-s> s|"                <ALT>+s = Split window.
-    tnoremap <M-v> v|"                <ALT>+v = Split window vertically.
-    tnoremap <M-w> w|"                <ALT>+w = Next window.
-    tnoremap <M-#> |"                 <ALT>+# = Edit alternate buffer.
-    "In terminal mode use <A-r> to paste from registers while in 'insert' mode.
-    tnoremap <expr> <A-r> '<C-\><C-N>"'.nr2char(getchar()).'pi'
-    "Allows escape key to be used in terminal mode.
-    tnoremap <esc> <c-\><c-n>
-endif
-
+"nmap <silent> <C-j> <Plug>(ale_next)
+"nmap <silent> <C-k> <Plug>(ale_previous)
 
 """ FUNCTION KEYS <F1> TO <F12>
 
