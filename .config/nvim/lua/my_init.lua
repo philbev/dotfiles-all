@@ -1,4 +1,7 @@
--- TELESCOPE CONFIGURATION
+-- *****************************************************************
+-- *                    TELESCOPE CONFIGURATION                    *
+-- *****************************************************************
+
 require('telescope').setup{
     defaults = {
         layout_strategy = "horizontal",
@@ -35,12 +38,17 @@ require('telescope').load_extension('media_files')
 
 -- ****************** LSP CONFIGURATION *********************
 
--- Python
+-- ************************************************
+-- *                    Python                    *
+-- ************************************************
+
 --require'lspconfig'.pyright.setup{}
 require'lspconfig'.pylsp.setup{}
 --require'lspconfig'.pylsp.setup{on_attach=require'compe'.on_attach}
 
--- Lua
+-- *************************************************************
+-- *                    Lua Language Server                    *
+-- *************************************************************
 
 -- set the path to the sumneko installation
 local system_name = "Linux" -- (Linux, macOS, or Windows)
@@ -49,7 +57,6 @@ local sumneko_root_path = '/home/phil/lua-language-server'
 local sumneko_binary = sumneko_root_path.."/bin/"..system_name.."/lua-language-server"
 
 require('lspconfig').sumneko_lua.setup({
-    cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
     -- An example of settings for an LSP server.
     --    For more options, see nvim-lspconfig
     settings = {
@@ -73,45 +80,48 @@ require('lspconfig').sumneko_lua.setup({
             },
         }
     },
-
-    on_attach = require'compe'.on_attach
 })
+-- **********************************************************
+ -- *                     Setup nvim-cmp                    *
+-- **********************************************************
+  local cmp = require'cmp'
 
-require'compe'.setup {
-  enabled = true;
-  autocomplete = true;
-  debug = false;
-  min_length = 1;
-  preselect = 'enable';
-  throttle_time = 80;
-  source_timeout = 200;
-  resolve_timeout = 800;
-  incomplete_delay = 400;
-  max_abbr_width = 100;
-  max_kind_width = 100;
-  max_menu_width = 100;
-documentation = true,
-documentation = {
-    border = { '', '' ,'', ' ', '', '', '', ' ' }, -- the border option is the same as `|help nvim_open_win|`
-    winhighlight = "NormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder",
-    max_width = 120,
-    min_width = 60,
-    max_height = math.floor(vim.o.lines * 0.3),
-    min_height = 1,
-  };
+  cmp.setup({
+    snippet = {
+      expand = function(args)
+        -- For `vsnip` user.
+        vim.fn["vsnip#anonymous"](args.body)
 
-  source = {
-    path = true;
-    buffer = true;
-    calc = true;
-    nvim_lsp = true;
-    nvim_lua = true;
-    vsnip = true;
-    ultisnips = true;
-    luasnip = true;
-    treesitter = true;
-  };
-}
+        -- For `luasnip` user.
+        -- require('luasnip').lsp_expand(args.body)
+
+        -- For `ultisnips` user.
+        -- vim.fn["UltiSnips#Anon"](args.body)
+      end,
+    },
+    mapping = {
+      ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.close(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = {
+      { name = 'nvim_lsp' },
+      -- For ultisnips user.
+      { name = 'ultisnips' },
+      { name = 'buffer' },
+    }
+  })
+
+  -- *********************************************************
+  --                      Setup lspconfig                    *
+  -- *********************************************************
+  
+  require'lspconfig'.sumneko_lua.setup {
+    cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  }
 
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
