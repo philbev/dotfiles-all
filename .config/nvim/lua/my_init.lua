@@ -1,41 +1,3 @@
--- *****************************************************************
--- *                    TELESCOPE CONFIGURATION                    *
--- *****************************************************************
-
-require('telescope').setup{
-    defaults = {
-        layout_strategy = "horizontal",
-        layout_config = {
-            horizontal = { preview_cutoff = 90, },
-        },
-    },
-    vimgrep_arguments = {
-      'rg',
-      '--color=always',
-      '--no-heading',
-      '--with-filename',
-      '--line-number',
-      '--column',
-      '--smart-case',
-      '-u' -- thats the new thing
-    },
-    extensions = {
-        fzf = {
-            fuzzy = true
-        },
-    },
-    media_files = {
-      -- filetypes whitelist
-      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-      filetypes = {"png", "webp", "jpg", "jpeg"},
-      find_cmd = "rg" -- find command (defaults to `fd`)
-    }
-}
-
-require('telescope').load_extension('fzf')
-require('telescope').load_extension('media_files')
-
-
 -- ****************** LSP CONFIGURATION *********************
 
 -- ************************************************
@@ -161,10 +123,10 @@ _G.s_tab_complete = function()
   end
 end
 
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+--vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+--vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+--vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+--vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 
 
 require 'keyMappings'
