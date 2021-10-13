@@ -1,12 +1,12 @@
 -- ****************** LSP CONFIGURATION *********************
 
--- ************************************************
--- *                    Python                    *
--- ************************************************
-
---require'lspconfig'.pyright.setup{}
-require'lspconfig'.pylsp.setup{}
---require'lspconfig'.pylsp.setup{on_attach=require'compe'.on_attach}
+---- ************************************************
+---- *                    Python                    *
+---- ************************************************
+--
+----require'lspconfig'.pyright.setup{}
+--require'lspconfig'.pylsp.setup{}
+----require'lspconfig'.pylsp.setup{on_attach=require'compe'.on_attach}
 
 -- *************************************************************
 -- *                    Lua Language Server                    *
@@ -79,7 +79,7 @@ require('lspconfig').sumneko_lua.setup({
   -- *********************************************************
   --                      Setup lspconfig                    *
   -- *********************************************************
-  
+
   require'lspconfig'.sumneko_lua.setup {
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -123,10 +123,10 @@ _G.s_tab_complete = function()
   end
 end
 
---vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
---vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
---vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
---vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 
 
 require 'keyMappings'
