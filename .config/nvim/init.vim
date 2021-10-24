@@ -76,9 +76,12 @@ Plug 'nvim-telescope/telescope-media-files.nvim'
 "Neovim language server
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'hrsh7th/cmp-nvim-lsp'     " LSP source for nvim-cmp
-Plug 'hrsh7th/cmp-buffer'
+Plug 'onsails/lspkind-nvim'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'hrsh7th/cmp-nvim-lsp'     " LSP source for nvim-cmp
 Plug 'SirVer/ultisnips'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
