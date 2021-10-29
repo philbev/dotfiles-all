@@ -42,7 +42,6 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'SirVer/ultisnips'
 Plug 'prabirshrestha/async.vim'           " Needed or ultisnips and lsp
 Plug 'prabirshrestha/vim-lsp'             " Needed or ultisnips and lsp
 Plug 'thomasfaingnaert/vim-lsp-snippets'  " Needed or ultisnips and lsp
@@ -73,15 +72,18 @@ Plug 'nvim-lua/plenary.nvim'        "Needed for telescope.nvim
 Plug 'nvim-telescope/telescope.nvim'
 "Telescope plug-ins
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope-media-files.nvim'
 "Neovim language server
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'hrsh7th/nvim-compe'
-"Plug 'hrsh7th/cmp-nvim-lsp'     " LSP source for nvim-cmp
-"Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
-Plug 'L3MON4D3/LuaSnip'         " Snippets plugin
-Plug 'nvim-telescope/telescope-media-files.nvim'
-"Plug 'nvim-lua/completion-nvim'
+Plug 'onsails/lspkind-nvim'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'hrsh7th/cmp-nvim-lsp'     " LSP source for nvim-cmp
+Plug 'SirVer/ultisnips'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 " Multiple Plug commands can be written in a single line using | separators
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
