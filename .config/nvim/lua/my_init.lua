@@ -89,7 +89,7 @@ cmp.setup({
                 nvim_lsp = "[LSP]",
                 nvim_lua = "[api]",
                 path = "[path]",
-                ultisnips = "[snip]",
+                ultisnips = "[ulti]",
                 --gh_issues = "[issues]",
             },
         },
