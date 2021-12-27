@@ -1,0 +1,3 @@
+xbindkeys &
+setxkbmap -layout gb -model pc104 &
+nitrogen --restore &

@@ -1,0 +1,22 @@
+language: ruby
+sudo: false
+dist: trusty
+
+branches:
+  only: master
+
+rvm:
+  - 2.2
+  - 2.3
+  - 2.4
+  - 2.5
+  - ruby-head
+
+before_install:
+  - eval "$(curl --connect-timeout 30 --retry 3 -Ss https://raw.githubusercontent.com/neovim/bot-ci/master/scripts/travis-setup.sh) nightly-x64"
+  - gem update --system
+  - gem update bundler
+  - bundle --version
+
+env: REPORT_COVERAGE=1 NVIM_RUBY_LOG_LEVEL=DEBUG NVIM_RUBY_LOG_FILE=ci.log
+script: bundle exec rake --trace
