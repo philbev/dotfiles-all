@@ -1,0 +1,91 @@
+Height 1080=923
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC4AAADV/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAABEAAADVwAAAFoBAAADAAAAAQAAAWcAAANX/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAQAAAEQAAANXAAABDAEAAAMAAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAoBAAADAAAElwAAA1cAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+Width 1920=1720
+
+[CompactMode]
+FontWeight=50
+
+[Desktop Entry]
+DefaultProfile=Z-shell.profile
+
+[DetailsMode]
+FontWeight=50
+
+[Favorite Profiles]
+Favorites=
+
+[General]
+RememberOpenedTabs=false
+Version=201
+ViewPropsTimestamp=2018,11,4,12,32,42
+
+[IconsMode]
+FontFamily=ProFontWindows Nerd Font Mono
+FontWeight=50
+PreviewSize=112
+UseSystemFont=false
+
+[KPropertiesDialog]
+DP-3 HDMI-1 Height 1920x1080=417
+DP-3 HDMI-1 Width 1920x1080=427
+Height 1080=484
+Width 1920=476
+
+[MainWindow]
+DP-3 HDMI-1 Height 1080=784
+DP-3 HDMI-1 Height 1920x1080=1007
+DP-3 HDMI-1 Width 1920=1145
+DP-3 HDMI-1 Width 1920x1080=1920
+DP-3 HDMI-1 Window-Maximized 1920x1080=true
+DP-3 HDMI-1 XPosition=387
+DP-3 HDMI-1 XPosition 1920x1080=0
+DP-3 HDMI-1 YPosition=184
+DP-3 HDMI-1 YPosition 1920x1080=29
+DP1 HDMI1 Height 1920x1080=1007
+DP1 HDMI1 Width 1920x1080=939
+DP1 HDMI1 Window-Maximized 1920x1080=true
+DP1 HDMI1 XPosition 1920x1080=0
+DP1 HDMI1 YPosition 1920x1080=29
+DisplayPort-2 HDMI-A-0 Height 1080=1052
+DisplayPort-2 HDMI-A-0 Width 1920=1892
+DisplayPort-2 HDMI-A-0 XPosition=1934
+DisplayPort-2 HDMI-A-0 YPosition=14
+HDMI-1 DP-3 Height 1920x1080=1043
+HDMI-1 DP-3 Width 1920x1080=1918
+HDMI-1 DP-3 XPosition 1920x1080=1
+HDMI-1 DP-3 YPosition 1920x1080=1
+HDMI-1 Height 1920x1080=1007
+HDMI-1 Width 1920x1080=1920
+HDMI-1 XPosition 1920x1080=0
+HDMI-1 YPosition 1920x1080=29
+Height 1080=1011
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+Width 1920=939
+
+[Open-with settings]
+CompletionMode=1
+History=vlc,vl,neo,vim
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,djvuthumbnail,marble_thumbnail_shp,exrthumbnail,directorythumbnail,fontthumbnail,marble_thumbnail_geojson,pothumbnail,marble_thumbnail_gpx,imagethumbnail,jpegthumbnail,marble_thumbnail_kmz,marble_thumbnail_kml,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mltpreview,mobithumbnail,opendocumentthumbnail,marble_thumbnail_osm,palathumbcreator,gsthumbnail,designerthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+
+[Search]
+Location=Everywhere
+
+[SettingsDialog]
+DP-3 HDMI-1 Height 1080=425
+DP-3 HDMI-1 Height 1920x1080=432
+DP-3 HDMI-1 Width 1920=569
+DP-3 HDMI-1 Width 1920x1080=599
+DisplayPort-2 HDMI-A-0 Height 1080=444
+DisplayPort-2 HDMI-A-0 Width 1920=579
+Height 1080=444
+Width 1920=570
+
+[VersionControl]
+enabledPlugins=Dropbox
+
+[ViewPropertiesDialog]
+Height 1080=454
+Width 1920=367

@@ -16,7 +16,7 @@ Calibre Library/
 #.cddb/
 #.colors
 #colors-256.sh*
-.config/
+#.config/
 #configs.sh*
 .conky/
 .cpan/
@@ -145,3 +145,5 @@ Videos/
 #.zprofile
 #.zshrc
 .zshrc.orig
+*.PyCharmCE2018
+*.pyc

@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/phil/src/python/derek_banas-udemy/4-User_input+math_functions'
+let g:netrw_dirhist_9='/home/phil/src/python/udemy-learn_python_programming_masterclass'
+let g:netrw_dirhist_8='/home/phil/src/python'
+let g:netrw_dirhist_7='/home/phil/src/python/udemy-learn_python_programming_masterclass'
+let g:netrw_dirhist_6='/home/phil/src/python/udemy-learn_python_programming_masterclass/4-program_flow_control_in_python'
+let g:netrw_dirhist_5='/home/phil/src/python/udemy-learn_python_programming_masterclass'
+let g:netrw_dirhist_4='/home/phil/src/python'
+let g:netrw_dirhist_3='/home/phil/src'
+let g:netrw_dirhist_2='/home/phil'
+let g:netrw_dirhist_1='/home/phil/.config/yay'
