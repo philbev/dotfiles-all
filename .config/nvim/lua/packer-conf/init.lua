@@ -61,4 +61,5 @@ return require('packer').startup(function()
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'romgrk/barbar.nvim'
   use 'nvim-lualine/lualine.nvim'
+  use 'folke/which-key.nvim'
 end)

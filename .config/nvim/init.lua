@@ -13,6 +13,7 @@ require('ultisnips-conf')
 require('treesitter-conf')
 require('telescope-conf')
 require('lualine-conf')
+require('whichkey-conf')
 
 
 
