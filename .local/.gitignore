@@ -1,0 +1,5 @@
+bin/
+#.gitignore
+include/
+lib/
+#share/

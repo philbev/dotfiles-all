@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/phil/.config/nvim/lua'
+let g:netrw_dirhist_1='/home/phil/.config/nvim/lua/_telescope'
+let g:netrw_dirhist_0='/home/phil/src/lua/lua_users_tutorials'
+let g:netrw_dirhist_9='/home/phil'
+let g:netrw_dirhist_8='/home/phil/.config/nvim/lua'
+let g:netrw_dirhist_7='/home/phil/.config/nvim'
+let g:netrw_dirhist_6='/home/phil/.config'
+let g:netrw_dirhist_5='/home/phil'
+let g:netrw_dirhist_4='/home/phil/src'
+let g:netrw_dirhist_3='/home/phil/src/lua'

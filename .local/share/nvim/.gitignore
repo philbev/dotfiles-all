@@ -1,0 +1,10 @@
+#.gitignore
+log
+lsp_servers/
+#.netrwhist
+#rplugin.vim
+shada/
+#site/
+swap/
+#telescope_history
+undo/

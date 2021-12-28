@@ -77,7 +77,7 @@ junk/
 #krohnkite_keys.kksrc
 #.less_colours.sh
 .lesshst
-.local/
+#.local/
 lua-language-server/
 .lyx/
 #.mailrc
