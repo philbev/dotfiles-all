@@ -1,3 +1,4 @@
+pat
 .alacritty.yml.bak
 .aqbanking/
 .aspell.en.prepl
@@ -112,7 +113,7 @@ Pictures/
 #Settings_RT-AX58U.CFG
 .sqlite_history
 src/
-#.ssh/
+.ssh/
 .subversion/
 .svnqt/
 .task/
