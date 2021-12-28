@@ -49,7 +49,7 @@ Dropbox/
 .git/
 .git-completion.bash
 #.gitconfig
-#.git-credentials
+.git-credentials
 #.gitignore
 .gitignore.bak
 #global_kwin.kksrc
