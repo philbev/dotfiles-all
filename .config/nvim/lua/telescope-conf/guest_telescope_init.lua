@@ -55,4 +55,4 @@ require('telescope').load_extension('fzf')
 -- keymaps for telescope
 -- =====================
 
-vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<cr>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<cr>', { noremap = true })

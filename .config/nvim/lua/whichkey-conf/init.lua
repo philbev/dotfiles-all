@@ -42,16 +42,16 @@ wk.setup{
     scroll_up = '<c-u>', -- binding to scroll up inside the popup
   },
   window = {
-    border = "double", -- none, single, double, shadow
+    border = "single", -- none, single, double, shadow
     position = "bottom", -- bottom, top
-    margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
-    padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
+    margin = { 1, 10, 2, 10 }, -- extra window margin [top, right, bottom, left]
+    padding = { 1, 1, 1, 1 }, -- extra window padding [top, right, bottom, left]
     winblend = 0
   },
   layout = {
     height = { min = 4, max = 25 }, -- min and max height of the columns
     width = { min = 20, max = 50 }, -- min and max width of the columns
-    spacing = 3, -- spacing between columns
+    spacing = 5, -- spacing between columns
     align = "left", -- align columns left, center or right
   },
   ignore_missing = false, -- enable this to hide mappings for which you didn't specify a label
@@ -67,4 +67,33 @@ wk.setup{
     v = { "j", "k" },
   },
     }
+
+-- local wk = require("which-key")
+-- As an example, we will create the following mappings:
+--  * <leader>ff find files
+--  * <leader>fr show recent files
+--  * <leader>fb Foobar
+-- we'll document:
+--  * <leader>fn new file
+--  * <leader>fe edit file
+-- and hide <leader>1
+
+wk.register({
+	n = {'<cmd>NvimTreeToggle<cr>', 'NvimTree'},
+    q = {':q!<cr>', '[:q!] Quit discard changes'},
+    s = {':w | source %<cr>', '[:w|so%] Write & source'},
+    w = {':w<cr>', '[:w] Write'},
+    x = {':x<cr>', '[:x] Write & exit'},
+    t = {
+        name = "Telescope", -- optional group name
+        h = { "<cmd>Telescope help_tags<cr>", "Help-tags" }, -- create a binding with label
+        l = { "<cmd>Telescope highlights<cr>", "Highlights" }, -- create a binding with label
+        f = { "<cmd>Telescope find_files<cr>", "Find_files" }, -- create a binding with label
+        r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=true }, -- additional options for creating the keymap
+        -- n = { "New File" }, -- just a label. don't create any mapping
+        -- e = "Edit File", -- same as above
+        -- ["1"] = "which_key_ignore",  -- special label to hide it in the popup
+        -- b = { function() print("bar") end, "Foobar" } -- you can also pass functions!
+    },
+}, { prefix = "<leader>" })
 
