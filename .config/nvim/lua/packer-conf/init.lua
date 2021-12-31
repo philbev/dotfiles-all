@@ -66,5 +66,5 @@ return require('packer').startup(function()
     use 'p00f/nvim-ts-rainbow'
     use 'kdheepak/tabline.nvim'
     use 'hoob3rt/lualine.nvim'
-    use 'glepnir/indent-guides.nvim'
+    -- use 'glepnir/indent-guides.nvim'
 end)

@@ -27,6 +27,8 @@ map('n', '<F12>', ':edit $MYVIMRC<cr>', opts)
 -- VISUAL MODE MAPPINGS
 map('v', '<M-Down>', ":m '> +1<cr>gv=gv", opts )
 map('v', '<M-Up>', ":m'< -2<cr>gv=gv", opts )
+map('v', '>', '>gv', opts )
+map('v', '<', '<gv', opts )
 
 
 
