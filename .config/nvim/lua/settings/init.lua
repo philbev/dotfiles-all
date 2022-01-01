@@ -35,5 +35,6 @@ set.completeopt = 'menuone,noselect,noinsert'
 set.hidden = true
 set.mouse = "a"
 set.pastetoggle = '<F11>'
+set.listchars = 'tab:➱ ,space:·,trail:+,eol:⮰'
 
 -- vim.notify = require("notify")

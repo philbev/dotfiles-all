@@ -17,19 +17,20 @@ map('n', '<M-,>', ':bprevious<cr>', opts)
 map('n', '<M-/>', ':bnext<cr>', opts)
 map('n', '<M-\\>', ':bprevious<cr>', opts)
 map('n', '<M-c>', ':close<cr>', opts)
+map('n', '<M-l>', ':set list! list?<cr>', opts)
 map('n', '<M-n>', '<C-w>w', opts)
+map('n', '<M-o>', ':only<cr>', opts)
 map('n', '<F2>', ':nohlsearch<cr>', opts)
 map('n', '<F3>', ':set spell! spell?<cr>', opts)
 map('n', '<F4>', ':set relativenumber! relativenumber?<cr>', opts)
 map('n', '<F24>', ':source $MYVIMRC<cr>', { noremap = true })
 map('n', '<F12>', ':edit $MYVIMRC<cr>', opts)
+map('n', '<A-<>', ':BufferMovePrevious<CR>', opts)
+map('n', '<A->>', ' :BufferMoveNext<CR>', opts)
 
 -- VISUAL MODE MAPPINGS
 map('v', '<M-Down>', ":m '> +1<cr>gv=gv", opts )
 map('v', '<M-Up>', ":m'< -2<cr>gv=gv", opts )
 map('v', '>', '>gv', opts )
 map('v', '<', '<gv', opts )
-
-
-
 
