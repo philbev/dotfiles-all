@@ -45,12 +45,6 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
-    -- For vsnip users.
-    -- use 'hrsh7th/cmp-vsnip'
-    -- use 'hrsh7th/vim-vsnip'
-    -- For luasnip users.
-    -- use 'L3MON4D3/LuaSnip'
-    -- use 'saadparwaiz1/cmp_luasnip'
     use 'SirVer/ultisnips'
     use 'honza/vim-snippets'
     use 'quangnguyen30192/cmp-nvim-ultisnips'
@@ -66,5 +60,8 @@ return require('packer').startup(function()
     use 'p00f/nvim-ts-rainbow'
     use 'kdheepak/tabline.nvim'
     use 'hoob3rt/lualine.nvim'
-    -- use 'glepnir/indent-guides.nvim'
+    use 'lukas-reineke/indent-blankline.nvim'
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use 'dhruvmanila/telescope-bookmarks.nvim'
+    use 'machakann/vim-highlightedyank'
 end)
