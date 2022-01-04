@@ -71,5 +71,5 @@ require('telescope').load_extension('bookmarks')
 -- keymaps for telescope
 -- =====================
 
-vim.api.nvim_set_keymap('n', '<leader>tf', ':Telescope find_files<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>tg', ':Telescope live_grep<cr>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<leader>tf', ':Telescope find_files<cr>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<leader>tg', ':Telescope live_grep<cr>', { noremap = true })

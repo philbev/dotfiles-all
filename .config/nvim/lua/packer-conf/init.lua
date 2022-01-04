@@ -53,15 +53,17 @@ return require('packer').startup(function()
     use 'onsails/lspkind-nvim'
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-    use 'romgrk/barbar.nvim'
+    -- use 'romgrk/barbar.nvim'
     use 'nvim-lualine/lualine.nvim'
     use 'folke/which-key.nvim'
     use 'windwp/nvim-autopairs'
     use 'p00f/nvim-ts-rainbow'
-    use 'kdheepak/tabline.nvim'
-    use 'hoob3rt/lualine.nvim'
+    -- use 'kdheepak/tabline.nvim'
+    -- use 'hoob3rt/lualine.nvim'
     use 'lukas-reineke/indent-blankline.nvim'
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use 'dhruvmanila/telescope-bookmarks.nvim'
     use 'machakann/vim-highlightedyank'
+    use 'vim-airline/vim-airline'
+    use 'vim-airline/vim-airline-themes'
+    use 'lewis6991/gitsigns.nvim'
 end)

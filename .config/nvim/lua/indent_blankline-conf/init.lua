@@ -2,6 +2,8 @@
 -- *          INDENT BLANKLINE CONFIGURATION          *
 -- ****************************************************
 
+-- See https://github.com/lukas-reineke/indent-blankline.nvim
+
 vim.opt.list = false
 vim.opt.listchars:append("eol:⮰")
 vim.cmd([[highlight IndentBlanklineChar guifg=#606060]])

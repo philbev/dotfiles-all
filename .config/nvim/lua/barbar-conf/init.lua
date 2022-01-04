@@ -1,3 +1,11 @@
+--[[
+ _                _                                __
+| |__   __ _ _ __| |__   __ _ _ __ ___ ___  _ __  / _|
+| '_ \ / _` | '__| '_ \ / _` | '__/ __/ _ \| '_ \| |_
+| |_) | (_| | |  | |_) | (_| | | | (_| (_) | | | |  _|
+|_.__/ \__,_|_|  |_.__/ \__,_|_|(_)___\___/|_| |_|_|
+
+]]
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -106,3 +114,15 @@ vim.g.bufferline = {
   -- where X is the buffer number. But only a static string is accepted here.
   no_name_title = nil,
 }
+local tree ={}
+tree.open = function ()
+   require'bufferline.state'.set_offset(31, 'FileTree')
+   require'nvim-tree'.find_file(true)
+end
+
+tree.close = function ()
+   require'bufferline.state'.set_offset(0)
+   require'nvim-tree'.close()
+end
+
+return tree

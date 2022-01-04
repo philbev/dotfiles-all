@@ -1,3 +1,12 @@
+--[[
+          _     _      _     _                                     __
+__      _| |__ (_) ___| |__ | | _____ _   _        ___ ___  _ __  / _|
+\ \ /\ / / '_ \| |/ __| '_ \| |/ / _ \ | | |_____ / __/ _ \| '_ \| |
+ \ V  V /| | | | | (__| | | |   <  __/ |_| |_____| (_| (_) | | | |  _|
+  \_/\_/ |_| |_|_|\___|_| |_|_|\_\___|\__, |      \___\___/|_| |_|_|
+                                      |___/
+]]
+
 local wk = require('which-key')
 wk.setup{
       -- your configuration comes here
@@ -79,13 +88,21 @@ wk.setup{
 -- and hide <leader>1
 
 wk.register({
-	n = {'<cmd>NvimTreeToggle<cr>', 'NvimTree'},
+    b = {
+        name = 'Barbar',
+        b = {'<cmd>BufferOrderByBufferNumber<CR>', 'Order tabs by number'},
+        d = {'<cmd>BufferOrderByDirectory<CR>', 'Order tabs by number'},
+        l = {'<cmd>BufferOrderByLanguage<CR>', 'Order tabs by number'}
+
+    },
+    n = {'<cmd>NvimTreeToggle<cr>', 'NvimTree'},
     q = {':q!<cr>', '[:q!] Quit discard changes'},
     s = {':w | source %<cr>', '[:w|so%] Write & source'},
     w = {':w<cr>', '[:w] Write'},
     x = {':x<cr>', '[:x] Write & exit'},
-    t = {
+    f = {
         name = "Telescope", -- optional group name
+        g = { '<cmd>Telescope live_grep<cr>', 'Live grep' },
         h = { "<cmd>Telescope help_tags<cr>", "Help-tags" }, -- create a binding with label
         l = { "<cmd>Telescope highlights<cr>", "Highlights" }, -- create a binding with label
         f = { "<cmd>Telescope find_files<cr>", "Find_files" }, -- create a binding with label

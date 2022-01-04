@@ -36,5 +36,6 @@ set.hidden = true
 set.mouse = "a"
 set.pastetoggle = '<F11>'
 set.listchars = 'tab:➱ ,space:·,trail:+,eol:⮰'
+set.showtabline=0
 
 -- vim.notify = require("notify")
