@@ -3,39 +3,42 @@
 -- ******************************
 
 -- See :options
-local set = vim.opt
 
-set.expandtab = true
-set.smarttab = true
-set.shiftwidth = 4
-set.tabstop = 4
-set.smartindent = true
-set.autoindent = true
-set.smarttab = true
+local options = {
 
-set.hlsearch = true
-set.incsearch = true
-set.ignorecase = true
-set.smartcase = true
+    expandtab = true,
+    smarttab = true,
+    shiftwidth = 4,
+    tabstop = 4,
+    smartindent = true,
+    autoindent = true,
 
-set.termguicolors = true
-set.showmode = true
-set.splitbelow = true
-set.splitright = true
-set.wrap = true
-set.scrolloff = 3
-set.fileencoding = 'utf-8'
+    hlsearch = true,
+    incsearch = true,
+    ignorecase = true,
+    smartcase = true,
 
-set.number = true
-set.relativenumber = true
-set.cursorline = true
-set.wildmenu = true
-set.completeopt = 'menuone,noselect,noinsert'
+    termguicolors = true,
+    showmode = true,
+    splitbelow = true,
+    splitright = true,
+    wrap = true,
+    scrolloff = 3,
+    fileencoding = 'utf-8',
 
-set.hidden = true
-set.mouse = "a"
-set.pastetoggle = '<F11>'
-set.listchars = 'tab:➱ ,space:·,trail:+,eol:⮰'
-set.showtabline=0
+    number = true,
+    relativenumber = true,
+    cursorline = true,
+    wildmenu = true,
+    completeopt = 'menuone,noselect,noinsert',
 
--- vim.notify = require("notify")
+    hidden = true,
+    mouse = "a",
+    pastetoggle = '<F11>',
+    listchars = 'tab:➱ ,space:·,trail:+,eol:⮰',
+    showtabline = 0,
+}
+
+for k,v in pairs(options) do
+    vim.opt[k] = v
+end
