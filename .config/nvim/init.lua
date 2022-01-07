@@ -27,6 +27,7 @@ require "indent_blankline-conf"
 --require 'barbar-conf'
 require('airline-conf')
 require('gitsigns-conf')
+require('toggleterm-conf')
 
 -- vim.cmd('highlight NonText guibg=yellow')
 vim.cmd('highlight PMenu guibg=#404040')
