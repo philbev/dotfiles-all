@@ -210,7 +210,7 @@ autoload precmd
 precmd
 # This sets the $LS_COLORS variable. For arch linux ~/.dir_colors does
 # not exist so must be generated with "eval $(dircolors -b ~/.dir_colors)"
-eval $(dircolors .dir_colors)
+eval $(dircolors ~/.dir_colors)
 zstyle ':completion:*' menu select                              # For autocompletion with an arrow-key driven interface.
 setopt COMPLETE_ALIASES                                         # For autocompletion of command line switches for aliases.
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'          # For case insensitive auto completion
@@ -334,11 +334,11 @@ inf () {
 export LC_CTYPE=en_GB.UTF-8
 
 
-if [[ $TERM != 'linux' ]]; then
-    neofetch
-else
-    prompt='>>> '
-fi
+#if [[ $TERM != 'linux' ]]; then
+#    neofetch
+#else
+#    prompt='>>> '
+#fi
 
 ## PLUGINS
 
