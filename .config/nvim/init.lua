@@ -24,7 +24,7 @@ require('nvim-ts-rainbow-conf')
 require "indent_blankline-conf"
 --require('lualine-conf')
 --require('tabline_nvim-conf')
---require 'barbar-conf'
+require 'barbar-conf'
 require('airline-conf')
 require('gitsigns-conf')
 require('toggleterm-conf')

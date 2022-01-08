@@ -9,7 +9,7 @@ vim.cmd([[au VimEnter * AirlineTheme cobalt2]])
 vim.cmd([[let g:airline_left_sep = ''
 let g:airline_right_sep = '']])
 
-vim.cmd([[let g:airline#extensions#tabline#enabled = 1]])
+vim.cmd([[let g:airline#extensions#tabline#enabled = 0]])
 
 
 vim.cmd(([[

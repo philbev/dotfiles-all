@@ -53,7 +53,7 @@ return require('packer').startup(function()
     use 'onsails/lspkind-nvim'
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-    -- use 'romgrk/barbar.nvim'
+    use 'romgrk/barbar.nvim'
     use 'nvim-lualine/lualine.nvim'
     use 'folke/which-key.nvim'
     use 'windwp/nvim-autopairs'
