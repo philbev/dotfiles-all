@@ -55,6 +55,7 @@ Dropbox/
 #global_kwin.kksrc
 .gnome/
 .gnupg/
+go/
 .gphoto/
 .gtk-bookmarks
 .gtkrc-2.0
