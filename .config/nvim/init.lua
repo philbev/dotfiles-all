@@ -8,26 +8,24 @@
 -- *          NEOVIM INITIALISATION FILE          *
 -- ************************************************
 
-require('settings')
-require('mappings')
-require('packer-conf')
-require('nvim-tree-conf')
-require('nvim-cmp-conf')
-require('lsp-conf')
-require('lsp-conf.lua-server')
-require('ultisnips-conf')
-require('treesitter-conf')
-require('telescope-conf')
-require('whichkey-conf')
-require('nvim-autopairs-conf')
-require('nvim-ts-rainbow-conf')
-require "indent_blankline-conf"
---require('lualine-conf')
---require('tabline_nvim-conf')
-require 'barbar-conf'
-require('airline-conf')
-require('gitsigns-conf')
-require('toggleterm-conf')
+require('user.nvim-cmp')
+require('user.airline')
+require 'user.barbar'
+require('user.gitsigns')
+require 'user.indent_blankline'
+require('user.lsp')
+require('user.sumneko_lua')
+require('user.mappings')
+require('user.nvim-autopairs')
+require('user.nvim-tree')
+require('user.nvim-ts-rainbow')
+require('user.packer')
+require('user.settings')
+require('user.telescope')
+require('user.toggleterm')
+require('user.treesitter')
+require('user.ultisnips')
+require('user.whichkey')
 
 -- vim.cmd('highlight NonText guibg=yellow')
 vim.cmd('highlight PMenu guibg=#404040')
