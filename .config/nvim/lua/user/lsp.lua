@@ -10,3 +10,7 @@ require'lspconfig'.pyright.setup{}
 
 -- Bash server
 require'lspconfig'.bashls.setup{}
+
+-- ltex server
+-- For latex, bib, gitcommit, markdown, org and other filetypes.
+require'lspconfig'.ltex.setup{}
