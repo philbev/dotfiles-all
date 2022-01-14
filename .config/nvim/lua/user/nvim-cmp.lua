@@ -26,7 +26,7 @@ cmp.setup({
         }),
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     },
-      formatting = {
+    formatting = {
         -- Youtube: How to set up nice formatting for your sources.
         format = lspkind.cmp_format {
             with_text = true,
@@ -47,7 +47,7 @@ cmp.setup({
         { name = 'zsh' },
         { name = 'path' },
         { name = 'buffer' },
-        })
+    })
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
