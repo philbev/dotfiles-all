@@ -67,4 +67,5 @@ return require('packer').startup(function()
     use 'vim-airline/vim-airline-themes'
     use 'lewis6991/gitsigns.nvim'
     use 'akinsho/toggleterm.nvim'
+    use 'norcalli/nvim-colorizer.lua'
 end)

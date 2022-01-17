@@ -26,6 +26,7 @@ require('user.toggleterm')
 require('user.treesitter')
 require('user.ultisnips')
 require('user.whichkey')
+require('user.nvim-colorizer')
 
 -- vim.cmd('highlight NonText guibg=yellow')
 vim.cmd('highlight PMenu guibg=#404040')
