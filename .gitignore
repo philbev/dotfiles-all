@@ -112,6 +112,7 @@ Pictures/
 .screenlayout/
 #.set_prompt.sh*
 #Settings_RT-AX58U.CFG
+snap/
 .sqlite_history
 src/
 .ssh/
