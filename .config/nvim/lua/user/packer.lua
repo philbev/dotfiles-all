@@ -50,4 +50,6 @@ return require('packer').startup(function()
 	use { 'windwp/nvim-autopairs' }
 	use { 'p00f/nvim-ts-rainbow' }
 	use { 'lukas-reineke/indent-blankline.nvim' }
+	use {"akinsho/toggleterm.nvim"}
+	use { 'kyazdani42/nvim-tree.lua' }
 end)
