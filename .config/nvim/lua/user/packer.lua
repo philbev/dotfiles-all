@@ -29,7 +29,6 @@ packer.init {
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-	use 'SirVer/ultisnips'
 	use 'honza/vim-snippets'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'romgrk/barbar.nvim'
@@ -48,4 +47,7 @@ return require('packer').startup(function()
 	use {'SirVer/ultisnips'}
 	use {'quangnguyen30192/cmp-nvim-ultisnips'}
 	use { 'onsails/lspkind-nvim' }
+	use { 'windwp/nvim-autopairs' }
+	use { 'p00f/nvim-ts-rainbow' }
+	use { 'lukas-reineke/indent-blankline.nvim' }
 end)

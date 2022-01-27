@@ -52,4 +52,5 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.cmd('highlight CursorLine guibg=NONE gui=underline')
 vim.cmd(':highlight NonText guifg=yellow')
 vim.cmd(':highlight Pmenu guibg=#404040')
+vim.cmd('hi IndentBlanklineChar guifg=gray')
 vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=1000}]])
