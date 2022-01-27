@@ -38,7 +38,8 @@ map('n', '<M-\\>', ':bprevious<cr>', opts)
 map('n', '<M-n>', '<C-w>w', opts)
 map('n', '<M-c>', '<C-w>c', opts)
 map('n', '<M-l>', ':set list! list?<cr>', opts)
+map('n', '<M-o>', ':only<cr>', opts)
 
 -- VISUAL MODE MAPPINGS
-map('n', '<M-Down>', ':m +1<cr>', opts)
-map('n', '<M-Up>', ':m -2<cr>', opts)
+map('v', '<M-Down>', ":m '>+1<cr>gv", opts)
+map('v', '<M-Up>', ':m -2<cr>gv', opts)
