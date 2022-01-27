@@ -52,4 +52,5 @@ return require('packer').startup(function()
 	use { 'lukas-reineke/indent-blankline.nvim' }
 	use {"akinsho/toggleterm.nvim"}
 	use { 'kyazdani42/nvim-tree.lua' }
+	use { 'f3fora/cmp-spell' }
 end)

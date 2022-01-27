@@ -47,6 +47,7 @@ set.ignorecase = true
 set.smartcase = true
 set.cursorline = true
 set.listchars = 'tab:⇨ ,eol:⮰,space:·,trail:+'
+set.spelllang = 'en'
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 vim.cmd('highlight CursorLine guibg=NONE gui=underline')
