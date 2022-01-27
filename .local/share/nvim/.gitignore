@@ -1,10 +1,10 @@
 #.gitignore
 log
 lsp_servers/
-#.netrwhist
-#rplugin.vim
+.netrwhist
+rplugin.vim
 shada/
-#site/
+site/
 swap/
 telescope_history
 tree-sitter-kotlin.tar.gz
