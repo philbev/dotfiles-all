@@ -1,11 +1,9 @@
---[[
---
- ___       _ _         _
-|_ _|_ __ (_) |_      | |_   _  __ _
- | || '_ \| | __|     | | | | |/ _` |
- | || | | | | |_   _  | | |_| | (_| |
-|___|_| |_|_|\__| (_) |_|\__,_|\__,_|
-]]
+--  ___       _ _       _
+-- |_ _|_ __ (_) |_    | |_   _  __ _
+--  | || '_ \| | __|   | | | | |/ _` |
+--  | || | | | | |_  _ | | |_| | (_| |
+-- |___|_| |_|_|\__|(_)|_|\__,_|\__,_|
+
 require('user.settings')
 require('user.mappings')
 require('user.packer')
@@ -19,3 +17,5 @@ require('user.autopairs')
 require('user.indent-blankline')
 require('user.nvim-tree')
 require('user.nvim-colorizer')
+require('user.lspconfig')
+require('user.lsp-installer')
