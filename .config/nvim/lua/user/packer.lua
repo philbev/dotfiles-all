@@ -56,4 +56,5 @@ return require('packer').startup(function()
 	use { 'lifepillar/vim-gruvbox8' }
 	use { 'norcalli/nvim-colorizer.lua' }
 	use { 'williamboman/nvim-lsp-installer' }
+	use { 'lewis6991/gitsigns.nvim' }
 end)
