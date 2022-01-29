@@ -47,7 +47,7 @@ set.pastetoggle = '<F11>'
 set.ignorecase = true
 set.smartcase = true
 set.cursorline = true
-set.listchars = 'tab:⇨ ,eol:⮰,space:·,trail:+'
+set.listchars = 'tab:🢡 ,eol:⮰,space:·,trail:+'
 set.spelllang = 'en'
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
