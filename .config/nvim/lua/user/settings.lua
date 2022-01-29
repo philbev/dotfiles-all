@@ -50,8 +50,9 @@ set.cursorline = true
 set.listchars = 'tab:🢡 ,eol:⮰,space:·,trail:+'
 set.spelllang = 'en'
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
+vim.opt.cpoptions:append('W')
 
-vim.cmd('highlight CursorLine guibg=#505050')
+vim.cmd('highlight CursorLine guibg=#404040')
 vim.cmd(':highlight NonText guifg=yellow')
 vim.cmd(':highlight Pmenu guibg=#404040')
 vim.cmd('hi IndentBlanklineChar guifg=gray')
