@@ -53,4 +53,6 @@ return require('packer').startup(function()
 	use {"akinsho/toggleterm.nvim"}
 	use { 'kyazdani42/nvim-tree.lua' }
 	use { 'f3fora/cmp-spell' }
+	use { 'lifepillar/vim-gruvbox8' }
+	use { 'norcalli/nvim-colorizer.lua' }
 end)

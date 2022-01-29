@@ -33,7 +33,8 @@ set.smarttab = true
 set.tabstop = 4
 set.softtabstop = 4
 set.shiftwidth = 4
-set.autoindent = true
+-- set.autoindent = true
+set.smartindent = true
 set.wrap = true
 set.number = true
 set.relativenumber = true
@@ -50,7 +51,7 @@ set.listchars = 'tab:⇨ ,eol:⮰,space:·,trail:+'
 set.spelllang = 'en'
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
-vim.cmd('highlight CursorLine guibg=NONE gui=underline')
+vim.cmd('highlight CursorLine guibg=#505050')
 vim.cmd(':highlight NonText guifg=yellow')
 vim.cmd(':highlight Pmenu guibg=#404040')
 vim.cmd('hi IndentBlanklineChar guifg=gray')
