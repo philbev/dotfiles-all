@@ -1,5 +1,6 @@
 #.gitignore
 lua-language-server
 plugin
+spell/
 *.orig
 *.bak
