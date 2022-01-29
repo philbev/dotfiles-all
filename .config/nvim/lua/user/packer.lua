@@ -55,4 +55,5 @@ return require('packer').startup(function()
 	use { 'f3fora/cmp-spell' }
 	use { 'lifepillar/vim-gruvbox8' }
 	use { 'norcalli/nvim-colorizer.lua' }
+	use { 'williamboman/nvim-lsp-installer' }
 end)
