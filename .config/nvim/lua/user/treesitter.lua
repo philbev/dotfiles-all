@@ -1,10 +1,17 @@
--- _____                   _ _   _                  _
--- |_   _| __ ___  ___  ___(_) |_| |_ ___ _ __      | |_   _  __ _
--- | || '__/ _ \/ _ \/ __| | __| __/ _ \ '__|     | | | | |/ _` |
--- | || | |  __/  __/\__ \ | |_| ||  __/ |     _  | | |_| | (_| |
--- |_||_|  \___|\___||___/_|\__|\__\___|_|    (_) |_|\__,_|\__,_|
+--  _____                   _ _   _            _
+-- |_   _| __ ___  ___  ___(_) |_| |_ ___ _ __| |_   _  __ _
+--   | || '__/ _ \/ _ \/ __| | __| __/ _ \ '__| | | | |/ _` |
+--   | || | |  __/  __/\__ \ | |_| ||  __/ | _| | |_| | (_| |
+--   |_||_|  \___|\___||___/_|\__|\__\___|_|(_)_|\__,_|\__,_|
 
-require'nvim-treesitter.configs'.setup {
+
+local status_ok, configs = pcall(require, 'nvim-treesitter.configs')
+if not status_ok then
+	return
+end
+
+-- require'nvim-treesitter.configs'.setup {
+configs.setup {
 	-- One of "all", "maintained" (parsers with maintainers), or a list of languages
 	ensure_installed = "maintained",
 
@@ -37,7 +44,22 @@ require'nvim-treesitter.configs'.setup {
 		-- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
 		extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
 		max_file_lines = nil, -- Do not enable for files with more than n lines, int
-		-- colors = {}, -- table of hex strings
-		-- termcolors = {} -- table of colour name strings
+		colors = {
+			'#00ff00',
+			'#ff0000',
+			'#ffff00',
+			'#ff00ff',
+			'#00ffff',
+			'#ffffff',
+			'#0000ff',
+		}, -- table of hex strings
+		-- termcolors = {
+		-- 'Red',
+		-- 'Yellow',
+		-- 'Green',
+		-- 'Cyan',
+		-- 'Magenta',
+		-- 'White',
+		-- } -- table of colour name strings
 	}
 }
