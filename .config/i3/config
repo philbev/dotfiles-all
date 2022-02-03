@@ -192,9 +192,9 @@ bindsym $mod+r mode "resize"
 #}
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Needed for gaps
-for_window [class=".*"] border pixel 1
-gaps inner 0
-gaps outer 0
+for_window [class=".*"] border pixel 5
+gaps inner 8
+gaps outer 8
 
 # Background wallpaper
 #exec_always feh --bg-scale /home/phil/Pictures/wallpaper.jpg
@@ -247,7 +247,8 @@ bindsym $mod+Shift+v exec sudo virt-manager
 # Programmes to autostart
 # exec chromium
 # exec --no-startup-id thunderbird
-#exec_always picom -f
+# exec_always picom -f
+exec_always picom -f --inactive-opacity 0.7
 # exec --no-startup-id alacritty -e emacs -nw
 exec --no-startup-id conky -d
 exec_always --no-startup-id flameshot
