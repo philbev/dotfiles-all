@@ -252,6 +252,7 @@ exec_always picom -f --inactive-opacity 0.7
 # exec --no-startup-id alacritty -e emacs -nw
 exec --no-startup-id conky -d
 exec_always --no-startup-id flameshot
+exec_always --no-startup-id blueman-applet
 
 # Assign workspaces to monitor screen
 workspace $ws1 output DP1
