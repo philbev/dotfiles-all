@@ -27,6 +27,8 @@
 -- vim.bo: behaves like :setlocal for buffer-local options
 -- vim.wo: behaves like :setlocal for window-local options
 
+vim.notify = require("notify")
+
 local set = vim.o
 set.smarttab = true
 set.tabstop = 4
