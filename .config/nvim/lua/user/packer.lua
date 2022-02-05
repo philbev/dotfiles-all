@@ -56,4 +56,5 @@ return require('packer').startup(function()
 	use { 'williamboman/nvim-lsp-installer' }
 	use { 'lewis6991/gitsigns.nvim' }
 	use { 'rcarriga/nvim-notify' }
+	use { 'tpope/vim-surround' }
 end)
