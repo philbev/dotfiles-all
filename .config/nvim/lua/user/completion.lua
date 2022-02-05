@@ -11,7 +11,7 @@ if not status_ok then
 end
 
 local lspkind = require "lspkind"
-lspkind.init()
+-- lspkind.init()
 
 cmp.setup({
 	snippet = {
