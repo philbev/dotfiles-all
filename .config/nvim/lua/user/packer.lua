@@ -27,34 +27,43 @@ packer.init {
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-	use 'honza/vim-snippets'
+	-- Required by other plugins
 	use 'kyazdani42/nvim-web-devicons'
+	use { 'nvim-lua/plenary.nvim' }
+	-- Statusline and tabline plugins
 	use 'romgrk/barbar.nvim'
 	use { 'nvim-lualine/lualine.nvim' }
+	-- Telescope and extensions
 	use { 'nvim-telescope/telescope.nvim' }
-	use { 'nvim-lua/plenary.nvim' }
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	use { 'folke/which-key.nvim' }
+	-- LSP plugins
 	use {'neovim/nvim-lspconfig'}
+	use { 'williamboman/nvim-lsp-installer' }
+	-- nvim-cmp
+	use {'hrsh7th/nvim-cmp'}
 	use {'hrsh7th/cmp-nvim-lsp'}
+	use {'hrsh7th/cmp-nvim-lua'}
 	use {'hrsh7th/cmp-buffer'}
 	use {'hrsh7th/cmp-path'}
 	use {'hrsh7th/cmp-cmdline'}
-	use {'hrsh7th/nvim-cmp'}
-	use {'hrsh7th/cmp-nvim-lua'}
 	use {'SirVer/ultisnips'}
 	use {'quangnguyen30192/cmp-nvim-ultisnips'}
+	use 'honza/vim-snippets'
 	use { 'onsails/lspkind-nvim' }
-	use { 'windwp/nvim-autopairs' }
+	use { 'f3fora/cmp-spell' }
+	-- Colorschemes
 	use { 'p00f/nvim-ts-rainbow' }
+	use { 'norcalli/nvim-colorizer.lua' }
+	use { 'lifepillar/vim-gruvbox8' }
+	use { 'Mofiqul/dracula.nvim' }
+	-- Other plugins
+	use { 'windwp/nvim-autopairs' }
 	use { 'lukas-reineke/indent-blankline.nvim' }
 	use {"akinsho/toggleterm.nvim"}
 	use { 'kyazdani42/nvim-tree.lua' }
-	use { 'f3fora/cmp-spell' }
-	use { 'lifepillar/vim-gruvbox8' }
-	use { 'norcalli/nvim-colorizer.lua' }
-	use { 'williamboman/nvim-lsp-installer' }
 	use { 'lewis6991/gitsigns.nvim' }
 	use { 'rcarriga/nvim-notify' }
 	use { 'tpope/vim-surround' }
+	use { 'tpope/vim-fugitive' }
 end)

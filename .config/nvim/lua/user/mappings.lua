@@ -39,6 +39,7 @@ map('n', '<M-n>', '<C-w>w', opts)
 map('n', '<M-c>', '<C-w>c', opts)
 map('n', '<M-l>', ':set list! list?<cr>', opts)
 map('n', '<M-o>', ':only<cr>', opts)
+map('n', '<leader>gs', ':Git<cr>', opts)
 
 -- VISUAL MODE MAPPINGS
 map('v', '<M-Down>', ":m '>+1<cr>gv", opts)
