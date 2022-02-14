@@ -147,6 +147,8 @@ alias svi='sudo nvim'
 alias startx='startx -- -nolisten tcp'
 alias v=nvim
 alias vi=nvim
+alias v3='nvim ~/.config/i3/config'
+alias va='nvim ~/.config/alacritty/alacritty.yml'
 alias vim='TERM=xterm-256color vim'
 alias vib='vi $HOME/.bashrc'
 alias vie='vi $HOME/.emacs.d/init.el'
