@@ -196,6 +196,8 @@ for_window [class=".*"] border pixel 5
 gaps inner 8
 gaps outer 8
 
+exec_always --no-startup-id autotiling
+
 # Background wallpaper
 #exec_always feh --bg-scale /home/phil/Pictures/wallpaper.jpg
 exec_always nitrogen --restore
