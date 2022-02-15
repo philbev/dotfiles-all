@@ -58,7 +58,7 @@ cmp.setup({
 				nvim_lua = "[api]",
 				path = "[path]",
 				ultisnips = "[ultisnip]",
-				spell = "[spell]",
+				-- spell = "[spell]",
 			},
 		},
 	},
@@ -74,7 +74,7 @@ cmp.setup({
 		{ name = 'zsh' },
 	}, {
 		{ name = 'buffer', keyword_length = 3 },
-		{ name = 'spell', keyword_length = 4 },
+		-- { name = 'spell', keyword_length = 4 },
 	})
 })
 
