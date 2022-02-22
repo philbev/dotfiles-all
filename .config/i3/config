@@ -51,7 +51,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
@@ -226,7 +226,7 @@ exec_always xset s 1860 600
 exec_always xrandr --output HDMI1 --auto --right-of DP1
 
 # Floating windows
-for_window [class="Emacs"] floating enable
+# for_window [class="Emacs"] floating enable
 
 # Assign applications to workspaces
 assign [class="Emacs"] $ws1
@@ -252,7 +252,7 @@ bindsym $mod+Shift+v exec sudo virt-manager
 # exec --no-startup-id thunderbird
 # exec_always picom -f
 exec_always picom -f --inactive-opacity 0.7
-# exec --no-startup-id alacritty -e emacs -nw
+exec --no-startup-id alacritty -e emacs -nw
 exec --no-startup-id conky -d
 exec_always --no-startup-id flameshot
 exec_always --no-startup-id blueman-applet
@@ -272,6 +272,7 @@ workspace $ws10 output HDMI1
 # Assign programs to workspaces. Use xprop from command line to get window class.
 for_window [class="Thunderbird"] move to workspace $ws3; workspace number $ws3
 for_window [class="Chromium"] move to workspace $ws9; workspace number $ws9
+for_window [class="firefox"] move to workspace $ws9; workspace number $ws9
 
 # class                 border  backgr. text    indicator child_border
 #client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
