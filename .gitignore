@@ -45,7 +45,7 @@ Dropbox/
 #.fzf.zsh
 #gb_cz_de
 #.gdbinit
-#.gem/
+.gem/
 .git/
 .git-completion.bash
 #.gitconfig
