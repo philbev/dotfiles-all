@@ -230,6 +230,7 @@ exec_always xrandr --output HDMI1 --auto --right-of DP1
 
 # Assign applications to workspaces
 assign [class="Emacs"] $ws1
+assign [class="Thunderbird"] $ws3
 assign [class="Gimp"] $ws4
 assign [class="Conky"] $ws9
 
