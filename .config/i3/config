@@ -60,6 +60,7 @@ bindsym $mod+q kill
 # installed.
 #bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+m exec --no-startup-id i3_keys.sh
 
 # change focus
 bindsym $mod+h focus left
