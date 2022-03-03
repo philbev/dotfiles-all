@@ -1,5 +1,5 @@
 configuration {
-    modi: "run,drun,window,ssh";
+    modi: "run,drun,window,ssh,emoji,filebrowser";
     font: "Hack 16";
     show-icons: true;
 }
