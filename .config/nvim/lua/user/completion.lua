@@ -18,6 +18,7 @@ cmp.setup({
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
 			vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+			require("luasnip").lsp_expand(args.body)
 		end,
 	},
 	mapping = {
@@ -57,7 +58,8 @@ cmp.setup({
 				nvim_lsp = "[LSP]",
 				nvim_lua = "[api]",
 				path = "[path]",
-				ultisnips = "[ultisnip]",
+				luasnip = "[luasnip]",		-- For luasnip users.
+				ultisnips = "[ultisnip]",	-- For ultisnips users.
 				-- spell = "[spell]",
 			},
 		},
@@ -69,12 +71,13 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'nvim_lua' },
-		{ name = 'ultisnips' }, -- For ultisnips users.
+		{ name = "luasnip" },		-- For luasnip users.
+		{ name = 'ultisnips' },		-- For ultisnips users.
 		{ name = 'path' },
 		{ name = 'zsh' },
 	}, {
-		{ name = 'buffer', keyword_length = 3 },
-		-- { name = 'spell', keyword_length = 4 },
+			{ name = 'buffer', keyword_length = 3 },
+			-- { name = 'spell', keyword_length = 4 },
 	})
 })
 
@@ -90,6 +93,6 @@ cmp.setup.cmdline(':', {
 	sources = cmp.config.sources({
 		{ name = 'path' }
 	}, {
-		{ name = 'cmdline' }
+			{ name = 'cmdline' }
 	})
 })

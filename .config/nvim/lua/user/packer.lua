@@ -47,9 +47,13 @@ return require('packer').startup(function()
 	use {'hrsh7th/cmp-buffer'}
 	use {'hrsh7th/cmp-path'}
 	use {'hrsh7th/cmp-cmdline'}
+	-- For ultisnips
 	use {'SirVer/ultisnips'}
 	use {'quangnguyen30192/cmp-nvim-ultisnips'}
 	use 'honza/vim-snippets'
+	-- For luasnip
+	use { 'L3MON4D3/LuaSnip' }
+	use { 'saadparwaiz1/cmp_luasnip' }
 	use { 'onsails/lspkind-nvim' }
 	use { 'f3fora/cmp-spell' }
 	-- Colorschemes
@@ -66,4 +70,5 @@ return require('packer').startup(function()
 	use { 'rcarriga/nvim-notify' }
 	use { 'tpope/vim-surround' }
 	use { 'tpope/vim-fugitive' }
+	use { 'godlygeek/tabular' }
 end)

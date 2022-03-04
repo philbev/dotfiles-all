@@ -50,6 +50,7 @@ set.smartcase = true
 set.cursorline = true
 set.listchars = 'tab:🢡 ,eol:⮰,space:·,trail:+'
 set.spelllang = 'en'
+set.pumheight = 15
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.cpoptions:append('W')
 
