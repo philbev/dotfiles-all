@@ -426,8 +426,9 @@ font:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
+shell:
 #  program: /bin/bash
+  program: /usr/bin/fish
 #  args:
 #    - --login
 
