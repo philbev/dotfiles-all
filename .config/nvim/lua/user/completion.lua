@@ -5,6 +5,8 @@
 -- |_| \_| \_/ |_|_| |_| |_| (_)  \___|_| |_| |_| .__/
 -- |_|
 
+-- ~/.config/nvim/lua/user/completion.lua
+
 local status_ok, cmp = pcall(require, 'cmp')
 if not status_ok then
 	return
@@ -17,7 +19,7 @@ cmp.setup({
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
-			vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+			-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
 			require("luasnip").lsp_expand(args.body)
 		end,
 	},
@@ -30,7 +32,7 @@ cmp.setup({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
-		['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+		-- ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 		-- If you want tab completion :'(
 		--  First you have to just promise to read `:help ins-completion`.
 		--
@@ -49,6 +51,17 @@ cmp.setup({
 			end
 		end,
 	},
+	sources = cmp.config.sources({
+		{ name = 'nvim_lsp' },
+		{ name = 'nvim_lua' },
+		{ name = 'luasnip' },
+		-- { name = 'ultisnips' },		-- For ultisnips users.
+		{ name = 'path' },
+		{ name = 'zsh' },
+	}, {
+			{ name = 'buffer', keyword_length = 3 },
+			-- { name = 'spell', keyword_length = 4 },
+	}),
 	formatting = {
 		-- Youtube: How to set up nice formatting for your sources.
 		format = lspkind.cmp_format {
@@ -59,7 +72,7 @@ cmp.setup({
 				nvim_lua = "[api]",
 				path = "[path]",
 				luasnip = "[luasnip]",		-- For luasnip users.
-				ultisnips = "[ultisnip]",	-- For ultisnips users.
+				-- ultisnips = "[ultisnip]",	-- For ultisnips users.
 				-- spell = "[spell]",
 			},
 		},
@@ -68,17 +81,6 @@ cmp.setup({
 		native_menu = false,
 		ghost_text = true,
 	},
-	sources = cmp.config.sources({
-		{ name = 'nvim_lsp' },
-		{ name = 'nvim_lua' },
-		{ name = "luasnip" },		-- For luasnip users.
-		{ name = 'ultisnips' },		-- For ultisnips users.
-		{ name = 'path' },
-		{ name = 'zsh' },
-	}, {
-			{ name = 'buffer', keyword_length = 3 },
-			-- { name = 'spell', keyword_length = 4 },
-	})
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
