@@ -251,7 +251,7 @@ bindsym $mod+Shift+v exec sudo virt-manager
 
 # Programmes to autostart
 # exec chromium
-# exec --no-startup-id thunderbird
+exec --no-startup-id thunderbird
 # exec_always picom -f
 exec_always picom -f --inactive-opacity 0.7
 exec --no-startup-id alacritty -e emacs -nw
@@ -272,7 +272,7 @@ workspace $ws9 output HDMI1
 workspace $ws10 output HDMI1
 
 # Assign programs to workspaces. Use xprop from command line to get window class.
-for_window [class="Thunderbird"] move to workspace $ws3; workspace number $ws3
+# for_window [class="Thunderbird"] move to workspace $ws3; workspace number $ws3
 for_window [class="Chromium"] move to workspace $ws9; workspace number $ws9
 for_window [class="firefox"] move to workspace $ws9; workspace number $ws9
 
