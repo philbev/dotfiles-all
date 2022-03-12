@@ -92,12 +92,14 @@ lua-language-server/
 #.msmtprc
 Music/
 #mykeys.khotkeys
+node_modules/
 .node_repl_history
 .npm/
 .nv/
 .nvimlog
 #.p10k.zsh
 .p10k.zsh.edited
+package.json
 package-lock.json
 #phil_arch_install.sh
 Pictures/
