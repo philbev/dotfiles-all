@@ -1,0 +1,19 @@
+	use { 'folke/which-key.nvim' }
+	use {'SirVer/ultisnips'}
+	use {'quangnguyen30192/cmp-nvim-ultisnips'}
+	use 'honza/vim-snippets'
+	use { 'L3MON4D3/LuaSnip' }
+	use { 'saadparwaiz1/cmp_luasnip' }
+	use { 'onsails/lspkind-nvim' }
+	use { 'f3fora/cmp-spell' }
+	use { 'lifepillar/vim-gruvbox8' }
+	use { 'Mofiqul/dracula.nvim' }
+	use { 'windwp/nvim-autopairs' }
+	use { 'lukas-reineke/indent-blankline.nvim' }
+	use {"akinsho/toggleterm.nvim"}
+	use { 'kyazdani42/nvim-tree.lua' }
+	use { 'lewis6991/gitsigns.nvim' }
+	use { 'rcarriga/nvim-notify' }
+	use { 'tpope/vim-surround' }
+	use { 'tpope/vim-fugitive' }
+	use { 'godlygeek/tabular' }
