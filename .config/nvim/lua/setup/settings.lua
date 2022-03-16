@@ -51,6 +51,7 @@ set.cursorline = true
 set.listchars = 'tab:🢡 ,eol:⮰,space:·,trail:+'
 set.spelllang = 'en'
 set.pumheight = 15
+set.shiftround = true
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.cpoptions:append('W')
 
