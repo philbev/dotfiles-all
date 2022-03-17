@@ -55,6 +55,8 @@ set.shiftround = true
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.cpoptions:append('W')
 
+vim.cmd('colorscheme dracula')
+vim.cmd('highlight Comment guifg=cyan')
 vim.cmd('highlight CursorLine guibg=#404040')
 vim.cmd(':highlight NonText guifg=yellow')
 vim.cmd(':highlight Pmenu guibg=#404040')
