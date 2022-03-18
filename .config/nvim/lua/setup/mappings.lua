@@ -5,8 +5,10 @@
 -- |_|  |_|\__,_| .__/| .__/|_|_| |_|\__, |___/ (_) |_|\__,_|\__,_|
 --              |_|   |_|            |___/
 
+-- ~/.config/nvim/lua/setup/mappings.lua
+
 -- Neovim provides a list of API functions to set, get and delete mappings:
--- 
+--
 -- Global mappings:
 -- vim.api.nvim_set_keymap()
 -- vim.api.nvim_get_keymap()
@@ -40,7 +42,9 @@ map('n', '<M-c>', '<C-w>c', opts)
 map('n', '<M-l>', ':set list! list?<cr>', opts)
 map('n', '<M-o>', ':only<cr>', opts)
 map('n', '<leader>gs', ':Git<cr>', opts)
-vim.keymap.set({'n'}, "<A-w>", '<cmd>set wrap! wrap?<cr>', opts)
+vim.keymap.set({'n'}, "<M-w>", '<cmd>set wrap! wrap?<cr>', opts)
+vim.keymap.set({'n'}, '<M-d>', '<cmd>lua vim.lsp.diagnostic.goto_next()<cr>')
+vim.keymap.set({'n'}, '<M-u>', '<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>')
 
 -- VISUAL MODE MAPPINGS
 map('v', '<M-Down>', ":m '>+1<cr>gv", opts)

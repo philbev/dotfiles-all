@@ -5,6 +5,9 @@
 -- |_____|___/ .__/ \___\___/|_| |_|_| |_|\__, (_)_|\__,_|\__,_|
 --           |_|                          |___/
 
+-- ~/.config/nvim/lua/setup/lspconfig.lua
+
+
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 require('lspconfig')['sumneko_lua'].setup {

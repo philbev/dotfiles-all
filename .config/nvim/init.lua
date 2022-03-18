@@ -4,6 +4,8 @@
 --  | || | | | | |_  _ | | |_| | (_| |
 -- |___|_| |_|_|\__|(_)|_|\__,_|\__,_|
 
+-- ~/.config/nvim/init.lua
+
 require('setup.settings')
 require('setup.mappings')
 require('setup.packer')

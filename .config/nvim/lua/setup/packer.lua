@@ -4,6 +4,7 @@
 -- |  __/ (_| | (__|   <  __/ |     _  | | | \ V /| | | | | | |
 -- |_|   \__,_|\___|_|\_\___|_|    (_) |_| |_|\_/ |_|_| |_| |_|
 
+-- ~/.config/nvim/lua/setup/packer.lua
 
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 

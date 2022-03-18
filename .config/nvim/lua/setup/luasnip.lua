@@ -5,7 +5,9 @@
 -- | |__| |_| | (_| \__ \ | | | | |_) || | |_| | (_| |
 -- |_____\__,_|\__,_|___/_| |_|_| .__(_)_|\__,_|\__,_|
 --                              |_|
+
 -- ~/.config/nvim/lua/user/luasnip.lua
+
 -- See https://github.com/L3MON4D3/LuaSnip
 -- See teej's on YouTube - https://www.youtube.com/watch?v=Dn800rlPIho&list=WL&index=8
 

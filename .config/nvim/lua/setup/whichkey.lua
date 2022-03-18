@@ -162,6 +162,11 @@ local mappings = {
 	  h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 	  v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+	v = {
+		name = 'Window Commands',
+		v = { '<cmd>vsplit<cr>', 'Vertical split' },
+		h = { '<cmd>split<cr>', 'Vertical split' },
+	},
   ["w"] = { "<cmd>wa<CR>", "[:wa<cr>] Save all files" },
   ["x"] = { "<cmd>xa<CR>", "[:xa<cr>] Save all files and exit" },
 }
