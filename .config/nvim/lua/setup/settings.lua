@@ -56,7 +56,7 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.cpoptions:append('W')
 
 vim.cmd('colorscheme dracula')
-vim.cmd('highlight WinSeparator guibg=none')
+-- vim.cmd('highlight WinSeparator guibg=none')
 vim.cmd('highlight Comment guifg=cyan')
 vim.cmd('highlight CursorLine guibg=#505050')
 vim.cmd(':highlight NonText guifg=yellow')

@@ -72,4 +72,5 @@ return require('packer').startup(function()
 	use { 'tpope/vim-surround' }
 	use { 'tpope/vim-fugitive' }
 	use { 'godlygeek/tabular' }
+	use { 'rebelot/kanagawa.nvim' }
 end)
