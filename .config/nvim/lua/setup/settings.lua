@@ -52,13 +52,14 @@ set.listchars = 'tab:🢡 ,eol:⮰,space:·,trail:+'
 set.spelllang = 'en'
 set.pumheight = 15
 set.shiftround = true
+set.shell = 'fish'
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.cpoptions:append('W')
 
 vim.cmd('colorscheme dracula')
--- vim.cmd('highlight WinSeparator guibg=none')
+vim.cmd('highlight WinSeparator guibg=none guifg=#a0a0a0')
 vim.cmd('highlight Comment guifg=cyan')
-vim.cmd('highlight CursorLine guibg=#505050')
+vim.cmd('highlight CursorLine guibg=#707070')
 vim.cmd(':highlight NonText guifg=yellow')
 vim.cmd(':highlight Pmenu guibg=#404040')
 vim.cmd('hi IndentBlanklineChar guifg=gray')
