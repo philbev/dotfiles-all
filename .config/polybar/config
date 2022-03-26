@@ -438,7 +438,7 @@ menu-2-1-exec = menu-open-0
 [module/pacman]
 type = custom/script
 exec = checkupdates | wc -l
-interval = 900
+interval = 60
 label = %output%
 ; label-pacman-foreground = #ffbb00
 ;format.foreground = #ffbb00

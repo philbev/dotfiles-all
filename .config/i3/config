@@ -193,7 +193,7 @@ bindsym $mod+r mode "resize"
 #}
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Needed for gaps
-for_window [class=".*"] border pixel 5
+for_window [class=".*"] border pixel 2
 gaps inner 8
 gaps outer 8
 
@@ -253,7 +253,7 @@ bindsym $mod+Shift+v exec sudo virt-manager
 # exec chromium
 exec --no-startup-id thunderbird
 # exec_always picom -f
-exec_always picom -f --inactive-opacity 0.7
+exec_always picom -f --inactive-opacity 0.9
 exec --no-startup-id alacritty -e emacs -nw
 exec --no-startup-id conky -d
 exec_always --no-startup-id flameshot
@@ -274,13 +274,13 @@ workspace $ws10 output HDMI1
 # Assign programs to workspaces. Use xprop from command line to get window class.
 # for_window [class="Thunderbird"] move to workspace $ws3; workspace number $ws3
 for_window [class="Chromium"] move to workspace $ws9; workspace number $ws9
-for_window [class="firefox"] move to workspace $ws9; workspace number $ws9
+for_window [class="Navigator"] move to workspace $ws9; workspace number $ws9
 
 # class                 border  backgr. text    indicator child_border
 #client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 client.focused          #ff0000 #285577 #ffff00 #0000ff   #ff0000
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #4f4f4f
+client.unfocused        #333333 #222222 #888888 #292d2e   #4f4f4f
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #
