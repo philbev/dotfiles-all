@@ -73,4 +73,6 @@ return require('packer').startup(function()
 	use { 'tpope/vim-fugitive' }
 	use { 'godlygeek/tabular' }
 	use { 'rebelot/kanagawa.nvim' }
+	use { 'nvim-neo-tree/neo-tree.nvim', branch = 'v2.x' }
+	use { 'MunifTanjim/nui.nvim' }
 end)

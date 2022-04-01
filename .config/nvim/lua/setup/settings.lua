@@ -63,5 +63,10 @@ vim.cmd('highlight CursorLine guibg=#707070')
 vim.cmd(':highlight NonText guifg=yellow')
 vim.cmd(':highlight Pmenu guibg=#404040')
 vim.cmd('hi IndentBlanklineChar guifg=gray')
-vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=1000}]])
 vim.cmd('let g:nvim_tree_indent_markers = 1')
+vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=1000}]])
+vim.api.nvim_create_autocmd(  {'TextYankPost'},{
+		pattern = {'*'},
+		command = 'lua vim.highlight.on_yank({  timeout  = 1000, higroup = IncSearch })'
+	}
+	)
