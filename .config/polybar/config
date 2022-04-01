@@ -27,6 +27,16 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
+[bar/secondary]
+monitor = ${env:MONITOR:HDMI1}
+width = 90%
+height = 27
+;offset-x = 1%
+;offset-y = 1%
+radius = 6.0
+fixed-center = false
+bottom = true
+
 [bar/primary]
 monitor = ${env:MONITOR:DP1}
 width = 100%
