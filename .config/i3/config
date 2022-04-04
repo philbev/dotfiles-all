@@ -218,8 +218,9 @@ exec_always nitrogen --restore
 exec_always xmodmap /home/phil/.Xmodmap
 
 # Monitor timeouts
-exec_always xset dpms 1800 1800 0
-exec_always xset s 1860 600
+# exec_always xset dpms 1800 1800 0
+exec_always xset -dpms
+exec_always xset s 7200
 
 # Multiple monitors
 #exec_always xrandr --output DisplayPort-2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-0 --off
