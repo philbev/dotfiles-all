@@ -215,7 +215,7 @@ exec_always nitrogen --restore
 #exec_always setxkbmap  -layout eu -model pc104
 
 # For changes to kecaps on Keychron K3 ('home', 'page up' and 'page down' keys.
-exec_always xmodmap /home/phil/.Xmodmap
+#exec_always xmodmap /home/phil/.Xmodmap
 
 # Monitor timeouts
 # exec_always xset dpms 1800 1800 0
@@ -280,8 +280,8 @@ for_window [class="Navigator"] move to workspace $ws9; workspace number $ws9
 # class                 border  backgr. text    indicator child_border
 #client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 client.focused          #ff0000 #285577 #ffff00 #0000ff   #ff0000
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #4f4f4f
-client.unfocused        #333333 #222222 #888888 #292d2e   #4f4f4f
+client.focused_inactive #333333 #5f676a #ffffff #3f3d3c   #3f3d3c
+client.unfocused        #333333 #222222 #888888 #3f3d3c   #3f3d3c
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #
@@ -289,6 +289,6 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 # focus_on_window_activation smart|urgent|focus|none
  #focus_on_window_activation focus
-exec_always setxkbmap  gb -model pc105
+exec_always setxkbmap  us -model pc104
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
