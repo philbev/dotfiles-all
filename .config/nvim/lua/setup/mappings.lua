@@ -45,6 +45,7 @@ map('n', '<leader>gs', ':Git<cr>', opts)
 vim.keymap.set({'n'}, "<M-w>", '<cmd>set wrap! wrap?<cr>', opts)
 vim.keymap.set({'n'}, '<M-d>', '<cmd>lua vim.lsp.diagnostic.goto_next()<cr>')
 vim.keymap.set({'n'}, '<M-u>', '<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>')
+vim.keymap.set({'n'}, '<M-/>', '<cmd>Neotree toggle<cr>')
 
 -- VISUAL MODE MAPPINGS
 map('v', '<M-Down>', ":m '>+1<cr>gv", opts)
