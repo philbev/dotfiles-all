@@ -47,7 +47,7 @@ set.clipboard = 'unnamedplus'
 set.pastetoggle = '<F11>'
 set.ignorecase = true
 set.smartcase = true
-set.cursorline = true
+-- set.cursorline = true
 set.listchars = 'tab:🢡 ,eol:⮰,space:·,trail:+'
 set.spelllang = 'en'
 set.pumheight = 15
@@ -64,9 +64,21 @@ vim.cmd(':highlight NonText guifg=yellow')
 vim.cmd(':highlight Pmenu guibg=#404040')
 vim.cmd('hi IndentBlanklineChar guifg=gray')
 vim.cmd('let g:nvim_tree_indent_markers = 1')
--- vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=1000}]])
+
 vim.api.nvim_create_autocmd(  {'TextYankPost'},{
 		pattern = {'*'},
 		command = 'lua vim.highlight.on_yank({  timeout  = 1000, higroup = IncSearch })'
+	}
+	)
+
+vim.api.nvim_create_autocmd(  {'WinEnter', 'BufEnter'},{
+		pattern = {'*'},
+		command = 'lua vim.o.cursorline = true'
+	}
+	)
+
+vim.api.nvim_create_autocmd(  {'WinLeave'},{
+		pattern = {'*'},
+		command = 'lua vim.o.cursorline = false'
 	}
 	)
