@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 # MY /home/.bashrc INITIALISATION FILE
 
-if [[ $TERM = "linux" ]]; then
-    setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu.gz
-fi
+#if [[ $TERM = "linux" ]]; then
+#    setfont /usr/share/kbd/consolefonts/iso01-12x22.psfu.gz
+#fi
 
 ## SOURCED FILES
 # Load all my functions from $HOME/.functions.sh
