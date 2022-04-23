@@ -23,6 +23,10 @@ cmp.setup({
 			require("luasnip").lsp_expand(args.body)
 		end,
 	},
+	window = {
+      completion = cmp.config.window.bordered(),
+      documentation = cmp.config.window.bordered(),
+    },
 	mapping = {
 		['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
 		['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
@@ -76,11 +80,7 @@ cmp.setup({
 				-- spell = "[spell]",
 			},
 		},
-	},
-	experimental = {
-		native_menu = false,
-		ghost_text = true,
-	},
+	}
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
