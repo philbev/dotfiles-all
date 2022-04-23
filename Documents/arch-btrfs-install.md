@@ -43,7 +43,7 @@ For root Filesystems with btrfs
 ## Mount Root Partition and Create Subvolumes
 ```bash
 Mount root filesystem
-	mount /dev/<root>
+	mount /dev/<root> /mnt
 
 Create subvolumes
 	btrfs su cr /mnt/@
@@ -60,19 +60,19 @@ Create subvolumes
 
 ## Mount Subvolumes
 ```bash
-	mount -o noatime,commit=120,compress=zstd,space_cache,subvol=@ /dev/sda3 /mnt
+	mount -o noatime,commit=120,compress=zstd,space_cache=v2,subvol=@ /dev/<mountpoint> /mnt
 
 Create folders to mount the other subvolumes
 	mkdir /mnt/{boot,home,var,tmp,.snapshots}
 
 Mount subvolumes
-	mount -o noatime,commit=120,compress=zstd,space_cache,subvol=@home /dev/sda3 /mnt/home
-	mount -o noatime,commit=120,compress=zstd,space_cache,subvol=@tmp /dev/sda3 /mnt/tmp
-	mount -o noatime,commit=120,compress=zstd,space_cache,subvol=@.snapshots /dev/sda3 /mnt/.snapshots
-	mount -o subvol=@var /dev/sda3 /mnt/var
+	mount -o noatime,commit=120,compress=zstd,space_cache=v2,subvol=@home /dev/<mountpoint> /mnt/home
+	mount -o noatime,commit=120,compress=zstd,space_cache=v2,subvol=@tmp /dev/<mountpoint> /mnt/tmp
+	mount -o noatime,commit=120,compress=zstd,space_cache=v2,subvol=@.snapshots /dev/<mountpoint> /mnt/.snapshots
+	mount -o subvol=@var /dev/<mountpoint> /mnt/var
 
 Mount the boot partition at /boot folder
-	mount /dev/sda1 /mnt/boot
+	mount /dev/<boot mountpoint> /mnt/boot
 ```
 
 ## Installing the base system
@@ -113,10 +113,11 @@ Generate locales:
 	locale-gen
 
 Set locale in locale.conf file:
+	echo FONT=ter-128b >> /etc/locale.conf
 	echo LANG=en_US.UTF-8 >> /etc/locale.conf
 If you choose a different language, replace en_US.UTF-8 with your language.
 
-Set keymap (for non-us ketboards)
+Set keymap (for non-us keyboards)
 	echo KEYMAP=[keymap] >> /etc/vconsole.conf
 Replace [keymap] with your specific keymap.
 ```
@@ -143,7 +144,7 @@ Install remaining essential packages
 	pacman -S grub grub-btrfs efibootmgr base-devel linux-headers networkmanager network-manager-applet wpa_supplicant dialog os-prober mtools dosfstools reflector git
 
 Additional packages to add:
-	pacman -S bluez bluez-utils cups xdg-utils xdg-user-dirs
+	pacman -S bluez bluez-utils cups xdg-utils xdg-user-dirs terminus-font
 
 Add btrfs module to mkinitcpio
 	vim /etc/mkinitcpio.conf
