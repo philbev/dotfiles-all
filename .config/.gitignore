@@ -99,6 +99,7 @@ kactivitymanagerdrc
 kactivitymanagerd-statsrc
 kactivitymanagerd-switcher
 kaffeinerc
+kalendaracrc
 kalarmrc
 katemetainfos
 katerc
@@ -175,6 +176,7 @@ kwinrulesrc
 kxkbrc
 latte/
 lattedockrc
+lazygit/
 libaccounts-glib/
 libfm/
 libreoffice/

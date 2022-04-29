@@ -131,6 +131,7 @@ src/
 #us_cz
 #us_eur_cz
 Videos/
+.via/
 .vim/
 .viminfo
 #.vimrc
