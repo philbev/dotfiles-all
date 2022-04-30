@@ -8,6 +8,7 @@ SETUVAR _fish_abbr_gtp:git\x20push
 SETUVAR _fish_abbr_gts:git\x20status
 SETUVAR _fish_abbr_pcs:sudo\x20pacman\x20\x2dS
 SETUVAR _fish_abbr_pcy:sudo\x20pacman\x20\x2dSyyu
+SETUVAR _fish_abbr_spr:sudo\x20pacman\x20\x2dR
 SETUVAR _fish_abbr_sps:sudo\x20pacman\x20\x2dS
 SETUVAR _fish_abbr_spy:sudo\x20pacman\x20\x2dSyyu
 SETUVAR fish_color_autosuggestion:cyan
