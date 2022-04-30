@@ -49,11 +49,13 @@ gcc
 gimp
 gimp-help-en_gb
 git
+gnome-characters
 gnome-keyring
 go
 gparted
 groff
 grub
+grub-btrfs
 grub-customizer
 gvfs-google
 gvim
@@ -69,6 +71,7 @@ jq
 kde-applications-meta
 kitty
 kvantum
+lazygit
 libhandy
 libreoffice-fresh-en-gb
 libtool
@@ -104,9 +107,11 @@ pavucontrol
 pcmanfm
 perl-image-exiftool
 pkgconf
-plasma-meta
 plasma-wayland-protocols
+pulseaudio
+pulseaudio-alsa
 pulseaudio-bluetooth
+pulsemixer
 python-pip
 qemu
 qemu-arch-extra
@@ -142,6 +147,7 @@ which
 words
 xbindkeys
 xclip
+xcolor
 xdg-user-dirs
 xf86-video-intel
 xf86-video-vesa

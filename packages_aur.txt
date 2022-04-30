@@ -2,6 +2,8 @@ adduser
 autokey-common
 autokey-qt
 autotiling-git
+chaotic-keyring
+chaotic-mirrorlist
 google-chrome
 hexokinase-git
 kwin-bismuth
@@ -24,9 +26,10 @@ ruby-colorls
 sddm-sugar-dark
 spacefm
 termite
+timeshift
 ulauncher
 ventoy-bin
-via-bin
+via-appimage
 visual-studio-code-bin
 xfce4-sysinfo
 xsnow-bin
