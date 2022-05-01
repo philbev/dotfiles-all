@@ -56,14 +56,15 @@ cmp.setup({
 		end,
 	},
 	sources = cmp.config.sources({
+		{ name = 'buffer', keyword_length = 3 },
 		{ name = 'nvim_lsp' },
 		{ name = 'nvim_lua' },
 		{ name = 'luasnip' },
 		-- { name = 'ultisnips' },		-- For ultisnips users.
 		{ name = 'path' },
+		{ name = 'dictionary', keyword_length = 4 },
 		{ name = 'zsh' },
 	}, {
-			{ name = 'buffer', keyword_length = 3 },
 			-- { name = 'spell', keyword_length = 4 },
 	}),
 	formatting = {
@@ -71,11 +72,12 @@ cmp.setup({
 		format = lspkind.cmp_format {
 			with_text = true,
 			menu = {
-				buffer = "[buf]",
-				nvim_lsp = "[LSP]",
-				nvim_lua = "[api]",
-				path = "[path]",
-				luasnip = "[luasnip]",		-- For luasnip users.
+				buffer = "[Buf]",
+				nvim_lsp = "[Lsp]",
+				nvim_lua = "[Api]",
+				path = "[Path]",
+				luasnip = "[Luasnip]",		-- For luasnip users.
+				dictionary = 'Dict'
 				-- ultisnips = "[ultisnip]",	-- For ultisnips users.
 				-- spell = "[spell]",
 			},
@@ -99,4 +101,31 @@ cmp.setup.cmdline(':', {
 	}, {
 			{ name = 'cmdline' }
 	})
+})
+
+local status_fine,dict = pcall(require, 'cmp_dictionary')
+if not status_fine then
+	return
+end
+
+dict.setup({
+	dic = {
+		["*"] = { "/usr/share/dict/words" },
+		--["lua"] = "path/to/lua.dic",
+		--["javascript,typescript"] = { "path/to/js.dic", "path/to/js2.dic" },
+		--filename = {
+		--	["xmake.lua"] = { "path/to/xmake.dic", "path/to/lua.dic" },
+		--},
+		--filepath = {
+		--	["%.tmux.*%.conf"] = "path/to/tmux.dic"
+		--},
+	},
+	-- The following are default values, so you don't need to write them if you don't want to change them
+	exact = 2,
+	first_case_insensitive = false,
+	document = false,
+	document_command = "wn %s -over",
+	async = false,
+	capacity = 5,
+	debug = false,
 })

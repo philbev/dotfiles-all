@@ -75,4 +75,5 @@ return require('packer').startup(function()
 	use { 'rebelot/kanagawa.nvim' }
 	use { 'nvim-neo-tree/neo-tree.nvim', branch = 'v2.x' }
 	use { 'MunifTanjim/nui.nvim' }
+	use { 'uga-rosa/cmp-dictionary' }
 end)
