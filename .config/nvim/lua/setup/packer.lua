@@ -48,6 +48,7 @@ return require('packer').startup(function()
 	use {'hrsh7th/cmp-buffer'}
 	use {'hrsh7th/cmp-path'}
 	use {'hrsh7th/cmp-cmdline'}
+	use { 'uga-rosa/cmp-dictionary' }
 	-- For ultisnips
 	use {'SirVer/ultisnips'}
 	use {'quangnguyen30192/cmp-nvim-ultisnips'}
@@ -57,23 +58,23 @@ return require('packer').startup(function()
 	use { 'saadparwaiz1/cmp_luasnip' }
 	use { 'onsails/lspkind-nvim' }
 	use { 'f3fora/cmp-spell' }
+	-- File Managers
+	use { 'nvim-neo-tree/neo-tree.nvim', branch = 'v2.x' }
+	use { 'MunifTanjim/nui.nvim' }
+	use { 'kyazdani42/nvim-tree.lua' }
 	-- Colorschemes
 	use { 'p00f/nvim-ts-rainbow' }
 	use { 'norcalli/nvim-colorizer.lua' }
 	use { 'lifepillar/vim-gruvbox8' }
 	use { 'Mofiqul/dracula.nvim' }
+	use { 'rebelot/kanagawa.nvim' }
 	-- Other plugins
 	use { 'windwp/nvim-autopairs' }
 	use { 'lukas-reineke/indent-blankline.nvim' }
 	use {"akinsho/toggleterm.nvim"}
-	use { 'kyazdani42/nvim-tree.lua' }
 	use { 'lewis6991/gitsigns.nvim' }
 	use { 'rcarriga/nvim-notify' }
 	use { 'tpope/vim-surround' }
 	use { 'tpope/vim-fugitive' }
 	use { 'godlygeek/tabular' }
-	use { 'rebelot/kanagawa.nvim' }
-	use { 'nvim-neo-tree/neo-tree.nvim', branch = 'v2.x' }
-	use { 'MunifTanjim/nui.nvim' }
-	use { 'uga-rosa/cmp-dictionary' }
 end)
