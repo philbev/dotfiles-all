@@ -54,6 +54,7 @@ set.shiftround = true
 set.shell = 'fish'
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.cpoptions:append('W')
+vim.opt.formatoptions:remove({'r', 'o'})
 
 vim.cmd('colorscheme dracula')
 vim.cmd('highlight WinSeparator guibg=none guifg=#a0a0a0')
@@ -77,4 +78,20 @@ vim.api.nvim_create_autocmd(  {'WinEnter', 'BufEnter'},{
 vim.api.nvim_create_autocmd(  {'WinLeave'},{
 		pattern = {'*'},
 		command = 'lua vim.o.cursorline = false'
+	})
+
+vim.api.nvim_create_autocmd(  {'FileType'},{
+		pattern = {'packer'},
+		command = "lua vim.keymap.set('n', '<Space>', '<C-f>', { noremap = true, silent = true })"
+	})
+
+
+vim.api.nvim_create_autocmd(  {'FileType'},{
+		pattern = {'packer'},
+		command = "lua vim.keymap.set('n', 'b', '<C-b>', { noremap = true, silent = true })"
+	})
+
+vim.api.nvim_create_autocmd(  {'FileType'},{
+		pattern = {'packer'},
+		command = "lua vim.keymap.set('n', '<Esc>', '<cmd>q<cr>', { noremap = true, silent = true })"
 	})
