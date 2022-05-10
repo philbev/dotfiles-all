@@ -81,13 +81,13 @@ vim.api.nvim_create_autocmd(  {'WinLeave'},{
 	})
 
 vim.api.nvim_create_autocmd(  {'FileType'},{
-		pattern = {'packer'},
+		pattern = {'packer', 'help', 'checkhealth'},
 		command = "lua vim.keymap.set('n', '<Space>', '<C-f>', { noremap = true, silent = true })"
 	})
 
 
 vim.api.nvim_create_autocmd(  {'FileType'},{
-		pattern = {'packer'},
+		pattern = {'packer', 'help', 'checkhealth'},
 		command = "lua vim.keymap.set('n', 'b', '<C-b>', { noremap = true, silent = true })"
 	})
 
