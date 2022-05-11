@@ -1,6 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-	alias l='exa -lhgF  --git --group-directories-first'
+	alias l='exa -lhgF  --git --icons --group-directories-first'
 	alias lk='lsblk -o model,type,name,fstype,size,label,mountpoint,partlabel'
 	alias dot='source ~/.config/fish/config.fish'
 	alias gitx='~/.zfuncs/gitx'
