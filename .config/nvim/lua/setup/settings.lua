@@ -5,6 +5,8 @@
 -- |____/ \___|\__|\__|_|_| |_|\__, |___/
 --                             |___/
 
+-- ~/.config/nvim/lua/setup/settings.lua
+
 -- -- USING API FUNCTIONS
 -- Neovim provides a set of API functions to either set an option or get its current value:
 --
@@ -44,7 +46,7 @@ set.splitbelow = true
 set.splitright = true
 set.termguicolors = true
 set.clipboard = 'unnamedplus'
-set.pastetoggle = '<F11>'
+set.pastetoggle = '<F6>'
 set.ignorecase = true
 set.smartcase = true
 set.listchars = 'tab:🢡 ,eol:⮰,space:·,trail:+'
@@ -58,7 +60,8 @@ vim.opt.formatoptions:remove({'r', 'o'})
 
 vim.cmd('colorscheme dracula')
 vim.cmd('highlight WinSeparator guibg=none guifg=#a0a0a0')
-vim.cmd('highlight Comment guifg=cyan')
+vim.cmd('highlight Comment guifg=#cccccc')
+vim.cmd('highlight LineNr guifg=#cccccc')
 vim.cmd(':highlight NonText guifg=yellow')
 vim.cmd(':highlight Pmenu guibg=#404040')
 --vim.cmd('hi IndentBlanklineChar guifg=gray')
@@ -94,4 +97,9 @@ vim.api.nvim_create_autocmd(  {'FileType'},{
 vim.api.nvim_create_autocmd(  {'FileType'},{
 		pattern = {'packer'},
 		command = "lua vim.keymap.set('n', '<Esc>', '<cmd>q<cr>', { noremap = true, silent = true })"
+	})
+
+vim.api.nvim_create_autocmd(  {'FileType'},{
+		pattern = {'*'},
+		command = "lua vim.opt.formatoptions:remove { 'r', 'o' }"
 	})
