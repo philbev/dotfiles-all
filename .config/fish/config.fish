@@ -12,5 +12,5 @@ if status is-interactive
 	alias vin='cd ~/.config/nvim/lua/setup; nvim ~/.config/nvim/init.lua packer.lua mappings.lua lspconfig.lua settings.lua whichkey.lua'
 	alias rv='rm -v'
 	# Starship prompt
-	starship init fish | source
+	# starship init fish | source
 end
