@@ -28,7 +28,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet &
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -236,6 +236,7 @@ assign [class="Emacs"] $ws1
 assign [class="Thunderbird"] $ws3
 assign [class="Gimp"] $ws4
 assign [class="Conky"] $ws9
+assign [class="firefox"] $ws9
 
 # Key bindings
 # NOTE! mod1 = <Alt> key, $mod or mod4 = <Win> key.
@@ -254,7 +255,7 @@ bindsym $mod+Shift+v exec sudo virt-manager
 # Programmes to autostart
 # exec chromium
 exec --no-startup-id thunderbird
-# exec_always picom -f
+#exec_always picom -f
 exec_always picom -f --inactive-opacity 0.9
 exec --no-startup-id alacritty -e emacs -nw
 exec --no-startup-id conky -d
